@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Preferences &amp; Settings on darktable user manual</title>
+    <link>https://elstoc.github.io/dtdocs/preferences-settings/</link>
+    <description>Recent content in Preferences &amp; Settings on darktable user manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://elstoc.github.io/dtdocs/preferences-settings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/overview/</guid>
+      <description>darktable comes with a number of user-configurable preferences. These can be adjusted in the preferences dialog, which can be reached by clicking the gear icon on the right of the top panel.
+Any altered settings (i.e. those that differ from their default state) are highlighted. Double click on a setting&amp;rsquo;s label to reset to the default value.</description>
+    </item>
+    
+    <item>
+      <title>general</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/general/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/general/</guid>
+      <description>The preferences in this tab control the overall look and feel of darktable.
+ interface language Set the language of the user interface. the system default is marked with an * (needs a restart) theme Set the theme for the user interface. Apart from any aesthetic considerations, the recommended interface color for color evaluation is middle grey. Indeed, visual perception is affected by ambient brightness, and a low brightness of the interface causes all kinds of illusions.</description>
+    </item>
+    
+    <item>
+      <title>import</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/import/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/import/</guid>
+      <description>This tab contains options related to importing images into darktable using the import module.
+import  ignore JPEG images when importing film rolls When you have RAW+JPEG images together in one directory it usually doesn&amp;rsquo;t make sense to import both. Set this flag to ignore all JPEGs when importing images (default off). recursive directory traversal when importing film rolls When importing images from a folder, also recursively import images from its sub-folders.</description>
+    </item>
+    
+    <item>
+      <title>lighttable</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/lighttable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/lighttable/</guid>
+      <description>The following options control functionality in the lighttable view and associated modules.
+ color manage cached thumbnails If activated darktable generates thumbnails in a general color space (AdobeRGB) in order to render them independently of the individual monitor. Conversion to the monitor color space is undertaken at display time. If this option is not activated thumbnails are stored directly in the specific monitor color space at generation time and are subsequently displayed without further corrections (default on).</description>
+    </item>
+    
+    <item>
+      <title>darkroom</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/darkroom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/darkroom/</guid>
+      <description>The following options control functionality in the darkroom view and associated modules.
+ pen pressure control for brush masks Controls how the pressure reading of a graphics tablet impacts newly generated drawn mask brush strokes. You can control the brush width, hardness and opacity. “Absolute” control means that the pressure reading directly defines the attribute with a value between 0% and 100%. “Relative” means that the pressure reading adjusts the attribute between zero and the pre-defined default value (default off).</description>
+    </item>
+    
+    <item>
+      <title>other views</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/other-views/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/other-views/</guid>
+      <description>The following options control functionality in the map and slideshow views.
+map / geolocalisation  maximum number of images drawn on map The maximum number of geotagged images drawn on the map. Increasing this number can slow down the drawing of the map. Needs a restart if changed (default 100). pretty print the image location Show a more readable representation of the geo-location in the image information module (default on).  slideshow  waiting time before each picture in slideshow The number of seconds before displaying the next image (default 5).</description>
+    </item>
+    
+    <item>
+      <title>processing</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/processing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/processing/</guid>
+      <description>The following options control how images are processed.
+ always use LittleCMS 2 to apply output color profile If this option is activated, darktable will use the LittleCMS 2 system library instead of its own internal routines. This is significantly slower than the default but might give more accurate results in some cases (default off).  Note that if the given ICC is LUT-based or contains both a LUT and a matrix, darktable will use LittleCMS 2 to render the colors regardless of this configuration parameter&amp;rsquo;s value.</description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/security/</guid>
+      <description>The following options allow the user to switch on warnings when certain activities are undertaken.
+ ask before removing images from database Always ask the user before any image is removed from the database (default on). ask before erasing images from disk Always ask the user before any image file is deleted (default on). ask before discarding history stack Always ask the user before the history stack of an image is discarded (default on).</description>
+    </item>
+    
+    <item>
+      <title>cpu/gpu/memory</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/cpu-gpu-memory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/cpu-gpu-memory/</guid>
+      <description>This preference tab contains mostly performance-related settings:
+ memory in megabytes to use for thumbnail cache In order to speed-up display of film rolls, darktable stores thumbnails in a cache file on disk (primary cache) and loads it into memory at startup. This setting controls the cache size in megabytes. It needs a restart if changed (default 256MB). enable disk backend for thumbnail cache If activated, darktable stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they get dropped from the primary cache.</description>
+    </item>
+    
+    <item>
+      <title>storage</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/storage/</guid>
+      <description>The following options are related to darktable&amp;rsquo;s library database and XMP sidecar files.
+database  check for database maintenance Indicates when darktable should check for database fragmentation and perform maintenance. Options are &amp;ldquo;never&amp;rdquo;, &amp;ldquo;on startup&amp;rdquo;, &amp;ldquo;on close&amp;rdquo; and &amp;ldquo;on both&amp;rdquo;. Each of these is also available with an additional &amp;ldquo;(don&amp;rsquo;t ask)&amp;rdquo; option to perform the checks automatically without prompting (default &amp;ldquo;on close&amp;rdquo;). database fragmentation ratio threshold Fragmentation ratio (in per cent) above which database maintenance should be performed (subject to the selection made in the option above) (default 25).</description>
+    </item>
+    
+    <item>
+      <title>miscellaneous</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/miscellaneous/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/miscellaneous/</guid>
+      <description>interface  mouse wheel scrolls modules side panel by default When enabled, the mouse wheel scrolls side panels by default and Ctrl+Alt+mouse wheel scrolls data entry fields. When disabled, this behavior is reversed (default off). always show panels scrollbars Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on). (needs a restart) method to use for getting the display profile This option allows the user to force darktable to use a specific method to obtain the current display profile for color management.</description>
+    </item>
+    
+    <item>
+      <title>shortcuts</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/shortcuts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/shortcuts/</guid>
+      <description>Much of the functionality of darktable can be accessed via shortcuts using the keyboard or keyboard/mouse combinations. These shortcuts are user-configurable via the shortcuts tab.
+Many of the key shortcuts are provided with default values but most must be configured by the user. Any key may be used for a keyboard shortcut, and may be modified with one or more of Shift, Control or Alt.
+When you open the shortcuts tab you are initially presented with a hierarchical list of all actions that can receive a keyboard shortcut.</description>
+    </item>
+    
+    <item>
+      <title>presets</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/presets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/presets/</guid>
+      <description>This menu gives you an overview of the presets that are defined for darktable&amp;rsquo;s modules. In this dialog you can select whether a user-defined preset should be auto-applied to matching images. By pressing the “import” button at the bottom of the window you can import a saved preset.
+Pre-defined presets (those that are included by default within darktable) are shown with a lock symbol. Their auto-apply properties cannot be changed.</description>
+    </item>
+    
+    <item>
+      <title>lua options</title>
+      <link>https://elstoc.github.io/dtdocs/preferences-settings/lua-options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/preferences-settings/lua-options/</guid>
+      <description> lua scripts installer don&amp;rsquo;t show again Check this box to not show the lua scripts installer in the lighttable if no lua scripts are installed  </description>
+    </item>
+    
+  </channel>
+</rss>

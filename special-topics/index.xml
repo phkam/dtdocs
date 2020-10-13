@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Special Topics on darktable user manual</title>
+    <link>https://elstoc.github.io/dtdocs/special-topics/</link>
+    <description>Recent content in Special Topics on darktable user manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://elstoc.github.io/dtdocs/special-topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>memory</title>
+      <link>https://elstoc.github.io/dtdocs/special-topics/memory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/special-topics/memory/</guid>
+      <description>darktable&amp;rsquo;s memory requirements are high. A simple calculation makes this clear. If you have a 20MPx image then, for precision reasons, darktable will store this internally as a 4 x 32-bit floating point cell for each pixel. Each full image of this size will therefore need about 300MB of memory. As we want to process the image, we will at least need two buffers for each module – one for input and one for output.</description>
+    </item>
+    
+    <item>
+      <title>variables</title>
+      <link>https://elstoc.github.io/dtdocs/special-topics/variables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/special-topics/variables/</guid>
+      <description>darktable supports variable substitution in a number of modules and preference settings. For example:
+ Defining file names in the export selected lighttable module Displaying image information in the darkroom&amp;rsquo;s image information line Displaying image information in the lighttable&amp;rsquo;s overlays and tooltips (see preferences -&amp;gt; lighttable) Placing text on an image in the watermark processing module  available variables The following variables are available:
+$(ROLL_NAME) roll of the input image $(FILE_FOLDER) folder containing the input image $(FILE_NAME) basename of the input image $(FILE_EXTENSION) extension of the input image $(ID) the image id $(VERSION) the duplicate version number $(VERSION_IF_MULTI) same as $(VERSION) but null string if only one version exists $(VERSION_NAME) version name from metadata $(SEQUENCE) a sequence number within export job $(MAX_WIDTH) maximum image width to limit within export session $(MAX_HEIGHT) maximum image height to limit within export session $(YEAR) year at date of export $(MONTH) month at date of export $(DAY) day at date of export $(HOUR) hour at time of export $(MINUTE) minute at time of export $(SECOND) second at time of export $(EXIF_YEAR) Exif year $(EXIF_MONTH) Exif month $(EXIF_DAY) Exif day $(EXIF_HOUR) Exif hour $(EXIF_MINUTE) Exif minute $(EXIF_SECOND) Exif second $(EXIF_ISO) ISO value $(EXIF_EXPOSURE) Exif exposure $(EXIF_EXPOSURE_BIAS) Exif exposure bias $(EXIF_APERTURE) Exif aperture $(EXIF_FOCAL_LENGTH) Exif focal length $(EXIF_FOCUS_DISTANCE) Exif focus distance $(LONGITUDE) longitude $(LATITUDE) latitude $(ELEVATION) elevation $(STARS) star rating $(LABELS) colorlabels $(MAKER) camera maker $(MODEL) camera model $(LENS) lens $(TITLE) title from metadata $(DECRIPTION) description from metadata $(CREATOR) creator from metadata $(PUBLISHER) publisher from metadata $(RIGHTS) rights from metadata $(PICTURES_FOLDER) pictures folder $(HOME) home folder $(DESKTOP) desktop folder $(OPENCL) whether OpenCL is activated $(TAGS) tags list (Xmp.</description>
+    </item>
+    
+    <item>
+      <title>default module order</title>
+      <link>https://elstoc.github.io/dtdocs/special-topics/module-order/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/special-topics/module-order/</guid>
+      <description>The following sections describe the default module order in the new scene-referred workflow and the legacy display-referred workflow. Note that in the following sections the module order goes from top (input file) to bottom (output image).
+scene-referred module order The default ordering of modules when using the new scene-referred workflow is as follows:
+ raw black/white point invert white balance highlight reconstruction chromatic aberrations hot pixels raw denoise demosaic denoise (profiled) denoise (bilateral filter) rotate pixels scale pixels lens correction haze removal perspective correction orientation crop and rotate liquify spot removal retouch exposure local tone mapping tone equalizer graduated density unbreak input profile legacy equalizer input color profile negadoctor denoise (non-local means) color look up table defringe contrast equalizer lowpass highpass sharpen lut 3D color mapping channel mixer basic adjustments color balance rgb curve rgb levels base curve filmic (legacy) FILMIC RGB &amp;ndash; transition from scene-referred to display-referred space contrast brightness saturation tone curve levels shadows and highlights zone system global tonemap fill light local contrast color correction color contrast velvia vibrance color zones bloom colorize lowlight vision monochrome grain soften split-toning vignetting color reconstruction output color profile dithering framing watermark  key:</description>
+    </item>
+    
+  </channel>
+</rss>

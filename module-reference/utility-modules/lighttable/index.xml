@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lighttable on darktable user manual</title>
+    <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/</link>
+    <description>Recent content in lighttable on darktable user manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>export selected</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/export-selected/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/export-selected/</guid>
+      <description>Export images which have been selected in the lighttable.
+Files can be exported to a file on disk, email, various on-line storage locations, a webalbum, or a book template.
+You can also press Ctrl+E within the darkroom mode to export the currently-edited image using the last settings from this module.
+module controls  target storage The type of location to store your selected images. A number of different back-ends are implemented, including file on disk, a LaTeX book template and various web albums.</description>
+    </item>
+    
+    <item>
+      <title>geotagging</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/geotagging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/geotagging/</guid>
+      <description>Import and apply GPX track data to a selection of images.
+A GPS receiver calculates its current position based on the information it receives from satellites and records it in a GPX file – together with the current date and time. The Exif data of the images also contains a time stamp defined by the camera settings. The geotagging module takes the time stamp of the image, looks up the position in the GPX file at that time, and stores the appropriate coordinates (latitude/longitude/elevation) in its database and the image&amp;rsquo;s XMP sidecar file.</description>
+    </item>
+    
+    <item>
+      <title>history stack</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/history-stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/history-stack/</guid>
+      <description>Manipulate the history stack of one or more selected images.
+module controls  copy Copy the history stack of the selected image. A dialog appears within which you may choose which items from the history stack to include. If more than one image is selected, the history stack is taken from the image that was selected first. Double-clicking on an item copies that item only and immediately closes the dialog. copy all Copy the complete history stack from the selected image; all items will be included.</description>
+    </item>
+    
+    <item>
+      <title>import</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/import/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/import/</guid>
+      <description>Import images into film rolls.
+Images can be imported from the local filesystem or from a connected camera. See supported file formats for information about the file formats currently supported by darktable.
+import from filesystem You can import either a single image or a folder of images from the filesystem by clicking the relevant button. The imported image(s) will be automatically added to a film roll with the same name as the filesystem folder they are imported from.</description>
+    </item>
+    
+    <item>
+      <title>lua scripts installer (ToDo)</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>select</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/select/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/select/</guid>
+      <description>Select images in the lighttable according to simple criteria.
+module controls  select all Select all images in the current view (collection), with respect to the filters. select none De-select all images. invert selection Select all images that are not currently selected. select film roll Select all images that are in the same film roll as the currently selected images. select untouched Select all images that have not yet been developed.</description>
+    </item>
+    
+    <item>
+      <title>selected images</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/selected-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/selected-image/</guid>
+      <description>Perform actions on images that have been selected in the lighttable view.
+module controls  remove Remove the selected images from the darktable database. Removed images will not be shown in the lighttable view any more, but remain on the filesystem along with any XMP sidecar file. As darktable stores XMP files with your development parameters on disk, you can later fully reconstruct your work by re-importing the images. delete/trash Eliminate the selected images from the darktable database and remove any associated XMP sidecar files.</description>
+    </item>
+    
+    <item>
+      <title>styles</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/styles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/styles/</guid>
+      <description>Store an image&amp;rsquo;s history stack as a named style and apply styles to selected images.
+Styles can either be created within this panel or in the history stack module in the darkroom.
+A list of all available styles is displayed at the top of the module. A search field above the list allows you to input a text string which can be used to filter styles by their name or description.</description>
+    </item>
+    
+    <item>
+      <title>timeline</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/timeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/timeline/</guid>
+      <description>View your images by the date/time they were taken.
+In the lighttable filemanager view, you can show/hide the timeline module in the bottom panel with the shortcut Ctrl+F.
+Within the timeline, you can show the next and previous dates by scrolling your mouse; Ctrl+scroll to zoom in/out.
+You can also use timeline to select images by date range with mouse click+pan.</description>
+    </item>
+    
+  </channel>
+</rss>

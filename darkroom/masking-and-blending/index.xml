@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>masking and blending on darktable user manual</title>
+    <link>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/</link>
+    <description>Recent content in masking and blending on darktable user manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/overview/</guid>
+      <description>By default a module takes input from the preceding module, performs its operation on the image and hands the output over to the next module in the pixelpipe.
+A module&amp;rsquo;s output can optionally be reprocessed (combined) with its input before being handed to the next module. This additional processing step is called blending. Input and output are processed using algorithms called blending operators or blend modes.
+Each blend mode is further controlled by the opacity parameter, with a value between 0% and 100%, which defines how much the input and output images contribute to the final result.</description>
+    </item>
+    
+    <item>
+      <title>blend modes</title>
+      <link>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/blend-modes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/blend-modes/</guid>
+      <description>Blend modes define how the input and output of a module are combined (blended) together before a module&amp;rsquo;s final output is passed to the next module in the pixelpipe. Most of the blend modes should be familiar from other imaging software and are thoroughly discussed in the GIMP user manual.
+This section therefore only discusses some of the darktable-specific blend modes in detail.
+ normal The most commonly used blend mode, &amp;ldquo;normal&amp;rdquo; simply mixes input and output to an extent determined by the opacity parameter.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>image processing modules &amp; the pixelpipe on darktable user manual</title>
+    <link>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/</link>
+    <description>Recent content in image processing modules &amp; the pixelpipe on darktable user manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>the anatomy of a module</title>
+      <link>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-anatomy-of-a-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-anatomy-of-a-module/</guid>
+      <description>The basic element of image processing in darktable is a module. In order to process a raw image a number of modules act on the input image in sequence, each performing a different operation on the image.
+Every processing module executes independently in a similar manner:
+ Receive input data from the last executed module Perform some processing (the module&amp;rsquo;s operation) on the input data to generate the output data. The operation is what distinguishes individual darktable modules from one another.</description>
+    </item>
+    
+    <item>
+      <title>the pixelpipe and module order</title>
+      <link>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-pixelpipe-and-module-order/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-pixelpipe-and-module-order/</guid>
+      <description>The sequence of processing modules operating on an input file in a defined order to generate an output image is known as the &amp;ldquo;pixelpipe&amp;rdquo;.
+module order and workflows The order in which modules are executed within the pixelpipe has been carefully chosen to give the best output quality. In previous versions of darktable it was not possible to change the module order. However, there are a number of very specific use cases and workflows where the movement of some modules in the pipe is advised.</description>
+    </item>
+    
+    <item>
+      <title>the history stack</title>
+      <link>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/history-stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/history-stack/</guid>
+      <description>The history stack stores the entire editing history for a given image, in the order that those edits were applied. It is saved to darktable&amp;rsquo;s library database and XMP sidecar file and persists between editing sessions.
+Each time a processing module is enabled, disabled, moved or amended a new entry is added to the top of the history stack.
+The history stack can be queried and modified within the history stack module in the darkroom.</description>
+    </item>
+    
+    <item>
+      <title>undo and redo</title>
+      <link>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/undo-redo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/undo-redo/</guid>
+      <description>While you are editing your image, darktable records all of your changes to an image in the history stack. Thanks to this recording process it is possible to undo and redo changes to recover a previous editing state. Note that this undo/redo facility is unlimited in the number of steps while editing an image but it is reset each time the darkroom is switched to a new image.
+The default key shortcuts are:</description>
+    </item>
+    
+  </channel>
+</rss>
