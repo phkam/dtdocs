@@ -12,9 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-anatomy-of-a-module/</guid>
-      <description>The basic element of image processing in darktable is a module. In order to process a raw image a number of modules act on the input image in sequence, each performing a different operation on the image.
+      <description>The basic element of image processing in darktable is the module. In order to process a raw image a number of modules act on the input image in sequence, each performing a different operation on the image data.
 Every processing module executes independently in a similar manner:
- Receive input data from the last executed module Perform some processing (the module&amp;rsquo;s operation) on the input data to generate the output data. The operation is what distinguishes individual darktable modules from one another.</description>
+ Receive input data from the last executed module Perform some processing (the module&amp;rsquo;s operation) on the input data to generate the output data.</description>
     </item>
     
     <item>
@@ -23,8 +23,8 @@ Every processing module executes independently in a similar manner:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-pixelpipe-and-module-order/</guid>
-      <description>The sequence of processing modules operating on an input file in a defined order to generate an output image is known as the &amp;ldquo;pixelpipe&amp;rdquo;.
-module order and workflows The order in which modules are executed within the pixelpipe has been carefully chosen to give the best output quality. In previous versions of darktable it was not possible to change the module order. However, there are a number of very specific use cases and workflows where the movement of some modules in the pipe is advised.</description>
+      <description>The ordered sequence of processing modules operating on an input file to generate an output image is known as the &amp;ldquo;pixelpipe&amp;rdquo;.
+The order of the pixelpipe is represented graphically by the order in which modules are presented in the user interface &amp;ndash; the pixelpipe runs from the bottom to the top of the modules as they appear in the darkroom view (RAW image at the bottom of the pixelpipe and output image at the top).</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@ module order and workflows The order in which modules are executed within the pi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/history-stack/</guid>
-      <description>The history stack stores the entire editing history for a given image, in the order that those edits were applied. It is saved to darktable&amp;rsquo;s library database and XMP sidecar file and persists between editing sessions.
+      <description>The history stack stores the entire editing history for a given image, in the order in which those edits were applied. It is saved to darktable&amp;rsquo;s library database and the image&amp;rsquo;s XMP sidecar file and persists between editing sessions.
 Each time a processing module is enabled, disabled, moved or amended a new entry is added to the top of the history stack.
 The history stack can be queried and modified within the history stack module in the darkroom.</description>
     </item>
@@ -44,8 +44,8 @@ The history stack can be queried and modified within the history stack module in
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/undo-redo/</guid>
-      <description>While you are editing your image, darktable records all of your changes to an image in the history stack. Thanks to this recording process it is possible to undo and redo changes to recover a previous editing state. Note that this undo/redo facility is unlimited in the number of steps while editing an image but it is reset each time the darkroom is switched to a new image.
-The default key shortcuts are:</description>
+      <description>While you are editing your image, darktable records all of the modifications you make to that image. Thanks to this recording process it is possible to undo and redo changes to recover a previous editing state. Note that the undo/redo facility is unlimited in the number of steps while editing an image, but is reset each time the darkroom is switched to a new image.
+Press Ctrl+Z to undo the last modification and Ctrl+Y to redo the last undone modification (if any).</description>
     </item>
     
   </channel>

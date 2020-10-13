@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4016,15 +4068,17 @@
     <p>Adjust black, white and mid-gray points in RGB color space. This module is silmilar to the <a href="/dtdocs/module-reference/processing-modules/levels/"><em>levels</em></a> module, which works in Lab color space.</p>
 <p>The rgb levels tool shows a histogram of the image, and displays three bars with handles. Drag the handles to modify the black, middle-gray and white points in lightness (in &ldquo;RGB, linked channels&rdquo; mode) or independently for each of the R, G and B channels (in &ldquo;RGB, independent channels&rdquo; mode).</p>
 <p>Moving the black and white bars to match the left and right borders of the histogram will make the output image span the full available tonal range. This will increase the image&rsquo;s contrast.</p>
-<p>Moving the middle bar will modify the middle-gray tones. Shifting it left will make the image look brighter, shifting it right will make it darker. This is often referred to as changing the image&rsquo;s gamma.</p>
-<p>Three color pickers are available for sampling the black, white and gray points from the image.
-<em>N.B. Under certain conditions, especially with highly saturated blue light sources, the <em>levels</em> module may produce black pixel artifacts. See the &ldquo;gamut clipping&rdquo; option of the <a href="/dtdocs/module-reference/processing-modules/input-color-profile/">input color profile</a> module for information about how to mitigate this issue.</em></p>
+<p>Moving the middle bar will modify the middle-gray tones. Shifting it left will make the image look brighter, shifting it right will make it darker. This is often referred to as changing the image&rsquo;s &ldquo;gamma&rdquo;.</p>
+<p>Three color pickers are available for sampling the black, white and gray points from the image.</p>
+<hr>
+<p><strong>Note:</strong> Under certain conditions, especially with highly saturated blue light sources, the <em>levels</em> module may produce black pixel artifacts. See the &ldquo;gamut clipping&rdquo; option of the <a href="/dtdocs/module-reference/processing-modules/input-color-profile/"><em>input color profile</em></a> module for information about how to mitigate this issue.</p>
+<hr>
 <h1 id="module-controls">module controls</h1>
 <dl>
 <dt>mode</dt>
 <dd>The mode of operation. &ldquo;RGB, linked channels&rdquo; (default) provides a single levels tool which updates all channels, taking into account the selected color preservation method (see &ldquo;preserve colors&rdquo; below). &ldquo;RGB, independent channels&rdquo; provides separate levels controls for each of the R, G and B channels.</dd>
 <dt>auto</dt>
-<dd>Auto-adjust the black and white point and put the gray point exactly in the mean between them. Use the color picker to auto-adjust based on a selected area of the image.</dd>
+<dd>Auto-adjust the black and white point and put the gray point exactly in the mean between them. Use the color picker to auto-adjust based on a selected region of the image.</dd>
 <dt>preserve colors</dt>
 <dd>Choose a color preservation method when using &ldquo;RGB, linked channels&rdquo; mode (default &ldquo;luminance&rdquo;).</dd>
 </dl>

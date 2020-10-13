@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4014,11 +4066,11 @@
     </h1>
 
     <p>A convenience module that combines controls from <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a>, <a href="/dtdocs/module-reference/processing-modules/highlight-reconstruction/"><em>highlight reconstruction</em></a>, <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> and <a href="/dtdocs/module-reference/processing-modules/vibrance/"><em>vibrance</em></a> into a single module.</p>
-<p>While this module can provide a quick and convenient way to make simple adjustments to an image, it must be used with care. Normally exposure adjustments should come before <a href="/dtdocs/module-reference/processing-modules/input-color-profile/">input color profile</a> in the pixelpipe, and color adjustments should come after. Because the basic adjustments module combines all of these functions into a single operation in the pixelpipe, it may not play nicely with other modules. Therefore, if you plan to use basic adjustments with other modules, please instead consider using the <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a> + <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a> / <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> / <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/">filmic rgb</a> + <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> modules so that these operations occur in the correct places in the pixelpipe.</p>
+<p>While this module can provide a quick and convenient way to make simple adjustments to an image, it must be used with care. Normally exposure adjustments should come before <a href="/dtdocs/module-reference/processing-modules/input-color-profile/">input color profile</a> in the pixelpipe, and color adjustments should come after. Because the <em>basic adjustments</em> module combines all of these functions into a single operation in the pixelpipe, it may not play nicely with other modules. Therefore, if you plan to use <em>basic adjustments</em> with other modules, please instead consider using the <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a> + <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a> / <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> / <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/">filmic rgb</a> + <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> modules so that these operations occur in the correct places in the pixelpipe.</p>
 <h1 id="module-controls">module controls</h1>
 <dl>
 <dt>black level correction</dt>
-<dd>Equivalent to black level correction in the <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a> module, this slider defines the threshold at which dark gray values are cut off to pure black. Reducing this can bring some dark colors back into gamut. Increading this slider may appear to increase the contrast and pop of an image, but it can push dark colors out of gamut, and clipped data cannot be recovered further down the pixel pipe. To control the contrast in the shadows, it is better to use other modules such as <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> or <a href="/dtdocs/module-reference/processing-modules/levels/"><em>levels</em></a>, which mitigate these negative impacts further down the pixel pipeline.</dd>
+<dd>Equivalent to black level correction in the <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a> module, this slider defines the threshold at which dark gray values are cut off to pure black. Reducing this can bring some dark colors back into gamut. Increasing this slider may appear to increase the contrast and pop of an image, but it can push dark colors out of gamut, and clipped data cannot be recovered further down the pixel pipe. To control the contrast in the shadows, it is better to use other modules such as <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> or <a href="/dtdocs/module-reference/processing-modules/levels/"><em>levels</em></a>, which mitigate these negative impacts further down the pixel pipeline.</dd>
 <dt>exposure</dt>
 <dd>Adjust exposure compensation. Adding 1 EV of exposure compensation is equivalent to doubling the exposure time in camera, opening the aperture by 1 stop, or doubling the ISO.</dd>
 <dd>
@@ -4036,15 +4088,15 @@
 <dt>middle grey</dt>
 <dd>Set the fulcrum point for the <em>contrast</em> slider. This is equivalent to the <em>contrast fulcrum</em> slider on the <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> module. If the contrast slider is set to <code>0</code> this slider will not have any effect.</dd>
 <dt>brightness</dt>
-<dd>Equivalent to increasing the <em>gamma factor</em> slider in the <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> module. Moving the slider to the right will increase the brightness of the image, with an emphasis on brightening the mid-tones of the image.</dd>
+<dd>Equivalent to increasing the <em>gamma factor</em> slider in the <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> module. Moving the slider to the right will increase the brightness of the image, with an emphasis on the mid-tones.</dd>
 <dt>saturation</dt>
 <dd>Equivalent to the <em>output saturation</em> slider on the <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> module, this slider affects the saturation, or brilliance and intensity of the colors. Moving the slider to the right will increase the amount of color in the image; moving the slider to the left will reduce the amount of color in the image.</dd>
 <dt>vibrance</dt>
-<dd>Accentuate the colors of the image without adding unnatural colors, as it&rsquo;s often the case with the Saturation slider. It works by reducing the lightness of already saturated pixels to make the colors more vivid. You can also achieve some interesting effects by combining it with the saturation slider to target more or less saturationed areas of the image.</dd>
+<dd>Accentuate the colors of the image without adding unnatural colors, as it&rsquo;s often the case with the <em>saturation</em> slider. It works by reducing the lightness of already saturated pixels to make the colors more vivid. You can also achieve some interesting effects by combining it with the saturation slider to target more or less saturated areas of the image.</dd>
 <dt>auto</dt>
-<dd>Automatically adjust the exposure of an image, taking into acount the entire image. Use the color picker to select a rectangular area of the image &ndash; the exposure will be automatically adjusted based on the selected region. This allows you to prioritise which parts of the image should be well-exposed.</dd>
+<dd>Automatically adjust the exposure, taking into account the entire image, or use the color picker to select a rectangular area of the image &ndash; the exposure will be automatically adjusted based on the selected region. This allows you to prioritise which parts of the image should be well-exposed.</dd>
 <dt>clip</dt>
-<dd>This affects the number of pixels that will be clipped to back or white during the auto-exposure calculation. Moving this slider to the right will allow more pixels to be clipped and increase the contrast; moving this slider to the left will compress the image more and lower the contrast.</dd>
+<dd>This affects the number of pixels that will be clipped to black or white during the auto-exposure calculation. Moving this slider to the right will allow more pixels to be clipped and increase the contrast; moving this slider to the left will compress the image more and lower the contrast.</dd>
 </dl>
 
 

@@ -54,9 +54,8 @@ You can navigate through the images using the arrow keys (←/→/↑/↓) or by
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/module-header/</guid>
       <description>At the top of each image operation module is the module header.
-IMAGE HERE
-Click on the module header to expand the module and display the parameters that control its operation.
-By default darktable will only allow one processing module to be expanded at a time. If you click the header of another module, the previous module controls are collapsed. If you want to see more than one module expanded, you may expand further modules with Shift+click: all previously expanded modules will remain open.</description>
+ Click on the module name to expand the module and display the parameters that control its operation.
+By default darktable will only allow one processing module to be expanded at a time &amp;ndash; if you click the header of another module, the previously-opened module&amp;rsquo;s controls are collapsed. If you want expand more than one module, you may expand further modules with Shift+click and all previously expanded modules will remain open.</description>
     </item>
     
     <item>
@@ -76,9 +75,8 @@ The following sections explain how to construct masks in darktable.</description
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/overview/</guid>
-      <description>By default a module takes input from the preceding module, performs its operation on the image and hands the output over to the next module in the pixelpipe.
-A module&amp;rsquo;s output can optionally be reprocessed (combined) with its input before being handed to the next module. This additional processing step is called blending. Input and output are processed using algorithms called blending operators or blend modes.
-Each blend mode is further controlled by the opacity parameter, with a value between 0% and 100%, which defines how much the input and output images contribute to the final result.</description>
+      <description>By default each module takes its input from the preceding module in the pixelpipe, performs its operation on the image data, and hands the output over to the next module in the pixelpipe.
+A module&amp;rsquo;s output data can optionally be reprocessed (combined) with its input data before being handed to the next module. This additional processing step is called blending. Input and output data is reprocessed using algorithms called blending operators or blend modes.</description>
     </item>
     
     <item>
@@ -111,7 +109,7 @@ While the mouse is over an image thumbnail or images are selected, there are a n
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/lua/usage/overview/</guid>
-      <description>Lua scripts can be used to define actions that darktable will perform whenever a specified event is triggered. One example might be calling an external application during file export in order to apply additional processing steps outside of darktable.
+      <description>Lua scripts can be used to define actions for darktable to perform when an event is triggered. One example might be calling an external application during file export in order to apply additional processing steps outside of darktable.
 Lua is an independent project founded in 1993, providing a powerful, fast, lightweight, embeddable scripting language. Lua is widely used by many open source applications, in commercial programs, and for games programming.</description>
     </item>
     
@@ -132,8 +130,8 @@ Even if your camera doesn&amp;rsquo;t support this feature, there is an alternat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/overview/</guid>
-      <description>darktable comes with a number of user-configurable preferences. These can be adjusted in the preferences dialog, which can be reached by clicking the gear icon on the right of the top panel.
-Any altered settings (i.e. those that differ from their default state) are highlighted. Double click on a setting&amp;rsquo;s label to reset to the default value.</description>
+      <description>darktable comes with a number of user-configurable preferences. These can be adjusted in the preferences dialog, which can be reached by clicking the gear icon on the right of the top panel. Preferences are separated into tabs, each of which is described in more detail in the following sections.
+When opened from within the lighttable or darkroom views, the appropriate tab will be loaded by default to allow you to modify that view&amp;rsquo;s settings.</description>
     </item>
     
     <item>
@@ -153,7 +151,8 @@ This module supports the printer&amp;rsquo;s ICC profile which is somewhat manda
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/slideshow/overview/</guid>
-      <description>The slideshow view allows you to view a slideshow of your current collection. Entering the slideshow view will start the slideshow of the images, using the currently selected collection with the associated filtering rules and sort order applied. To learn more on how to define the collection and the associated filtering rules, see the section on collections. Select the sort criterion and sort order of the images in the top panel.</description>
+      <description>The slideshow view allows you to watch a slideshow of your current collection. Entering the slideshow view will start the slideshow, using the currently selected collection with the associated filtering rules and sort order applied. To learn more about how to define the collection and filtering rules, see the section on collections. Select the sort criteria and sort order of the images in the top panel.
+The image display is optimized to take full advantage of your screen size.</description>
     </item>
     
     <item>
@@ -182,8 +181,8 @@ This module supports the printer&amp;rsquo;s ICC profile which is somewhat manda
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/tethering/overview/</guid>
-      <description>The tethering view allows you to capture images directly into darktable from your connected camera.
-To use the tethering feature you need to connect your camera to your PC using a USB cable. Your computer might ask to mount or view the connected camera. Do not mount or view the camera. If your camera is mounted or viewed automatically, you will need to “unmount/eject” the camera. This unlocks the camera so that darktable can take control of it &amp;ndash; darktable will then re-lock the camera so that it cannot be used by other applications.</description>
+      <description>The tethering view allows you to capture images directly into darktable from a connected camera.
+To use the tethering feature you need to connect your camera to your PC using a USB cable. Your computer might ask to mount or view the connected camera. Do not mount or view the camera. If your camera is mounted or viewed automatically, you will need to “unmount/eject” the camera before darktable can access it.</description>
     </item>
     
     <item>
@@ -201,9 +200,9 @@ To use the tethering feature you need to connect your camera to your PC using a 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-anatomy-of-a-module/</guid>
-      <description>The basic element of image processing in darktable is a module. In order to process a raw image a number of modules act on the input image in sequence, each performing a different operation on the image.
+      <description>The basic element of image processing in darktable is the module. In order to process a raw image a number of modules act on the input image in sequence, each performing a different operation on the image data.
 Every processing module executes independently in a similar manner:
- Receive input data from the last executed module Perform some processing (the module&amp;rsquo;s operation) on the input data to generate the output data. The operation is what distinguishes individual darktable modules from one another.</description>
+ Receive input data from the last executed module Perform some processing (the module&amp;rsquo;s operation) on the input data to generate the output data.</description>
     </item>
     
     <item>
@@ -227,7 +226,7 @@ darktable&amp;rsquo;s requirements are no exception. All calculations are perfor
     </item>
     
     <item>
-      <title>basic principles -- luarc files</title>
+      <title>basic principles: luarc files</title>
       <link>https://elstoc.github.io/dtdocs/lua/usage/basic-principles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -306,7 +305,7 @@ Each change you make to the image in the darkroom is turned into a history stack
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/general/</guid>
       <description>The preferences in this tab control the overall look and feel of darktable.
- interface language Set the language of the user interface. the system default is marked with an * (needs a restart) theme Set the theme for the user interface. Apart from any aesthetic considerations, the recommended interface color for color evaluation is middle grey. Indeed, visual perception is affected by ambient brightness, and a low brightness of the interface causes all kinds of illusions.</description>
+ interface language Set the language of the user interface. The system default is marked with an * (needs a restart) theme Set the theme for the user interface. Apart from any aesthetic considerations, the recommended interface color for color evaluation is middle grey. Indeed, visual perception is affected by ambient brightness, and a low brightness of the interface causes all kinds of illusions.</description>
     </item>
     
     <item>
@@ -372,7 +371,7 @@ Each change you make to the image in the darkroom is turned into a history stack
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/multiple-instances/</guid>
-      <description>Many of darktable&amp;rsquo;s modules can be applied more than once in the pixelpipe. Each instance of a module behaves like any other module, taking its input from the module below in the pixelpipe delivering its output to the module above.
+      <description>Many of darktable&amp;rsquo;s modules can be applied more than once in the pixelpipe. Each instance of a module behaves independently, taking its input from the module below in the pixelpipe delivering its output to the module above.
 As with the base instance of a module, all instances can be moved independently within the pixelpipe either by holding Ctrl+Shift while dragging &amp;amp; dropping or by choosing &amp;ldquo;move up&amp;rdquo; or &amp;ldquo;move down&amp;rdquo; in the multiple instances drop-down menu.</description>
     </item>
     
@@ -423,8 +422,8 @@ In order for darktable to consider a file for import, it must have one of the fo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-pixelpipe-and-module-order/</guid>
-      <description>The sequence of processing modules operating on an input file in a defined order to generate an output image is known as the &amp;ldquo;pixelpipe&amp;rdquo;.
-module order and workflows The order in which modules are executed within the pixelpipe has been carefully chosen to give the best output quality. In previous versions of darktable it was not possible to change the module order. However, there are a number of very specific use cases and workflows where the movement of some modules in the pipe is advised.</description>
+      <description>The ordered sequence of processing modules operating on an input file to generate an output image is known as the &amp;ldquo;pixelpipe&amp;rdquo;.
+The order of the pixelpipe is represented graphically by the order in which modules are presented in the user interface &amp;ndash; the pixelpipe runs from the bottom to the top of the modules as they appear in the darkroom view (RAW image at the bottom of the pixelpipe and output image at the top).</description>
     </item>
     
     <item>
@@ -444,8 +443,8 @@ left panel  collect images Filter the list of images displayed in the lighttable
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/slideshow/usage/</guid>
-      <description>The slideshow view is in an early stage of development with a basic set of features.
-F11 toggle full-screen mode. + or increase delay between each image. up arrow - or decrease delay between each image. down arrow left-click or switch to the next image of the collection. right arrow or shift+right arrow right-click or switch to the previous image of the collection. left arrow or shift+left arrow spacebar start and stop auto-advance mode which automatically switches to the next images every five seconds by default.</description>
+      <description>The slideshow view is in an early stage of development with only a basic set of features.
+F11 toggle full-screen mode. + or increase delay between each image. up arrow - or decrease delay between each image. down arrow left-click or right arrow or switch to the next image of the collection. shift+right arrow right-click or left arrow or switch to the previous image of the collection. shift+left arrow spacebar start and stop auto-advance mode which automatically switches to the next images every five seconds by default.</description>
     </item>
     
     <item>
@@ -455,7 +454,7 @@ F11 toggle full-screen mode. + or increase delay between each image. up arrow - 
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/darktable-chart/usage/</guid>
       <description>The tool is organized into three tabs in the upper part and a text output frame in the lower part.
-The first tab is used to define the source image, the second tab defines the reference (target) and the third tab contains the controls to generate the resulting darktable style.</description>
+ The first tab is used to define the source image, the second tab defines the reference (target) and the third tab contains the controls to generate the resulting darktable style.</description>
     </item>
     
     <item>
@@ -464,8 +463,8 @@ The first tab is used to define the source image, the second tab defines the ref
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/zoomable-lighttable/</guid>
-      <description>Zoomable lighttable mode inherits most of its features from the filemanager mode, with some notable changes.
-Scroll with your mouse wheel to zoom in and out. Move the mouse while pressing the left mouse button to navigate through your collection.</description>
+      <description>The zoomable lighttable mode provides an easy and intuitive way to navigate large collections of images.
+If you are trying to find something quickly in a collection, this mode allows you to zoom out so that you can see a large number of thumbnails, then you can move the lighttable around to browse them. When you spot something, you can easily zoom in to check if that is really what you were looking for and, if not, zoom out again and keep looking.</description>
     </item>
     
     <item>
@@ -475,7 +474,7 @@ Scroll with your mouse wheel to zoom in and out. Move the mouse while pressing t
       
       <guid>https://elstoc.github.io/dtdocs/lua/usage/a-simple-example/</guid>
       <description>Let&amp;rsquo;s start with a simple example which will print some code on the console. Create a file called luarc in darktable&amp;rsquo;s configuration directory (usually $HOME/.config/darktable/) and add the following line to it:
-print(&amp;quot;Hello World !&amp;quot;) Start darktable and you will see the sentence Hello World ! printed on the console. Nothing fancy but it&amp;rsquo;s a start.
+print(&amp;quot;Hello World !&amp;quot;) Start darktable and you will see the sentence &amp;ldquo;Hello World !&amp;rdquo; printed on the console. Nothing fancy but it&amp;rsquo;s a start.
 At this point, there is nothing darktable-specific in the script. We simply use Lua&amp;rsquo;s standard print function to print a string.</description>
     </item>
     
@@ -547,7 +546,7 @@ The filmstrip allows you to interact with images while you are not in the lightt
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/import/</guid>
-      <description>This tab contains options related to importing images into darktable using the import module.
+      <description>This tab contains a number of default settings for the lighttable import module.
 import  ignore JPEG images when importing film rolls When you have RAW+JPEG images together in one directory it usually doesn&amp;rsquo;t make sense to import both. Set this flag to ignore all JPEGs when importing images (default off). recursive directory traversal when importing film rolls When importing images from a folder, also recursively import images from its sub-folders.</description>
     </item>
     
@@ -577,8 +576,8 @@ For each data channel of a module (Lab, RGB) and several virtual data channels (
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/presets/</guid>
-      <description>Presets allow you to store commonly used module settings for future use. Some modules already come with pre-defined presets but you can also define your own. Both internal and user-defined presets can be shown by clicking the presets menu in the module header.
-the presets menu The presets menu will contain one or more of the following entries depending on the presets that are defined or selected for the module:</description>
+      <description>Presets allow you to store commonly used module settings for future use. Some modules already come with pre-defined presets and you may also define your own. Both internal and user-defined presets can be shown by clicking the presets menu in the module header.
+the presets menu The presets menu will contain one or more of the following entries depending on what presets are defined or selected for the current module:</description>
     </item>
     
     <item>
@@ -606,7 +605,7 @@ You can change the default method in preferences -&amp;gt;processing -&amp;gt; a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/history-stack/</guid>
-      <description>The history stack stores the entire editing history for a given image, in the order that those edits were applied. It is saved to darktable&amp;rsquo;s library database and XMP sidecar file and persists between editing sessions.
+      <description>The history stack stores the entire editing history for a given image, in the order in which those edits were applied. It is saved to darktable&amp;rsquo;s library database and the image&amp;rsquo;s XMP sidecar file and persists between editing sessions.
 Each time a processing module is enabled, disabled, moved or amended a new entry is added to the top of the history stack.
 The history stack can be queried and modified within the history stack module in the darkroom.</description>
     </item>
@@ -627,7 +626,7 @@ thumbnail creation Thumbnails are created whenever an image is imported into dar
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/lighttable/undo-redo/</guid>
-      <description>Most changes made within the lighttable are recorded and can be reverted to a previous state. This includes modifications to color labels, ratings, geo-localization, tags, metadata, copy/paste of history, or application of a style. Note that the facility to undo/redo actions is unlimited in the number of steps while in the lighttable view, but it is reset each time you switch to a different view.
+      <description>Most changes made within the lighttable are recorded and can be reverted to a previous state. This includes modifications to color labels, ratings, geo-localization, tags, metadata, orientation, copy/paste of history, or application of a style. Note that the facility to undo/redo actions is unlimited in the number of steps while in the lighttable view, but it is reset each time you switch to a different view.
 Press Ctrl+Z to undo the last modification and Ctrl+Y to redo the last undone modification (if any).</description>
     </item>
     
@@ -669,8 +668,8 @@ The display-referred workflow places more emphasis on performing image processin
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/lighttable/</guid>
-      <description>The following options control functionality in the lighttable view and associated modules.
- color manage cached thumbnails If activated darktable generates thumbnails in a general color space (AdobeRGB) in order to render them independently of the individual monitor. Conversion to the monitor color space is undertaken at display time. If this option is not activated thumbnails are stored directly in the specific monitor color space at generation time and are subsequently displayed without further corrections (default on).</description>
+      <description>The following options control functionality in the lighttable view and modules.
+ color manage cached thumbnails If activated, darktable generates thumbnails in a general color space (AdobeRGB) in order to render them independently of the individual monitor. Conversion to the monitor color space is undertaken at display time. If this option is not activated thumbnails are stored directly in a monitor-specific color space at generation time and are subsequently displayed without further corrections (default on).</description>
     </item>
     
     <item>
@@ -679,8 +678,8 @@ The display-referred workflow places more emphasis on performing image processin
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/module-controls/</guid>
-      <description>sliders Sliders offer five different ways of interaction, depending on the level of control you require.
- left-click Click anywhere in the slider area to set the value. You can also click and drag to change it. You don&amp;rsquo;t have to aim for the triangle or even the line - you may click anywhere in the entire height of the slider including the label. mouse wheel Hover over the slider with your mouse, then use your mouse wheel to adjust the value.</description>
+      <description>sliders Sliders offer five different methods of interaction, depending on the level of control you require.
+ left-click Click anywhere in the slider area to set the value. You can also click and drag to change it. You don&amp;rsquo;t have to aim for the triangle or even the line - you can click anywhere in the entire height of the slider including the label. mouse wheel Hover over the slider with your mouse, then use your mouse wheel to adjust the value.</description>
     </item>
     
     <item>
@@ -752,7 +751,7 @@ star ratings You can give an image a rating from zero to five stars. The quality
       <guid>https://elstoc.github.io/dtdocs/tethering/troubleshooting/</guid>
       <description>This troubleshooting guide will provide you with some steps to verify whether your camera can be used with tethering. This is done using the gphoto2 command-line tools. This is what darktable uses to interface with your camera.
 Find your camera port name to use it in the following tests. Usually the port usb: will be enough and therefore is used in these examples.
-verify that your camera is detected The following command will verify a camera that is connected to the computer and detected by gphoto2.</description>
+is your camera detected? The following command will verify that your camera is connected to the computer and detected by gphoto2.</description>
     </item>
     
     <item>
@@ -761,8 +760,8 @@ verify that your camera is detected The following command will verify a camera t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/undo-redo/</guid>
-      <description>While you are editing your image, darktable records all of your changes to an image in the history stack. Thanks to this recording process it is possible to undo and redo changes to recover a previous editing state. Note that this undo/redo facility is unlimited in the number of steps while editing an image but it is reset each time the darkroom is switched to a new image.
-The default key shortcuts are:</description>
+      <description>While you are editing your image, darktable records all of the modifications you make to that image. Thanks to this recording process it is possible to undo and redo changes to recover a previous editing state. Note that the undo/redo facility is unlimited in the number of steps while editing an image, but is reset each time the darkroom is switched to a new image.
+Press Ctrl+Z to undo the last modification and Ctrl+Y to redo the last undone modification (if any).</description>
     </item>
     
     <item>
@@ -782,7 +781,7 @@ darktable = require &amp;quot;darktable&amp;quot; local function hello_shortcut(
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/curves/</guid>
       <description>Three image processing modules (base curve, tone curve and rgb curve) use curves to control the tones in the image. These modules have some common features that deserve separate discussion.
-nodes In their default state, curves are straight lines, defined by two anchor nodes. You can move the nodes to modify the curve or generate new nodes by clicking on the curve. With Ctrl+click you can generate a new node at the x-location of the mouse pointer and the corresponding y-location of the current curve &amp;ndash; this adds a node without the risk of accidentally modifying the curve.</description>
+ nodes In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve.</description>
     </item>
     
     <item>
@@ -801,7 +800,7 @@ nodes In their default state, curves are straight lines, defined by two anchor n
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/color-management/color-spaces/</guid>
-      <description>darktable&amp;rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera raws. Both represent colors by a combination of red, green and blue. For the most part darktable&amp;rsquo;s modules act in the CIELAB color space (often just called “Lab”) which describes color as a combination of lightness data (L) and a point in the a-b color plane. The final output of the image processing pipeline is once again in RGB, either shaped for the monitor display or for the output file.</description>
+      <description>darktable&amp;rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera raws. Both represent colors by a combination of red, green and blue. Most of the actual image processing takes place in a large RGB &amp;ldquo;working profile&amp;rdquo; space, with some (mostly older) modules internally working in the CIELAB color space (often just called “Lab”). The final output of the image processing pipeline is once again in an RGB space shaped for either monitor display or the output file.</description>
     </item>
     
     <item>
@@ -850,7 +849,7 @@ Press the H button in any darktable view to show a list of all shortcuts that ar
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/refinement-controls/</guid>
       <description>When a parametric or drawn mask is active, several additional sliders are shown which allow the mask to be further refined.
- feathering guide Mask feathering smoothes a drawn or parametric mask such that the mask&amp;rsquo;s edges automatically align with the edges of features in the image. The smoothing is guided either by the module&amp;rsquo;s input or output (before blending), depending on what is selected in the “feathering guide” combobox. Feathering is particularly sensitive to this choice when used with edge-modifying modules (modules for sharpening or blurring an image).</description>
+ feathering guide Mask feathering smooths a drawn or parametric mask such that the mask&amp;rsquo;s edges automatically align with the edges of features in the image. The smoothing is guided either by the module&amp;rsquo;s input or output (before blending), depending on whether you select &amp;ldquo;input image&amp;rdquo; or &amp;ldquo;output image&amp;rdquo; in the “feathering guide” combobox.</description>
     </item>
     
     <item>
@@ -870,7 +869,7 @@ There can be various reasons why OpenCL might fail during the initialization pha
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/darktable-chart/process/</guid>
       <description>If all of the required settings in the “source image” and “reference values” tabs are ready you can move on to the “process” tab.
-First, you need to tell darktable-chart which of the patches represents the gray ramp. In the screenshot displayed above, the gray ramp is positioned in the lower part of the color reference chart, denoted as “GS00&amp;hellip;GS23”.
+ First, you need to tell darktable-chart which of the patches represents the gray ramp. In the screenshot displayed above, the gray ramp is positioned in the lower part of the color reference chart, denoted as “GS00&amp;hellip;GS23”.
 The “number of final patches” input defines how many editable color patches the resulting style will use within the color look up table module.</description>
     </item>
     
@@ -880,7 +879,7 @@ The “number of final patches” input defines how many editable color patches 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/</guid>
-      <description>Wavelets are a technique used in image processing to separate an image into a number of layers, each containing a different level of detail. After decomposing an image in this way, a processing module can limit its processing to one or more of those layers, and then piece the image back together again at the end. This allows us to be surgical about which features in the image we wish to impact when working with a module.</description>
+      <description>Wavelets are a technique used in image processing to separate (or decompose) an image into a number of distinct layers, each containing a different level of detail. After decomposing an image in this way, a module can limit its processing to one or more of these detail layers, and then piece the layers back together again at the end to form its output image. This allows us to be surgical about which features in the image we wish to impact when working with a module.</description>
     </item>
     
     <item>
@@ -949,17 +948,19 @@ map / geolocalisation  maximum number of images drawn on map The maximum number 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/raster/</guid>
-      <description>As described in the previous sections, the final output of a module&amp;rsquo;s mask (the combined effect of any drawn and parameteric masks) is a greyscale raster image representing the extent to which the module should be applied to each pixel. This raster image is stored internally for active modules and can be subsequently reused within other modules in the pixelpipe.
+      <description>As described in the previous sections, the final output of a module&amp;rsquo;s mask (the combined effect of any drawn and parameteric masks) is a greyscale raster image representing the extent to which the module&amp;rsquo;s effect should be applied to each pixel. This raster image is stored internally for active modules and can be subsequently reused within other modules in the pixelpipe.
 As with any mask, if the value for a pixel in a raster mask is zero the input to the module is passed in the module&amp;rsquo;s output unchanged.</description>
     </item>
     
     <item>
-      <title>searching for and grouping modules (ToDo)</title>
+      <title>searching and grouping modules</title>
       <link>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/</guid>
-      <description>Summarise the ways in which modules can be grouped (module groups) and searched.</description>
+      <description>At the top of the right-hand panel in the darkroom view is a module that allows you to search for and select from pre-defined groups of processing modules:
+ The appearance of the module groups and search functionality can be modified in preferences -&amp;gt; darkroom -&amp;gt; show module groups and/or search text entry. Here, you can choose to show only the module groups, only the search entry, or both.
+groups Click on one of the module group icons above the search module textbox to see all of the modules which belong to that group.</description>
     </item>
     
     <item>
@@ -1030,7 +1031,7 @@ In order to obtain profiling info you need to start darktable from a terminal wi
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/processing/</guid>
       <description>The following options control how images are processed.
- always use LittleCMS 2 to apply output color profile If this option is activated, darktable will use the LittleCMS 2 system library instead of its own internal routines. This is significantly slower than the default but might give more accurate results in some cases (default off).  Note that if the given ICC is LUT-based or contains both a LUT and a matrix, darktable will use LittleCMS 2 to render the colors regardless of this configuration parameter&amp;rsquo;s value.</description>
+ always use LittleCMS 2 to apply output color profile If this option is activated, darktable will use the LittleCMS 2 system library to apply the output color profile instead of its own internal routines. This is significantly slower than the default but might give more accurate results in some cases. If the given ICC is LUT-based or contains both a LUT and a matrix, darktable will use LittleCMS 2 to render the colors regardless of this configuration parameter&amp;rsquo;s value (default off).</description>
     </item>
     
     <item>
@@ -1080,7 +1081,7 @@ If the Lua call results in an error, the DBus method call will return an error o
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/cpu-gpu-memory/</guid>
       <description>This preference tab contains mostly performance-related settings:
- memory in megabytes to use for thumbnail cache In order to speed-up display of film rolls, darktable stores thumbnails in a cache file on disk (primary cache) and loads it into memory at startup. This setting controls the cache size in megabytes. It needs a restart if changed (default 256MB). enable disk backend for thumbnail cache If activated, darktable stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they get dropped from the primary cache.</description>
+ memory in megabytes to use for thumbnail cache In order to speed-up the display of film rolls, darktable stores image thumbnails in a cache file on disk (primary cache) and loads it into memory at startup. This setting controls the size of the cache in megabytes. It needs a restart if changed (default 256MB). enable disk backend for thumbnail cache If activated, darktable stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they get dropped from the primary cache.</description>
     </item>
     
     <item>
@@ -1140,8 +1141,8 @@ As an example, the following program will print the list of all images in your l
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/shortcuts/</guid>
       <description>Much of the functionality of darktable can be accessed via shortcuts using the keyboard or keyboard/mouse combinations. These shortcuts are user-configurable via the shortcuts tab.
-Many of the key shortcuts are provided with default values but most must be configured by the user. Any key may be used for a keyboard shortcut, and may be modified with one or more of Shift, Control or Alt.
-When you open the shortcuts tab you are initially presented with a hierarchical list of all actions that can receive a keyboard shortcut.</description>
+Many important shortcut actions are provided with default key combinations, but most must be manually configured by the user. Any key may be used for a keyboard shortcut, and may be combined with the Shift, Control or Alt modifier keys (or any combination thereof).
+When you open the shortcuts tab you are initially presented with a hierarchical list of all actions that can be applied with a keyboard shortcut.</description>
     </item>
     
     <item>
@@ -1160,7 +1161,7 @@ Pre-defined presets (those that are included by default within darktable) are sh
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/lua-options/</guid>
-      <description> lua scripts installer don&amp;rsquo;t show again Check this box to not show the lua scripts installer in the lighttable if no lua scripts are installed  </description>
+      <description> lua scripts installer don&amp;rsquo;t show again Check this box to hide the lua scripts installer in the lighttable if no lua scripts are installed.  </description>
     </item>
     
     <item>
@@ -1211,9 +1212,8 @@ This can include sequence, bracket and delayed captures. You are also able to co
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/channel-mixer/</guid>
       <description>A simple yet powerful tool to manage color channels.
-This module accepts red, green and blue channels as an input and provides red, green, blue, gray, hue, saturation and lightness channels as output.
-matrix multiplication You can think of the channel mixer as a type of matrix multiplication between a 3x3 matrix and the input [R G B] values.
-┌ R_out ┐ ┌ Rr Rg Rb ┐ ┌ R_in ┐ │ G_out │ = │ Gr Gg Gb │ X │ G_in │ └ B_out ┘ └ Br Bg Bb ┘ └ B_in ┘ If, for example, you&amp;rsquo;ve been given a matrix to transform from one color space to another, you can enter the matrix coefficients into channel mixer as follows:</description>
+This module accepts red, green and blue channels as an input and provides red, green, blue, gray, hue, saturation and lightness channels as output. It allows you to independently control how much each input channel contributes to each output channel.
+RGB matrix multiplication You can think of the channel mixer as a type of matrix multiplication between a 3x3 matrix and the input [R G B] values.</description>
     </item>
     
     <item>
@@ -1223,8 +1223,8 @@ matrix multiplication You can think of the channel mixer as a type of matrix mul
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/chromatic-aberrations/</guid>
       <description>Correct chromatic aberrations.
-The underlying model assumes as input an uncropped photographic image. The module is therefore likely to fail when you zoom in, as in that case it will only operate the visible portion of the image. This limitation only applies to interactive work and not to the final export.
-This module currently only works for images recorded with a Bayer sensor (which is the sensor used in the majority of cameras).</description>
+The underlying model assumes as input an uncropped photographic image. The module is therefore likely to fail when you zoom in, as it is only able to operate on the visible portion of the image. This limitation only applies to interactive work and not to the final export.
+This module currently only works for images recorded with a Bayer sensor (the sensor used in the majority of cameras).</description>
     </item>
     
     <item>
@@ -1233,7 +1233,7 @@ This module currently only works for images recorded with a Bayer sensor (which 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/clipping/</guid>
-      <description>When we send an image to a display device, we normally represent each color pixels as a set of 3 numbers, representing the intensity of the red, green and blue primary colors in the output color space that, when we mix them togather, produce the appropriate color of that pixel. Because the output color space is normally closely related to play ardware with physical limations, the output color space will have a maximum value allowed for the [R,G,B] channels representing maximum intensity, and there will also be a minimum value below which anything gets mapped to zero.</description>
+      <description>When an image is sent to a display device, each pixel is normally represented as a set of 3 numbers, representing the intensity of the red, green and blue primary colors in the output color space. Because the output color space is usually closely related to hardware with physical limations, there is a maximum permitted value for the [R,G,B] channels, representing the maximum available intensity for that color space. Similarly, there is also a minimum value below which pixel values will be mapped to zero.</description>
     </item>
     
     <item>
@@ -1243,17 +1243,17 @@ This module currently only works for images recorded with a Bayer sensor (which 
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/collect-images/</guid>
       <description>Filter the images shown in the lighttable view and filmstrip panel using image attributes. This set of filtered images is known as a collection.
-All images imported imported into darktable are stored in darktable&amp;rsquo;s library database, along with attributes describing each image. A collection may be defined by applying filtering rules to these attributes, thus creating a subset of images to display in the lighttable view and filmstrip panel.
-The default collection is based on the film roll attribute and displays all images of the last imported or selected film roll.</description>
+All images imported imported into darktable are stored in darktable&amp;rsquo;s library database, along with attributes describing each image. A collection may be defined by applying filtering rules to these attributes, thus creating a subset of images to display in the lighttable view and the filmstrip module.</description>
     </item>
     
     <item>
-      <title>color assessment (ToDo)</title>
+      <title>color assessment</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/</guid>
-      <description></description>
+      <description>When developing an image, the way we perceive brightness, contrast and saturation is influenced by the surrounding ambient conditions. If an image is displayed against a dark background, as with the default theme in darktable, it can have the a number of adverse effects on our perception of that image:
+ Exaggeration of the perceived exposure makes the image seems brighter than it really is. This is nicely illustrated by the Adelson checkerboard shadow effect.</description>
     </item>
     
     <item>
@@ -1262,7 +1262,8 @@ The default collection is based on the film roll attribute and displays all imag
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-balance/</guid>
-      <description>A versatile tool for adjusting the image&amp;rsquo;s color balance. It can be used to revert parasitic color casts or to enhance the visual atmosphere of a picture using color grading, a popular technique in the cinema industry.
+      <description>A versatile tool for adjusting the image&amp;rsquo;s color balance.
+This module can be used to revert parasitic color casts or to enhance the visual atmosphere of an image using color grading, a popular technique in the cinema industry.
 overview The color balance module allows you to shift colors selectively by luminance range: shadows, mid-tones, and highlights. It does so using two different methods:
  lift, gamma, gain the classic method, which allows a more separated control of shadows versus highlights.</description>
     </item>
@@ -1315,16 +1316,18 @@ Two steps are required to use this module:
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-reconstruction/</guid>
       <description>Recover color information in blown-out highlights.
-Due to the nature of digital sensors, overexposed highlights lack valid color information. Most frequently they appear neutral white or exhibit some color cast &amp;ndash; depending on what other image processing steps are involved. This module can “heal” overexposed highlights by replacing their colors with better fitting ones. The module acts on pixels whose luminance exceeds a user defined threshold. Replacement colors are taken from neighboring pixels.</description>
+Due to the nature of digital sensors, overexposed highlights lack valid color information. Most frequently they appear neutral white or exhibit some color cast &amp;ndash; depending on what other image processing steps are involved. This module can “heal” overexposed highlights by replacing their colors with better fitting ones. The module acts on pixels whose luminance exceeds a user-defined threshold. Replacement colors are taken from neighboring pixels.</description>
     </item>
     
     <item>
-      <title>color zones (ToDo)</title>
+      <title>color zones</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/</guid>
-      <description>module controls </description>
+      <description>Selectively adjust the lightness, saturation and hue of pixels based on their current lightness, saturation and hue.
+This module works in CIE LCh color space, which separates pixels into lightness, chroma (or saturation) and hue components. It allows you to manipulate the lightness, saturation and hue of targeted groups of pixels through the use of curves.
+In the color zones module, you first need to choose whether you wish to adjust (select) pixels based on their lightness, saturation or hue.</description>
     </item>
     
     <item>
@@ -1349,12 +1352,13 @@ module controls  contrast The contrast brightness The brightness saturation The 
     </item>
     
     <item>
-      <title>contrast equalizer (ToDo)</title>
+      <title>contrast equalizer</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/</guid>
-      <description>module controls </description>
+      <description>This versatile module can be used to achieve a variety of effects, for example, bloom, denoising, clarity, and local contrast enhancement. It works in the wavelet domain and parameters can be tuned independently for each wavelet detail scale. It operates in CIE LCh color space, which means that it is able to treat luminosity and chromaticity separately.
+A number of presets are provided, which should give you a better understanding the full power of this module.</description>
     </item>
     
     <item>
@@ -1365,7 +1369,7 @@ module controls  contrast The contrast brightness The brightness saturation The 
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/crop-rotate/</guid>
       <description>Crop, rotate, and correct perspective distortions using on-screen guides.
 Whenever the user interface of this module is in focus, the full uncropped image will be shown, overlaid with crop handles and optional guiding lines.
-Resize the crop by dragging the border and corner handles. Move the crop rectangle by holding down the left mouse button and dragging. Constrain movement to the horizontal/vertical axis by holding Ctrl/Shift, respectively while dragging. Commit changes by either giving focus to another module or double-clicking on the image.</description>
+ Resize the crop by dragging the border and corner handles. Move the crop rectangle by clicking and dragging. Constrain movement to the horizontal/vertical axis by holding Ctrl/Shift, respectively while dragging. Commit changes by either giving focus to another module or by double-clicking on the image.</description>
     </item>
     
     <item>
@@ -1396,7 +1400,7 @@ bayer filters The sensor cells of a digital camera are not color-sensitive &amp;
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/</guid>
       <description>Denoise high ISO images.
-This module reduces noise in the image while preserving sharp edges. This is accomplished by averaging pixels with their neighbors, taking into account not only the geometric distance but also the distance on the range scale (i.e. differences in the RGB values). The module is particularly effective if one RGB channel is more noisy than the others. In such a case, use the channel mixer module to examine the channels one by one, in order to set the blur intensities accordingly.</description>
+This module reduces noise in the image while preserving sharp edges. This is accomplished by averaging pixels with their neighbors, taking into account not only their geometric distance but also their distance on the range scale (i.e. differences in the RGB values). This module is particularly effective if one RGB channel is more noisy than the others. In such a case, use the channel mixer module to examine the channels one by one, in order to set the blur intensities accordingly.</description>
     </item>
     
     <item>
@@ -1406,8 +1410,8 @@ This module reduces noise in the image while preserving sharp edges. This is acc
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/</guid>
       <description>Remove image noise while preserving structure.
-This is accomplished by averaging each pixel with some surrounding pixels in the image. The weight of such a pixel in the averaging process depends on the similarity of its neighborhood with the neighborhood of the pixel being denoised. A patch with a certain size is used to measure that similarity.
-As denoising is a resource hungry process, it slows down pixelpipe processing significantly. Consider activating this module late in your workflow.</description>
+This is accomplished by averaging each pixel with some surrounding pixels in the image. The weight of such a pixel in the averaging process depends on the similarity of its neighborhood with the neighborhood of the pixel being denoised. A patch with a defined size is used to measure that similarity.
+As denoising is a resource-intensive process, it slows down pixelpipe processing significantly. Consider activating this module late in your workflow.</description>
     </item>
     
     <item>
@@ -1446,7 +1450,7 @@ The buttons on the top-right allow you to create new duplicates of the current i
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/export-selected/</guid>
-      <description>Export images which have been selected in the lighttable.
+      <description>Export images that have been selected in the lighttable.
 Files can be exported to a file on disk, email, various on-line storage locations, a webalbum, or a book template.
 You can also press Ctrl+E within the darkroom mode to export the currently-edited image using the last settings from this module.
 module controls  target storage The type of location to store your selected images. A number of different back-ends are implemented, including file on disk, a LaTeX book template and various web albums.</description>
@@ -1471,7 +1475,7 @@ This module has two modes of operation:
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/fill-light/</guid>
       <description>Locally modify exposure based on pixel lightness.
 This module pushes exposure by increasing lightness with a Gaussian curve of a specified width, centered on a given lightness.
-module controls  exposure The fill-light exposure (EV) center The median lightness impacted by the fill-light. The lightness must be set manually but a color picker can be used to provide a guide. The lightness of the selected point/area is displayed in the gradient bar.</description>
+module controls  exposure The fill-light exposure (EV) center The median lightness impacted by the fill-light. The lightness must be set manually but a color picker can be used to provide a guide based on a sample from the image. The lightness of the selected point/area is displayed in the gradient bar.</description>
     </item>
     
     <item>
@@ -1482,7 +1486,7 @@ module controls  exposure The fill-light exposure (EV) center The median lightne
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/filmic-rgb/</guid>
       <description>Compress the tonal range of an image by reproducing the tone and color response of classic film.
 This module protects colors and contrast in the mid-tones, recovers the shadows, and compresses bright highlights. It is particularly suited to portrait photography, especially in back-lit situations, but needs extra care when details need to be preserved in the highlights (e.g. clouds).
- The module is derived from a module of the same name in Blender 3D modeller by T.</description>
+The module is derived from a module of the same name in Blender 3D modeller by T.</description>
     </item>
     
     <item>
@@ -1492,7 +1496,7 @@ This module protects colors and contrast in the mid-tones, recovers the shadows,
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/filmstrip/</guid>
       <description>The filmstrip can be used to quickly switch between images in any darktable view. The images shown are the same as displayed in the lighttable view and are defined by the currently-selected collection.
-The filmstrip can be switched on and off using the shortcut Ctrl+F. The height of the filmstrip panel can be changed by clicking and dragging its top border.
+ The filmstrip can be switched on and off using the shortcut Ctrl+F. The height of the filmstrip panel can be changed by clicking and dragging its top border.
 Quickly navigate through the images in the filmstrip by scrolling with the mouse.</description>
     </item>
     
@@ -1502,17 +1506,18 @@ Quickly navigate through the images in the filmstrip by scrolling with the mouse
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/map/find-location/</guid>
-      <description>The find location module is used to search for a location on map. You must be connected to the internet to use this feature.
-To use this module, type in a place name or address, press Enter and a list of results will be shown. Click on one of the resulting items and the map will zoom to that location. An outline covering that location or a pin pointing at the location will be displayed.</description>
+      <description>Search for a location on the map. You must be connected to the internet to use this feature.
+To use this module, type in a place name or address, press Enter and a list of results will be shown. Click on one of the resulting items and the map will zoom to that location. An outline covering that location or a pin pointing at the location will be displayed. Drag images from the filmstrip at the bottom of the screen to their location on the map.</description>
     </item>
     
     <item>
-      <title>focus peaking (ToDo)</title>
+      <title>focus peaking</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/</guid>
-      <description></description>
+      <description>The focus peaking module allows you to identify which parts of the image are sharp and in-focus. It works both in the lighttable view, where you can easily see at a glance which images are sharp and which are blurry, and in the darkroom view, when you are processing a single image.
+The module is activated by clicking on the focus-peaking icon ( ). It highlights the sharp parts of the image with a yellow, green and blue overlay:</description>
     </item>
     
     <item>
@@ -1542,7 +1547,7 @@ module controls  border size The size of the frame as a percentage of the underl
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/geotagging/</guid>
       <description>Import and apply GPX track data to a selection of images.
-A GPS receiver calculates its current position based on the information it receives from satellites and records it in a GPX file – together with the current date and time. The Exif data of the images also contains a time stamp defined by the camera settings. The geotagging module takes the time stamp of the image, looks up the position in the GPX file at that time, and stores the appropriate coordinates (latitude/longitude/elevation) in its database and the image&amp;rsquo;s XMP sidecar file.</description>
+A GPS receiver calculates its current position based on the information it receives from satellites and records it in a GPX file, together with the current date and time. The Exif data of the images also contains a time stamp defined by the camera settings. The geotagging module takes the time stamp of the image, looks up the position in the GPX file at that time, and stores the appropriate coordinates (latitude/longitude/elevation) in its database and the image&amp;rsquo;s XMP sidecar file.</description>
     </item>
     
     <item>
@@ -1552,8 +1557,8 @@ A GPS receiver calculates its current position based on the information it recei
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/global-color-picker/</guid>
       <description>Take color samples from the current darkroom image, display their values in multiple ways and compare colors from different locations.
-The color picker is activated by pressing the color picker icon. There are multiple parameters for controlling how the color picker works, whose settings remain in effect until you leave the darkroom mode.
-Besides the global color picker described here, many darktable modules (e.g. tone curve) also contain local color pickers which are (mostly) used to set individual module parameters.</description>
+The color picker is activated by pressing the color picker icon. The module&amp;rsquo;s parameters will remain in effect until you leave the darkroom mode.
+Besides the global color picker described here, many darktable modules (e.g. tone curve) also contain local color pickers which are used to set individual module parameters. You should be aware that these two forms of color picker do not always work in the same color space.</description>
     </item>
     
     <item>
@@ -1563,8 +1568,8 @@ Besides the global color picker described here, many darktable modules (e.g. ton
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/global-tonemap/</guid>
       <description>Compress the tonal range of an HDR image into the limited tonal range of a typical LDR output file.
-Global tonemapping processes each pixel of an HDR image, without taking the local surrounding into account. This is generally faster than local tonemapping, but might lead to less convincing results with very high-dynamic-range scenes.
-module controls  operator The operator to use. Reinhard, Filmic and Drago global tonemap operators are available. Depending on the selected operator, different parameters can be adjusted.</description>
+Global tonemap processes each pixel of an HDR image, without taking the local surrounding into account. This is generally faster than local tone mapping, but might lead to less convincing results with very high-dynamic-range scenes.
+module controls  operator The operator to use. Reinhard, Filmic and Drago global tonemap operators are available.</description>
     </item>
     
     <item>
@@ -1629,8 +1634,7 @@ Module Controls  sharpness The sharpness of the filter contrast boost The contra
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/histogram/</guid>
       <description>A graphical depiction of the developed image&amp;rsquo;s light levels.
-Move the mouse over the panel to show buttons to adjust the display. The leftmost button cycles the mode between a &amp;ldquo;regular&amp;rdquo; and a waveform-style histogram. The next button controls how the data for the current mode is displayed. The three rightmost colored squares are toggles which enable or disable the display of the red, green and blue color channels.
-When the mouse is over the histogram panel, scrolling while holding down the Ctrl key will change the height of the panel.</description>
+ Move the mouse over the panel to show buttons to adjust the display. The leftmost button cycles the mode between a &amp;ldquo;regular&amp;rdquo; and a waveform-style histogram. The next button controls how the data for the current mode is displayed. The three rightmost colored squares are toggles which enable or disable the display of the red, green and blue color channels.</description>
     </item>
     
     <item>
@@ -1641,7 +1645,7 @@ When the mouse is over the histogram panel, scrolling while holding down the Ctr
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/history-stack/</guid>
       <description>Query and modify the history stack of the current darkroom image.
 This module lists every change of state (activate/de-activate/move/change parameters) for all image processing modules that have been modified for the current image. You can select a point in the stack to return to that point in the development history of the image.
-Caution: adjusting any module will cause all modules above the currently selected one to be discarded. It is easy to lose development work on an image in this way!</description>
+ Caution: adjusting any module will cause all modules above the currently selected one to be discarded. It is easy to lose development work on an image in this way!</description>
     </item>
     
     <item>
@@ -1662,7 +1666,7 @@ module controls  copy Copy the history stack of the selected image. A dialog app
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/hot-pixels/</guid>
       <description>Automatically detect and eliminate hot pixels.
 Hot pixels are pixels which have failed to record a light level correctly. Detected hot pixels are replaced by an average of their neighbors.
-module controls  threshold How strong a pixel&amp;rsquo;s value needs to deviate from that of its neighbors to be regarded as a hotpixel. strength The blending strength of the hotpixels with their surrounding. detect by 3 neighbours Extend the detection of hotpixels: regard a pixel as hot if a minimum of only three (instead of four) neighbor pixels deviate by more than the threshold level.</description>
+module controls  threshold How strong a pixel&amp;rsquo;s value needs to deviate from that of its neighbors to be regarded as a hot pixel. strength The blending strength of the hot pixels with their surrounding. detect by 3 neighbours Extend the detection of hot pixels &amp;ndash; regard a pixel as hot if a minimum of only three (instead of four) neighbor pixels deviate by more than the threshold level.</description>
     </item>
     
     <item>
@@ -1692,8 +1696,8 @@ The image information line can be displayed in the top, bottom, left or right pa
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/import/</guid>
-      <description>Import images into film rolls.
-Images can be imported from the local filesystem or from a connected camera. See supported file formats for information about the file formats currently supported by darktable.
+      <description>Import images into one or more film rolls.
+Images can be imported from the local filesystem or from a connected camera. See supported file formats for more information.
 import from filesystem You can import either a single image or a folder of images from the filesystem by clicking the relevant button. The imported image(s) will be automatically added to a film roll with the same name as the filesystem folder they are imported from.</description>
     </item>
     
@@ -1703,9 +1707,7 @@ import from filesystem You can import either a single image or a folder of image
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/input-color-profile/</guid>
-      <description>The input color profile defines how darktable will interpret the colors of the image.
-You can alter darktable&amp;rsquo;s auto-allocated input color profile if there is an alternative that more closely matches the original image&amp;rsquo;s color space. This module also allows colors to be confined to a certain gamut to mitigate some (infrequent) color artifacts.
-module controls  profile The profile or color matrix to apply. A number of matrices are provided along with an enhanced color matrix for some camera models.</description>
+      <description>The input color profile module defines how darktable will interpret the colors of the image. It takes the color space used by the source of the image (e.g. camera, scanner) and converts the pixel encodings to a standardised working color space. This means that subsequent modules in the pipeline don&amp;rsquo;t need to be concerned with the specifics of the input device, and can work with and convert to/from the working color space.</description>
     </item>
     
     <item>
@@ -1747,8 +1749,8 @@ The levels tool offers two modes of operation:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/liquify/</guid>
-      <description>Move pixels around by applying freestyle distortions to parts of the image, using points, lines and curves.
-Each of liquify&amp;rsquo;s tools is based on nodes. A point is given by a single node and a line or curve consists of a set of nodes defining the path.
+      <description>Move pixels around by applying freestyle distortions to parts of the image using points, lines and curves.
+nodes Each of liquify&amp;rsquo;s tools is based on nodes. A point is given by a single node and a line or curve consists of a set of nodes defining a path.
 There is a limit of 100 nodes in a single liquify instance. For more nodes than this, use additional module instances. However, note that the liquify module consumes a lot of system resources.</description>
     </item>
     
@@ -1778,8 +1780,8 @@ module controls  mode Choice of local laplacian filter or bilateral grid. The fo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/lowlight-vision/</guid>
-      <description>Simulate human lowlight vision making lowlight pictures look closer to human lowlight perception. This module can also be used to perform a day to night conversion.
-The idea is to calculate a scotopic vision image, which is perceived by the rods rather than than the cones in the eye under low light. Scotopic lightness is then mixed with photopic value (regular color image pixel) using some blending function. This module is also able to simulate the Purkinje effect by adding some blueness to the dark parts of the image.</description>
+      <description>Simulate human lowlight vision making pictures look closer to human lowlight perception. This module can also be used to perform a day-to-night conversion.
+The idea is to calculate a scotopic vision image, which is perceived by the rods rather than than the cones in the eyes under low light. Scotopic lightness is then mixed with photopic value (regular color image pixel) using some blending function. This module is also able to simulate the Purkinje effect by adding some blueness to the dark parts of the image.</description>
     </item>
     
     <item>
@@ -1788,18 +1790,19 @@ The idea is to calculate a scotopic vision image, which is perceived by the rods
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/lowpass/</guid>
-      <description>Apply a low pass filter (e.g. gaussian blur) to the image, while controlling the output contrast and saturation.
-This module is primarily intended to be used in combination with a blend mode. For example, try using the local contrast mask preset with an overlay blend mode.
-module controls  radius The radius of the blur soften with The blur algorithm to use gaussian blur: Blur all image channels (L, a, b) bilateral filter: Blur the L channel only, while preserving edges contrast Higher absolute values increase contrast.</description>
+      <description>Apply a low pass filter (for example, a Gaussian blur) to the image, while controlling the output contrast and saturation.
+This module is primarily intended to be used in combination with a blend mode. For example, try using the local contrast mask preset with the overlay blend mode.
+module controls  radius The radius of the blur soften with The blur algorithm to use  gaussian blur: Blur all image channels (L, a, b)    bilateral filter: Blur the L channel only, while preserving edges   contrast Higher absolute values increase contrast.</description>
     </item>
     
     <item>
-      <title>lua scripts installer (ToDo)</title>
+      <title>lua scripts installer</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/</guid>
-      <description></description>
+      <description>This panel provides an interface for installing darktable lua scripts. The first time it is run, instructions are displayed in the module.
+It can be disabled with an option in preferences -&amp;gt; lua options.</description>
     </item>
     
     <item>
@@ -1813,13 +1816,24 @@ This module accepts .cube and .png (haldclut) files. The 3D LUT data is not save
     </item>
     
     <item>
+      <title>manage module layouts</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/</guid>
+      <description>Manage the layout and grouping of processing modules.
+ This maintenance screen can be accessed from the presets menu beside the module group icons (below the histogram in the darkroom view).
+module controls preset list The panel on the left of the screen lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. Those at the bottom of the list are user-defined.</description>
+    </item>
+    
+    <item>
       <title>map settings</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/map/map-settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/map/map-settings/</guid>
-      <description>In the map settings module you can select your preferred map data from various providers. Some will provide additional layers (satellite view etc.) which you can toggle.
-usage  show OSD This option lets you choose whether to display the OSD controls on top-left of the center view. filtered images When selected, only the images from the filmstrip are displayed in the center view. If not selected, all images in the current library are displayed as long as the corresponding images have GPS data associated.</description>
+      <description>Select preferred map data from various providers. Some will provide additional layers (satellite view etc.) which you can toggle.
+module controls  show OSD Choose whether to display the OSD controls on top-left of the center view. filtered images When selected, only the images from the filmstrip are displayed in the center view. If not selected, all images in the current library are displayed as long as the corresponding images have GPS data associated with them.</description>
     </item>
     
     <item>
@@ -1829,7 +1843,7 @@ usage  show OSD This option lets you choose whether to display the OSD controls 
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/</guid>
       <description>Manage all masks and shapes for the current image.
-This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.
+ This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.
 In the top line of the mask manager panel are buttons that can be used to create new shapes. These are the same as in the drawn mask interface of the individual modules.</description>
     </item>
     
@@ -1840,16 +1854,7 @@ In the top line of the mask manager panel are buttons that can be used to create
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/metadata-editor/</guid>
       <description>Edit the metadata (title, description, creator, publisher, rights etc.) of selected images.
-module controls  metadata entry fields A separate field is displayed for each metadata item. Ctrl+scroll on any field to increase its height. Ctrl+Enter to insert a new line. clear Delete existing metadata from the selected image(s). apply Apply new settings, from the metadata entry fields, to the selected image(s). configure metadata Click this button to bring up a dialog where you can configure how metadata is handled within darktable.</description>
-    </item>
-    
-    <item>
-      <title>module groups (ToDo)</title>
-      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/module-groups/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/module-groups/</guid>
-      <description></description>
+module controls  metadata entry fields A separate field is displayed for each metadata item. Ctrl+scroll on any field to increase its height. Ctrl+Enter to insert a new line. Press Enter to apply any text entered in the current metadata field to the selected images. clear Delete existing metadata from the selected images. apply Apply new settings, from the metadata entry fields, to the selected images.</description>
     </item>
     
     <item>
@@ -1859,7 +1864,8 @@ module controls  metadata entry fields A separate field is displayed for each me
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/module-order/</guid>
       <description>Change the order of the processing modules in the darkroom using presets.
-When processing an image, the active modules are applied in a specific order, which is shown in the right-hand section of the darkroom view. Towards the bottom of the module list is a utility module named &amp;ldquo;module order&amp;rdquo;. This utility module provides information about the current ordering of the processing modules in the pixelpipe. The parameter &amp;ldquo;current order&amp;rdquo; can take on 3 possible values:</description>
+When processing an image, the active modules are applied in a specific order, which is shown in the right-hand panel of the darkroom view. This module provides information about the current ordering of the processing modules in the pixelpipe. The single parameter &amp;ldquo;current order&amp;rdquo; can take on the following values:
+ v3.0 This is the default module order for scene-referred workflow.</description>
     </item>
     
     <item>
@@ -1869,8 +1875,8 @@ When processing an image, the active modules are applied in a specific order, wh
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/monochrome/</guid>
       <description>Quickly convert an image to black &amp;amp; white using a variable color filter.
-Under certain conditions, especially highly saturated blue light sources in the frame, this module may produce black pixel artifacts. Use the gamut clipping option of the input color profile module to mitigate this issue.
-To use this module, first reduce the filter size (to concentrate its effect) and move it across the hue pallet to find the best filter value for your desired image rendition.</description>
+To use this module, first reduce the filter size (to concentrate its effect) and move it across the hue pallet to find the best filter value for your desired image rendition. Then gradually expand the filter to include more hues and achieve more natural tonality.
+ Note: Under certain conditions, especially highly saturated blue light sources in the frame, this module may produce black pixel artifacts.</description>
     </item>
     
     <item>
@@ -1895,12 +1901,14 @@ The navigation panel can be toggled on/off with a keyboard shortcut (Ctrl+Shift+
     </item>
     
     <item>
-      <title>negadoctor (ToDo)</title>
+      <title>negadoctor</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/</guid>
-      <description>module controls </description>
+      <description>Negadoctor allows you to process a scanned film negative.
+You can obtain an image of a negative using a film scanner, or by photographing it against a white light (e.g. a light table or computer monitor) or off-camera flash.
+preparation If the image of the negative was obtained using a digital camera, then in order to obtain accurate colors in the final image, you will need to take the following points into consideration:</description>
     </item>
     
     <item>
@@ -1910,7 +1918,8 @@ The navigation panel can be toggled on/off with a keyboard shortcut (Ctrl+Shift+
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/orientation/</guid>
       <description>Rotate the image 90 degrees at a time.
-By default this module sets the orientation based on the image&amp;rsquo;s Exif data.
+The module is enabled by default and the orientation is automatically set based on the image&amp;rsquo;s Exif data.
+The orientation can also be set using the selected images module in the lighttable view.
 module controls  rotate Double click the label to reset the image&amp;rsquo;s rotation counter-clockwise Rotate the image 90 degrees counter-clockwise clockwise Rotate the image 90 degrees clockwise  </description>
     </item>
     
@@ -1951,9 +1960,9 @@ module controls printer  printer Select one of the installed printers. media The
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/raw-black-white-point/</guid>
-      <description>Define the camera-specific black and white points.
+      <description>Define camera-specific black and white points.
 This module is activated automatically for all raw images. Default settings are applied for all supported cameras. Changes to the defaults are normally not required.
-module controls  black level 0-3 The camera-specific black level of the four pixels in the RGGB Bayer pattern. Pixels with values lower than the defined level are considered to contain no valid data. white point The camera-specific white level.</description>
+module controls  black level 0-3 The camera-specific black level of the four pixels in the RGGB Bayer pattern. Pixels with values lower than the defined level are considered not to contain valid data. white point The camera-specific white level.</description>
     </item>
     
     <item>
@@ -1973,9 +1982,9 @@ module controls  noise threshold The threshold for noise detection. Higher value
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/raw-overexposed/</guid>
-      <description>This option warns you about areas of your raw input image with clipped color channels. Clipped color channels imply an overexposed image with loss of information in the affected areas. You may use the highlight reconstruction or color reconstruction modules to reconstruct these areas.
+      <description>This option warns you about areas of your raw input image with clipped color channels. Clipped color channels imply an overexposed image with loss of information in the affected areas. You may use the highlight reconstruction or color reconstruction modules to attempt to reconstruct these areas.
 Right-click on the icon to open a dialog containing the following configuration parameters.
- mode mark with CFA color: Display a pattern of the respective primary colors (red, green, and blue) to indicate which color channels are clipped.</description>
+ mode Choose how to mark clipped areas:   mark with CFA color: Display a pattern of the respective primary colors (red, green, and blue) to indicate which color channels are clipped.</description>
     </item>
     
     <item>
@@ -1989,12 +1998,13 @@ Click on an entry to reopen the selected collection. This also updates the colle
     </item>
     
     <item>
-      <title>retouch (ToDo)</title>
+      <title>retouch</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/</guid>
-      <description>module controls </description>
+      <description>Remove unwanted image elements by cloning, healing, blurring and filling using drawn shapes.
+This module extends the capabilities of the spot removal module by including a &amp;ldquo;heal&amp;rdquo; tool (based on the heal tool from GIMP) which provides a type of seamless cloning. It can also take advantage of wavelet decomposition, allowing the image to be separated into layers of varying detail (from coarse to fine). These layers can then be selectively retouched before being recombined to produce the output image.</description>
     </item>
     
     <item>
@@ -2048,7 +2058,7 @@ The module has no controls.</description>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/select/</guid>
       <description>Select images in the lighttable according to simple criteria.
-module controls  select all Select all images in the current view (collection), with respect to the filters. select none De-select all images. invert selection Select all images that are not currently selected. select film roll Select all images that are in the same film roll as the currently selected images. select untouched Select all images that have not yet been developed.</description>
+module controls  select all Select all images shown in the current lighttable view select none De-select all images. invert selection Select all images that are not currently selected. select film roll Select all images that are in the same film roll as the currently-selected images. select untouched Select all images that have not yet been developed.  </description>
     </item>
     
     <item>
@@ -2058,7 +2068,7 @@ module controls  select all Select all images in the current view (collection), 
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/selected-image/</guid>
       <description>Perform actions on images that have been selected in the lighttable view.
-module controls  remove Remove the selected images from the darktable database. Removed images will not be shown in the lighttable view any more, but remain on the filesystem along with any XMP sidecar file. As darktable stores XMP files with your development parameters on disk, you can later fully reconstruct your work by re-importing the images. delete/trash Eliminate the selected images from the darktable database and remove any associated XMP sidecar files.</description>
+module controls  remove Remove the selected images from the darktable database. Removed images can no longer be viewed or edited within darktable but the image files remain on the filesystem along with any XMP sidecar files. As darktable keeps the XMP files up-to-date with your latest development history, you can later fully restore your work by re-importing the images.</description>
     </item>
     
     <item>
@@ -2078,7 +2088,7 @@ The session module allows you to set a jobcode, which can be used to create your
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/shadows-and-highlights/</guid>
       <description>Modify the tonal range of the shadows and highlights of an image by enhancing local contrast.
-module controls  shadows Control the effect on shadows. Positive values will lighten shadows while negative values will darken them. highlights Control the effect on highlights. Negative values will darken highlights while positive values will lighten them. white point adjustment By default the algorithm of this module leaves the black and white points untouched. In some cases an image might contain tonal variations beyond the white point, i.</description>
+module controls  shadows Control the effect on shadows. Positive values will lighten shadows while negative values will darken them. highlights Control the effect on highlights. Positive values will lighten highlights while negative values will darken them. white point adjustment By default the algorithm of this module leaves the black and white points untouched. In some cases an image might contain tonal variations beyond the white point, i.</description>
     </item>
     
     <item>
@@ -2098,7 +2108,7 @@ module controls  radius The unsharp mask applies a gaussian blur to the image as
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/snapshots/</guid>
-      <description>A snapshot is stored as a bitmap of the current center view. Snapshots can be taken at any point in the development process and then selected to be overlaid onto the current center view. This allows you to undertake a side by side comparison (by default left=snapshot, right=active edit) while you are tuning parameters of a module. This can also be combined with history stack module to compare a snapshot against different stages of development.</description>
+      <description>A snapshot is a stored bitmap of the center image in the darktable view. Snapshots can be taken at any point in the development process and later selected to be overlaid onto the current center view. This allows you to undertake a side by side comparison (by default left=snapshot, right=active edit) while you are tuning parameters of a module. This can also be combined with history stack module to compare a snapshot against different stages of development.</description>
     </item>
     
     <item>
@@ -2118,7 +2128,7 @@ module controls  radius The unsharp mask applies a gaussian blur to the image as
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/soften/</guid>
       <description>Create a softened image using the Orton effect.
 Michael Orton achieved his results on slide film by using two exposures of the same scene, one well exposed and one overexposed. He then used a darkroom technique to blend these two images into a final image where the overexposed image was blurred.
-This module is a near-copy of Orton&amp;rsquo;s analogue process into the digital domain.
+This module is a near-copy of Orton&amp;rsquo;s analog process into the digital domain.
 module controls  size The size of blur of the overexposed image.</description>
     </item>
     
@@ -2140,7 +2150,7 @@ module controls  shadows and highlights color Set the desired hue and saturation
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/spot-removal/</guid>
       <description>Correct areas of an image (the target) using details from another area of the image (the source).
-This module uses some of the shapes that are offered in drawn masks (circles, ellipses and paths), and the user interface is similar.
+This module uses some of the shapes that are available for drawn masks (circles, ellipses and paths), and the user interface is similar.
 To use this module, first select the desired shape by clicking the corresponding shape icon (Ctrl+click to enable continuous shape creation mode). Next, you may optionally choose the source for the correction by using Shift+Ctrl+click or Shift+click on the image canvas to choose absolute or relative mode, respectively (see below).</description>
     </item>
     
@@ -2150,9 +2160,9 @@ To use this module, first select the desired shape by clicking the corresponding
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/styles/</guid>
-      <description>Store an image&amp;rsquo;s history stack as a named style and apply styles to selected images.
+      <description>Create named styles from selected images&#39; history stacks and apply styles to selected images.
 Styles can either be created within this panel or in the history stack module in the darkroom.
-A list of all available styles is displayed at the top of the module. A search field above the list allows you to input a text string which can be used to filter styles by their name or description.</description>
+A list of all available styles is displayed at the top of the module. A search field above the list allows you to locate a style by name or description. This module also allows styles to be edited and deleted.</description>
     </item>
     
     <item>
@@ -2161,7 +2171,8 @@ A list of all available styles is displayed at the top of the module. A search f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/tagging/</guid>
-      <description>This module is used to manage tags on images. Tags provide a means of adding information to images using a keyword dictionary. You can manage tags as a hierarchical tree, which can be useful when their number becomes large. Only tags at the leaves of the tree add information to an image. Parent tags just serve as categories which are used to organise the leaf tags. For example, in the “color|white” tag, “color” is a category for the “white” tag.</description>
+      <description>Manage tags attached to images.
+Tags provide a means of adding information to images using a keyword dictionary. You can also manage tags as a hierarchical tree, which can be useful when their number becomes large. Only tags at the leaves of the tree add information to an image &amp;ndash; parent tags simply serve as categories and are are used to organise the leaf tags. For example, in the “color|white” tag, “color” is a category for the “white” tag.</description>
     </item>
     
     <item>
@@ -2171,7 +2182,7 @@ A list of all available styles is displayed at the top of the module. A search f
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/timeline/</guid>
       <description>View your images by the date/time they were taken.
-In the lighttable filemanager view, you can show/hide the timeline module in the bottom panel with the shortcut Ctrl+F.
+ In the lighttable filemanager view, you can show/hide the timeline module in the bottom panel with the shortcut Ctrl+F.
 Within the timeline, you can show the next and previous dates by scrolling your mouse; Ctrl+scroll to zoom in/out.
 You can also use timeline to select images by date range with mouse click+pan.</description>
     </item>
@@ -2184,7 +2195,7 @@ You can also use timeline to select images by date range with mouse click+pan.</
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/tone-curve/</guid>
       <description>A classic digital photography tool to alter an image&amp;rsquo;s tones using curves.
 This module is very similar to the rgb curve module but works in Lab color space.
-Activate the color picker to show the picked values in the graph (Ctrl+click to use the picker in area mode). Numerical (Lab) values of the input and output (see below) at the selected spot or area are shown at the top left of the widget.</description>
+Activate the color picker to show the picked values in the histogram (Ctrl+click to use the picker in area mode). Numerical (Lab) values of the input and output (see below) at the selected spot or area are shown at the top left of the widget.</description>
     </item>
     
     <item>
@@ -2194,7 +2205,7 @@ Activate the color picker to show the picked values in the graph (Ctrl+click to 
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/tone-equalizer/</guid>
       <description>Perform dodging and burning on an image while preserving local contrast.
-This module is designed to be used together with filmic rgb, and it can selectively brighten or darken up to 9 different ranges of luminosity. When used together with filmic rgb, it replaces the need for other tone-mapping modules such as the base curve, shadows and highlights, tone curve and the zone system modules. It works in linear RGB space and uses a mask to guide the dodging and burning adjustments, helping to preserve local contrast within the image.</description>
+This module can selectively brighten or darken up to 9 different ranges of luminosity. When used together with filmic rgb, it replaces the need for other tone-mapping modules such as the base curve, shadows and highlights, tone curve and zone system modules. It works in linear RGB space and uses a mask to guide the dodging and burning adjustments, helping to preserve local contrast within the image.</description>
     </item>
     
     <item>
@@ -2203,7 +2214,7 @@ This module is designed to be used together with filmic rgb, and it can selectiv
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/tone-mapping/</guid>
-      <description>Compress the tonal range of HDR images, so they fit into the limits of a normal, low dynamic range image, using Durand&amp;rsquo;s 2002 algorithm.
+      <description>Compress the tonal range of HDR images so that they fit into the limits of an LDR image, using Durand&amp;rsquo;s 2002 algorithm.
 The underlying algorithm uses a bilateral filter to decompose an image into a coarse base layer and a detail layer. The contrast of the base layer is compressed, while the detail layer is preserved, then both layers are re-combined.
 module controls  contrast compression The contrast compression level of the base layer.</description>
     </item>
@@ -2246,7 +2257,7 @@ module controls  vibrance The amount of vibrance to apply to the image.  </descr
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/vignetting/</guid>
       <description>Apply a vignetting effect to the image.
 Vignetting is a modification of the brightness and saturation at the borders of the image in a specified shape. Many of the parameters listed below can also be modified with a graphical control that overlays the image when the module has focus, showing the shape and extent of the effect.
-This module is known to provoke banding artifacts under certain conditions. You should consider activating the dithering module to alleviate this.</description>
+ Note: This module is known to provoke banding artifacts under certain conditions. You should consider activating the dithering module to alleviate this.</description>
     </item>
     
     <item>
@@ -2256,8 +2267,8 @@ This module is known to provoke banding artifacts under certain conditions. You 
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/watermark/</guid>
       <description>Render a vector-based overlay onto your image. Watermarks are standard SVG documents and can be designed using Inkscape.
-The SVG processor of darktable also substitutes strings within the SVG document, which allows you to include image dependent information in the watermark.
-User-designed watermarks are placed into the directory $HOME/.config/darktable/watermarks. Once in place, use the reload button update the list of available watermarks.
+The SVG processor of darktable can also substitute strings within the SVG document, which allows you to include image dependent information in the watermark.
+User-designed watermarks should be placed into the directory $HOME/.config/darktable/watermarks. Once in place, use the reload button update the list of available watermarks.
 The following is a list of variable strings that are supported for substitution within the SVG document.</description>
     </item>
     
@@ -2267,9 +2278,9 @@ The following is a list of variable strings that are supported for substitution 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/white-balance/</guid>
-      <description>Set the white balance of the image by
- altering the temperature and tint defining a value for each (RGB) channel, or choosing from list of predefined white balances  The default settings for this module are derived from the image&amp;rsquo;s Exif data.
-module controls scene illuminant temp In this section there are scene illuminanant temperature and tint controls which set the white balace of the image. Click on the &amp;lsquo;scene illuminant temp&amp;rsquo; label to cycle between 3 different slider color modes.</description>
+      <description>Adjust the white balance of the image by altering the temperature and tint, defining a coefficient for each (RGB) channel, or choosing from list of predefined white balance settings.
+The default settings for this module are derived from the camera white balance stored in the image&amp;rsquo;s Exif data.
+White balance is not intended as a &amp;ldquo;creative&amp;rdquo; module &amp;ndash; its primary goal is is to technically correct the white balance of the image ensuring that neutral colored objects in the scene are rendered as neutral colors in the image.</description>
     </item>
     
     <item>
@@ -2280,7 +2291,7 @@ module controls scene illuminant temp In this section there are scene illuminana
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/zone-system/</guid>
       <description>Adjust the lightness of an image using Ansel Adams&#39; zone system.
 The lightness of the image (the L channel in Lab color space) is divided into a number of zones ranging from pure black to pure white. These zones are displayed in a zonebar beneath a preview image. The number of zones can be changed by mouse-scrolling on that bar (default 10 zones).
-The zonebar is split horizontally with the lower part showing the zones of the module&amp;rsquo;s input and the upper part the zones of the module&amp;rsquo;s output.</description>
+ The zonebar is split horizontally with the lower part showing the zones of the module&amp;rsquo;s input and the upper part the zones of the module&amp;rsquo;s output.</description>
     </item>
     
   </channel>

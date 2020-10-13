@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>darktable user manual - searching for and grouping modules (ToDo)</title>
+<title>darktable user manual - searching and grouping modules</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class=" active">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4010,10 +4062,29 @@
 
 <article role="main">
     <h1 class="title">
-        searching for and grouping modules (ToDo)
+        searching and grouping modules
     </h1>
 
-    <p>Summarise the ways in which modules can be grouped (module groups) and searched.</p>
+    <p>At the top of the right-hand panel in the darkroom view is a module that allows you to search for and select from pre-defined groups of processing modules:</p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/module-group-and-search.png#w25" alt="group and search"  />
+
+</p>
+<p>The appearance of the module groups and search functionality can be modified in <a href="/dtdocs/preferences-settings/darkroom/"><code>preferences</code> -&gt; <code>darkroom</code> -&gt; <code>show module groups and/or search text entry</code></a>. Here, you can choose to show only the module groups, only the search entry, or both.</p>
+<h1 id="groups">groups</h1>
+<p>Click on one of the <em>module group</em> icons above the <em>search module</em> textbox to see all of the modules which belong to that group. Click on the <em>active modules</em> group (
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/module-group-active-icon.png" alt="module-group-active-icon"  />
+
+) to list the modules that are active for the current edit.
+If you click on any module group (including the <em>active modules</em> group) a second time, a complete list of all available modules is shown.</p>
+<p>darktable ships with some standard pre-defined module grouping presets, which can be selected from the presets menu on the right-hand-side of the module groups list. You can also customize and create your own groups by selecting &ldquo;manage presets&hellip;&rdquo; from the same drop-down menu. Please refer to the <a href="/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/"><em>manage module layouts</em></a> section for more details about this functionality.</p>
+<h1 id="search">search</h1>
+<p>When you enter some text in the <em>search module</em> entry, any modules whose name contains that text will be listed under the search box. All matching modules will be shown, regardless whether they are currently available in any of the module groups. You can then activate any of the listed modules by clicking on its activation icon, expand the module by clicking on its name, and adjust any settings as required.</p>
+<p>If you choose to hide the module groups and show only the search entry, the module list will contain a list of either the currently-active modules or the results of any search term entered.</p>
 
 
     

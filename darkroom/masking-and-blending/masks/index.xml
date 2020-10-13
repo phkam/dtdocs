@@ -55,7 +55,7 @@ The &amp;ldquo;combine masks&amp;rdquo; combobox contains the following options,
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/refinement-controls/</guid>
       <description>When a parametric or drawn mask is active, several additional sliders are shown which allow the mask to be further refined.
- feathering guide Mask feathering smoothes a drawn or parametric mask such that the mask&amp;rsquo;s edges automatically align with the edges of features in the image. The smoothing is guided either by the module&amp;rsquo;s input or output (before blending), depending on what is selected in the “feathering guide” combobox. Feathering is particularly sensitive to this choice when used with edge-modifying modules (modules for sharpening or blurring an image).</description>
+ feathering guide Mask feathering smooths a drawn or parametric mask such that the mask&amp;rsquo;s edges automatically align with the edges of features in the image. The smoothing is guided either by the module&amp;rsquo;s input or output (before blending), depending on whether you select &amp;ldquo;input image&amp;rdquo; or &amp;ldquo;output image&amp;rdquo; in the “feathering guide” combobox.</description>
     </item>
     
     <item>
@@ -64,7 +64,7 @@ The &amp;ldquo;combine masks&amp;rdquo; combobox contains the following options,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/raster/</guid>
-      <description>As described in the previous sections, the final output of a module&amp;rsquo;s mask (the combined effect of any drawn and parameteric masks) is a greyscale raster image representing the extent to which the module should be applied to each pixel. This raster image is stored internally for active modules and can be subsequently reused within other modules in the pixelpipe.
+      <description>As described in the previous sections, the final output of a module&amp;rsquo;s mask (the combined effect of any drawn and parameteric masks) is a greyscale raster image representing the extent to which the module&amp;rsquo;s effect should be applied to each pixel. This raster image is stored internally for active modules and can be subsequently reused within other modules in the pixelpipe.
 As with any mask, if the value for a pixel in a raster mask is zero the input to the module is passed in the module&amp;rsquo;s output unchanged.</description>
     </item>
     

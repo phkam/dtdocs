@@ -13,9 +13,8 @@
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/module-header/</guid>
       <description>At the top of each image operation module is the module header.
-IMAGE HERE
-Click on the module header to expand the module and display the parameters that control its operation.
-By default darktable will only allow one processing module to be expanded at a time. If you click the header of another module, the previous module controls are collapsed. If you want to see more than one module expanded, you may expand further modules with Shift+click: all previously expanded modules will remain open.</description>
+ Click on the module name to expand the module and display the parameters that control its operation.
+By default darktable will only allow one processing module to be expanded at a time &amp;ndash; if you click the header of another module, the previously-opened module&amp;rsquo;s controls are collapsed. If you want expand more than one module, you may expand further modules with Shift+click and all previously expanded modules will remain open.</description>
     </item>
     
     <item>
@@ -24,7 +23,7 @@ By default darktable will only allow one processing module to be expanded at a t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/multiple-instances/</guid>
-      <description>Many of darktable&amp;rsquo;s modules can be applied more than once in the pixelpipe. Each instance of a module behaves like any other module, taking its input from the module below in the pixelpipe delivering its output to the module above.
+      <description>Many of darktable&amp;rsquo;s modules can be applied more than once in the pixelpipe. Each instance of a module behaves independently, taking its input from the module below in the pixelpipe delivering its output to the module above.
 As with the base instance of a module, all instances can be moved independently within the pixelpipe either by holding Ctrl+Shift while dragging &amp;amp; dropping or by choosing &amp;ldquo;move up&amp;rdquo; or &amp;ldquo;move down&amp;rdquo; in the multiple instances drop-down menu.</description>
     </item>
     
@@ -34,8 +33,8 @@ As with the base instance of a module, all instances can be moved independently 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/presets/</guid>
-      <description>Presets allow you to store commonly used module settings for future use. Some modules already come with pre-defined presets but you can also define your own. Both internal and user-defined presets can be shown by clicking the presets menu in the module header.
-the presets menu The presets menu will contain one or more of the following entries depending on the presets that are defined or selected for the module:</description>
+      <description>Presets allow you to store commonly used module settings for future use. Some modules already come with pre-defined presets and you may also define your own. Both internal and user-defined presets can be shown by clicking the presets menu in the module header.
+the presets menu The presets menu will contain one or more of the following entries depending on what presets are defined or selected for the current module:</description>
     </item>
     
     <item>
@@ -44,8 +43,8 @@ the presets menu The presets menu will contain one or more of the following entr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/module-controls/</guid>
-      <description>sliders Sliders offer five different ways of interaction, depending on the level of control you require.
- left-click Click anywhere in the slider area to set the value. You can also click and drag to change it. You don&amp;rsquo;t have to aim for the triangle or even the line - you may click anywhere in the entire height of the slider including the label. mouse wheel Hover over the slider with your mouse, then use your mouse wheel to adjust the value.</description>
+      <description>sliders Sliders offer five different methods of interaction, depending on the level of control you require.
+ left-click Click anywhere in the slider area to set the value. You can also click and drag to change it. You don&amp;rsquo;t have to aim for the triangle or even the line - you can click anywhere in the entire height of the slider including the label. mouse wheel Hover over the slider with your mouse, then use your mouse wheel to adjust the value.</description>
     </item>
     
     <item>
@@ -55,7 +54,7 @@ the presets menu The presets menu will contain one or more of the following entr
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/curves/</guid>
       <description>Three image processing modules (base curve, tone curve and rgb curve) use curves to control the tones in the image. These modules have some common features that deserve separate discussion.
-nodes In their default state, curves are straight lines, defined by two anchor nodes. You can move the nodes to modify the curve or generate new nodes by clicking on the curve. With Ctrl+click you can generate a new node at the x-location of the mouse pointer and the corresponding y-location of the current curve &amp;ndash; this adds a node without the risk of accidentally modifying the curve.</description>
+ nodes In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve.</description>
     </item>
     
     <item>
@@ -64,16 +63,18 @@ nodes In their default state, curves are straight lines, defined by two anchor n
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/</guid>
-      <description>Wavelets are a technique used in image processing to separate an image into a number of layers, each containing a different level of detail. After decomposing an image in this way, a processing module can limit its processing to one or more of those layers, and then piece the image back together again at the end. This allows us to be surgical about which features in the image we wish to impact when working with a module.</description>
+      <description>Wavelets are a technique used in image processing to separate (or decompose) an image into a number of distinct layers, each containing a different level of detail. After decomposing an image in this way, a module can limit its processing to one or more of these detail layers, and then piece the layers back together again at the end to form its output image. This allows us to be surgical about which features in the image we wish to impact when working with a module.</description>
     </item>
     
     <item>
-      <title>searching for and grouping modules (ToDo)</title>
+      <title>searching and grouping modules</title>
       <link>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/</guid>
-      <description>Summarise the ways in which modules can be grouped (module groups) and searched.</description>
+      <description>At the top of the right-hand panel in the darkroom view is a module that allows you to search for and select from pre-defined groups of processing modules:
+ The appearance of the module groups and search functionality can be modified in preferences -&amp;gt; darkroom -&amp;gt; show module groups and/or search text entry. Here, you can choose to show only the module groups, only the search entry, or both.
+groups Click on one of the module group icons above the search module textbox to see all of the modules which belong to that group.</description>
     </item>
     
   </channel>

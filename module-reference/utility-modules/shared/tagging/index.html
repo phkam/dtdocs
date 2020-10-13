@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,8 +4065,9 @@
         tagging
     </h1>
 
-    <p>This module is used to manage tags on images.  Tags provide a means of adding information to images using a keyword dictionary. You can manage tags as a hierarchical tree, which can be useful when their number becomes large. Only tags at the leaves of the tree add information to an image. Parent tags just serve as categories which are used to organise the leaf tags. For example, in the “color|white” tag, “color” is a category for the “white” tag.</p>
-<p>Tags are physically stored in <a href="/dtdocs/overview/sidecar-files/">XMP sidecar files</a> as well as in darktable&rsquo;s library database.</p>
+    <p>Manage tags attached to images.</p>
+<p>Tags provide a means of adding information to images using a keyword dictionary. You can also manage tags as a hierarchical tree, which can be useful when their number becomes large. Only tags at the leaves of the tree add information to an image &ndash; parent tags simply serve as categories and are are used to organise the leaf tags. For example, in the “color|white” tag, “color” is a category for the “white” tag.</p>
+<p>Tags are physically stored in <a href="/dtdocs/overview/sidecar-files/">XMP sidecar files</a> as well as in darktable&rsquo;s library database and can be included in <a href="/dtdocs/module-reference/utility-modules/lighttable/export-selected/">exported</a> images.</p>
 <h1 id="module-sections">module sections</h1>
 <p>The tagging module consists of two sections</p>
 <ol>
@@ -4046,30 +4099,30 @@
 <dt><code>attach</code> button</dt>
 <dd>If a tag is selected in the <em>tag dictionary</em> section, attach this tag to the selected images.</dd>
 <dt><code>detach</code> button</dt>
-<dd>If a tag is selected in the <em>attached tags</em> list, the <code>detach</code> button will disassociate that tag from the selected images. A tag can also be detached if you <code>right click</code> on the tag name and select <code>detach</code> from the pop-up menu.</dd>
+<dd>If a tag is selected in the <em>attached tags</em> list, detach that tag from the selected images. A tag can also be detached if you <code>right click</code> on the tag name and select <code>detach</code> from the pop-up menu.</dd>
 <dt><code>check mark</code> [✓] button</dt>
-<dd>This toggle button allows you to see any hidden tags that darktable has automatically attached to the selected images.</dd>
+<dd>Choose whether to view any hidden tags that darktable has automatically attached to the selected images.</dd>
 <dt><code>sort</code> [⥯] button:</dt>
-<dd>This toggle button selects whether to sort the <em>attached tags</em> list alphabetically or by the count shown in brackets next to the tag (this count indiates how many of the selected images are bearing that tag).</dd>
+<dd>Choose whether to sort the <em>attached tags</em> list alphabetically or by the count shown in brackets next to the tag (this count indiates how many of the selected images have that tag attached to them).</dd>
 <dt><code>minus sign</code> [&ndash;] button</dt>
-<dd>This toggle button selects whether or not to show the parent categories of the tag.</dd>
+<dd>Choose whether or not to show the parent categories of the tag.</dd>
 </dl>
-<p>Adjust the height of the <em>attached tags</em> window using <code>Ctrl+mouse wheel</code>.</p>
+<p>You can adjust the height of the <em>attached tags</em> window using <code>Ctrl+scroll</code>.</p>
 <h2 id="tag-dictionary-section">tag dictionary section</h2>
-<p>The <em>tag dictionary</em> section displays all of the tags that are available in darktable&rsquo;s database. At the top of the <em>tag dictionary</em> section is a text box where tag names can be entered. Below this is a list of available tags, which may include indicator symbols to the left of the tag names. The meanings of these symbols are:</p>
+<p>The <em>tag dictionary</em> section displays all of the tags that are available in darktable&rsquo;s database. At the top of the <em>tag dictionary</em> section is a text box where tag names can be entered. Below this is a list of available tags, which may also include indicator symbols to the left of the tag names. The meanings of these symbols are:</p>
 <ul>
 <li>
-<p>a <code>check mark</code> [✓] symbol indicates that the tag is attached to all of the selected images</p>
+<p>a <code>check mark</code> [✓] indicates that the tag is attached to all of the selected images</p>
 </li>
 <li>
-<p>a <code>minus sign</code> [&ndash;] symbol indicates that the tag is attached to at least one of the selected images. If the symbol is next to a category name in the hierarchical <em>tree</em> view, it means that one of the child tags under that category is attached to at least one of the selected images.</p>
+<p>a <code>minus sign</code> [&ndash;] indicates that the tag is attached to at least one of the selected images. If the symbol is next to a category name in the hierarchical <em>tree</em> view, it means that one of the child tags under that category is attached to at least one of the selected images.</p>
 </li>
 <li>
 <p>if no indicator symbol is present, this means that the tag is not attached to any of the selected images, or that the category has no child tags attached to any of the selected images.</p>
 </li>
 </ul>
-<p>In the <em>tree</em> view, a name in italics is a category, and not a child tag. Note that categories are just used to organise the tags, and that a category cannot be attached to an image or exported.</p>
-<p>Below the <em>tag dictionary</em> list, there are a number of buttons, from left to right:</p>
+<p>In the hierarchical <em>tree</em> view, a name in italics represents a category, and not a child tag. Note that categories are just used to organise the tags, and that a category cannot be directly attached to an image or exported.</p>
+<p>Below the <em>tag dictionary</em> list are the following buttons, from left to right:</p>
 <dl>
 <dt><code>new</code> button</dt>
 <dd>Create a new tag, using the name that has been entered into the text entry box at the top of the <em>tag dictionary</em> section.</dd>
@@ -4078,49 +4131,49 @@
 <dt><code>export...</code> button</dt>
 <dd>Export all tags to a Lightroom keyword file.</dd>
 <dt><code>plus sign</code> [+] toggle button</dt>
-<dd>Show any tags that have been attached to some of the selected images but not to all of them. This can be useful to determine whether you want to apply any of those tags to the rest of the selected images.</dd>
+<dd>Show a list of tags that have been attached to some of the selected images but not to all of them. This can be useful to help you decide whether you want to apply any of those tags to the rest of the selected images.</dd>
 <dt><code>list/tree</code> [☷] button</dt>
 <dd>Toggle the display of tags between a straight <em>list</em> view and a hierarchical <em>tree</em> view.</dd>
 </dl>
-<p>Adjust the height of the <em>tag dictionary</em> window using <code>Ctrl+mouse wheel</code>.</p>
+<p>You can adjust the height of the <em>tag dictionary</em> window using <code>Ctrl+scroll</code>.</p>
 <h1 id="usage">usage</h1>
 <p>The following sections describe the operations that can be performed with tags.</p>
 <h2 id="text-entry">text entry</h2>
 <p>The text entry box (shown under the <code>attach</code>/<code>detach</code> buttons) has multiple purposes.</p>
 <ul>
-<li>If the <em>tag dictionary</em> list is in <em>list</em> view mode (and not <em>tree</em> view mode), then typing the first few characters of a tag will bring up a list of suggestions. You can then scroll down with the <code>arrow</code> keys and hit <code>enter</code> to select one of the suggestions. Hitting <code>enter</code> a second time will attach it to the selected images. You can also edit the name of the tag before hitting <code>enter</code> &ndash; in this case the tag will be created if it doesn&rsquo;t already exist in the database.</li>
-</ul>
-<hr>
-<p>Note: If you find the auto-completion behaviour annoying, it can be disabled in <a href="/dtdocs/preferences-settings/miscellaneous/"><code>preferences</code> -&gt; <code>miscellaneous</code> -&gt; <code>disable the entry completion</code></a>.</p>
-<hr>
-<ul>
 <li>
-<p>Aside from the auto-completion suggestions, typing some partial text into the text entry box allows you filters the set of tags shown in the <em>tag dictionary</em> window to those whose name or synonyms matches the entered text. Press <code>enter</code> to attach a tag with the entered name &ndash; the entered tag will be attached to the selected images. If that tag name does not yet exist in the database, it will be created before being attached.</p>
+<p>If the <em>tag dictionary</em> list is in <em>list</em> view mode (rather than <em>tree</em> view mode), then typing the first few characters of a tag will bring up a list of suggestions. You can then scroll down with the <code>arrow</code> keys and press <code>Enter</code> to select one of the suggestions. Pressing <code>Enter</code> a second time will attach it to the selected images. You can also edit the name of the tag before pressing <code>Enter</code> &ndash; in this case the tag will be created if it doesn&rsquo;t already exist in the database.</p>
 </li>
 <li>
-<p>The pop-up menu entry “copy to entry” can be used to copy a selected tag to the text entry box. You can then edit this name and press <code>enter</code> to create a new tag similar to the one you just selected, making it easy to create tags with similar names.</p>
+<p>Aside from the auto-completion suggestions, typing some partial text into the text entry box allows you filters the set of tags shown in the <em>tag dictionary</em> window to those whose name or synonym matches the entered text. Press <code>Enter</code> to attach a tag with the entered name to the selected images. If that tag name does not yet exist in the database, it will be created before being attached.</p>
+</li>
+<li>
+<p>The pop-up menu entry “copy to entry” can be used to copy a selected tag to the text entry box. You can then edit this name and press <code>Enter</code> to create a new tag with that name, making it easy to create multiple tags with similar names.</p>
 </li>
 </ul>
+<hr>
+<p><strong>Note:</strong> If you find the auto-completion behaviour annoying, it can be disabled in <a href="/dtdocs/preferences-settings/miscellaneous/"><code>preferences</code> -&gt; <code>miscellaneous</code> -&gt; <code>disable the entry completion</code></a>.</p>
+<hr>
 <h2 id="create-tag">create tag</h2>
 <p>There are several ways to create a new tag:</p>
 <ul>
 <li>
-<p>Import a text file. You can import one or more text files in the Lightroom tagging file format. You can also export your tags, add information to the exported file, then re-import it. The import function updates existing tags and creates new tags as required. If you change the name of a tag in the import file, it will be treated as a new tag.</p>
+<p><em>Import a text file</em>. You can import one or more text files in the Lightroom tagging file format. You can also export your tags, add information to the exported file, then re-import it. The import function updates existing tags and creates new tags as required. If you change the name of a tag in the import file, it will be treated as a new tag.</p>
 </li>
 <li>
-<p>Import already-tagged images. This method does not offer any flexibility to change tag names or categories during the import process.</p>
+<p><em>Import already-tagged images</em>. This method does not offer any flexibility to change tag names or categories during the import process.</p>
 </li>
 <li>
-<p>Use the “create tag” sub-menu. A tag can be created manually, under an existing one (hierarchical) or at the root level.</p>
+<p><em>Use the “create tag” sub-menu</em>. A tag can be created manually, under an existing one (hierarchical) or at the root level.</p>
 </li>
 <li>
-<p>Type into the text box and press the “new” button. Hierarchical tags are created using the pipe symbol “|”. Note that the tag is also attached to any selected images.</p>
+<p><em>Type into the text box and press the “new” button</em>. Hierarchical tags are created using the pipe symbol “|”. Note that the entered tag is also attached to any selected images.</p>
 </li>
 </ul>
-<p>A number of tags are also generated automatically by dartable (e.g. “darktable|exported” or “darktable|styles|your style”). These help keep track of what actions may have been undertaken on those images. For example, these automatic tags allow you to idenntify which images have previously been exported, or which images have had styles applied.</p>
+<p>A number of tags are also generated automatically by dartable (e.g. “darktable|exported” or “darktable|styles|your style”). These help keep track of what actions may have been undertaken on those images. For example, these automatic tags allow you to identify which images have previously been exported, or which images have had styles applied.</p>
 <h2 id="editrename-tag">edit/rename tag</h2>
-<p>The <em>tag dictionary</em> can be mainained via the <code>edit tag...</code> and <code>rename path...</code> pop-up menu items (<code>right-click</code> on a tag in the <em>tag dictionary</em> view).</p>
-<p>The <code>edit tag...</code> operation allows you to change the name of a tag, though you cannot change which category it belongs to (you cannot use the pipe &ldquo;|&rdquo; symbol in the tag name field). The command is aborted if you try to enter a tag name that already exists. You can set the <em>private</em> and <em>category</em> flags and define <em>synonyms</em> for the tag (see below). These attributes are recorded in the <code>XMP-dc Subject</code> and <code>XMP-lr Hierarchical Subject</code> metadata entries. You can control which tags are included in exports by changing settings in the <a href="/dtdocs/module-reference/utility-modules/lighttable/export-selected/">export selected</a> module.</p>
+<p>The <em>tag dictionary</em> can be mainained via the &ldquo;<code>edit tag...</code>&rdquo; and &ldquo;<code>rename path...</code>&rdquo; items in the <code>right-click</code> pop-up menu.</p>
+<p>The &ldquo;<code>edit tag...</code>&rdquo; operation allows you to change the name of a tag, though you cannot change which category it belongs to (you cannot use the pipe &ldquo;|&rdquo; symbol in the tag name field). The command is aborted if you try to enter a tag name that already exists. You can set the <em>private</em> and <em>category</em> flags and define <em>synonyms</em> for the tag (see below). These attributes are recorded in the <code>XMP-dc Subject</code> and <code>XMP-lr Hierarchical Subject</code> metadata entries, respectively. You can control which tags are included in exports by changing settings in the <a href="/dtdocs/module-reference/utility-modules/lighttable/export-selected/">export selected</a> module.</p>
 <ul>
 <li>
 <p>A tag set as “private” is, by default, not exported.</p>
@@ -4132,33 +4185,33 @@
 <p>“synonyms” enrich the tag information and are mainly used to assist search engines. For example “juvenile”, “kid” or “youth” can be set as synonyms of “child”. Synonyms can also be used to translate tag names to other languages.</p>
 </li>
 </ul>
-<p>The <code>rename path...</code> operation is only available in the <em>tree</em> view mode, and it shows the number of tagged images which would be impacted by a change to the name of this tag or category. The rename path window lets the user change the full path of tag, including the catagories to which it belongs (categories can be specified using the pipe &ldquo;|&rdquo; symbol). This operation is powerful, but please take care as it can have a significant impact on the metadata of your images. The operation is aborted if the requested change causes a conflict with an existing tag.</p>
+<p>The &ldquo;<code>rename path...</code>&rdquo; operation is only available in the <em>tree</em> view mode, and it shows the number of tagged images which would be impacted by a change to the name of this tag or category. The rename path window lets the user change the full path of tag, including the catagories to which it belongs (categories can be specified using the pipe &ldquo;|&rdquo; symbol). This operation is powerful, but please take care as it can have a significant impact on the metadata of your images. The operation is aborted if the requested change causes a conflict with an existing tag.</p>
 <h2 id="attach-tag">attach tag</h2>
 <p>There are a number of ways to attach an existing tag to a group of selected images:</p>
 <ul>
-<li><code>click</code> on a tag in the <em>tag dictionary</em> window to select it, then <code>click</code> on the <code>attach</code> button to attach that tag to the selected images</li>
-<li><code>right-click</code> on a tag in the <em>tag dictionary</em> window which will bring up a pop-up menu, then select the “attach tag” menu item to attach that tag to the selected images.</li>
-<li><code>double-click</code> on a tag in the <em>tag dictionary</em> window to attach that tag to the selected images.</li>
-<li><code>right-click</code> on a tag shown in the <em>attached tags</em> view to show a pop-up menu and, if not all of the selected images have that tag, the <code>attach tag to all</code> menu item will attach that tag to all the selected images.</li>
+<li><code>click</code> on a tag in the <em>tag dictionary</em> window to select it, then <code>click</code> on the <code>attach</code> button.</li>
+<li><code>right-click</code> on a tag in the <em>tag dictionary</em> window which will bring up a pop-up menu, then select the “attach tag” menu item.</li>
+<li><code>double-click</code> on a tag in the <em>tag dictionary</em> window.</li>
+<li><code>right-click</code> on a tag shown in the <em>attached tags</em> view to show a pop-up menu. If some of the selected images do not currently have that tag, the <code>attach tag to all</code> menu item will attach that tag to all the selected images.</li>
 <li>Type into the text box and press the “new” button or <code>enter</code>. This will create the tag if it doesn&rsquo;t already exist, and attach it to the selected images.</li>
-<li><code>Ctrl+T</code> opens a small text box at the bottom of the central view of the lighttable. Type in the name of a tag and press <code>enter</code>. The tag will be created if it doesn&rsquo;t exist, and the tag will be attached to all the selected images.</li>
+<li>Press <code>Ctrl+T</code> to open a small text box at the bottom of the central view of the lighttable. Type in the name of a tag and press <code>Enter</code>. The tag will be created if it doesn&rsquo;t exist, and the tag will be attached to all the selected images.</li>
 </ul>
 <p>When hovering over the images in the ligthtable you can check which tags are attached to the image, either by looking at the <em>attached tags</em> window in the <em>tagging</em> module, or in the <em>tags</em> attribute in the <a href="/dtdocs/module-reference/utility-modules/shared/image-information/">image information</a> module.</p>
 <h2 id="detach-tag">detach tag</h2>
 <p>There are several ways to remove a tag from a group of selected images:</p>
 <ul>
-<li><code>click</code> on a tag in the <em>attached tag</em> window of the <em>tagging</em> module to select the tag, then <code>click</code> on the <code>detach</code> button underneath to remove the tag from the selected images.</li>
-<li><code>double-click</code> on a tag in the <em>attached tag</em> window to remove that tag from all the selected images.</li>
-<li><code>right-click</code> on a tag in the <em>attached tag</em> window, to show a pop-up menu, and select <code>detach</code> to remove the tag from all the selected images.</li>
+<li><code>click</code> on a tag in the <em>attached tag</em> window of the <em>tagging</em> module to select the tag, then <code>click</code> on the <code>detach</code> button.</li>
+<li><code>double-click</code> on a tag in the <em>attached tag</em> window.</li>
+<li><code>right-click</code> on a tag in the <em>attached tag</em> window, to show a pop-up menu, and select <code>detach</code>.</li>
 </ul>
 <h2 id="delete-tag">delete tag</h2>
 <p>It is possible to completely remove a tag from all images (whether selected or not) and delete the tag from the database. Because this could impact a large number of images, a warning will be displayed indicating how many images currently have this tag attached. Take this warning seriously as there is no way to undo this action (except by restoring your database and/or XMP sidecar files from a backup). A tag in <em>tag dictionary</em> window can be deleted in the following ways:</p>
 <ul>
-<li><code>right-click</code> on a tag in the <em>tag dictionary</em> window, to show a pop-up menu, and choose <code>delete tag</code> to delete the tag.</li>
+<li><code>right-click</code> on a tag in the <em>tag dictionary</em> window, to show a pop-up menu, and choose <code>delete tag</code>.</li>
 <li><code>right-click</code> on a tag or category in the <em>tag dictionary</em> window, to show a pop-up menu, and choose <code>delete path</code> to delete the tag or category, together with any child tags or categories.</li>
 </ul>
 <h2 id="import--export">import / export</h2>
-<p>The “import” button allows you to choose a text file (which must comply with the Lightroom tag text file format) and import its content. If a tag already exists, its properties will be updated, otherwise the tag will be created.</p>
+<p>The “import” button allows you to choose a text file (which must comply with the Lightroom tag text file format) and import its content. If a tag in the imported file already exists, its properties will be updated, otherwise a new tag will be created.</p>
 <p>The “export” button exports your entire tag dictionary into a text file of your choice (Lightroom tag text file format).</p>
 <h2 id="navigation">navigation</h2>
 <p>To see the images bearing a particular tag in the <em>tag dictionary</em> window, <code>right-click</code> on the tag name and choose <code>go to tag collection</code> in the resulting pop-up menu. This opens a collection in the <em>collect images</em> module showing all images containing this tag. You can also select other tags in the <em>collect images</em> module by <code>double clicking</code> on the collection for the other tag.</p>

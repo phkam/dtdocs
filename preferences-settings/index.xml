@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/overview/</guid>
-      <description>darktable comes with a number of user-configurable preferences. These can be adjusted in the preferences dialog, which can be reached by clicking the gear icon on the right of the top panel.
-Any altered settings (i.e. those that differ from their default state) are highlighted. Double click on a setting&amp;rsquo;s label to reset to the default value.</description>
+      <description>darktable comes with a number of user-configurable preferences. These can be adjusted in the preferences dialog, which can be reached by clicking the gear icon on the right of the top panel. Preferences are separated into tabs, each of which is described in more detail in the following sections.
+When opened from within the lighttable or darkroom views, the appropriate tab will be loaded by default to allow you to modify that view&amp;rsquo;s settings.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@ Any altered settings (i.e. those that differ from their default state) are highl
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/general/</guid>
       <description>The preferences in this tab control the overall look and feel of darktable.
- interface language Set the language of the user interface. the system default is marked with an * (needs a restart) theme Set the theme for the user interface. Apart from any aesthetic considerations, the recommended interface color for color evaluation is middle grey. Indeed, visual perception is affected by ambient brightness, and a low brightness of the interface causes all kinds of illusions.</description>
+ interface language Set the language of the user interface. The system default is marked with an * (needs a restart) theme Set the theme for the user interface. Apart from any aesthetic considerations, the recommended interface color for color evaluation is middle grey. Indeed, visual perception is affected by ambient brightness, and a low brightness of the interface causes all kinds of illusions.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@ Any altered settings (i.e. those that differ from their default state) are highl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/import/</guid>
-      <description>This tab contains options related to importing images into darktable using the import module.
+      <description>This tab contains a number of default settings for the lighttable import module.
 import  ignore JPEG images when importing film rolls When you have RAW+JPEG images together in one directory it usually doesn&amp;rsquo;t make sense to import both. Set this flag to ignore all JPEGs when importing images (default off). recursive directory traversal when importing film rolls When importing images from a folder, also recursively import images from its sub-folders.</description>
     </item>
     
@@ -42,8 +42,8 @@ import  ignore JPEG images when importing film rolls When you have RAW+JPEG imag
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/lighttable/</guid>
-      <description>The following options control functionality in the lighttable view and associated modules.
- color manage cached thumbnails If activated darktable generates thumbnails in a general color space (AdobeRGB) in order to render them independently of the individual monitor. Conversion to the monitor color space is undertaken at display time. If this option is not activated thumbnails are stored directly in the specific monitor color space at generation time and are subsequently displayed without further corrections (default on).</description>
+      <description>The following options control functionality in the lighttable view and modules.
+ color manage cached thumbnails If activated, darktable generates thumbnails in a general color space (AdobeRGB) in order to render them independently of the individual monitor. Conversion to the monitor color space is undertaken at display time. If this option is not activated thumbnails are stored directly in a monitor-specific color space at generation time and are subsequently displayed without further corrections (default on).</description>
     </item>
     
     <item>
@@ -73,7 +73,7 @@ map / geolocalisation  maximum number of images drawn on map The maximum number 
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/processing/</guid>
       <description>The following options control how images are processed.
- always use LittleCMS 2 to apply output color profile If this option is activated, darktable will use the LittleCMS 2 system library instead of its own internal routines. This is significantly slower than the default but might give more accurate results in some cases (default off).  Note that if the given ICC is LUT-based or contains both a LUT and a matrix, darktable will use LittleCMS 2 to render the colors regardless of this configuration parameter&amp;rsquo;s value.</description>
+ always use LittleCMS 2 to apply output color profile If this option is activated, darktable will use the LittleCMS 2 system library to apply the output color profile instead of its own internal routines. This is significantly slower than the default but might give more accurate results in some cases. If the given ICC is LUT-based or contains both a LUT and a matrix, darktable will use LittleCMS 2 to render the colors regardless of this configuration parameter&amp;rsquo;s value (default off).</description>
     </item>
     
     <item>
@@ -93,7 +93,7 @@ map / geolocalisation  maximum number of images drawn on map The maximum number 
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/cpu-gpu-memory/</guid>
       <description>This preference tab contains mostly performance-related settings:
- memory in megabytes to use for thumbnail cache In order to speed-up display of film rolls, darktable stores thumbnails in a cache file on disk (primary cache) and loads it into memory at startup. This setting controls the cache size in megabytes. It needs a restart if changed (default 256MB). enable disk backend for thumbnail cache If activated, darktable stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they get dropped from the primary cache.</description>
+ memory in megabytes to use for thumbnail cache In order to speed-up the display of film rolls, darktable stores image thumbnails in a cache file on disk (primary cache) and loads it into memory at startup. This setting controls the size of the cache in megabytes. It needs a restart if changed (default 256MB). enable disk backend for thumbnail cache If activated, darktable stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they get dropped from the primary cache.</description>
     </item>
     
     <item>
@@ -122,8 +122,8 @@ database  check for database maintenance Indicates when darktable should check f
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/shortcuts/</guid>
       <description>Much of the functionality of darktable can be accessed via shortcuts using the keyboard or keyboard/mouse combinations. These shortcuts are user-configurable via the shortcuts tab.
-Many of the key shortcuts are provided with default values but most must be configured by the user. Any key may be used for a keyboard shortcut, and may be modified with one or more of Shift, Control or Alt.
-When you open the shortcuts tab you are initially presented with a hierarchical list of all actions that can receive a keyboard shortcut.</description>
+Many important shortcut actions are provided with default key combinations, but most must be manually configured by the user. Any key may be used for a keyboard shortcut, and may be combined with the Shift, Control or Alt modifier keys (or any combination thereof).
+When you open the shortcuts tab you are initially presented with a hierarchical list of all actions that can be applied with a keyboard shortcut.</description>
     </item>
     
     <item>
@@ -142,7 +142,7 @@ Pre-defined presets (those that are included by default within darktable) are sh
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/preferences-settings/lua-options/</guid>
-      <description> lua scripts installer don&amp;rsquo;t show again Check this box to not show the lua scripts installer in the lighttable if no lua scripts are installed  </description>
+      <description> lua scripts installer don&amp;rsquo;t show again Check this box to hide the lua scripts installer in the lighttable if no lua scripts are installed.  </description>
     </item>
     
   </channel>

@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,21 +4065,23 @@
         multiple instances
     </h1>
 
-    <p>Many of darktable&rsquo;s modules can be applied more than once in the pixelpipe. Each instance of a module behaves like any other module, taking its input from the module below in the pixelpipe delivering its output to the module above.</p>
+    <p>Many of darktable&rsquo;s modules can be applied more than once in the pixelpipe. Each instance of a module behaves independently, taking its input from the module below in the pixelpipe delivering its output to the module above.</p>
 <p>As with the base instance of a module, all instances can be moved independently within the pixelpipe either by holding <code>Ctrl+Shift</code> while dragging &amp; dropping or by choosing &ldquo;move up&rdquo; or &ldquo;move down&rdquo; in the <em>multiple instances</em> drop-down menu.</p>
 <p>Instances can be renamed with <code>Ctrl+click</code> on the module header.</p>
 <h1 id="typical-use-cases">typical use cases</h1>
-<p>There are many occasions where it makes sense to have an operation act more than once in the pixelpipe. Here are some typical use cases.</p>
+<p>There are many occasions where it makes sense to have a module apply more than once in the pixelpipe. Here are some typical use cases.</p>
 <ul>
 <li>The <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a> module can be used in combination with with <a href="/dtdocs/darkroom/masking-and-blending/masks/">masks</a> to lighten or darken parts of an image. A separate instance may be created to modify each part of the image.</li>
-<li>You may wish to apply a denoising module like <a href="/dtdocs/module-reference/processing-modules/denoise-profiled/"><em>denoise (profiled)</em></a> with two different parameter sets: one for luma denoising and another for chroma denoising. This can be accomplished by generating two module instances and using the first one only on luma (by selecting <a href="/dtdocs/darkroom/masking-and-blending/blend-modes/">blend mode</a> “lightness”) and the second one only on chroma (by selecting blend mode “color”).</li>
+<li>You may wish to handle luma and chroma noise independently. This can be accomplished by generating two instances of your chosen denoising module and using the first one only on luma (by selecting <a href="/dtdocs/darkroom/masking-and-blending/blend-modes/">blend mode</a> “lightness”) and the second one only on chroma (by selecting blend mode “color”).</li>
 </ul>
-<p>Please note that each instance also adds to the workload of your pixelpipe. Generating too many instances – especially of the more demanding modules – will cause noticeable slow-down.</p>
+<hr>
+<p><strong>Note:</strong> Each instance also adds to the workload of your pixelpipe. Generating too many instances – especially of the more demanding modules – will cause noticeable slow-down.</p>
+<hr>
 <h1 id="managing-multiple-instances">managing multiple instances</h1>
 <p><em>Click</em> on the <em>multiple instance menu</em> in the <a href="/dtdocs/darkroom/interacting-with-modules/module-header/">module header</a> to display a drop-down menu, with the following options.</p>
 <dl>
 <dt>new instance</dt>
-<dd>Create a new instance of the current module with all of its parameters reset to default. The &lsquo;instance name&rsquo; is automatically set to a unique integer so that it can be distinguished from its parent. This name can be changed (see below).</dd>
+<dd>Create a new instance of the current module with all of its parameters reset to default. The &lsquo;instance name&rsquo; is automatically set to a unique integer so that it can be distinguished from its parent.</dd>
 <dt>duplicate instance</dt>
 <dd>Create a new instance of the current module with all of its parameters inherited from its parent. As with &lsquo;new instance&rsquo; the &lsquo;instance name&rsquo; is automatically set to a unique integer.</dd>
 <dt>move up/down</dt>

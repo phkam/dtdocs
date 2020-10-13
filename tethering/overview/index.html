@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,13 +4065,13 @@
         overview
     </h1>
 
-    <p>The tethering view allows you to capture images directly into darktable from your connected camera.</p>
-<p>To use the tethering feature you need to connect your camera to your PC using a USB cable. Your computer might ask to mount or view the connected camera. <em>Do not mount or view the camera</em>. If your camera is mounted or viewed automatically, you will need to “unmount/eject” the camera. This unlocks the camera so that darktable can take control of it &ndash; darktable will then re-lock the camera so that it cannot be used by other applications.</p>
-<p>After the USB cable is connected, look at the <a href="/dtdocs/module-reference/utility-modules/lighttable/import/">import</a> module in the <a href="/dtdocs/lighttable/">lighttable</a> view. If your camera is not visible in this module, click the “scan devices” button and it should appear with two functions available: “import from camera” and “tethered shoot”. Click “tethered shoot” to enter the tethering mode.</p>
+    <p>The tethering view allows you to capture images directly into darktable from a connected camera.</p>
+<p>To use the tethering feature you need to connect your camera to your PC using a USB cable. Your computer might ask to mount or view the connected camera. <em>Do not mount or view the camera</em>. If your camera is mounted or viewed automatically, you will need to “unmount/eject” the camera before darktable can access it. This unlocks the camera so that darktable can take control of it &ndash; darktable will then re-lock the camera so that it cannot be used by other applications.</p>
+<p>After the USB cable is connected, look at the <a href="/dtdocs/module-reference/utility-modules/lighttable/import/">import</a> module in the <a href="/dtdocs/lighttable/">lighttable</a> view. If your camera is not visible in this module, click the “scan devices” button and it should appear with two functions available: “import from camera” and “tethered shoot”. Click “tethered shoot” to enter the tethering view.</p>
 <p>darktable uses <a href="https://github.com/gphoto/gphoto2" target="_blank">gphoto2</a> to interface with your camera. If you have problems finding the connected camera as described above, check the <a href="/dtdocs/tethering/troubleshooting/">troubleshooting</a> section in this chapter to verify that your camera has tethering support.</p>
-<p>In the center view, images are shown while you capture them. You can capture an image by either using darktable&rsquo;s user interface or manually triggering a capture with your camera. If you are using Live View the image will be shown in darktable&rsquo;s center view.</p>
+<p>In the center view, images are shown while you capture them. You can capture an image by either using darktable&rsquo;s user interface or by manually triggering a capture with your camera. If you are using Live View the image will be shown in darktable&rsquo;s center view.</p>
 <p>When entering tethering view, a film roll will be created using the same structure as defined for camera import (see <a href="/dtdocs/preferences-settings/import/"><code>preferences</code> -&gt; <code>import</code> -&gt; <code>session options</code></a>). The job code will be predefined as “capture”.</p>
-<p>If you want to group your captures into different film rolls, you should use the <a href="/dtdocs/module-reference/utility-modules/tethering/session/">session</a> module in the right-hand panel to set a different job code. When entering a new name and pressing <code>Enter</code>, a new film roll will be created and captured images will go into this new film roll.</p>
+<p>If you want to group your captures into different film rolls, you should use the <a href="/dtdocs/module-reference/utility-modules/tethering/session/">session</a> module in the right-hand panel to set a different job code. When entering a new name and pressing <code>Enter</code>, a new film roll will be created and newly-captured images will be added into this new film roll.</p>
 <p>darktable provides some useful tools to set up an image capture in the user interface. You can set up timelapse captures, brackets for HDR and even sequential captures of bracketed images. For more information read the documentation on the <a href="/dtdocs/module-reference/utility-modules/tethering/camera-settings/">camera settings</a> module and the <a href="/dtdocs/tethering/examples/">examples</a> later in this chapter.</p>
 
 

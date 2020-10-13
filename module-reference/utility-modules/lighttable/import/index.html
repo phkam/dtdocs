@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,17 +4065,17 @@
         import
     </h1>
 
-    <p>Import images into film rolls.</p>
-<p>Images can be imported from the local filesystem or from a connected camera. See <a href="/dtdocs/overview/supported-file-formats/">supported file formats</a> for information about the file formats currently supported by darktable.</p>
+    <p>Import images into one or more film rolls.</p>
+<p>Images can be imported from the local filesystem or from a connected camera. See <a href="/dtdocs/overview/supported-file-formats/">supported file formats</a> for more information.</p>
 <h1 id="import-from-filesystem">import from filesystem</h1>
 <p>You can import either a single image or a folder of images from the filesystem by clicking the relevant button. The imported image(s) will be automatically added to a film roll with the same name as the filesystem folder they are imported from.</p>
 <p>Clicking on “image” or “folder” opens a file selector dialog. Navigate through the filesystem, and select the item(s) to import.</p>
-<p>On the lower part of the dialog, are some additional <em>import options</em>. These options can be set by default within <a href="/dtdocs/preferences-settings/import/"><code>preferences</code> -&gt; <code>import</code></a>.</p>
+<p>On the lower part of the dialog, are some additional <em>import options</em> as follows. Default values for all of these options can be set in <a href="/dtdocs/preferences-settings/import/"><code>preferences</code> -&gt; <code>import</code></a>.</p>
 <dl>
 <dt>import folders recursively (folder import only)</dt>
-<dd>Check this option to import images in the currently selected folder and all subfolders. It is not recommended to use this option to import a large number of images at the same time. The import process causes darktable to generate thumbnails for all of the imported images, but in the end it will only be able to keep the recent ones in its cache. It is better to import images in smaller chunks.</dd>
+<dd>Check this option to import images in the currently selected folder and all subfolders. It is not recommended to use this option to import a large number of images at the same time. The import process causes darktable to generate thumbnails for all of the imported images, but in the end it will only be able to keep the most recent in its cache. It is better to import images in smaller chunks.</dd>
 <dt>ignore JPEG files</dt>
-<dd>Check this option if there are JPEG images in the same folder that you do not want to import. This option is usually used where the camera stores RAW+JPEG and you only want to work on the raw files, leaving the JPEG images alone.</dd>
+<dd>Check this option if there are <code>JPEG</code> images in the same folder that you do not want to import. This option is usually used where the camera stores <code>RAW+JPEG</code> and you only want to work on the raw files, leaving the <code>JPEG</code> images untouched.</dd>
 <dt>apply metadata on import</dt>
 <dd>This option allows you to automatically set some metadata fields on your images at import time.</dd>
 </dl>
@@ -4035,9 +4087,9 @@
 <p>When a camera is detected, it will show up in the device panel after pressing “scan for devices”. If you hover your mouse over the camera tab label, a tooltip will pop up with information about the camera (model, firmware version etc.). Depending on the capabilities of the camera, the following options may be displayed:</p>
 <dl>
 <dt>import from camera</dt>
-<dd>This will bring up an import dialog, showing any images on camera that can be selected for import into a film roll in darktable.</dd>
+<dd>This will bring up an import dialog, showing any images on camera that can be selected for import into a film roll.</dd>
 <dd>
-<p>The base folder for storing imported images and the naming pattern of subfolders and individual images can be set in the <a href="/dtdocs/preferences-settings/import/"><code>preferences</code> -&gt; <code>import</code></a>.</p>
+<p>The base folder for storing imported images and the naming pattern of subfolders and individual images can be set in <a href="/dtdocs/preferences-settings/import/"><code>preferences</code> -&gt; <code>import</code></a>.</p>
 </dd>
 <dt>tethered shoot</dt>
 <dd>Tethering is used to integrate darktable with your camera. When you take images with your camera, they are automatically imported into darktable, so you can review the result of the shoot. You can also setup remote capture jobs, controlling the number of images and time between captures, along with camera settings such as exposure time, aperture etc.</dd>
@@ -4061,7 +4113,7 @@
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="prev">lua scripts installer (ToDo) &gt;</a>
+	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="prev">lua scripts installer &gt;</a>
 	
 	
     </div>

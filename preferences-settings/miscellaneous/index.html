@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,41 +4065,41 @@
         miscellaneous
     </h1>
 
-    <h3 id="interface">interface</h3>
+    <h1 id="interface">interface</h1>
 <dl>
 <dt>mouse wheel scrolls modules side panel by default</dt>
 <dd>When enabled, the mouse wheel scrolls side panels by default and <code>Ctrl+Alt+mouse wheel</code> scrolls data entry fields. When disabled, this behavior is reversed (default off).</dd>
 <dt>always show panels scrollbars</dt>
 <dd>Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on). (needs a restart)</dd>
 <dt>method to use for getting the display profile</dt>
-<dd>This option allows the user to force darktable to use a specific method to obtain the current display profile for <a href="/dtdocs/special-topics/color-management/">color management</a>. In the default setting “all” darktable will choose to query the X display server&rsquo;s xatom or the colord system service. You can set this option to “xatom” or “colord” to enforce a specific method if the two methods give different results. You can run the <a href="/dtdocs/special-topics/program-invocation/darktable-cmstest/">darktable-cmstest</a> binary to examine your color management subsystem.</dd>
+<dd>This option allows the user to force darktable to use a specific method to obtain the current display profile for <a href="/dtdocs/special-topics/color-management/">color management</a>. In the default setting “all”, darktable will choose to query the X display server&rsquo;s xatom or the colord system service. You can set this option to “xatom” or “colord” to enforce a specific method if the two methods give different results. You can run the <a href="/dtdocs/special-topics/program-invocation/darktable-cmstest/">darktable-cmstest</a> binary to examine your color management subsystem.</dd>
 </dl>
-<h3 id="tags">tags</h3>
+<h1 id="tags">tags</h1>
 <dl>
 <dt>omit hierarchy in simple tag lists</dt>
 <dd>When exporting images any hierarchical tags are also added as a simple list of non-hierarchical tags to make them visible to some other programs. When this option is checked darktable will only include the last part of the hierarchy and ignore the rest. So <code>foo|bar|baz</code> will only add <code>baz</code>.</dd>
 <dt>disable the entry completion</dt>
 <dd>The entry completion is useful for those who enter tags using the keyboard only. For others the entry completion can be embarrassing (default off). (needs a restart)</dd>
 </dl>
-<h3 id="keyboard-shortcuts-with-multiple-instances">keyboard shortcuts with multiple instances</h3>
+<h1 id="keyboard-shortcuts-with-multiple-instances">keyboard shortcuts with multiple instances</h1>
 <p>It is possible to create multiple instances of many processing modules. In this scenario it is not always obvious which instance should be controlled by keyboard shortcut operations. The following options control rules that are applied (in order) to decide which module instance keyboard shortcuts should be applied to.</p>
 <p>These rules are also used when clicking and dragging on the histogram to change exposure.</p>
 <dl>
-<dt>prefer expanded instance</dt>
-<dd>if instances of the module are expanded, ignore collapsed instances</dd>
+<dt>prefer expanded instances</dt>
+<dd>If instances of the module are expanded, ignore collapsed instances (default off).</dd>
 <dt>prefer enabled instances</dt>
-<dd>after applying the above rule, if remaining instances of the module are active, ignore inactive instances</dd>
+<dd>After applying the above rule, if remaining instances of the module are active, ignore inactive instances (default off).</dd>
 <dt>prefer unmasked instances</dt>
-<dd>after applying the above rules, if remaining instances of the module are unmasked, ignore masked instances</dd>
+<dd>After applying the above rules, if remaining instances of the module are unmasked, ignore masked instances (default off).</dd>
 <dt>selection order</dt>
-<dd>after applying the above rules, apply the shortcut to the first or last instance remaining</dd>
+<dd>After applying the above rules, apply the shortcut to the first or last instance remaining (default &ldquo;last instance&rdquo;).</dd>
 </dl>
-<h3 id="other">other</h3>
+<h1 id="other">other</h1>
 <dl>
 <dt>do not show april 1st game</dt>
 <dd>Don&rsquo;t show a game when opening darktable on April 1st (default on).</dd>
 <dt>password storage backend to use</dt>
-<dd>The storage backend for password storage. Options: “auto” (default), “none”, “libsecret”, “kwallet”.</dd>
+<dd>The backend to use for password storage. Options: “auto” (default), “none”, “libsecret”, “kwallet”.</dd>
 <dt>executable for playing audio files</dt>
 <dd>Define an external program which is used in the lighttable view to play audio files that some cameras record to keep notes for images (default “aplay”).</dd>
 </dl>

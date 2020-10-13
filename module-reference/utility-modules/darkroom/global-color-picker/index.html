@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4014,26 +4066,31 @@
     </h1>
 
     <p>Take color samples from the current darkroom image, display their values in multiple ways and compare colors from different locations.</p>
-<p>The color picker is activated by pressing the color picker icon. There are multiple parameters for controlling how the color picker works, whose settings remain in effect until you leave the darkroom mode.</p>
-<p>Besides the global color picker described here, many darktable modules (e.g. <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a>) also contain local color pickers which are (mostly) used to set individual module parameters. You should be aware that these two forms of color picker do not always work in the same color space. The global color picker works in monitor color space and takes samples after the complete pixelpipe has been processed. Local color pickers run in the color space of the module in which they are activated and reflect the input or output data of that module within the pixelpipe.</p>
+<p>The color picker is activated by pressing the color picker icon. The module&rsquo;s parameters will remain in effect until you leave the darkroom mode.</p>
+<p>Besides the global color picker described here, many darktable modules (e.g. <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a>) also contain local color pickers which are used to set individual module parameters. You should be aware that these two forms of color picker do not always work in the same color space. The global color picker works in monitor color space and takes its samples after the complete pixelpipe has been processed. Local color pickers run in the color space of the module in which they are activated and reflect the input or output data of that module within the pixelpipe.</p>
 <h1 id="module-controls">module controls</h1>
 <dl>
 <dt>point/area mode</dt>
-<dd>The global color picker can be run in point or area mode. When in point mode only a small spot under your cursor is taken as a sample. In area mode you can draw a rectangle and darktable samples the area within that rectangle.</dd>
+<dd>The global color picker can be run in point or area mode by <code>clicking</code> or <code>Ctrl+clicking</code> on the color picker icon, respectively. When in point mode only a small spot under your cursor is taken as a sample. In area mode you can draw a rectangle and darktable samples the area within that rectangle.</dd>
 <dt>mean/min/max</dt>
 <dd>If samples are taken in area mode, darktable will calculate mean, minimum and maximum color channel values. This combobox allows you to select which of those are displayed. For obvious statistical reasons mean, min and max are identical for the single sample of point mode.</dd>
 <dt>color swatch / color values</dt>
-<dd>A color swatch representing the sampled point or area is displayed alongside numerical values. The global color picker works in monitor RGB color space. Select &ldquo;Lab&rdquo; to translate these numerical values into Lab color space. Beware that Lab values are approximated here. Depending on the monitor color profile there may be some deviations from the actual values.</dd>
-<dt>restrict histogram to selection</dt>
-<dd>When this checkbox is ticked, only the values of the selected area or point are taken into account by the main histogram at the top of the right hand panel. This allows you to see what tonal values are present in a specific area.</dd>
+<dd>A color swatch representing the sampled point or area is displayed alongside numerical values. Clicking on the swatch will toggle on/off a much larger swatch for easier viewing.</dd>
+<dd>
+<p>The global color picker works in monitor RGB color space. Select &ldquo;Lab&rdquo; to translate these numerical values into Lab color space. Beware that Lab values are approximated here. Depending on the monitor color profile there may be some deviations from the actual values.</p>
+</dd>
 <dt>live samples</dt>
 <dd>The sampled colors (in either area or point mode) can be stored as live samples by pressing the “add” button. A color swatch and numerical values will be shown for each stored sample. You can select which numerical value (mean, min, max) is to be displayed and whether the display should be in RGB or Lab color space.</dd>
 <dd>
 <p>Newly created live samples are not locked. If you change your image those changes will be reflected in your live samples. This can be used to show you how changing a parameter affects different parts of an image. Clicking on a live sample&rsquo;s color swatch locks it and a lock symbol is displayed. Further image changes will then no longer affect the sample. You can use this to compare two live samples by locking just one of them, providing a before and after comparison.</p>
 </dd>
 <dd>
-<p>Live sample locations are visually indicated on your image if you check the option “display sample areas on image”.</p>
+<p>If you hover the mouse over the &ldquo;delete&rdquo; button of one of the live sample entries, the selected region for that sample will be highlighted in the image preview.</p>
 </dd>
+<dt>display sample areas on image</dt>
+<dd>When this checkbox is ticked, live sample locations are visually indicated on your image.</dd>
+<dt>restrict histogram to selection</dt>
+<dd>When this checkbox is ticked, only the values of the selected area or point are taken into account by the main histogram at the top of the right hand panel. This allows you to see what tonal values are present in a specific area.</dd>
 </dl>
 
 

@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4015,9 +4067,14 @@
 
     <p>Automatically correct for converging lines, a form of perspective distortion. The underlying mechanism is inspired by Markus Hebel&rsquo;s <a href="http://www.shiftn.de/" target="_blank"><em>ShiftN</em></a> program.</p>
 <p>Perspective distortions are a natural effect when projecting a three dimensional scene onto a two dimensional plane and cause objects close to the viewer to appear larger than objects further away. Converging lines are a special case of perspective distortions frequently seen in architectural photographs. Parallel lines, when photographed at an angle, are transformed into converging lines that meet at some vantage point within or outside of the image frame.</p>
-<p>This module is able to correct converging lines by warping the image in such a way that the lines in question become parallel to the image frame. Corrections can be applied in vertical and horizontal direction, either separately or in combination. In order to perform automatic correction the module first analyzes the image for suitable structural features consisting of line segments. Based on these line segments a fitting procedure is initiated which determines the best values for the module parameters.</p>
+<p>This module is able to correct converging lines by warping the image in such a way that the lines in question become parallel to the image frame. Corrections can be applied in a vertical and horizontal direction, either separately or in combination. In order to perform automatic correction the module first analyzes the image for suitable structural features consisting of line segments. Based on these line segments a fitting procedure is initiated which determines the best values for the module&rsquo;s parameters.</p>
 <h1 id="analysing-the-structure-of-an-image">analysing the structure of an image</h1>
-<p>Click the “get structure” icon to analyze the image for structural elements &ndash; darktable will automatically detect and evaluate line elements. Only lines that form a set of vertical or horizontal converging lines are used for the subsequent processing steps. The line segments are displayed as overlays on the image canvas, with the type of line identified by color:</p>
+<p>Click the 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/icon-get-structure.png" alt="structure-icon"  />
+
+ icon to analyze the image for structural elements &ndash; darktable will automatically detect and evaluate line elements. Only lines that form a set of vertical or horizontal converging lines are used for the subsequent processing steps. The line segments are displayed as overlays on the image canvas, with the type of line identified by color:</p>
 <dl>
 <dt>green</dt>
 <dd>Vertical converging lines</dd>
@@ -4051,20 +4108,50 @@
 <dt>lens model</dt>
 <dd>This parameter controls the lens focal length, camera crop factor and aspect ratio that will be used by the correction algorithm. If set to “generic” a lens focal length of 28mm on a 35mm full-frame camera is assumed. If set to “specific”, the focal length and crop factor can be set manually using the sliders provided.</dd>
 <dt>focal length</dt>
-<dd>If the <em>lens model</em> is set to &ldquo;specific&rdquo;, set the lens focal length. The default value is taken from the Exif data of your image, and can be overridden by adjusting the slider manually.</dd>
+<dd>If the <em>lens model</em> is set to &ldquo;specific&rdquo;, set the lens focal length. The default value is taken from the Exif data of the image, and can be overridden by adjusting the slider manually.</dd>
 <dt>crop factor</dt>
 <dd>If the <em>lens model</em> is set to &ldquo;specific&rdquo;, set the camera crop factor. You will normally need to set this value manually.</dd>
 <dt>aspect ratio</dt>
 <dd>If the <em>lens model</em> is set to &ldquo;specific&rdquo;, this parameter allows for a free manual adjustment of the image&rsquo;s aspect ratio.</dd>
 <dt>automatic fit</dt>
-<dd>Click on one of the <em>automatic fit</em> icons to set the distortion correction sliders automatically based on the edge detection analysis. You can choose to automatically apply just the vertical corrections, just the horizontal corrections, or both together. <code>Ctrl+click</code> on any of the icons to apply a rotation without the lens shift. <code>Shift+click</code> on any of the icons to apply the lens shift without any rotation.</dd>
+<dd>Click on one of the <em>automatic fit</em> icons to set the distortion correction sliders automatically based on the edge detection analysis. You can choose to automatically apply just the vertical corrections 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/icon-vertical.png" alt="vertical-icon"  />
+
+, just the horizontal corrections 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/icon-horizontal.png" alt="horizontal-icon"  />
+
+, or both together 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/icon-both.png" alt="both-icon"  />
+
+. <code>Ctrl+click</code> on any of the icons to apply a rotation without the lens shift. <code>Shift+click</code> on any of the icons to apply the lens shift without any rotation.</dd>
 <dt>get structure</dt>
-<dd>Click on the <em>analyse structure</em> icon to (re-)analyze the image for suitable line segments. <code>Shift+click</code> to apply a contrast enhancement step before performing further analysis. <code>Ctrl+click</code> to apply an edge enhancment step before performing further analysis. Both variations can be used alone or in combination if the default analysis is not able to detect a sufficient number of lines.</dd>
+<dd>Click on the 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/icon-get-structure.png" alt="structure-icon"  />
+
+ icon to (re-)analyze the image for suitable line segments. <code>Shift+click</code> to apply a contrast enhancement step before performing further analysis. <code>Ctrl+click</code> to apply an edge enhancement step before performing further analysis. Both variations can be used alone or in combination if the default analysis is not able to detect a sufficient number of lines.</dd>
 <dd>
-<p>Click on the <code>X</code> icon to discard any structural information collected during previous analysis steps.</p>
+<p>Click on the 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/icon-cross.png" alt="cross-icon"  />
+
+icon to discard any structural information collected during previous analysis steps.</p>
 </dd>
 <dd>
-<p>Click in the <em>eye</em> icon to toggle the display of line segments identified by any previous structural analysis.</p>
+<p>Click on the 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/icon-eye.png" alt="eye-icon"  />
+
+ icon to toggle the display of line segments identified by any previous structural analysis.</p>
 </dd>
 </dl>
 <h1 id="examples">examples</h1>
@@ -4072,14 +4159,14 @@
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/perspective-correction-example-before.png" alt="prespective-correction-example-before"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/perspective-correction-example-before.png#w75" alt="prespective-correction-example-before"  />
 
 </p>
 <p>Here is the image after having corrected for vertical and horizontal perspective distortions. Note the framing by the automatic cropping feature and the still-visible overlay of structural lines:</p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/perspective-correction-example-after.png" alt="prespective-correction-example-after"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/perspective-correction/perspective-correction-example-after.png#w75" alt="prespective-correction-example-after"  />
 
 </p>
 

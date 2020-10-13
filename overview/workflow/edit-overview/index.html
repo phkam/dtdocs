@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4017,7 +4069,7 @@
 <p>To begin, open an image in the darkroom by double clicking an image thumbnail in the <a href="/dtdocs/lighttable/">lighttable</a> view.</p>
 <p>Each change you make to the image in the darkroom is turned into a history stack item. The history is stored in a database and in an XMP sidecar file for that image. All changes are stored automatically when you switch images or go from one darktable view to another. You can safely leave darkroom mode or quit darktable at any time and come back later to continue your work. For this reason darktable does not need a “save” button and it does not have one.</p>
 <p>On the left panel in darkroom mode is the <a href="/dtdocs/module-reference/utility-modules/darkroom/history-stack/">history stack</a> module, listing the changes you have made, starting from the bottom &ndash; each edit adds a new item to the top of the stack. You can select an earlier point in this history to show how the image looked at that point, for comparison between changes. The stack can be compressed to remove redundant intermediate points in your edits &ndash; when you are happy with what you have done, just compress the history stack.</p>
-<p>A large number of <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> are shipped with darktable, arranged into <a href="/dtdocs/module-reference/utility-modules/darkroom/module-groups/">module groups</a>. These groups are accessed via toggle buttons at the top of the right panel, just below the <a href="/dtdocs/module-reference/utility-modules/shared/histogram/">histogram</a>. There are also two special module groups named “active” and “favorites”, which only show modules enabled for the current image, and modules selected as a favourite, respectively. Marking a module as a favorite is done in the <a href="/dtdocs/module-reference/utility-modules/darkroom/more-modules/">more modules</a> module at the bottom of the right panel, by clicking a module name until a star is displayed in front of the icon.</p>
+<p>A large number of <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> are shipped with darktable, arranged into <a href="../../module-reference/utility-modules/darkroom/module-groups.md">module groups</a>. These groups are accessed via toggle buttons at the top of the right panel, just below the <a href="/dtdocs/module-reference/utility-modules/shared/histogram/">histogram</a>. There are also two special module groups named “active” and “favorites”, which only show modules enabled for the current image, and modules selected as a favourite, respectively. Marking a module as a favorite is done in the <a href="/dtdocs/module-reference/utility-modules/darkroom/more-modules/">more modules</a> module at the bottom of the right panel, by clicking a module name until a star is displayed in front of the icon.</p>
 <h1 id="choosing-a-workflow">choosing a workflow</h1>
 <p>When processing an image, we apply a sequence of modules, known as the <a href="/dtdocs/darkroom/processing-modules-and-pixelpipe/">pixelpipe</a>.</p>
 <pre><code>camera                                                       display

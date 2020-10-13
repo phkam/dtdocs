@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4014,40 +4066,40 @@
     </h1>
 
     <p>A simple yet powerful tool to manage color channels.</p>
-<p>This module accepts red, green and blue channels as an input and provides red, green, blue, gray, hue, saturation and lightness channels as output.</p>
-<h1 id="matrix-multiplication">matrix multiplication</h1>
-<p>You can think of the channel mixer as a type of matrix multiplication between a 3x3 matrix and the input [R G B] values.</p>
+<p>This module accepts red, green and blue channels as an input and provides red, green, blue, gray, hue, saturation and lightness channels as output. It allows you to independently control how much each input channel contributes to each output channel.</p>
+<h1 id="rgb-matrix-multiplication">RGB matrix multiplication</h1>
+<p>You can think of the <em>channel mixer</em> as a type of matrix multiplication between a 3x3 matrix and the input [R G B] values.</p>
 <pre><code>┌ R_out ┐     ┌ Rr Rg Rb ┐     ┌ R_in ┐
 │ G_out │  =  │ Gr Gg Gb │  X  │ G_in │
 └ B_out ┘     └ Br Bg Bb ┘     └ B_in ┘
-</code></pre><p>If, for example, you&rsquo;ve been given a matrix to transform from one color space to another, you can enter the matrix coefficients into channel mixer as follows:</p>
+</code></pre><p>If, for example, you&rsquo;ve been provided with a matrix to transform from one color space to another, you can enter the matrix coefficients into the <em>channel mixer</em> as follows:</p>
 <ul>
 <li>set the destination to <em>red</em> then set the Rr, Rg &amp; Rb values using the red, green and blue sliders</li>
 <li>set the destination to <em>green</em> then set the Gr, Gg &amp; Gb values using the red, green and blue sliders</li>
 <li>set the destination to <em>blue</em> then set the Br, Bg &amp; Bb values using the red, green and blue sliders</li>
 </ul>
-<p>By default, channel mixer just copies the input values straight over to the output values. This is equivalent to multiplying by the identify matrix:</p>
+<p>By default, <em>channel mixer</em> just copies the input [R G B] channels straight over to the matching output channels. This is equivalent to multiplying by the identify matrix:</p>
 <pre><code>┌ R_out ┐     ┌ 1  0  0 ┐      ┌ R_in ┐
 │ G_out │  =  │ 0  1  0 │   X  │ G_in │
 └ B_out ┘     └ 0  0  1 ┘      └ B_in ┘
-</code></pre><p>As an example, the following matrix is useful for taming ugly out-of-gamut blue LED lights by making them more magenta:</p>
+</code></pre><p>As an example use case, the following matrix is useful for taming ugly out-of-gamut blue LED lights by making them more magenta:</p>
 <pre><code>┌  1.00  -0.18  0.18 ┐ 
 │ -0.20   1.00  0.20 │
 └  0.05  -0.05  1.00 ┘ 
-</code></pre><p>In this case it is useful to use a <a href="/dtdocs/darkroom/masking-and-blending/masks/parametric/">parameteric mask</a> to limit the effect of the channel mixer to just the problematic colors.</p>
-<p>A more intuitive take for what the channel mixer sliders do:</p>
+</code></pre><p>In this case it is useful to use a <a href="/dtdocs/darkroom/masking-and-blending/masks/parametric/">parameteric mask</a> to limit the effect of the <em>channel mixer</em> to just the problematic colors.</p>
+<p>A more intuitive take for what the <em>channel mixer</em> sliders do:</p>
 <ul>
 <li>for the <em>red</em> destination, adjusting sliders to the right will make the R, G or B areas of the image more red. Moving the slider to the left will make those areas more cyan.</li>
 <li>for the <em>green</em> destination, adjusting sliders to the right will make the R, G or B areas of the image more green. Moving the slider to the left will make those areas more magenta.</li>
 <li>for the <em>blue</em> destination, adjusting sliders to the right will make the R, G or B areas of the image more blue. Moving the slider to the left will make those areas more yellow.</li>
 </ul>
 <h1 id="monochrome">monochrome</h1>
-<p>Another very useful application of channel mixer is the ability to mix the channels together to produce a grayscale output, in order to make a monochrome image. Use the <em>gray</em> destination, and set the red, green and blue sliders to control how much each channel contributes to the brightness of the output. This is equivalent to the following matrix multiplication:</p>
+<p>Another very useful application of the <em>channel mixer</em> is the ability to mix the channels together to produce a grayscale output &ndash; a monochrome image. Use the <em>gray</em> destination, and set the red, green and blue sliders to control how much each channel contributes to the brightness of the output. This is equivalent to the following matrix multiplication:</p>
 <pre><code>GRAY_out  =   [ r  g  b ]  X  ┌ R_in ┐
                               │ G_in │
                               └ B_in ┘
-</code></pre><p>When dealing with skin tones, the relative weights of the three channels will affect the level of detail in the image. Placing more weight on red, e.g. <code>[0.9, 0.3, -0.3]</code> will make for smooth skin tones, whereas emphasising green, e.g. <code>[0.4, 0.75, -0.15]</code> will bring out more detail. In both cases the blue channel is reduced to avoid emphasising unwanted skin texture.</p>
-<p>Traditional black and white film has different sensitivity to red, green and blue colors, and this can be simulated by setting the gray destination coefficients to represent this different sensitivity levels. The channel mixer has a number of predefined presets that can be used to simulate different types of black and white (and color) film.</p>
+</code></pre><p>When dealing with skin tones, the relative weights of the three channels will affect the level of detail in the image. Placing more weight on red (e.g. <code>[0.9, 0.3, -0.3]</code>) will make for smooth skin tones, whereas emphasising green (e.g. <code>[0.4, 0.75, -0.15]</code>) will bring out more detail. In both cases the blue channel is reduced to avoid emphasising unwanted skin texture.</p>
+<p>Different types of traditional black and white film have differing sensitivities to red, green and blue colors, and this can be simulated by setting the gray destination coefficients appropriately. The <em>channel mixer</em> module has a number of built-in presets that can be used to achieve this.</p>
 <h1 id="module-controls">module controls</h1>
 <dl>
 <dt>destination</dt>

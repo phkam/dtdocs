@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,12 +4065,12 @@
         presets
     </h1>
 
-    <p>Presets allow you to store commonly used module settings for future use. Some modules already come with pre-defined presets but you can also define your own. Both internal and user-defined presets can be shown by clicking the <em>presets menu</em> in the <a href="/dtdocs/darkroom/interacting-with-modules/module-header/">module header</a>.</p>
+    <p>Presets allow you to store commonly used module settings for future use. Some modules already come with pre-defined presets and you may also define your own. Both internal and user-defined presets can be shown by clicking the <em>presets menu</em> in the <a href="/dtdocs/darkroom/interacting-with-modules/module-header/">module header</a>.</p>
 <h1 id="the-presets-menu">the presets menu</h1>
-<p>The presets menu will contain one or more of the following entries depending on the presets that are defined or selected for the module:</p>
+<p>The presets menu will contain one or more of the following entries depending on what presets are defined or selected for the current module:</p>
 <dl>
 <dt>preset list</dt>
-<dd>A list of the currently available presets. The currently selected preset (if any) is shown in <strong>bold</strong>.</dd>
+<dd>A list of the presets available for the current module. The currently selected preset (if any) is shown in <strong>bold</strong>.</dd>
 <dt>edit this preset</dt>
 <dd>If a preset has been selected, click to edit that preset (see below)</dd>
 <dt>delete this preset</dt>
@@ -4026,12 +4078,17 @@
 <dt>update preset [name]</dt>
 <dd>Update the named preset to match the module&rsquo;s current parameters.</dd>
 <dt>store new preset</dt>
-<dd>Create a new preset with the module&rsquo;s current parameters.</dd>
+<dd>Create a new preset using the module&rsquo;s current parameters.</dd>
 </dl>
-<p><code>Middle-click</code> on a preset name to create a new instance of the module using the parameters of the selected preset.</p>
+<p><code>Middle-click</code> on a preset name to create a new instance of the module and apply the selected preset to it.</p>
 <h1 id="creating-and-editing-presets">creating and editing presets</h1>
 <p>When creating or editing presets, the following dialog is shown:</p>
-<p><strong>INSERT IMAGE HERE</strong></p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/presets/new_preset.png" alt="new preset"  />
+
+</p>
 <p>The following options can be set:</p>
 <dl>
 <dt>name</dt>
@@ -4047,13 +4104,15 @@
 <p>The example dialog above sets up following rules: if the lens name matches, the aperture is greater than or equal to f/8 and the focal length is between 24 and 35mm the preset will be automatically applied.</p>
 </dd>
 <dd>
-<p><em>Tip: The image information panel for your image displays your model name, use this to ensure you have the correct spelling. See <a href="/dtdocs/module-reference/utility-modules/shared/image-information/">image information</a> for more details.</em></p>
+<p><em>Tip: The image <a href="/dtdocs/module-reference/utility-modules/shared/image-information/">image information</a> for your image displays your model name. Use this to ensure you have the correct spelling.</em></p>
 </dd>
 <dt>only show this preset for matching images</dt>
-<dd>Check this box to automatically show the preset in the preset menu, using a similar set of filters as above.</dd>
+<dd>Check this box to automatically show the preset in the preset menu, using the same set of filters as above.</dd>
 </dl>
+<p>If you create a preset with the same name as a built-in preset, your newly created preset will override the built-in preset, which will no longer be accessible.</p>
 <h1 id="managing-presets">managing presets</h1>
-<p>Both user created and pre-defined presets can be viewed and managed from within <a href="/dtdocs/preferences-settings/presets/"><code>preferences</code> -&gt; <code>presets</code></a>.</p>
+<p>Both user-created and pre-defined presets can be viewed and managed from within <a href="/dtdocs/preferences-settings/presets/"><code>preferences</code> -&gt; <code>presets</code></a>.</p>
+<p>If you delete a preset that has the same name as one of the built-in presets, then your user preset will be deleted, and that preset name will no longer appear in the preset menu at all. The next time you start darktable, the corresponding built-in preset will once again become visible.</p>
 
 
     

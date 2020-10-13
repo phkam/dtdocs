@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4014,81 +4066,82 @@
     </h1>
 
     <p>Much of the functionality of darktable can be accessed via shortcuts using the keyboard or keyboard/mouse combinations. These shortcuts are user-configurable via the <em>shortcuts</em> tab.</p>
-<p>Many of the key shortcuts are provided with default values but most must be configured by the user. Any key may be used for a keyboard shortcut, and may be modified with one or more of <code>Shift</code>, <code>Control</code> or <code>Alt</code>.</p>
-<p>When you open the <em>shortcuts</em> tab you are initially presented with a hierarchical list of all actions that can receive a keyboard shortcut.</p>
+<p>Many important shortcut actions are provided with default key combinations, but most must be manually configured by the user. Any key may be used for a keyboard shortcut, and may be combined with the <code>Shift</code>, <code>Control</code> or <code>Alt</code> modifier keys (or any combination thereof).</p>
+<p>When you open the <em>shortcuts</em> tab you are initially presented with a hierarchical list of all actions that can be applied with a keyboard shortcut. At the top of this hierarchy is a short list of key <em>categories</em> which are defined below.</p>
 <h1 id="add-or-amend-a-shortcut">add or amend a shortcut</h1>
 <p>In order to add or amend a shortcut, first navigate to the action you want to change and double-click on it. You will be prompted to press the new key combination to be mapped to the selected action.</p>
 <p>If a conflict is found you will be given the option to retain the existing shortcut or replace it. Depending on context, it is possible to use the same keyboard shortcut for multiple actions. For example the same key combination may be used for one action in the lighttable view and another in the darkroom view.</p>
 <h1 id="remove-a-shortcut">remove a shortcut</h1>
-<p>To remove a keyboard shortcut, single-click on the action you wish to remove and press the backspace key.</p>
+<p>To remove a keyboard shortcut, single-click on the action you wish to remove it from and press the <code>backspace</code> key.</p>
 <h1 id="search-for-a-shortcut-action">search for a shortcut action</h1>
-<p>A search field is shown at the bottom of the <em>shortcuts</em> tab. Enter the text you wish to search for and press <code>Enter</code> or click the <em>search</em> button. Press <code>Enter</code> or <em>search</em> multiple times to cycle through all matching actions.</p>
+<p>A search field is shown at the bottom of the <em>shortcuts</em> tab. Enter the text you wish to search for and press <code>Enter</code> or click the <code>search</code> button. Press <code>Enter</code> or <code>search</code> multiple times to cycle through all matching shortcut actions.</p>
 <h1 id="view-currently-assigned-shortcuts">view currently assigned shortcuts</h1>
-<p>Press the <code>H</code> key in any darktable view to show a list of all shortcuts that are applicable to the current view. This shortcut is itself amendable in the <em>global</em> section of the <em>shortcuts</em> tab.</p>
+<p>Press the <code>H</code> key in any darktable view to show a list of all shortcuts that are assigned for the current view.</p>
 <h1 id="import-export-reset">import, export, reset</h1>
-<p>You can export your shortcut mappings to or import them from a file.</p>
-<p>Press the “default” button to reset all shortcuts to their default state. <em>Take care when using this option as it is not possible to restore back to a previous state unless you have first exported existing shortcuts to a file.</em></p>
+<p>You can import your shortcut mappings from or export them to a file.</p>
+<p>Press the “<code>default</code>” button to reset all shortcuts to their default state. <em>Take care when using this option as it is not possible to restore back to a previous state unless you have first exported existing shortcuts to a file or taken a backup of your configuration directory.</em></p>
 <h1 id="shortcut-categories">shortcut categories</h1>
-<p>Keyboard shortcuts are categorized so that they can easily be found. The following sections summarize these categories and also list some additional options that are specific to certain categories.</p>
+<p>Keyboard shortcuts are categorized within a hierarchical list so that they can easily be found. The following sections summarize these categories and list some common options.</p>
 <h2 id="global">global</h2>
-<p>Shortcuts in this section are applicable to all darktable views.</p>
+<p>Shortcut actions in this section are applicable to all darktable views.</p>
 <h2 id="views">views</h2>
-<p>A single section is provided for each darktable view. Shortcuts are only applicable to the selected view.</p>
+<p>A single section is provided for each darktable view. Shortcut actions are only applicable to the selected view.</p>
 <h2 id="processing-modules-image-operations">processing modules (&lsquo;image operations&rsquo;)</h2>
-<p>Shortcuts in the <em>image operations</em> section of this tab are only applicable to the <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> in the darktable view. A section is provided for each processing module.</p>
+<p>Shortcut actions in the <em>image operations</em> section of this tab are only applicable to the <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> in the darktable view. A section is provided for each processing module.</p>
 <h3 id="common-shortcuts">common shortcuts</h3>
-<p>Every processing module provides the following shortcuts by default</p>
+<p>Every processing module provides the following shortcut actions by default</p>
 <dl>
 <dt>enable module</dt>
-<dd>enable or disable the module, regardless of whether it is currently visible</dd>
+<dd>Enable or disable the module, regardless of whether it is currently visible</dd>
 <dt>show module</dt>
-<dd>expand or collapse the module. If the module is not currently displayed on the screen, darktable will switch to an appropriate module group (if applicable) before displaying it</dd>
+<dd>Expand or collapse the module. If the module is not currently displayed on the screen, darktable will switch to an appropriate module group (if applicable) before displaying it</dd>
 <dt>focus module</dt>
-<dd>cause the module to receive or lose focus.</dd>
+<dd>Cause the module to receive or lose focus.</dd>
 <dt>reset module parameters</dt>
-<dd>reset the module to its default state</dd>
+<dd>Reset the module to its default state</dd>
 <dt>show preset menu</dt>
-<dd>show the presets menu for the module</dd>
+<dd>Show the presets menu for the module</dd>
 </dl>
-<p>Shortcuts may be present for any module operation. For comboboxes and sliders, some standard shortcuts are available, as described in the following sections.</p>
+<p>For comboboxes and sliders, some standard shortcut actions are provided, as described in the following sections.</p>
+<p>In addition, other module-specific controls will be provided with their own shortcut actions.</p>
 <h3 id="sliders">sliders</h3>
-<p>All sliders in processing modules can be edited via keyboard shortcuts (regardless of whether the module is currently shown or enabled). The following actions are provided for each slider:</p>
+<p>All sliders in processing modules can be adjusted via keyboard shortcuts, regardless of whether the module is currently shown or enabled. The following shortcut actions are provided as standard for each slider:</p>
 <dl>
 <dt>increase/decrease</dt>
-<dd>separate shortcuts which allow you to increase or decrease the slider by a single step</dd>
+<dd>Separate shortcuts which allow you to increase or decrease the slider&rsquo;s value by a single step.</dd>
 <dt>dynamic</dt>
-<dd>a single shortcut that can be used in combination with the mouse scroll wheel to increase and decrease slider values</dd>
+<dd>A single shortcut that can be used in combination with the mouse scroll wheel to increase and decrease slider values.</dd>
 <dt>edit</dt>
-<dd>a shortcut to bring up the slider edit dialog within which you may key a value directly or modify the slider with the mouse</dd>
+<dd>A shortcut to bring up the slider&rsquo;s edit dialog within which you may key a value directly or modify the slider with the mouse.</dd>
 <dt>reset</dt>
-<dd>reset the slider to its default value</dd>
+<dd>Reset the slider to its default value.</dd>
 </dl>
-<p>In addition, you can modify the coarseness of the increase/decrease operations with a <em>global</em> keyboard shortcut. You can choose between fine, normal and coarse.</p>
-<p>When performing increase/decrease and dynamic operations on sliders, if the module is not currently shown, a toast message will appear over the image to indicate the current value of the slider.</p>
+<p>In addition, you can modify the coarseness of the increase/decrease operations with a <em>global</em> keyboard shortcut. You can choose between fine, normal and coarse (see <a href="/dtdocs/darkroom/interacting-with-modules/module-controls/">module controls</a> for more details).</p>
+<p>When performing increase/decrease and dynamic operations on sliders, if the module is not currently expanded, a toast message will appear at the top of the image to indicate the current value of the slider.</p>
 <h3 id="comboboxes">comboboxes</h3>
-<p>As with sliders, all comboboxes in processing modules can be edited via keyboard shortcuts. The following actions are provided for each combobox:</p>
+<p>As with sliders, all comboboxes in processing modules can be adjusted via keyboard shortcuts. The following shortcut actions are provided as standard for each combobox:</p>
 <dl>
 <dt>next/previous</dt>
-<dd>separate shortcuts which allow you to change to the next or previous entry in the combobox</dd>
+<dd>Separate shortcuts which allow you to change to the next or previous entry in the combobox</dd>
 <dt>dynamic</dt>
-<dd>a single shortcut that can be used in combination with the mouse scroll wheel to change to the next/previous entry in the combobox</dd>
+<dd>A single shortcut that can be used in combination with the mouse scroll wheel to change to the next/previous entry in the combobox</dd>
 </dl>
-<p>If the end of the list of combobox values is reached, these shortcuts will cycle back to the beginning of the list. Similarly, if the beginning of values is reached the shortcuts will cycle to the end.</p>
-<h3 id="handling-multiple-module-instances">handling multiple module instances</h3>
-<p>It is possible to create multiple instances of many processing modules. In this scenario it is not always obvious which instance should be controlled by keyboard shortcut operations.</p>
-<p>See <a href="/dtdocs/preferences-settings/miscellaneous/"><code>preferences</code> -&gt; <code>miscellaneous</code></a> for some additional settings that allow you to control how keyboard shortcuts are handled when multiple instances of an image operations module are present.</p>
+<p>If the end of a combobox list is reached, these shortcuts will cycle back to the beginning of the list. Similarly, if the beginning of the list is reached the shortcuts will cycle to the end.</p>
+<h3 id="multiple-module-instances">multiple module instances</h3>
+<p>It is possible to create <a href="/dtdocs/darkroom/interacting-with-modules/multiple-instances/">multiple instances</a> of many processing modules. In this scenario it is not always obvious which instance should be controlled by keyboard shortcut operations.</p>
+<p>See <a href="/dtdocs/preferences-settings/miscellaneous/"><code>preferences</code> -&gt; <code>miscellaneous</code></a> for some additional settings that allow you to control how keyboard shortcuts are handled when multiple instances of a processing module are present.</p>
 <h2 id="utility-modules">(utility) modules</h2>
-<p>Shortcuts in the <em>modules</em> section apply to <a href="/dtdocs/module-reference/utility-modules/">utility modules</a> only. These are modules that are not used for image processing and may appear on either the left or right panel. Some utility modules can be used in multiple views.</p>
-<p>As with processing modules, some shortcuts are provided by default for each module:</p>
+<p>Shortcuts in the <em>modules</em> section apply to <a href="/dtdocs/module-reference/utility-modules/">utility modules</a> only. These are modules that are not used for image processing and may appear on any panel. Some utility modules can be used in multiple views.</p>
+<p>As with processing modules, some shortcut actions are provided by default for each module:</p>
 <dl>
 <dt>show module</dt>
-<dd>expands or collapses the module</dd>
+<dd>Expand or collapse the module.</dd>
 <dt>reset module parameters</dt>
-<dd>resets the module to its default state</dd>
+<dd>Reset the module to its default state.</dd>
 <dt>show preset menu</dt>
-<dd>shows the presets menu for the module</dd>
+<dd>Show the presets menu for the module.</dd>
 </dl>
-<p>Some of the above options may not be applicable to all modules.</p>
+<p>Some of the above actions may not be available for all utility modules.</p>
 
 
     

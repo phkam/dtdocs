@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,11 +4065,13 @@
         input color profile
     </h1>
 
-    <p>The input color profile defines how darktable will interpret the colors of the image.</p>
-<p>You can alter darktable&rsquo;s auto-allocated input color profile if there is an alternative that more closely matches the original image&rsquo;s color space. This module also allows colors to be confined to a certain gamut to mitigate some (infrequent) color artifacts.</p>
+    <p>The input color profile module defines how darktable will interpret the colors of the image. It takes the color space used by the source of the image (e.g. camera, scanner) and converts the pixel encodings to a standardised working color space. This means that subsequent modules in the pipeline don&rsquo;t need to be concerned with the specifics of the input device, and can work with and convert to/from the working color space.</p>
+<p>Where an image has been captured in a camera raw file, the input color profile module will normally apply either a standard or enhanced color matrix specific for that camera model, which will be used to map the colors into the working profile color space. If color space information is embedded in the image, the <em>input color profile</em> module will use this information when mapping the colors to the working profile color space. The user can also explicitly specify a color space for the incoming image, and can even supply a custom ICC color profile specifically made for the input device.</p>
+<p>As part of the mapping from the input color space to the working profile space, the colors can be confined to a certain gamut using the <em>gamut clipping</em> options, which can help to mitigate some (infrequent) color artifacts. This is also influenced by the chosen <a href="/dtdocs/special-topics/color-management/rendering-intent/">rendering intent</a>.</p>
+<p>Note that the final color profile that will be used when exporting the image is controlled by the <a href="/dtdocs/module-reference/processing-modules/output-color-profile/"><em>output color profile</em></a> module.</p>
 <h1 id="module-controls">module controls</h1>
 <dl>
-<dt>profile</dt>
+<dt>input profile</dt>
 <dd>The profile or color matrix to apply. A number of matrices are provided along with an enhanced color matrix for some camera models. The enhanced matrices are designed to provide a look that is closer to that of the the camera manufacturer.</dd>
 <dd>
 <p>You can also supply your own input ICC profiles and put them into <code>$DARKTABLE/share/darktable/color/in</code> or <code>$HOME/.config/darktable/color/in</code> (where <code>$DARKTABLE</code> is the darktable installation directory and <code>$HOME</code> is your home directory). One common source of ICC profiles is the software that is shipped with your camera, which often contains profiles specific to your camera model. You may need to activate the <a href="/dtdocs/module-reference/processing-modules/unbreak-input-profile/"><em>unbreak input profile</em></a> module to use your own profiles.</p>
@@ -4025,10 +4079,12 @@
 <dd>
 <p>If your input image is a low dynamic range file like JPEG, or a raw in DNG format, it might already contain an embedded ICC profile which darktable will use by default. You can restore this default by selecting “embedded icc profile”.</p>
 </dd>
+<dt>working profile</dt>
+<dd>The working profile used by darktable modules. Each module can specify an alternative space that it will work in, and this will trigger a conversion. By default darktable will use &ldquo;linear Rec2020 RGB&rdquo;, which is a good choice in most cases.</dd>
 <dt>gamut clipping</dt>
 <dd>Activate a color clipping mechanism. In most cases you can leave this control in its default “off” state. However, if your image shows some specific features such as highly saturated blue light sources, gamut clipping might be useful to avoid black pixel artifacts. See <a href="/dtdocs/special-topics/color-management/color-artifacts/">possible color artifacts</a> for more information.</dd>
 <dd>
-<p>You can select from a list of RGB profiles. Input colors with a saturation that exceeds the permissible range of the selected profile are automatically clipped to a maximum value. “linear Rec2020RGB” and “Adobe RGB (compatible)” allow for a broader range of unclipped colors, while “sRGB” and “linear Rec709 RGB” produce a tighter clipping. Select the profile that prevents artifacts while still maintaining the highest color dynamics.</p>
+<p>Choose from a list of RGB profiles. Input colors with a saturation that exceeds the permissible range of the selected profile are automatically clipped to a maximum value. “linear Rec2020RGB” and “Adobe RGB (compatible)” allow for a broader range of unclipped colors, while “sRGB” and “linear Rec709 RGB” produce a tighter clipping. Select the profile that prevents artifacts while still maintaining the highest color dynamics.</p>
 </dd>
 </dl>
 

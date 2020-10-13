@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4016,9 +4068,11 @@
     <p>The preferences in this tab control the overall look and feel of darktable.</p>
 <dl>
 <dt>interface language</dt>
-<dd>Set the language of the user interface. the system default is marked with an * (needs a restart)</dd>
+<dd>Set the language of the user interface. The system default is marked with an * (needs a restart)</dd>
 <dt>theme</dt>
-<dd>Set the theme for the user interface. Apart from any aesthetic considerations, the recommended interface color for color evaluation is middle grey. Indeed, visual perception is affected by ambient brightness, and a low brightness of the interface causes all kinds of illusions. Using a dark interface to retouch photos can therefore lead to excessive retouching (abuse of contrast and saturation) and to a photo that is too dark once printed. It is therefore highly recommended that you use one of the &ldquo;grey&rdquo; themes for retouching work as these are designed to approximate middle grey.</dd>
+<dd>Set the theme for the user interface. Apart from any aesthetic considerations, the recommended interface color for color evaluation is middle grey. Indeed, visual perception is affected by ambient brightness, and a low brightness of the interface causes all kinds of illusions. Using a dark interface to retouch photos can therefore lead to excessive retouching (abuse of contrast and saturation) and to a photo that is too dark once printed. It is therefore highly recommended that you use one of the &ldquo;grey&rdquo; themes for retouching work as these are designed so that the user interface approximates middle grey (default &ldquo;darktable&rdquo;).</dd>
+<dt>performance mode</dt>
+<dd>Enable this option to render thumbnails and previews at a lower quality. This increases the rendering speed by a factor of 4, and is useful when working on slower computers (default off).</dd>
 <dt>use system font size</dt>
 <dd>Select this option to use the font size defined by your system. If unchecked, you may enter a custom font size in the box below (default on).</dd>
 <dt>font size in points</dt>
@@ -4026,10 +4080,10 @@
 <dt>GUI thumbs and previews DPI scaling factor</dt>
 <dd>Scale the thumbnails and previews resolutions for high DPI screens. Increase if thumbnails look blurry, decrease if lighttable is too slow. Set to -1.0 to use the system-defined global scaling. Default is 1.0 on most systems, or 2.0 when using resolutions above 1920×1080 px. (needs a restart)</dd>
 <dt>GUI controls and text DPI</dt>
-<dd>Adjust the global GUI resolution to rescale controls, buttons, labels, etc. Increase for a magnified GUI, decrease to fit more content in window. Set to -1 to use the system-defined global resolution. Default is 96 DPI on most systems. (needs a restart)</dd>
+<dd>Adjust the global GUI resolution to rescale controls, buttons, labels, etc. Increase for a magnified GUI, decrease to fit more content in the window. Set to -1 to use the system-defined global resolution. Default is 96 DPI on most systems. (needs a restart)</dd>
 </dl>
-<h3 id="css-theme-modifications">CSS Theme Modifications</h3>
-<p>In addition to selecting a pre-built theme to apply to darktable as a whole (above) you can also apply additional CSS customisations of your own to tweak the look-and-feel of darktable. A text entry box is provided for this purpose.</p>
+<h1 id="css-theme-modifications">CSS Theme Modifications</h1>
+<p>In addition to selecting a pre-built theme you can also apply additional CSS customisations of your own to tweak the look-and-feel of darktable. A text entry box is provided for this purpose.</p>
 <p>When you have finished entering your CSS tweaks, click on the &lsquo;save and apply&rsquo; button. This will save your CSS to a file (<code>$HOME/.config/darktable/user.css</code>) and immediately apply it to the current darktable session.</p>
 <p>If your changes cause any issues, you can uncheck the &ldquo;modify selected theme with CSS tweaks below&rdquo; check box. This will immediately restore the base theme but will leave your tweaks in the editor so that you can re-edit and try again. Simply press &ldquo;save and apply&rdquo; again when you are ready to retry. This will automatically re-check the &ldquo;modify selected theme with CSS tweaks below&rdquo; checkbox and apply the new CSS.</p>
 <p>If you have any issues with darktable please retry with this option unchecked to be certain that they were not caused by any of your changes.</p>

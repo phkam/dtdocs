@@ -12,9 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/overview/</guid>
-      <description>By default a module takes input from the preceding module, performs its operation on the image and hands the output over to the next module in the pixelpipe.
-A module&amp;rsquo;s output can optionally be reprocessed (combined) with its input before being handed to the next module. This additional processing step is called blending. Input and output are processed using algorithms called blending operators or blend modes.
-Each blend mode is further controlled by the opacity parameter, with a value between 0% and 100%, which defines how much the input and output images contribute to the final result.</description>
+      <description>By default each module takes its input from the preceding module in the pixelpipe, performs its operation on the image data, and hands the output over to the next module in the pixelpipe.
+A module&amp;rsquo;s output data can optionally be reprocessed (combined) with its input data before being handed to the next module. This additional processing step is called blending. Input and output data is reprocessed using algorithms called blending operators or blend modes.</description>
     </item>
     
     <item>

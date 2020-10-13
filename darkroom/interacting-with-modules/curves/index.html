@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4014,21 +4066,73 @@
     </h1>
 
     <p>Three image processing modules (<a href="/dtdocs/module-reference/processing-modules/base-curve/">base curve</a>, <a href="/dtdocs/module-reference/processing-modules/tone-curve/">tone curve</a> and <a href="/dtdocs/module-reference/processing-modules/rgb-curve/">rgb curve</a>) use curves to control the tones in the image. These modules have some common features that deserve separate discussion.</p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/curves/curve.png" alt="curve"  />
+
+</p>
 <h1 id="nodes">nodes</h1>
-<p>In their default state, curves are straight lines, defined by two anchor nodes. You can move the nodes to modify the curve or generate new nodes by clicking on the curve. With <code>Ctrl+click</code> you can generate a new node at the x-location of the mouse pointer and the corresponding y-location of the current curve &ndash; this adds a node without the risk of accidentally modifying the curve. Up to 20 nodes can be defined per curve. To remove a node, drag it out of the widget area.</p>
+<p>In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve. With <code>Ctrl+click</code> you can generate a new node at the x-location of the mouse pointer and the corresponding y-location of the current curve &ndash; this adds a node without the risk of accidentally modifying the curve. Up to 20 nodes can be defined per curve. To remove a node, click on it and drag it out of the widget area.</p>
 <h1 id="curve-controls">curve controls</h1>
+<p>The following controls are common to two or more of the above image processing modules and are therefore discussed separately here. Please see the individual module documentation for discussion of any additional module-specific controls.</p>
 <dl>
 <dt>interpolation method</dt>
 <dd><em>tone curve and rgb curve modules only</em></dd>
-<dd>Interpolation is the process by which a continuous curve is derived from a few nodes. As this process is never perfect, several methods are offered that can alleviate some of the potential issues you may encounter.</dd>
-</dl>
-<p>Arguably, the most visually pleasing method is the “cubic spline”. Since it gives smooth curves, the contrast in the image is better enhanced. However, this method is very sensitive to the nodes' position, and can produce cusps and oscillations when the nodes are too close to each other, or when there are too many of them. This method works best when there are only 4 to 5 nodes, evenly spaced.</p>
-<p>The “centripetal spline” method is designed specifically to avoid cusps and oscillations, but as a drawback it will follow the nodes more loosely. It is very robust, no matter the number of nodes and their spacing, but will produce a more faded and dull contrast.</p>
-<p>The “monotonic spline” method is designed specifically to give a monotonic interpolation, meaning that there will be none of the oscillations the cubic spline may produce. This method is most suitable when you are trying to build an analytical function from a node interpolation (for example: exponential, logarithm, power, etc.). Such functions are provided as presets. It is a good trade-off between the two aforementioned methods.</p>
-<dl>
+<dd>
+<p>Interpolation is the process by which a continuous curve is derived from a few nodes. As this process is never perfect, several methods are offered that can alleviate some of the issues you may encounter.</p>
+</dd>
+<dd>
+<ul>
+<li>Arguably, the most visually pleasing method is the “cubic spline” &ndash; since it gives smooth curves, the contrast in the image is better enhanced. However, this method is very sensitive to the nodes' position, and can produce cusps and oscillations when the nodes are too close to each other, or when there are too many of them. This method works best when there are only 4 to 5 nodes, evenly spaced.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>The “centripetal spline” method is designed specifically to avoid cusps and oscillations, but as a drawback it will follow the nodes more loosely. It is very robust, no matter the number of nodes and their spacing, but will produce a more faded and dull contrast.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>The “monotonic spline” method is designed specifically to give a monotonic interpolation, meaning that there will be none of the oscillations the cubic spline may produce. This method is most suitable when you are trying to build an analytical function from a node interpolation (for example: exponential, logarithm, power, etc.). Such functions are provided as presets. It is a good trade-off between the two aforementioned methods.</li>
+</ul>
+</dd>
+<dt>preserve colors</dt>
+<dd>If a non-linear tone curve is applied to each of the RGB channels individually, then the amount of tone adjustment applied to each color channel may be different, and this can cause hue shifts. Therefore, the <em>preserve colors</em> combobox provides different methods of calculating the &ldquo;luminance level&rdquo; of a pixel. The amount of tone adjustment is calculated based on this luminance value, and then this same adjustment is applied to all three of the RGB channels. Different luminance estimators can affect the contrast in different parts of the image, depending on the specific characteristics of that image. The user can therefore choose a particular estimator that provides the best results for the given image. Some of these methods are discussed in detail in the <strong>preserve chrominance</strong> control in the <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module. The following options are available:</dd>
+<dd>
+<ul>
+<li><em>none</em></li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>luminance</em></li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>max RGB</em></li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>average RGB</em></li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>sum RGB</em></li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>norm RGB</em></li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>basic power</em></li>
+</ul>
+</dd>
 <dt>scale for graph</dt>
-<dd><em>tone curve and base curve only</em></dd>
-<dd>The scale allows you to distort the graph display so that certain graphical properties emerge to help you draw more useful curves. Note that the scaling option only affects the curve display, not the actual parameters.</dd>
+<dd><em>tone curve and base curve modules only</em></dd>
+<dd>
+<p>The scale allows you to distort the graph display so that certain graphical properties emerge to help you draw more useful curves. Note that the scaling option only affects the curve display, not the actual parameters stored by the module.</p>
+</dd>
 <dd>
 <p>By default, a “linear” scale is used (defined by a scale factor of 0). This scale uses evenly spaced abscissa and ordinates axes.</p>
 </dd>
@@ -4036,20 +4140,9 @@
 <p>A logarithmic scale will compress the high values and dilate the low values, on both the abcissa and the axis of ordinates, so that the nodes in lowlights get more space on the graph and can be controlled more clearly.</p>
 </dd>
 <dd>
-<p>Increase the &lsquo;scale for graph&rsquo; slider to set the base of the logarithm. This allows you to control the amount of compression/dilatation operated by the scale. If you draw purely exponential or logarithmic functions from identity lines, setting this value defines the base of such functions.</p>
+<p>Increase the &lsquo;scale for graph&rsquo; slider to set the base of the logarithm used to scale the axes. This allows you to control the amount of compression/dilatation operated by the scale. If you draw purely exponential or logarithmic functions from identity lines, setting this value defines the base of such functions.</p>
 </dd>
-<dt>preserve colors</dt>
-<dd>The method of color preservation when applying contrast. Some of these methods are discussed in detail in the <strong>preserve chrominance</strong> control in the <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module. The following options are available:</dd>
 </dl>
-<ul>
-<li><em>none</em></li>
-<li><em>luminance</em></li>
-<li><em>max RGB</em></li>
-<li><em>average RGB</em></li>
-<li><em>sum RGB</em></li>
-<li><em>norm RGB</em></li>
-<li><em>basic power</em></li>
-</ul>
 
 
     

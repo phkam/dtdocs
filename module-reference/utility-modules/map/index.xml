@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/map/find-location/</guid>
-      <description>The find location module is used to search for a location on map. You must be connected to the internet to use this feature.
-To use this module, type in a place name or address, press Enter and a list of results will be shown. Click on one of the resulting items and the map will zoom to that location. An outline covering that location or a pin pointing at the location will be displayed.</description>
+      <description>Search for a location on the map. You must be connected to the internet to use this feature.
+To use this module, type in a place name or address, press Enter and a list of results will be shown. Click on one of the resulting items and the map will zoom to that location. An outline covering that location or a pin pointing at the location will be displayed. Drag images from the filmstrip at the bottom of the screen to their location on the map.</description>
     </item>
     
     <item>
@@ -22,8 +22,8 @@ To use this module, type in a place name or address, press Enter and a list of r
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/map/map-settings/</guid>
-      <description>In the map settings module you can select your preferred map data from various providers. Some will provide additional layers (satellite view etc.) which you can toggle.
-usage  show OSD This option lets you choose whether to display the OSD controls on top-left of the center view. filtered images When selected, only the images from the filmstrip are displayed in the center view. If not selected, all images in the current library are displayed as long as the corresponding images have GPS data associated.</description>
+      <description>Select preferred map data from various providers. Some will provide additional layers (satellite view etc.) which you can toggle.
+module controls  show OSD Choose whether to display the OSD controls on top-left of the center view. filtered images When selected, only the images from the filmstrip are displayed in the center view. If not selected, all images in the current library are displayed as long as the corresponding images have GPS data associated with them.</description>
     </item>
     
   </channel>

@@ -13,7 +13,8 @@
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/orientation/</guid>
       <description>Rotate the image 90 degrees at a time.
-By default this module sets the orientation based on the image&amp;rsquo;s Exif data.
+The module is enabled by default and the orientation is automatically set based on the image&amp;rsquo;s Exif data.
+The orientation can also be set using the selected images module in the lighttable view.
 module controls  rotate Double click the label to reset the image&amp;rsquo;s rotation counter-clockwise Rotate the image 90 degrees counter-clockwise clockwise Rotate the image 90 degrees clockwise  </description>
     </item>
     

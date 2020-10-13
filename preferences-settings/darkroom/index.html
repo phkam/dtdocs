@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4022,55 +4074,106 @@
 <dt>display of individual color channels</dt>
 <dd>Controls how individual color channels are displayed when activated in the <a href="/dtdocs/darkroom/masking-and-blending/masks/parametric/">parametric masks</a> feature. You can choose between “false color” and “grey scale” (default &ldquo;false color&rdquo;).</dd>
 <dt>pattern for the image information line</dt>
-<dd>Control the information that is displayed in the <a href="/dtdocs/module-reference/utility-modules/darkroom/image-info-line/">image information line</a>. You can use any variables in the <a href="/dtdocs/special-topics/variables/">variables</a> section as well as <code>$(NL)</code> for a new line.</dd>
+<dd>Set the information to be displayed in the <a href="/dtdocs/module-reference/utility-modules/darkroom/image-info-line/">image information line</a>. You can use any variables in the <a href="/dtdocs/special-topics/variables/">variables</a> section as well as <code>$(NL)</code> for a new line.</dd>
 <dt>position of the image information line</dt>
-<dd>Control the darkroom panel in which the <a href="/dtdocs/module-reference/utility-modules/darkroom/image-info-line/">image information line</a> is displayed. Choose between “top left” “top right” “top center” “bottom” and “hidden” (default &ldquo;bottom&rdquo;).</dd>
+<dd>Choose the darkroom panel in which the <a href="/dtdocs/module-reference/utility-modules/darkroom/image-info-line/">image information line</a> is displayed. Choose between “top left” “top right” “top center” “bottom” and “hidden” (default &ldquo;bottom&rdquo;).</dd>
 <dt>show module groups and/or search text entry</dt>
 <dd>Controls how <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> can be searched and grouped. You can choose between “show search text” “show groups” and “show both” (default &ldquo;show both&rdquo;). See <a href="/dtdocs/darkroom/interacting-with-modules/search-and-group/">searching for and grouping modules</a>. (need a restart)</dd>
 <dt>sort built-in presets first</dt>
-<dd>Controls how the presets menu is sorted for processing modules. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on).</dd>
+<dd>Choose how the presets menu is sorted for processing modules. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on).</dd>
 <dt>hide built-in presets</dt>
-<dd>If enabled, only user presets will be shown in presets menu for processing modules &ndash; built-in presets will be hidden (default off).</dd>
+<dd>If enabled, only user-defined presets will be shown in presets menu for processing modules &ndash; built-in presets will be hidden (default off).</dd>
 <dt>expand a single darkroom module at a time</dt>
-<dd>Controls how <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> are expanded. If this option is enabled, expanding a module by clicking collapses any currently expanded module. If you want to expand a module without collapsing the others you can do so with <code>Shift+click</code>. Disabling this option inverts the meaning of <code>click</code> and <code>Shift+click</code> (default on).</dd>
+<dd>Controls how <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> are expanded in the darkroom. If this option is enabled, expanding a module by clicking collapses any currently expanded module. If you want to expand a module without collapsing the others you can do so with <code>Shift+click</code>. Disabling this option inverts the meaning of <code>click</code> and <code>Shift+click</code> (default on).</dd>
 <dt>expand the module when it is activated, and collapse it when disabled</dt>
 <dd>Select this option for the darkroom to automatically expand or collapse <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> when they are enabled or disabled. (default off)</dd>
 <dt>scroll to darkroom modules when expanded/collapsed</dt>
 <dd>With this option enabled the darkroom side panel will scroll a <a href="/dtdocs/module-reference/processing-modules/">processing module</a> to the top when it is expanded or collapsed (default on).</dd>
 <dt>border around image in darkroom mode</dt>
-<dd>Process the center image in darkroom mode with a small border of the given number of pixels (default 20).</dd>
+<dd>Process the center image in darkroom mode with a border of the given number of pixels (default 20).</dd>
 <dt>show scrollbars for center view</dt>
 <dd>Should scrollbars be shown in the center view of the darkroom (default off).</dd>
 <dt>demosaicing for zoomed out darkroom mode</dt>
-<dd>Interpolation when not viewing 1:1 in darkroom mode</dd>
-<dd><em>always bilinear (fast)</em> is fastest, but not as sharp</dd>
-<dd><em>at most PPG (reasonable)</em> uses PPG + interpolation modes</dd>
-<dd><em>full (possibly slow)</em> will use exactly the settings for full-size export</dd>
-<dd>(default <em>at most ppg (reasonable)</em>).</dd>
+<dd>Choose how to demosaic images in the darkroom view when not viewing the image at 1:1 zoom scale</dd>
+<dd><ul>
+<li><em>always bilinear (fast)</em> is fastest, but not as sharp</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>at most PPG (reasonable)</em> uses PPG + interpolation modes</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>full (possibly slow)</em> will use exactly the settings for full-size export</li>
+</ul>
+</dd>
+<dd>(default &ldquo;<em>at most ppg (reasonable)</em>&quot;).</dd>
 <dt>reduce resolution of preview image</dt>
-<dd>Reduce the resolution of the <a href="/dtdocs/module-reference/utility-modules/darkroom/navigation/">navigation preview</a> image (choose from &ldquo;original&rdquo;, &ldquo;1/2&rdquo;, &ldquo;1/3&rdquo; or &ldquo;1/4&rdquo; size). This may improve the speed of the rendering but take care as it can also hinder accurate masking (default &ldquo;original&rdquo;).</dd>
+<dd>Reduce the resolution of the <a href="/dtdocs/module-reference/utility-modules/darkroom/navigation/">navigation preview</a> image (choose from &ldquo;original&rdquo;, &ldquo;1/2&rdquo;, &ldquo;1/3&rdquo; or &ldquo;1/4&rdquo; size). This may improve the speed of the rendering but take care as it can also hinder accurate color-picking and masking (default &ldquo;original&rdquo;).</dd>
 <dt>white balance slider colors</dt>
 <dd>Controls the appearance of the sliders in the <a href="/dtdocs/module-reference/processing-modules/white-balance/">white balance</a> module.</dd>
-<dd><em>no color</em> - background of the sliders is not colored at all.</dd>
-<dd><em>illuminant color</em> - slider colors represent the color of the light source, i.e. the color you are adjusting to in order to achieve neutral white</dd>
-<dd><em>effect emulation</em> - slider colors represent the effect the adjustment would have had on the scene. This is how most other raw processors show temperature/tint sliders colors.</dd>
+<dd><ul>
+<li><em>no color</em>: background of the sliders is not colored at all.</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>illuminant color</em>: slider colors represent the color of the light source, i.e. the color you are adjusting to in order to achieve neutral white</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>effect emulation</em>: slider colors represent the effect the adjustment would have had on the scene. This is how most other raw processors show temperature/tint sliders colors.</li>
+</ul>
+</dd>
 <dd>(default <em>no color</em>)</dd>
 <dt>colorbalance slider block layout</dt>
 <dd>Controls the appearance of the shadows/mid-tones/highlights sections in the <a href="/dtdocs/module-reference/processing-modules/color-balance/">color balance</a> module.</dd>
-<dd><em>list</em> - all sliders are shown in one long list (with headers)</dd>
-<dd><em>tabs</em> - use tabs to switch between the blocks of sliders</dd>
-<dd><em>columns</em> - the blocks of sliders are shown next to each other (in narrow columns)</dd>
+<dd><ul>
+<li><em>list</em>: all sliders are shown in one long list (with headers)</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>tabs</em>: use tabs to switch between the blocks of sliders</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>columns</em>: the blocks of sliders are shown next to each other (in narrow columns)</li>
+</ul>
+</dd>
 <dd>(default <em>list</em>)</dd>
 <dt>show right-side buttons in darkroom module headers</dt>
-<dd>Controls the display of the buttons that appear on the right-hand-side of processing module headers.</dd>
-<dd><em>always</em> - always show all buttons</dd>
-<dd><em>active</em> - only show the buttons when the mouse is over the module</dd>
-<dd><em>dim</em> - buttons are dimmed when mouse is away</dd>
-<dd><em>auto</em> - hide the buttons when the panel is narrow</dd>
-<dd><em>fade</em> - fade out all buttons when panel narrows</dd>
-<dd><em>fit</em> - hide all the buttons if the module name doesn&rsquo;t fit</dd>
-<dd><em>smooth</em> - fade out all buttons in one header simultaneously</dd>
-<dd><em>glide</em> - gradually hide individual buttons as needed</dd>
+<dd>Choose whether to show the three buttons (multi-instance, reset, presets) on the right-hand-side of the <a href="/dtdocs/darkroom/interacting-with-modules/module-header/">module header</a> for processing modules. These buttons will always appear when the mouse is over the module. At other times they will be shown or hidden according to this preference selection:</dd>
+<dd><ul>
+<li><em>always</em>: always show all buttons</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>active</em>: only show the buttons when the mouse is over the module</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>dim</em>: buttons are dimmed when mouse is away</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>auto</em>: hide the buttons when the panel is narrow</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>fade</em>: fade out all buttons when the panel narrows</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>fit</em>: hide all the buttons if the module name doesn&rsquo;t fit</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>smooth</em>: fade out all buttons in one header simultaneously</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>glide</em>: gradually hide individual buttons as needed</li>
+</ul>
+</dd>
 <dd>(default <em>always</em>)</dd>
 </dl>
 

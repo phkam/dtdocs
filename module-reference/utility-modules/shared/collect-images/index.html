@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4014,49 +4066,84 @@
     </h1>
 
     <p>Filter the images shown in the lighttable view and filmstrip panel using image attributes. This set of filtered images is known as a <em>collection</em>.</p>
-<p>All images imported imported into darktable are stored in darktable&rsquo;s library database, along with attributes describing each image. A collection may be  defined by applying filtering rules to these attributes, thus creating a subset of images to display in the lighttable view and filmstrip panel.</p>
+<p>All images imported imported into darktable are stored in darktable&rsquo;s library database, along with attributes describing each image. A collection may be  defined by applying filtering rules to these attributes, thus creating a subset of images to display in the lighttable view and the filmstrip module.</p>
 <p>The default collection is based on the <em>film roll</em> attribute and displays all images of the last imported or selected film roll.</p>
 <h1 id="available-filtering-attributes">available filtering attributes</h1>
 <p>The images in a collection can be filtered using the following image attributes:</p>
+<h2 id="files">files</h2>
 <dl>
 <dt>film roll</dt>
-<dd>The name of the film roll to which the image belongs</dd>
+<dd>The name of the film roll to which the image belongs (which is the same as the name of the folder in which the image resides)</dd>
 <dt>folders</dt>
 <dd>The folder (file path) where the image file is located</dd>
-<dt>camera</dt>
-<dd>The Exif data entry describing the camera make and model</dd>
+<dt>filename</dt>
+<dd>The filename of the image</dd>
+</dl>
+<h2 id="metadata">metadata</h2>
+<dl>
 <dt>tag</dt>
 <dd>Any tag that is attached to the image. When activated a hierarchical list of known tags is displayed</dd>
-<dt>date</dt>
-<dd>The date the photo was taken, in the format <code>YYYY:MM:DD</code></dd>
-<dt>time</dt>
-<dd>The date &amp; time the photo was taken, in the format <code>YYYY:MM:DD hh:mm:ss</code></dd>
-<dt>history</dt>
-<dd>Choose images whose history stacks have been altered or not</dd>
-<dt>color label</dt>
-<dd>Any color label attached to the image: “red”, “yellow”, “green”, “blue”, “purple”</dd>
-<dt>title</dt>
-<dd>The image&rsquo;s metadata “title” field</dd>
-<dt>description</dt>
-<dd>The image&rsquo;s metadata “description” field</dd>
 <dt>creator</dt>
 <dd>The image&rsquo;s metadata “creator” field</dd>
 <dt>publisher</dt>
 <dd>The image&rsquo;s metadata “publisher” field</dd>
+<dt>title</dt>
+<dd>The image&rsquo;s metadata “title” field</dd>
+<dt>description</dt>
+<dd>The image&rsquo;s metadata “description” field</dd>
 <dt>rights</dt>
 <dd>The image&rsquo;s metadata “rights” field</dd>
-<dt>lens</dt>
-<dd>The description of the lens, as derived from Exif data</dd>
-<dt>focal length</dt>
-<dd>The focal length value, as derived from Exif data</dd>
-<dt>ISO</dt>
-<dd>The ISO value, as derived from Exif data</dd>
-<dt>aperture</dt>
-<dd>The aperture value, as derived from Exif data</dd>
-<dt>filename</dt>
-<dd>The filename of the image</dd>
+<dt>notes</dt>
+<dd>The image&rsquo;s metadata &ldquo;notes&rdquo; field</dd>
+<dt>color label</dt>
+<dd>Any color label attached to the image (“red”, “yellow”, “green”, “blue”, “purple”)</dd>
 <dt>geotagging</dt>
 <dd>The geo location of the image</dd>
+</dl>
+<h2 id="times">times</h2>
+<dl>
+<dt>date taken</dt>
+<dd>The date the photo was taken, in the format <code>YYYY:MM:DD</code></dd>
+<dt>date-time taken</dt>
+<dd>The date &amp; time the photo was taken, in the format <code>YYYY:MM:DD hh:mm:ss</code></dd>
+<dt>import timestamp</dt>
+<dd>The date/time the file was imported, in the format <code>YYYY:MM:DD hh:mm:ss</code></dd>
+<dt>change timestamp</dt>
+<dd>The date/time the file was last changed, in the format <code>YYYY:MM:DD hh:mm:ss</code></dd>
+<dt>export timestamp</dt>
+<dd>The date/time the file was last expoted, in the format <code>YYYY:MM:DD hh:mm:ss</code></dd>
+<dt>print timestamp</dt>
+<dd>The date/time the file was last printed, in the format <code>YYYY:MM:DD hh:mm:ss</code></dd>
+</dl>
+<h2 id="capture-details">capture details</h2>
+<dl>
+<dt>camera</dt>
+<dd>The Exif data entry describing the camera make and model</dd>
+<dt>lens</dt>
+<dd>The description of the lens, as derived from Exif data</dd>
+<dt>aperture</dt>
+<dd>The aperture, as derived from Exif data</dd>
+<dt>exposure</dt>
+<dd>The shutter speed, as derived from Exif data</dd>
+<dt>focal length</dt>
+<dd>The focal length, as derived from Exif data</dd>
+<dt>ISO</dt>
+<dd>The ISO, as derived from Exif data</dd>
+<dt>aspect ratio</dt>
+<dd>The aspect ratio of the image, including any cropping within darktable</dd>
+</dl>
+<h2 id="darktable">darktable</h2>
+<dl>
+<dt>grouping</dt>
+<dd>Choose between &ldquo;group followers&rdquo; and &ldquo;group leaders&rdquo;</dd>
+<dt>local copy</dt>
+<dd>Show files that are, or are not copied locally</dd>
+<dt>history</dt>
+<dd>Choose images whose history stacks have been altered or not</dd>
+<dt>module</dt>
+<dd>Filter based on which processing modules have been applied to the image</dd>
+<dt>module order</dt>
+<dd>Choose images with &ldquo;v3.0&rdquo;, &ldquo;legacy&rdquo; or &ldquo;custom&rdquo; module orders</dd>
 </dl>
 <h1 id="module-controls">module controls</h1>
 <h2 id="defining-filter-criteria">defining filter criteria</h2>
@@ -4065,22 +4152,27 @@
 <dt>image attribute</dt>
 <dd>The left combobox allows you to choose which attribute to use to filter your collection (from the list described in the previous section)</dd>
 <dt>search pattern</dt>
-<dd>In the text field to the right of the attribute combobox, you can write a matching pattern. The pattern is compared against all database entries with the selected attribute. The filtering mechanism detects a match if any image&rsquo;s attribute contains the pattern in its full text. You may use <code>%</code> as wildcard character. The collection will be limited to matching images. Leave the text field empty to match all images for that attribute.</dd>
+<dd>In the text field to the right of the attribute combobox, you can write a matching pattern. The pattern is compared against all database entries with the selected attribute. The filtering mechanism detects a match if any image&rsquo;s attribute contains the pattern in its full text. You may use <code>%</code> as wildcard character. The collection will be limited to only the matching images. Leave the text field empty to match all images having that attribute.</dd>
 <dd>
 <p>Attributes with numerical or date/time attributes can be used in combination with comparative and range operators. Use <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;&gt;</code>, and <code>=</code> to select images with attributes less than, less than or equal, greater than, greater than or equal, not equal, or equal to the given value, respectively. An expression in the form <code>[from;to]</code> can be used to select using a range of values.</p>
 </dd>
 <dt>select by value</dt>
 <dd>As well as defining filter criteria using a search pattern, you can also manually choose from a list of entries taken from the currently-matching set of images.</dd>
 <dd>
-<p>The box below the search pattern will list values for the selected attribute that are present in the currently-matching images. This list is continuously updated as you type. You may also choose a sorting criteria by scrolling through the list and double-clicking.</p>
+<p>The box below the <em>search pattern</em> will list values for the selected attribute that are present in the currently-selected images. This list is continuously updated as you type. You may also choose a sorting criteria by scrolling through the list and double-clicking.</p>
 </dd>
 <dd>
 <p>If you enable single-click mode (see <a href="/dtdocs/preferences-settings/lighttable/"><code>preferences</code> -&gt; <code>lighttable</code></a>) you can select with a single-click rather than double-click. This mode also allows you to select a range of values with the mouse. This only works for numerical and date-time attributes.</p>
 </dd>
 </dl>
 <h2 id="combining-multiple-filters">combining multiple filters</h2>
-<p>You can combine multiple filters together to create more complex collections of images using a series of rules. A rule is a combination of a filter critera along with a logical operation that defines how that criteria is combined with any previously added rules.</p>
-<p>Click on the triangle button (to the right of the search field) to open a menu with the following options:</p>
+<p>You can combine multiple filters together to create more complex collections of images using a series of rules. A rule is a combination of a filter critera along with a logical operation that defines how that criteria is combined with any previous rules.</p>
+<p>Click on the 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/collect-images/collect-expander.png" alt="collect-expander-icon"  />
+
+ button (to the right of the search field) to open a menu with the following options:</p>
 <dl>
 <dt>clear this rule</dt>
 <dd>Remove the current rule – or reset to default if this is the only rule defined.</dd>
@@ -4091,11 +4183,26 @@
 <dt>exclude images</dt>
 <dd>Add a new rule, which is combined with the previous rule(s) in a logical EXCEPT operation. Images that are selected by the new criteria are excluded from the collection.</dd>
 </dl>
-<p>The logical operators defining how rules are combined are indicated with icons to the right of each added rule: AND by the <code>∩</code> symbol, OR by the <code>∪</code> symbol, and EXCEPT by the <code>\</code> symbol. Clicking on any of these icons allows you to change the logical operation.</p>
+<p>The logical operators defining how rules are combined are indicated with icons to the right of each added rule: AND by the 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/collect-images/collect-and.png" alt="collect-and-icon"  />
+
+ symbol, OR by the 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/collect-images/collect-or.png" alt="collect-or-icon"  />
+
+ symbol, and EXCEPT by the 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/collect-images/collect-except.png" alt="collect-except-icon"  />
+
+ symbol. Clicking on any of these icons allows you to change the logical operation for that rule.</p>
 <h2 id="updating-the-folder-path-of-moved-images">updating the folder path of moved images</h2>
-<p>While it is best to not touch imported files behind darktable&rsquo;s back, this module can help you recover from situations when you have moved image folders after importing them. The collect images module has a feature that allows you to update darktable&rsquo;s library database with the new folder location. The process is as follows:</p>
+<p>While it is best to not touch imported files behind darktable&rsquo;s back, this module can help you recover from situations when you have moved or renamed image folders after importing them. The collect images module has a feature that allows you to update darktable&rsquo;s library database with the new folder location. The process is as follows:</p>
 <ol>
-<li>Set the <em>image attribute</em> combobox to <em>folders</em></li>
+<li>Set the <em>image attribute</em> combobox to &ldquo;folders&rdquo;</li>
 <li>Locate the original folder name in the tree. The folder name will be displayed struck-through to emphasize that it is no longer present.</li>
 <li>Right-click on the folder name, select “search filmroll&hellip;”, and then select the new location of the folder.</li>
 </ol>

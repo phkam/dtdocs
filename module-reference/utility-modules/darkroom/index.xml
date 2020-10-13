@@ -12,16 +12,17 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/clipping/</guid>
-      <description>When we send an image to a display device, we normally represent each color pixels as a set of 3 numbers, representing the intensity of the red, green and blue primary colors in the output color space that, when we mix them togather, produce the appropriate color of that pixel. Because the output color space is normally closely related to play ardware with physical limations, the output color space will have a maximum value allowed for the [R,G,B] channels representing maximum intensity, and there will also be a minimum value below which anything gets mapped to zero.</description>
+      <description>When an image is sent to a display device, each pixel is normally represented as a set of 3 numbers, representing the intensity of the red, green and blue primary colors in the output color space. Because the output color space is usually closely related to hardware with physical limations, there is a maximum permitted value for the [R,G,B] channels, representing the maximum available intensity for that color space. Similarly, there is also a minimum value below which pixel values will be mapped to zero.</description>
     </item>
     
     <item>
-      <title>color assessment (ToDo)</title>
+      <title>color assessment</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/</guid>
-      <description></description>
+      <description>When developing an image, the way we perceive brightness, contrast and saturation is influenced by the surrounding ambient conditions. If an image is displayed against a dark background, as with the default theme in darktable, it can have the a number of adverse effects on our perception of that image:
+ Exaggeration of the perceived exposure makes the image seems brighter than it really is. This is nicely illustrated by the Adelson checkerboard shadow effect.</description>
     </item>
     
     <item>
@@ -50,8 +51,8 @@ The buttons on the top-right allow you to create new duplicates of the current i
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/global-color-picker/</guid>
       <description>Take color samples from the current darkroom image, display their values in multiple ways and compare colors from different locations.
-The color picker is activated by pressing the color picker icon. There are multiple parameters for controlling how the color picker works, whose settings remain in effect until you leave the darkroom mode.
-Besides the global color picker described here, many darktable modules (e.g. tone curve) also contain local color pickers which are (mostly) used to set individual module parameters.</description>
+The color picker is activated by pressing the color picker icon. The module&amp;rsquo;s parameters will remain in effect until you leave the darkroom mode.
+Besides the global color picker described here, many darktable modules (e.g. tone curve) also contain local color pickers which are used to set individual module parameters. You should be aware that these two forms of color picker do not always work in the same color space.</description>
     </item>
     
     <item>
@@ -62,7 +63,7 @@ Besides the global color picker described here, many darktable modules (e.g. ton
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/history-stack/</guid>
       <description>Query and modify the history stack of the current darkroom image.
 This module lists every change of state (activate/de-activate/move/change parameters) for all image processing modules that have been modified for the current image. You can select a point in the stack to return to that point in the development history of the image.
-Caution: adjusting any module will cause all modules above the currently selected one to be discarded. It is easy to lose development work on an image in this way!</description>
+ Caution: adjusting any module will cause all modules above the currently selected one to be discarded. It is easy to lose development work on an image in this way!</description>
     </item>
     
     <item>
@@ -77,23 +78,25 @@ The image information line can be displayed in the top, bottom, left or right pa
     </item>
     
     <item>
+      <title>manage module layouts</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/</guid>
+      <description>Manage the layout and grouping of processing modules.
+ This maintenance screen can be accessed from the presets menu beside the module group icons (below the histogram in the darkroom view).
+module controls preset list The panel on the left of the screen lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. Those at the bottom of the list are user-defined.</description>
+    </item>
+    
+    <item>
       <title>mask manager</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/</guid>
       <description>Manage all masks and shapes for the current image.
-This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.
+ This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.
 In the top line of the mask manager panel are buttons that can be used to create new shapes. These are the same as in the drawn mask interface of the individual modules.</description>
-    </item>
-    
-    <item>
-      <title>module groups (ToDo)</title>
-      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/module-groups/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/module-groups/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -103,7 +106,8 @@ In the top line of the mask manager panel are buttons that can be used to create
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/module-order/</guid>
       <description>Change the order of the processing modules in the darkroom using presets.
-When processing an image, the active modules are applied in a specific order, which is shown in the right-hand section of the darkroom view. Towards the bottom of the module list is a utility module named &amp;ldquo;module order&amp;rdquo;. This utility module provides information about the current ordering of the processing modules in the pixelpipe. The parameter &amp;ldquo;current order&amp;rdquo; can take on 3 possible values:</description>
+When processing an image, the active modules are applied in a specific order, which is shown in the right-hand panel of the darkroom view. This module provides information about the current ordering of the processing modules in the pixelpipe. The single parameter &amp;ldquo;current order&amp;rdquo; can take on the following values:
+ v3.0 This is the default module order for scene-referred workflow.</description>
     </item>
     
     <item>
@@ -133,9 +137,9 @@ The navigation panel can be toggled on/off with a keyboard shortcut (Ctrl+Shift+
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/raw-overexposed/</guid>
-      <description>This option warns you about areas of your raw input image with clipped color channels. Clipped color channels imply an overexposed image with loss of information in the affected areas. You may use the highlight reconstruction or color reconstruction modules to reconstruct these areas.
+      <description>This option warns you about areas of your raw input image with clipped color channels. Clipped color channels imply an overexposed image with loss of information in the affected areas. You may use the highlight reconstruction or color reconstruction modules to attempt to reconstruct these areas.
 Right-click on the icon to open a dialog containing the following configuration parameters.
- mode mark with CFA color: Display a pattern of the respective primary colors (red, green, and blue) to indicate which color channels are clipped.</description>
+ mode Choose how to mark clipped areas:   mark with CFA color: Display a pattern of the respective primary colors (red, green, and blue) to indicate which color channels are clipped.</description>
     </item>
     
     <item>
@@ -144,7 +148,7 @@ Right-click on the icon to open a dialog containing the following configuration 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/snapshots/</guid>
-      <description>A snapshot is stored as a bitmap of the current center view. Snapshots can be taken at any point in the development process and then selected to be overlaid onto the current center view. This allows you to undertake a side by side comparison (by default left=snapshot, right=active edit) while you are tuning parameters of a module. This can also be combined with history stack module to compare a snapshot against different stages of development.</description>
+      <description>A snapshot is a stored bitmap of the center image in the darktable view. Snapshots can be taken at any point in the development process and later selected to be overlaid onto the current center view. This allows you to undertake a side by side comparison (by default left=snapshot, right=active edit) while you are tuning parameters of a module. This can also be combined with history stack module to compare a snapshot against different stages of development.</description>
     </item>
     
     <item>

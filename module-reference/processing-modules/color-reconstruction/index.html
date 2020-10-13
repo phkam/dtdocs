@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4014,25 +4066,33 @@
     </h1>
 
     <p>Recover color information in blown-out highlights.</p>
-<p>Due to the nature of digital sensors, overexposed highlights lack valid color information. Most frequently they appear neutral white or exhibit some color cast &ndash; depending on what other image processing steps are involved. This module can “heal” overexposed highlights by replacing their colors with better fitting ones. The module acts on pixels whose luminance exceeds a user defined threshold. Replacement colors are taken from neighboring pixels. Both the spatial distance and the luminance distance (range) are taken into account for color selection.</p>
-<p>Due to a limitation of the underlying algorithm reconstructed colors may sometimes be displayed incorrectly if you zoom into the image in the darkroom view. If this happens you might observe a magenta shift in highlight areas close to high contrast edges, or you might see colorless highlight areas when used alongside the “reconstruct color” method of the <a href="/dtdocs/module-reference/processing-modules/highlight-reconstruction/"><em>highlight reconstruction</em></a> module. These artifacts only influence on-screen image display – the final output remains unaffected. It is recommended that you finetune the parameters of this module only when viewing the fully zoomed-out image.</p>
+<p>Due to the nature of digital sensors, overexposed highlights lack valid color information. Most frequently they appear neutral white or exhibit some color cast &ndash; depending on what other image processing steps are involved. This module can “heal” overexposed highlights by replacing their colors with better fitting ones. The module acts on pixels whose luminance exceeds a user-defined threshold. Replacement colors are taken from neighboring pixels. Both the spatial distance and the luminance distance (range) are taken into account for color selection.</p>
+<p>Due to a limitation of the underlying algorithm, reconstructed colors may sometimes be displayed incorrectly if you zoom into the image in the darkroom view. If this happens you might observe a magenta shift in highlight areas close to high contrast edges, or you might see colorless highlight areas when used alongside the “reconstruct color” method of the <a href="/dtdocs/module-reference/processing-modules/highlight-reconstruction/"><em>highlight reconstruction</em></a> module. These artifacts only influence on-screen image display – the final output remains unaffected. It is recommended that you finetune the parameters of this module only when viewing the fully zoomed-out image.</p>
 <h1 id="module-controls">module controls</h1>
 <dl>
 <dt>threshold</dt>
-<dd>The color reconstruction module replaces the color of all target pixels having luminance values above this threshold. Only pixels with luminance values below this threshold are taken as valid source pixels for replacement colors. Setting this parameter too high will cause the module to have no effect on any pixels. Setting it too low will minimize the “pool” of replacement colors – if no suitable colors are available the original colors are maintained. Therefore, this parameter exhibits a “sweet spot” characteristic with an optimum setting depending on the individual image.</dd>
+<dd>The color reconstruction module replaces the color of all target pixels having luminance values above this threshold. Only pixels with luminance values below the threshold are taken as valid source pixels for replacement colors. Setting this parameter too high will cause the module to have no effect on any pixels. Setting it too low will minimize the “pool” of replacement colors &ndash; if no suitable colors are available the original colors are maintained. This parameter therefore exhibits a “sweet spot” characteristic with an optimum setting depending on the individual image.</dd>
 <dt>spatial extent</dt>
-<dd>The spatial distance that source pixels may have from target pixels in order for them to contribute to color replacement. Higher values cause ever more distant pixels to contribute. This increases the chance of finding a replacement color but makes that color less well defined.</dd>
+<dd>The spatial distance that source pixels may have from target pixels in order for them to contribute to color replacement. Higher values cause ever more distant pixels to contribute. This increases the chance of finding a replacement color but makes the replacement color less well defined.</dd>
 <dt>range extent</dt>
-<dd>The range difference (in luminance values) that source pixels may have from target pixels in order for them to contribute to color replacement. Higher values cause more pixels to contribute even if their luminance differs more strongly from the target pixels. This again increases the chance of finding a replacement color but at the same time increases the risk of unfitting colors creeping in.</dd>
+<dd>The range difference (in luminance) that source pixels may have from target pixels in order for them to contribute to color replacement. Higher values cause more pixels to contribute even if their luminance differs more strongly from the target pixels. This again increases the chance of finding a replacement color but at the same time increases the risk of unfitting colors creeping in.</dd>
 <dt>precedence</dt>
-<dd>This combobox defines if certain replacement colors shall take precedence over others as follows:</dd>
+<dd>This combobox defines whether certain replacement colors shall take precedence over others as follows:</dd>
 <dd>
-<p><em>off</em> (default): all pixels contribute equally</p>
+<ul>
+<li><em>off</em> (default): All pixels contribute equally</li>
+</ul>
 </dd>
-<dd><em>saturated colors</em>: pixels contribute according to their chromaticity – the higher saturated a color the more it contributes</dd>
-<dd><em>hue</em>: give precedence to a specific hue (see below)</dd>
+<dd><ul>
+<li><em>saturated colors</em>: Pixels contribute according to their chromaticity – the more highly-saturated a color, the more it contributes</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>hue</em>: give precedence to a specific hue (see below)</li>
+</ul>
+</dd>
 <dt>hue</dt>
-<dd>This slider is only visible if you set the <em>precedence</em> to “hue”. It allows you to select a preferred hue of replacement colors. This only has an effect if the preferred hue is actually present within the selected spatial and range distance of the target pixels (see above). A typical use case is repairing highlights on human skin in situations where diverging colors are in close proximity (e.g. textiles or hair with a luminance close to skin). Setting a hue preference on skin tones avoids these other colors from creeping in.</dd>
+<dd>This slider is only visible if you set the <em>precedence</em> to “hue”. It allows you to select a preferred hue for replacement colors. This only has an effect if the preferred hue is actually present within the selected spatial and range distance of the target pixels (see above). A typical use case is repairing highlights on human skin in situations where diverging colors are in close proximity (e.g. textiles or hair with a luminance close that of to skin). Setting a hue preference on skin tones prevents these other colors from creeping in.</dd>
 </dl>
 
 
@@ -4050,7 +4110,7 @@
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="prev">color zones (ToDo) &gt;</a>
+	<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="prev">color zones &gt;</a>
 	
 	
     </div>

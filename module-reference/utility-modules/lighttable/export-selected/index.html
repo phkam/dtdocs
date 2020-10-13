@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,7 +4065,7 @@
         export selected
     </h1>
 
-    <p>Export images which have been selected in the lighttable.</p>
+    <p>Export images that have been selected in the lighttable.</p>
 <p>Files can be exported to a file on disk, email, various on-line storage locations, a webalbum, or a book template.</p>
 <p>You can also press <code>Ctrl+E</code> within the darkroom mode to export the currently-edited image using the last settings from this module.</p>
 <h1 id="module-controls">module controls</h1>
@@ -4027,30 +4079,55 @@
 <dt>on conflict</dt>
 <dd>Choose what to do if the generated filename conflicts with an existing file on export:</dd>
 <dd>
-<p><em>create unique filename</em>: Automatically choose a unique new file name by appending an integer to the conflicting filename.</p>
+<ul>
+<li><em>create unique filename</em>: Automatically choose a unique new file name by appending an integer to the conflicting filename.</li>
+</ul>
 </dd>
 <dd>
-<p><em>overwrite</em>: Automatically overwrite existing files. This option will present you with a confirmation dialog in order to protect you from accidental data loss. <em>(<strong>Note:</strong> This dialog is not presented per-file but as a one-off confirmation before the export job starts.)</em></p>
+<ul>
+<li><em>overwrite</em>: Automatically overwrite existing files. This option will present you with a confirmation dialog in order to protect you from accidental data loss. <em>(<strong>Note:</strong> This dialog is not presented per-file but as a one-off confirmation before the export job starts.)</em></li>
+</ul>
 </dd>
 <dd>
-<p><em>skip</em>: Do not export images where the destination filename already exists.</p>
+<ul>
+<li><em>skip</em>: Do not export images where the destination filename already exists.</li>
+</ul>
 </dd>
 <dt>file format</dt>
-<dd>Images can be exported to various file formats. Depending on the output format chosen you may define additional parameters. For some formats you need to choose the desired bit depth and compression method.</dd>
+<dd>Images can be exported to various file formats. Depending on the chosen format additional parameters may appear. For some formats you need to choose the desired bit depth and compression method.</dd>
 <dt>quality</dt>
 <dd>For some export formats you can define an output quality. Higher values will lead to larger file sizes. The default quality (95) is a good setting for very high quality exports, e.g. for archiving or printing purposes. If you need a good compromise between size and quality, e.g. for online image display or uploads, you should consider a value of “90” instead.</dd>
+<dt>unit</dt>
+<dd>Choose how to measure the maximum size of your exported image</dd>
+<dd>
+<ul>
+<li><em>pixels (file size)</em>: Enter the maximum width and height in pixels.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>cm (print size)</em>: Enter the maximum width and height in cm and define the image&rsquo;s dpi. The equivalent size in pixels will be automatically calculated.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>in (print size)</em>: Enter the maximum width and height in inches and define the image&rsquo;s dpi. The equivalent size in pixels will be automatically calculated.</li>
+</ul>
+</dd>
+<dt>dpi</dt>
+<dd>If units of cm or inches are chosen, set the dpi of the output image.</dd>
 <dt>max size</dt>
-<dd>Set the maximum width and height of the output images in pixels (zero means no maximum). Exported images will be constrained so as not to exceed either of these values, while retaining the correct aspect ratio. Set both to a value of “0” to export with the original dimensions (after cropping). If the entered values exceed the original dimensions darktable will either export with the original dimensions or upscale the image, depending on the &ldquo;allow upscaling&rdquo; parameter.</dd>
-<dt>high quality resampling</dt>
-<dd>Set this to &lsquo;yes&rsquo; to perform high quality resampling on the image. The image will be processed in full resolution and only downscaled at the very end. This can sometimes result in better quality, but will always be slower.</dd>
+<dd>Set the maximum width and height of the exported image(s) in pixels, cm or inches (depending on the selected unit) &ndash; zero means no maximum. Exported images will be constrained so as not to exceed either of these values, while retaining the correct aspect ratio. Set both to zero to export with the original dimensions (after cropping). If the entered values exceed the original dimensions darktable will either export with the original dimensions or upscale the image, depending on the &ldquo;allow upscaling&rdquo; parameter.</dd>
 <dt>allow upscaling</dt>
 <dd>Set to “yes” to perform an upscaling step if the user-defined maximum width and height exceed the original dimensions of the image. If set to “no” the exported image&rsquo;s dimensions will not exceed the dimensions of the original image (after cropping).</dd>
+<dt>high quality resampling</dt>
+<dd>Set this to &lsquo;yes&rsquo; to perform high quality resampling on the image. The image will be processed in full resolution and only downscaled at the very end. This can sometimes result in better quality, but will always be slower.</dd>
 <dt>profile</dt>
 <dd>The output color profile. Select “image settings” if you want the settings in the <a href="/dtdocs/module-reference/processing-modules/output-color-profile/"><em>output color profile</em></a> module of the individual images to take precedence.</dd>
 <dt>intent</dt>
 <dd>This option lets you define the intent, i.e. the way in which darktable will deal with out-of-gamut colors. See <a href="/dtdocs/special-topics/color-management/rendering-intent/">rendering intent</a> for a more detailed description of the available options.</dd>
 <dt>style</dt>
-<dd>This option lets you choose a style (a collection of history stack items) which darktable will combine with the existing history stack to generate the output image. These history items are only added temporarily &ndash; the original history stack is not overwritten. You can use this feature to add processing steps and parameters that you want to be applied specifically to images before export. For example you may define a style that adds a stronger level of sharpening when you produce scaled-down JPEG files for the internet or add a certain level of exposure compensation to all of your output images.</dd>
+<dd>This option lets you choose a <a href="/dtdocs/module-reference/utility-modules/lighttable/styles/">style</a> which darktable will combine with the existing history stack to generate the output image. These history items are only added temporarily &ndash; the original history stack is not overwritten. You can use this feature to add processing steps and parameters that you want to be applied specifically to images before export. For example you may define a style that adds a stronger level of sharpening when you produce scaled-down JPEG files for the internet or add a certain level of exposure compensation to all of your output images.</dd>
 <dt>mode</dt>
 <dd>When applying a style during export this option defines whether the history stack items of that style replace the original history stack of the image or are appended to it. Technically speaking, in append mode history stack items of the style will constitute separate instances of the respective modules on top of any existing ones (see also <a href="/dtdocs/darkroom/interacting-with-modules/multiple-instances/">multiple instances</a>). As a consequence the original history stack will remain in effect with the new items being applied in addition. This way you can apply an overall adjustment (e.g. exposure) to a number of exported images while respecting the settings of each individual image.</dd>
 <dt>export</dt>
@@ -4059,7 +4136,12 @@
 <dd>Press the icon on the right of the export button to bring up the <em>edit metadata exportation</em> dialog. This dialog allows you to to configure which metadata items are to be embedded into the exported image. See the following section for more details.</dd>
 </dl>
 <h1 id="including-metadata-in-the-exported-image">including metadata in the exported image</h1>
-<p><strong>INCLUDE IMAGE HERE</strong></p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/export-selected/metadata-config.png" alt="metadata config"  />
+
+</p>
 <p>The <em>edit metadata exportation</em> dialog can be used to control what metadata is included within exported files. The parameters entered into this dialog are saved along with other export parameters to user presets and the last entered values are retained when darktable is closed. The following options can be set:</p>
 <h2 id="general-settings">general settings</h2>
 <p>The left-hand-side of this dialog allows you to choose which groups of metadata are to be exported with the image. The following options are available:</p>
@@ -4072,21 +4154,30 @@
 <dd>Export geo tags</dd>
 <dt>tags</dt>
 <dd>Export tags  created in the <a href="/dtdocs/module-reference/utility-modules/shared/tagging/">tagging</a> module (to <code>Xmp.dc.Subject</code>). Three additional options can also be selected:</dd>
-<dd><em>private tags</em>: Export private tags</dd>
-<dd><em>synonyms</em>: Export tag synonyms</dd>
-<dd><em>omit hierarchy</em>: Only export the last part of hierarchical tags</dd>
+<dd><ul>
+<li><em>private tags</em>: Export private tags</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>synonyms</em>: Export tag synonyms</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>omit hierarchy</em>: Only export the last part of hierarchical tags</li>
+</ul>
+</dd>
 <dt>hierarchical tags</dt>
 <dd>Export hierarchical tags (to <code>Xmp.lr.Hierarchical Subject</code>)</dd>
 <dt>develop history</dt>
 <dd>Export the development history (history stack and shapes) where supported (e.g. JPEG, JPEG2000, TIFF). The development history will be stored as XMP tags within the output file. This information can later be used to reconstruct the parameters and settings that were used to produce the exported image.</dd>
-<dd>
-<p><em>Caution: For various reasons embedding XMP tags into output files may fail without notice, e.g. if certain size limits are exceeded. Users are therefore advised to not rely on this feature for their backup strategy. To back up your data always make sure to save your input (raw) file as well as all of darktable&rsquo;s XMP sidecar files.</em></p>
-</dd>
 </dl>
+<hr>
+<p><strong>Caution:</strong> For various reasons embedding XMP tags into output files may fail without notice, e.g. if certain size limits are exceeded. Users are therefore advised to not rely on this feature for their backup strategy. To back up your data always make sure to save your input (raw) file as well as all of darktable&rsquo;s XMP sidecar files.</p>
+<hr>
 <h2 id="per-metadata-settings">per metadata settings</h2>
 <p>The right-hand-side of this dialog allows you to define formulas to populate image metadata. The formulas defined here have priority over the settings in the left-hand-side of the dialog. The first column identifies the entry to be edited. The second column allows you to define how to calculate the value for that metadata entry using a formula.</p>
 <p>Leave the formula empty to prevent a given metadata entry from being exported (<code>Exif.GPSInfo.GPSVersionID</code> in the above example). To define a formula to calculate the metadata value, you can use the same variables and rules as for filenames (as documented in the <a href="/dtdocs/special-topics/variables/">variables</a> section). Press <code>Enter</code> to validate the formula.</p>
-<p>Use the “-” icon to remove a metadata entry from the list and the “+” icon to add a new one from a predefined list of available metadata tags.</p>
+<p>Use the “&ndash;” icon to remove a metadata entry from the list and the “+” icon to add a new one from a predefined list of available metadata tags.</p>
 <p>Click on the &ldquo;add&rdquo; button to add a metadata entry to the configuration list.</p>
 <p>The formulas allow you virtually define all the metadata you need to qualify your images in tagging and export the values in the XMP or IPTC tags of your choice. The exported tags can be different from one export to the next depending on the destination of the images. Tags and Categories are displayed separately in image information.</p>
 <p><em>Remember that a tag set up as a category is never exported.</em></p>
@@ -4097,7 +4188,9 @@
 <dt>example 2</dt>
 <dd>A first level tag called creator is followed by the name of the photographer, both set as categories: <code>creator|firstname lastname</code>. The formula copyrights (<code>$(YEAR) $(CATEGORY0(creator))</code>) builds the text associated with image rights. Here, <a href="/dtdocs/module-reference/utility-modules/shared/image-information/">image information</a> displays &ldquo;creator: firstname lastname&rdquo; as categories. Neither creator nor firstname lastname appear in the tags list and they are not exported as simple tags.</dd>
 </dl>
-<p>Note: tagging is not appropriate to define free text metadata, like a title or a description, which may be specific to each image. Use the <a href="/dtdocs/module-reference/utility-modules/shared/metadata-editor/">metadata editor</a> for this type of information.</p>
+<hr>
+<p><strong>Note:</strong> tagging is not appropriate to define free text metadata, like a title or a description, which may be specific to each image. Use the <a href="/dtdocs/module-reference/utility-modules/shared/metadata-editor/">metadata editor</a> for this type of information.</p>
+<hr>
 
 
     

@@ -22,7 +22,7 @@
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/darktable-chart/usage/</guid>
       <description>The tool is organized into three tabs in the upper part and a text output frame in the lower part.
-The first tab is used to define the source image, the second tab defines the reference (target) and the third tab contains the controls to generate the resulting darktable style.</description>
+ The first tab is used to define the source image, the second tab defines the reference (target) and the third tab contains the controls to generate the resulting darktable style.</description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@ The first tab is used to define the source image, the second tab defines the ref
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/darktable-chart/process/</guid>
       <description>If all of the required settings in the “source image” and “reference values” tabs are ready you can move on to the “process” tab.
-First, you need to tell darktable-chart which of the patches represents the gray ramp. In the screenshot displayed above, the gray ramp is positioned in the lower part of the color reference chart, denoted as “GS00&amp;hellip;GS23”.
+ First, you need to tell darktable-chart which of the patches represents the gray ramp. In the screenshot displayed above, the gray ramp is positioned in the lower part of the color reference chart, denoted as “GS00&amp;hellip;GS23”.
 The “number of final patches” input defines how many editable color patches the resulting style will use within the color look up table module.</description>
     </item>
     

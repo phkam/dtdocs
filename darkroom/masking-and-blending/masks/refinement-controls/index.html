@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4016,7 +4068,7 @@
     <p>When a parametric or drawn mask is active, several additional sliders are shown which allow the mask to be further refined.</p>
 <dl>
 <dt>feathering guide</dt>
-<dd>Mask feathering smoothes a drawn or parametric mask such that the mask&rsquo;s edges automatically align with the edges of features in the image. The smoothing is guided either by the module&rsquo;s input or output (before blending), depending on what is selected in the “feathering guide” combobox. Feathering is particularly sensitive to this choice when used with edge-modifying modules (modules for sharpening or blurring an image).</dd>
+<dd>Mask feathering smooths a drawn or parametric mask such that the mask&rsquo;s edges automatically align with the edges of features in the image. The smoothing is guided either by the module&rsquo;s input or output (before blending), depending on whether you select &ldquo;input image&rdquo; or &ldquo;output image&rdquo; in the “feathering guide” combobox. Feathering is particularly sensitive to this choice when used with edge-modifying modules (modules for sharpening or blurring an image).</dd>
 <dt>feathering radius</dt>
 <dd>Adjust the strength of the feathering effect. Feathering works best if the mask&rsquo;s edges already approximately match some edges in the guiding image. The larger the “feathering radius” the better the feathering algorithm can align the mask to more distant edges. If this radius is too large, however, the feathered mask may overshoot (cover regions that the user wants to exclude). Feathering is disabled when the feathering radius is set to 0.</dd>
 <dt>mask blur</dt>
@@ -4025,31 +4077,26 @@
 <dd>The strength of the module&rsquo;s effect is determined by the mask&rsquo;s local opacity. Feathering and blurring the mask may reduce the opacity of the original mask. The “mask opacity” slider allows you to readjust the mask opacity to compensate. If the mask opacity is decreased (negative slider values) less opaque parts are affected more strongly. Conversely, if the mask opacity is increased (positive slider values) more opaque parts are affected more strongly. As a consequence, completely opaque portions of the mask always remain opaque and completely transparent portions always remain transparent. This is to ensure that regions which have been excluded from or fully included in a module&rsquo;s effect (by setting the mask&rsquo;s opacity to 0% or 100%) remain fully excluded or included.</dd>
 <dt>mask contrast</dt>
 <dd>This slider increases or decreases the mask contrast. This allows you to adjust the transition between opaque and transparent parts of the mask.</dd>
-<dt>temporarily switch off mask</dt>
+<dt>temporarily switch off mask (
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/refinement-controls/icon-eye.png" alt="eye icon"  />
+
+)</dt>
 <dd>Sometimes it is useful to visualize a module&rsquo;s effect without the mask being active. Click on this icon to temporarily deactivate the mask (the selected blend mode and global opacity remain in effect).</dd>
-<dt>display mask</dt>
+<dt>display mask (
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/refinement-controls/icon-mask.png" alt="mask icon"  />
+
+)</dt>
 <dd>Click on this icon to display the current mask as a yellow overlay over a black-and-white version of the image. Solid yellow indicates an opacity of 100%; a fully visible gray background image (without yellow overlay) indicates an opacity of 0%.</dd>
 </dl>
 <h1 id="example-feathering-a-drawn-mask">example: feathering a drawn mask</h1>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/refinement-controls/feathering_1.png" alt="feathering1"  />
-
- 
-
-
-<img src="https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/refinement-controls/feathering_2.png" alt="feathering2"  />
-
- 
-
-
-<img src="https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/refinement-controls/feathering_3.png" alt="feathering3"  />
-
- 
-
-
-<img src="https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/refinement-controls/feathering_4.png" alt="feathering4"  />
+<img src="https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/refinement-controls/feathering.png#w100" alt="feathering"  />
 
 </p>
 <p>It can be rather tedious to create a drawn mask which precisely covers a particular feature in an image. In this example, we want to enhance the color contrast of the lion sculpture shown in the left image above without affecting the background.</p>
@@ -4059,7 +4106,7 @@
 <li>The third image shows the effect of adjusting the feathering radius, mask opacity and mask contrast, leading to a well matched mask with little effort. In this example the feathering radius has been adjusted to 50 and a blur radius of 5 was chosen to smooth the mask to some degree. The mask opacity and mask contrast have been increased to 0.3 and 0.5, respectively.</li>
 <li>The final image above shows the end result, where the color enhancement (via the <a href="/dtdocs/module-reference/processing-modules/color-contrast/"><em>color contrast</em></a> module) is restricted to only the lion sculpture.</li>
 </ol>
-<p>Mask feathering works particularly well in this example because the sculpture is well separated from the blurry background. The distinct edge at the border of the sculpture guides the feathering mask adjustment to match the shape of the sculpture.</p>
+<p>Mask feathering works particularly well in this example because the sculpture is well separated from the out-of-focus background. The distinct edge at the border of the sculpture guides the feathering mask adjustment to match the shape of the sculpture.</p>
 
 
     

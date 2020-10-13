@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4017,35 +4069,45 @@
 <p>Shapes are stored internally as vector graphics and are rendered with the required resolution during pixelpipe processing. Shapes are expressed in the coordinate system of the original image and are transformed along with the rest of the image by any active distorting modules in the pipe (<a href="/dtdocs/module-reference/processing-modules/lens-correction/"><em>lens correction</em></a>, <a href="/dtdocs/module-reference/processing-modules/crop-rotate/"><em>crop &amp; rotate</em></a> for example). This means that a shape will always work on the same image area regardless of any modifications that may be subsequently applied.  Please note that this distorting effect can cause straight lines in your mask to appear curved when the <a href="/dtdocs/module-reference/processing-modules/lens-correction/"><em>lens correction</em></a> module is active.</p>
 <p>The controls required to create and alter drawn masks may be enabled by selecting either the &ldquo;drawn mask&rdquo; or &ldquo;drawn &amp; parametric mask&rdquo; icon at the bottom of a module.</p>
 <h1 id="creating-shapes">creating shapes</h1>
-<p>Choose a shape by clicking on the appropriate shape icon.</p>
-<p><strong>IMAGE HERE</strong></p>
-<p>This will take you into the creation mode for that shape. Once you have finished drawing your shape you will automatically be taken into the edit mode.</p>
-<p><code>Ctrl+click</code> on the shape icon to continuously draw multiple shapes of the same type - each time a shape is completed, you will re-enter creation mode for a new instance of that shape. In this mode, <code>right-click</code> to stop drawing shapes and enter edit mode.</p>
-<p>For all drawn shapes, <code>Shift+scroll</code> changes the extent of the shape&rsquo;s feathering (the blur at the edge of the shape) and <code>Ctrl+scroll</code> changes the shape&rsquo;s opacity (how transparent it is). These operations are available in both creation and edit modes (as long as your mouse is over the shape in question).</p>
+<p>Choose a shape by clicking on the appropriate shape icon (from left to right: brush, circle, ellipse, path, gradient).</p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/drawn/shape-icons.png" alt="shape icons"  />
+
+</p>
+<p>This will take you into the creation mode for that shape. Once you have finished drawing your shape you will automatically be taken into edit mode.</p>
+<p><code>Ctrl+click</code> on the shape icon to continuously draw multiple shapes of the same type - each time a shape is completed, you will re-enter creation mode for a new instance of that shape. While in continuous creation mode, <code>right-click</code> to stop drawing shapes and enter edit mode.</p>
+<p>For all drawn shapes, <code>Shift+scroll</code> may be used to change the extent of the shape&rsquo;s feathering (the blur at the edge of the shape) and <code>Ctrl+scroll</code> to change the shape&rsquo;s opacity (how transparent it is). These operations are available in both creation and edit modes (as long as your mouse is over the shape in question).</p>
 <hr>
-<p><strong>Note:</strong> The preceding scroll operations will also cause the <strong>default</strong> feathering or opacity to be changed when used in shape creation mode. These values will be reapplied the next time you create a new shape.</p>
+<p><strong>Note:</strong> When used in shape creation mode, the preceding scroll operations will also cause the <strong>default</strong> feathering or opacity to be changed. The new default values will be used the next time you create a new shape.</p>
 <hr>
 <h1 id="editing-shapes">editing shapes</h1>
-<p>Click on the &lsquo;show and edit mask elements&rsquo; icon to enter shape edit mode. This will show all drawn masks used by the current module and allow you to edit those shapes. <code>Ctrl+click</code> on the same icon to enter restricted edit mode, where certain actions (e.g. dragging a complete shape or changing its size) are blocked. This is particularly useful to avoid costly mistakes when editing path and brush shapes.</p>
+<p>Click on the &lsquo;show and edit mask elements&rsquo; icon 
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/masking-and-blending/masks/drawn/shape-edit.png" alt="show and edit masks"  />
+
+ to enter shape edit mode. This will show all drawn masks in use by the current module and allow you to edit those shapes. <code>Ctrl+click</code> on the same icon to enter restricted edit mode, where certain actions (e.g. dragging a complete shape or changing its size) are blocked. This is particularly useful to avoid costly mistakes when editing path and brush shapes.</p>
 <p>Click and drag a shape to move it around the image canvas.</p>
 <h1 id="removing-shapes">removing shapes</h1>
-<p>While in edit mode you can right-click on a shape to remove it.</p>
+<p>While in edit mode <code>right-click</code> on a shape to remove it.</p>
 <h1 id="reusing-shapes">reusing shapes</h1>
-<p>You can reuse shapes that you have drawn in other modules. Click on the shapes drop-down to choose previously-drawn shapes individually or to use the same group of shapes as used in another module.</p>
+<p>You can reuse shapes that you have drawn in other modules. Click on the shapes drop-down (next to the &lsquo;show and edit mask elemenst&rsquo; button) to choose previously-drawn shapes individually or to use the same group of shapes as used by another module.</p>
 <h1 id="combining-and-managing-shapes">combining and managing shapes</h1>
 <p>The <a href="/dtdocs/module-reference/utility-modules/darkroom/mask-manager/">mask manager</a> module can be used to manage your drawn shapes. This module also allows you to group and combine drawn masks using set operators (union, intersection, difference, exclusion).</p>
 <h1 id="available-shapes">available shapes</h1>
 <dl>
 <dt>brush</dt>
-<dd>Start drawing a brush stroke by left-clicking on the image canvas and moving the mouse while keeping the button pressed. The brush stroke is finalized once you release the mouse button. Scroll the mouse to change the shape size, either before you start drawing or at any time during the operation. Likewise you can use the <code>[</code> and <code>]</code> to decrease/increase brush size, <code>{</code> and <code>}</code> to decrease/increase hardness/feathering, and <code>&lt;</code> and <code>&gt;</code> to decrease/increase opacity.</dd>
+<dd>Start drawing a brush stroke by left-clicking on the image canvas and moving the mouse while keeping the button pressed. The brush stroke is finalized once you release the mouse button. Scroll the mouse to change the shape size, either before you start drawing or at any time during the operation. Likewise you can use the &ldquo;<code>[</code>&rdquo; and &ldquo;<code>]</code>&rdquo; keys to decrease/increase brush size, the &ldquo;<code>{</code>&rdquo; and &ldquo;<code>}</code>&rdquo; keys to decrease/increase feathering, and the &ldquo;<code>&lt;</code>&rdquo; and &ldquo;<code>&gt;</code>&rdquo; keys to decrease/increase opacity.</dd>
 <dd>
-<p>If you have a graphics tablet with pen pressure sensitivity, darktable can apply the recorded pen pressure to certain attributes of the brush stroke. This operation can be changed in <a href="/dtdocs/preferences-settings/darkroom/"><code>preferences</code> -&gt; <code>darkroom</code> -&gt; <code>pen pressure control for brush masks</code></a>.</p>
+<p>If you have a graphics tablet with pen pressure sensitivity, darktable can apply the recorded pen pressure to certain attributes of the brush stroke. This operation can be controlled in <a href="/dtdocs/preferences-settings/darkroom/"><code>preferences</code> -&gt; <code>darkroom</code> -&gt; <code>pen pressure control for brush masks</code></a>.</p>
 </dd>
 <dd>
-<p>On lifting the tablet pen or releasing the left mouse button the brush stroke is converted into a number of connected nodes which define the shape. A configuration option (<a href="/dtdocs/preferences-settings/darkroom/"><code>preferences</code> -&gt; <code>darkroom</code> -&gt; <code>smoothing of brush strokes</code></a>) controls how much smoothing is applied. A higher level of smoothing leads to fewer nodes being created – this eases subsequent editing at the expense of lower accuracy.</p>
+<p>On lifting the tablet pen or releasing the left mouse button the brush stroke is converted into a number of connected nodes, which define the final shape. A configuration option (<a href="/dtdocs/preferences-settings/darkroom/"><code>preferences</code> -&gt; <code>darkroom</code> -&gt; <code>smoothing of brush strokes</code></a>) controls how much smoothing is applied. A higher level of smoothing leads to fewer nodes being created – this eases subsequent editing at the expense of lower accuracy.</p>
 </dd>
 <dd>
-<p>Nodes and segments of a brush stroke can be modified individually. See the documentation on paths below for more details.</p>
+<p>Nodes and segments of a brush stroke can be modified individually. See the documentation on path shapes below for more details.</p>
 </dd>
 </dl>
 <hr>
@@ -4053,19 +4115,19 @@
 <hr>
 <dl>
 <dt>circle</dt>
-<dd>Click on the image canvas to place the circle. Use the scroll wheel of your mouse while hovering over the circle to change its diameter. Scroll while hovering your mouse over the circle border to adjust the width of the feathering (the same effect as <code>Shift+scroll</code> within the main shape).</dd>
+<dd>Click on the image canvas to place the circle. Scroll while hovering over the circle to change its diameter. Scroll while hovering over the circle&rsquo;s border to change the width of the feathering (the same effect as <code>Shift+scroll</code> within the main shape).</dd>
 <dt>ellipse</dt>
-<dd>The general principle is the same as for the circle shape. In addition four nodes are shown on the ellipse line. Click on the nodes to adjust the ellipse&rsquo;s eccentricity. <code>Ctrl+click</code> on the nodes or use <code>Shift+Ctrl+scroll</code> to rotate the ellipse. <code>Shift+click</code> within the shape to toggle the gradual decay between equidistant and proportional mode.</dd>
+<dd>The general principle is the same as for the circle shape. In addition, four nodes are shown on the ellipse line. Click on the nodes to adjust the ellipse&rsquo;s eccentricity. <code>Ctrl+click</code> on the nodes or use <code>Shift+Ctrl+scroll</code> to rotate the ellipse. <code>Shift+click</code> within the shape to toggle the gradual decay between equidistant and proportional mode.</dd>
 <dt>path</dt>
-<dd>Left-click on the image canvas to define a path node. Create more path nodes to generate a free-format enclosed shape. Terminate the path by right-clicking after having set the last point. By default nodes are connected with smooth lines. If you want a node to define a sharp corner, you can do so by creating it with <code>Ctrl+click</code>.</dd>
+<dd>Click on the image canvas to place a number of nodes and generate a free-format enclosed shape, terminating the path by right-clicking after having set the last point. By default, nodes are connected with smooth lines. If you want a node to instead define a sharp corner, you can do so by creating it with <code>Ctrl+click</code>.</dd>
 <dd>
-<p>In edit mode you can convert existing nodes from smooth to sharp corners and vice versa by <code>Ctrl+clicking</code> on them. You can insert additional nodes by <code>Ctrl+clicking</code> on one of the line segments. Single nodes can be deleted by right-clicking on them. Take care to ensure that the mouse pointer is over the desired node and the node is highlighted, to avoid accidentally removing the whole path.</p>
+<p>In edit mode <code>Ctrl+click</code> on existing nodes to convert them from smooth to sharp corners and vice versa. <code>Ctrl+click</code> on one of the line segments to insert an additional node. Right-click on a node to delete it. Take care to ensure that the mouse pointer is over the desired node and the node is highlighted, to avoid accidentally removing the whole path.</p>
 </dd>
 <dd>
-<p>The size of the completed shape can be modified by scrolling. The same holds true for the width of the border (the area with a gradual opacity decay), which can be changed with <code>Shift+scroll</code> from anywhere within the shape. Single nodes as well as path segments can be moved by mouse-dragging. If a node is selected by clicking on it, a further control point appears – you can move this control point to modify the curvature of the line (reset to default by right-clicking). Dragging one of the control points on the border adjusts the border width just in that part of the shape.</p>
+<p>The size of the completed shape can be modified by scrolling. The same holds true for the width of the border (the area with a gradual opacity decay), which can also be changed with <code>Shift+scroll</code> from anywhere within the shape. Single nodes as well as path segments can be moved by dragging them with the mouse. If a node is selected by clicking on it, a further control point appears which allows you to modify the curvature of the line (reset to default by right-clicking). Dragging one of the control points on the border adjusts the border width just in that part of the shape.</p>
 </dd>
 <dd>
-<p>Consider fine tuning paths in the restricted edit mode (enabled by <code>Ctrl+clicking</code> on the &lsquo;show and edit mask elements&rsquo; icon). This allows you to adjust single nodes and segments without the risk of accidentally shifting or resizing the whole shape.</p>
+<p>Consider fine-tuning paths in restricted edit mode (enabled by <code>Ctrl+clicking</code> on the &lsquo;show and edit mask elements&rsquo; icon). This allows you to adjust single nodes and segments without the risk of accidentally shifting or resizing the whole shape.</p>
 </dd>
 <dt>gradient</dt>
 <dd>The gradient shape is a linear gradient which extends from a given point to the edge of the image.</dd>
@@ -4079,11 +4141,11 @@
 <p>Gradient lines can also be curved by scrolling close to the center line. This can be useful to counteract the distortion caused by the <a href="/dtdocs/module-reference/processing-modules/lens-correction/"><em>lens correction</em></a> module.</p>
 </dd>
 <dd>
-<p>Depending on the module and the underlying image using a gradient shape might provoke banding artifacts. You should consider activating the <a href="/dtdocs/module-reference/processing-modules/dithering/"><em>dithering</em></a> module to alleviate this.</p>
+<p>Depending on the module and the underlying image, using a gradient shape might provoke banding artifacts. You should consider activating the <a href="/dtdocs/module-reference/processing-modules/dithering/"><em>dithering</em></a> module to alleviate this.</p>
 </dd>
 </dl>
 <h1 id="reversing-the-polarity-of-a-drawn-mask">reversing the polarity of a drawn mask</h1>
-<p>Click on the &ldquo;+/-&rdquo; button to reverse the polarity of the entire drawn mask. For example, a circular mask will, by default, cause the module to be applied only to the area inside the drawn circle. Reversing the polarity will cause the module to apply to the whole image, <em>except for</em> that circle.</p>
+<p>Click on the &ldquo;<code>+/-</code>&rdquo; button to reverse the polarity of the entire drawn mask. For example, a circular mask will, by default, cause the module to be applied only to the area inside the drawn circle. Reversing its polarity will cause the module to apply to the whole image, <em>except for</em> that circle.</p>
 
 
     

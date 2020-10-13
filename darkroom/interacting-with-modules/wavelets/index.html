@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,7 +4065,7 @@
         wavelets
     </h1>
 
-    <p>Wavelets are a technique used in image processing to separate an image into a number of <em>layers</em>, each containing a different level of detail. After <em>decomposing</em> an image in this way, a processing module can limit its processing to one or more of those layers, and then piece the image back together again at the end. This allows us to be surgical about which features in the image we wish to impact when working with a module.</p>
+    <p>Wavelets are a technique used in image processing to separate (or <em>decompose</em>) an image into a number of distinct <em>layers</em>, each containing a different level of detail. After decomposing an image in this way, a module can limit its processing to one or more of these detail layers, and then piece the layers back together again at the end to form its output image. This allows us to be surgical about which features in the image we wish to impact when working with a module.</p>
 <p>Some of the operations darktable can perform in this way are:</p>
 <ul>
 <li>noise removal (in the <a href="/dtdocs/module-reference/processing-modules/denoise-profiled/"><em>denoise (profiled)</em></a>, <a href="/dtdocs/module-reference/processing-modules/raw-denoise/"><em>raw denoise</em></a> and <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> modules)</li>
@@ -4021,69 +4073,72 @@
 <li>blurring or removal of unwanted detail (in the <a href="/dtdocs/module-reference/processing-modules/retouch/"><em>retouch</em></a> module)</li>
 </ul>
 <h1 id="theory">theory</h1>
-<p>A wavelet is a mathematical function that starts off at zero, oscillates up and down and then settles back to zero. The following diagram shows some simple wavelets of different sizes.</p>
+<p>A wavelet is a mathematical function that starts off at zero, oscillates up and down and then settles back to zero. The following diagram shows some simple wavelets of differing sizes.</p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-overview.png" alt="wavelets-overview"  />
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-overview.png#w50" alt="wavelets-overview"  />
 
 </p>
-<p>These wavelets are used to decompose an image into multiple image layers, each containing details of a similar size to the given wavelet function. The wavelet functions are used to scan across and down the image using a mathematical operation called <em>convolution</em>. This picks out details from the image that are on a similar scale to the size of the wavelet, and from that builds different layers of detail corresponding to the different sizes of wavelets.</p>
-<p>Below is an example where layers have been extracted from the image shown above. In this case, the images were produced using the <a href="/dtdocs/module-reference/processing-modules/retouch/"><em>retouch</em></a> module), splitting the image into 8 different layers, and using the module&rsquo;s controls to visualise the details present at each of these wavelet scales:</p>
+<p>These wavelet functions are used to scan across and down the image using a mathematical operation called <em>convolution</em>. This picks out details from the image that are on a similar scale to the size of a given wavelet, and builds a number of detail layers each corresponding to a different wavelet scale.</p>
+<p>Below is an example where detail layers have been extracted from the image shown above. In this case, the images were produced using the <a href="/dtdocs/module-reference/processing-modules/retouch/"><em>retouch</em></a> module), splitting the image into 8 different layers, and using the module&rsquo;s controls to visualise the details present at each of these wavelet scales:</p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/clean-retouch.png" alt="wavelets-retouch-gui"  />
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/clean-retouch.png#w50" alt="wavelets-retouch-gui"  />
 
 </p>
 <p>The bars in the <em>wavelet decompose</em> section indicate the layers that have been extracted at different wavelet scales. The darkest rectangle at the left represents the entire image (before decomposition) and the grey boxes represent each of the decomposed layers. Clicking on the staircase icon below the bar graph enables the layer visualisation overlay so that you can see what the currently selected layer looks like.</p>
-<p>Let&rsquo;s take a look at some of those layers.</p>
-<p>At scale #2, the image contains only the very fine detail, which includes eyebrows, eye lashes and the pores of the skin. It doesn&rsquo;t include the coarser details of the image, because those details have been extracted to other layers:</p>
+<p>Let&rsquo;s take a look at some of the layers generated for the above image.</p>
+<p>At scale #2, the image contains only very fine details, including the model&rsquo;s eyebrows, eye lashes and the pores of his skin. It doesn&rsquo;t include the coarser details of the image, because those details have been extracted to other layers:</p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-2.png" alt="wavelets-layer-scale-2"  />
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-2.png#w50" alt="wavelets-layer-scale-2"  />
 
 </p>
-<p>At scales #5 and #6 we are seeing larger and larger features</p>
+<p>At scales #5 and #6 we begin to see larger and larger features</p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-5.png" alt="wavelets-layer-scale-5"  />
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-5.png#w50" alt="wavelets-layer-scale-5"  />
 
 </p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-6.png" alt="wavelets-layer-scale-6"  />
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-6.png#w50" alt="wavelets-layer-scale-6"  />
 
 </p>
-<p>By scale #8 we are only seeing very high-level features such as the overall shape of the nose, the eye and the cheek.</p>
+<p>By scale #8 we only see very high-level features such as the overall shape of the model&rsquo;s nose, eye and the cheek.</p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-8.png" alt="wavelets-layer-scale-8"  />
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-8.png#w50" alt="wavelets-layer-scale-8"  />
 
 </p>
 <h1 id="why-use-wavelets">why use wavelets?</h1>
-<p>In the above example, suppose we wanted to smooth out some of the blotchiness in the model&rsquo;s skin, without losing any of the underlying skin texture. Wavelet decomposition makes this a trivial operation - we use the retouch module to apply a Gaussian blur to just the &lsquo;blotchy&rsquo; detail layer. Once the adjustment is complete, the retouch module simply recombines that adjusted layer with the remaining untouched layers to produce the final image.</p>
+<p>Suppose, in the above example, that we wanted to smooth out some of the blotchiness in the model&rsquo;s skin, without losing any of the underlying skin texture. Wavelet decomposition makes this a trivial operation - we can simply use the retouch module to apply a Gaussian blur to only the &lsquo;blotchy&rsquo; detail layer(s), leaving all other detail layers untouched. Once the adjustment is complete, the retouch module simply recombines that adjusted layer with the remaining untouched layers to produce the final image.</p>
 <p>The sequence of images below shows (1) The original image; (2) The layer (scale 5) that we wish to blur; and (3) The final image after the scale 5 layer has been blurred and the layers recombined:</p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-original.png" alt="wavelets-original"  />
-
- 
-
-
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-5.png" alt="wavelets-layer-scale-5"  />
-
- 
-
-
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-blur-layered.png" alt="wavelets-blur-layered"  />
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-original.png#w50" alt="wavelets-original"  />
 
 </p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-5.png#w50" alt="wavelets-layer-scale-5"  />
+
+</p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-blur-layered.png#w50" alt="wavelets-blur-layered"  />
+
+</p>
+<p>As you can see, the large-scale skin blotches have been removed, but the smaller-scale details remain untouched.</p>
 <h1 id="interacting-with-wavelet-scales">interacting with wavelet scales</h1>
 <p>There are two methods by which processing modules allow you to modify their operation using wavelet scales</p>
 <h2 id="wavelet-decomposition">wavelet decomposition</h2>
@@ -4091,20 +4146,20 @@
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/clean-retouch.png" alt="wavelets-retouch-gui"  />
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/clean-retouch.png#w50" alt="wavelets-retouch-gui"  />
 
 </p>
-<p>See the <a href="/dtdocs/module-reference/processing-modules/retouch/"><em>retouch</em></a> documentation for more details.</p>
+<p>See the <a href="/dtdocs/module-reference/processing-modules/retouch/"><em>retouch</em></a> module documentation for more details.</p>
 <h2 id="spline-controls">spline controls</h2>
 <p>The <a href="/dtdocs/module-reference/processing-modules/denoise-profiled/"><em>denoise (profiled)</em></a>, <a href="/dtdocs/module-reference/processing-modules/raw-denoise/"><em>raw denoise</em></a> and <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> modules allow their effects to be applied more or less to different wavelet scales using <em>splines</em>.</p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/clean-spline.png" alt="spline"  />
+<img src="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/clean-spline.png#w50" alt="spline"  />
 
 </p>
 <p>Here, each node in the graph represents a different level of detail in the image, from coarse detail on the left to fine detail on the right. You can raise or lower each of these nodes with your mouse to increase or decrease the module&rsquo;s effect, respectively, on that wavelet scale.</p>
-<p>To modify the curve, click slightly above or below the line near to a node and drag up or down. You can change the width of your modification by scrolling with your mouse wheel, which increases or reduces the size of the circle displayed under your mouse pointer. A small circle indicates that the effect of dragging the curve up or down will be isolated mostly to the node being adjusted. A larger circle indicates that the effect will be more broad and will increasingly impact surrounding nodes. When you hover your mouse over the graph, shaded areas indicate the parts of the spline that will be impacted when you attempt to modify the curve.</p>
+<p>To modify the curve, click slightly above or below the line near to a node and drag up or down. You can change the width of your modification by scrolling with your mouse wheel, which increases or reduces the size of the circle displayed under your mouse pointer. A small circle indicates that the effect of dragging the curve up or down will be isolated mostly to the node being adjusted. A larger circle indicates that the effect will be more broad and will increasingly impact adjacent nodes. When you hover your mouse over the graph, shaded areas indicate the parts of the spline that will be impacted when you attempt to modify the curve.</p>
 
 
     
@@ -4121,7 +4176,7 @@
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="prev">searching for and grouping modules (ToDo) &gt;</a>
+	<a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="prev">searching and grouping modules &gt;</a>
 	
 	
     </div>

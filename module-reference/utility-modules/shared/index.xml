@@ -13,8 +13,7 @@
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/collect-images/</guid>
       <description>Filter the images shown in the lighttable view and filmstrip panel using image attributes. This set of filtered images is known as a collection.
-All images imported imported into darktable are stored in darktable&amp;rsquo;s library database, along with attributes describing each image. A collection may be defined by applying filtering rules to these attributes, thus creating a subset of images to display in the lighttable view and filmstrip panel.
-The default collection is based on the film roll attribute and displays all images of the last imported or selected film roll.</description>
+All images imported imported into darktable are stored in darktable&amp;rsquo;s library database, along with attributes describing each image. A collection may be defined by applying filtering rules to these attributes, thus creating a subset of images to display in the lighttable view and the filmstrip module.</description>
     </item>
     
     <item>
@@ -24,17 +23,18 @@ The default collection is based on the film roll attribute and displays all imag
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/filmstrip/</guid>
       <description>The filmstrip can be used to quickly switch between images in any darktable view. The images shown are the same as displayed in the lighttable view and are defined by the currently-selected collection.
-The filmstrip can be switched on and off using the shortcut Ctrl+F. The height of the filmstrip panel can be changed by clicking and dragging its top border.
+ The filmstrip can be switched on and off using the shortcut Ctrl+F. The height of the filmstrip panel can be changed by clicking and dragging its top border.
 Quickly navigate through the images in the filmstrip by scrolling with the mouse.</description>
     </item>
     
     <item>
-      <title>focus peaking (ToDo)</title>
+      <title>focus peaking</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/</guid>
-      <description></description>
+      <description>The focus peaking module allows you to identify which parts of the image are sharp and in-focus. It works both in the lighttable view, where you can easily see at a glance which images are sharp and which are blurry, and in the darkroom view, when you are processing a single image.
+The module is activated by clicking on the focus-peaking icon ( ). It highlights the sharp parts of the image with a yellow, green and blue overlay:</description>
     </item>
     
     <item>
@@ -44,8 +44,7 @@ Quickly navigate through the images in the filmstrip by scrolling with the mouse
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/histogram/</guid>
       <description>A graphical depiction of the developed image&amp;rsquo;s light levels.
-Move the mouse over the panel to show buttons to adjust the display. The leftmost button cycles the mode between a &amp;ldquo;regular&amp;rdquo; and a waveform-style histogram. The next button controls how the data for the current mode is displayed. The three rightmost colored squares are toggles which enable or disable the display of the red, green and blue color channels.
-When the mouse is over the histogram panel, scrolling while holding down the Ctrl key will change the height of the panel.</description>
+ Move the mouse over the panel to show buttons to adjust the display. The leftmost button cycles the mode between a &amp;ldquo;regular&amp;rdquo; and a waveform-style histogram. The next button controls how the data for the current mode is displayed. The three rightmost colored squares are toggles which enable or disable the display of the red, green and blue color channels.</description>
     </item>
     
     <item>
@@ -65,7 +64,7 @@ When hovering with the mouse over thumbnails, darktable will update this view, d
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/metadata-editor/</guid>
       <description>Edit the metadata (title, description, creator, publisher, rights etc.) of selected images.
-module controls  metadata entry fields A separate field is displayed for each metadata item. Ctrl+scroll on any field to increase its height. Ctrl+Enter to insert a new line. clear Delete existing metadata from the selected image(s). apply Apply new settings, from the metadata entry fields, to the selected image(s). configure metadata Click this button to bring up a dialog where you can configure how metadata is handled within darktable.</description>
+module controls  metadata entry fields A separate field is displayed for each metadata item. Ctrl+scroll on any field to increase its height. Ctrl+Enter to insert a new line. Press Enter to apply any text entered in the current metadata field to the selected images. clear Delete existing metadata from the selected images. apply Apply new settings, from the metadata entry fields, to the selected images.</description>
     </item>
     
     <item>
@@ -84,7 +83,8 @@ Click on an entry to reopen the selected collection. This also updates the colle
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/tagging/</guid>
-      <description>This module is used to manage tags on images. Tags provide a means of adding information to images using a keyword dictionary. You can manage tags as a hierarchical tree, which can be useful when their number becomes large. Only tags at the leaves of the tree add information to an image. Parent tags just serve as categories which are used to organise the leaf tags. For example, in the “color|white” tag, “color” is a category for the “white” tag.</description>
+      <description>Manage tags attached to images.
+Tags provide a means of adding information to images using a keyword dictionary. You can also manage tags as a hierarchical tree, which can be useful when their number becomes large. Only tags at the leaves of the tree add information to an image &amp;ndash; parent tags simply serve as categories and are are used to organise the leaf tags. For example, in the “color|white” tag, “color” is a category for the “white” tag.</description>
     </item>
     
   </channel>

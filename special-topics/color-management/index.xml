@@ -52,7 +52,7 @@ You can change the default method in preferences -&amp;gt;processing -&amp;gt; a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/color-management/color-spaces/</guid>
-      <description>darktable&amp;rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera raws. Both represent colors by a combination of red, green and blue. For the most part darktable&amp;rsquo;s modules act in the CIELAB color space (often just called “Lab”) which describes color as a combination of lightness data (L) and a point in the a-b color plane. The final output of the image processing pipeline is once again in RGB, either shaped for the monitor display or for the output file.</description>
+      <description>darktable&amp;rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera raws. Both represent colors by a combination of red, green and blue. Most of the actual image processing takes place in a large RGB &amp;ldquo;working profile&amp;rdquo; space, with some (mostly older) modules internally working in the CIELAB color space (often just called “Lab”). The final output of the image processing pipeline is once again in an RGB space shaped for either monitor display or the output file.</description>
     </item>
     
     <item>

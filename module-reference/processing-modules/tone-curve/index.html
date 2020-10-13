@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4015,7 +4067,7 @@
 
     <p>A classic digital photography tool to alter an image&rsquo;s tones using curves.</p>
 <p>This module is very similar to the <a href="/dtdocs/module-reference/processing-modules/rgb-curve/"><em>rgb curve</em></a> module but works in Lab color space.</p>
-<p>Activate the color picker to show the picked values in the graph (<code>Ctrl+click</code> to use the picker in area mode). Numerical (Lab) values of the input and output (see below) at the selected spot or area are shown at the top left of the widget.</p>
+<p>Activate the color picker to show the picked values in the histogram (<code>Ctrl+click</code> to use the picker in area mode). Numerical (Lab) values of the input and output (see below) at the selected spot or area are shown at the top left of the widget.</p>
 <h1 id="module-controls">module controls</h1>
 <p><em>Please refer to the <a href="/dtdocs/darkroom/interacting-with-modules/curves/">curves</a> section for more details about how to modify curves including the <strong>interpolation method</strong>, <strong>scale for graph</strong> and <strong>preserve colors</strong> controls.</em></p>
 <dl>
@@ -4023,26 +4075,21 @@
 <dd>Depending on the desired intent, you can apply the tone curve in three different color spaces:</dd>
 <dd>
 <ul>
-<li>Lab, linked channels,</li>
+<li>Lab (linked channels or separated channels),</li>
 </ul>
 </dd>
 <dd>
 <ul>
-<li>Lab, separated channels,</li>
+<li>XYZ (linked channels)</li>
 </ul>
 </dd>
 <dd>
 <ul>
-<li>XYZ, linked channels,</li>
+<li>RGB (linked channels)</li>
 </ul>
 </dd>
 <dd>
-<ul>
-<li>RGB, linked channels.</li>
-</ul>
-</dd>
-<dd>
-<p>Lab is a perceptual color space that is designed to approximate the way humans perceive colors and lightness, and represents color information independently of the the lightness information. In “Lab, separated channels”, you are given fully independent control over the chrominance (a/b-channels) and the luminance (L-channel). In “Lab, linked channels” mode, only the luminance (L-channel) control is available. The color saturation correction will be automatically computed, for each pixel, from the contrast correction applied to the luminance channel. This works better in cases where a subtle contrast correction is applied, but gives increasingly inaccurate saturation correction as the contrast gets more dramatically enhanced.</p>
+<p>Lab is a perceptual color space that is designed to approximate the way humans perceive colors and lightness, and represents color information independently of lightness information. In “Lab, separated channels”, you are given fully independent control over the luminance (L-channel) and the chrominance (a/b-channels). In “Lab, linked channels” mode, only the luminance (L-channel) control is available. The color saturation correction will be automatically computed, for each pixel, from the contrast correction applied to the luminance channel. This works better in cases where a subtle contrast correction is applied, but gives increasingly inaccurate saturation correction as the contrast gets more dramatically enhanced.</p>
 </dd>
 <dd>
 <p>XYZ is a linear technical color space designed to link the physiological light response of human eyes to RGB spaces. As with Lab, it separates lightness from color information, but it does so in a way that does not account for the role of the brain&rsquo;s correction in human perception. The “XYZ, linked channels” mode offers an alternative to “Lab, linked channels”. It works by applying the L-channel curve to all three channels in the XYZ color space. Look at <a href="/dtdocs/darkroom/masking-and-blending/blend-modes/">blend mode</a> “coloradjustment” if you want to tune the strength of automatic chroma scaling. This mode is known to produce a slight hue shift towards yellow.</p>
@@ -4054,14 +4101,14 @@
 <p>Note that the interface works in Lab color space in all cases. This means that the middle-gray coordinate is always 50% in the graph, no matter what color space is used. The same applies to the inset histogram displayed in the background of the curve. The controls are converted to the relevant color space before the corrections are applied – in RGB and XYZ, the middle-gray is therefore remapped from 50% to 18%.</p>
 </dd>
 <dt>L-channel curve</dt>
-<dd>The tone curve in L-channel works on Lightness. To provide a better overview, a lightness histogram is displayed in the module. When working in “Lab, linked channels”, “RGB, linked channels” or “XYZ, linked channels”, the L-channel curve is the only one available.</dd>
+<dd>The tone curve in L-channel works on Lightness. To provide a better overview, a lightness histogram is displayed in the module. When working in one of the &ldquo;linked channels&rdquo; modes, the L-channel curve is the only one available.</dd>
 <dd>
-<p>The horizontal line represents the input image pixels' lightness. The vertical line represents the lightness of the output image pixels. A straight line does not change anything. A point above the default diagonal increases the lightness, whereas a point under decreases it. Shifting the center of the curve upwards will lighten the image, shifting it downwards will darken the image. An S-like curve will enhance the contrast of the image.</p>
+<p>The horizontal line represents the lightness of the input image pixels. The vertical line represents the lightness of the output image pixels. The default straight diagonal line does not change anything. A curve above the default diagonal increases the lightness, whereas a curve below decreases it. An S-like curve will enhance the contrast of the image. You can move the end-points of the default diagonal to change the black point and white point and hence alter the overall contrast &ndash; this has the same effect as changing the black and white points in the <a href="/dtdocs/module-reference/processing-modules/levels/"><em>levels</em></a> module.</p>
 </dd>
 <dt>a/b-channel curves</dt>
 <dd>The curves in the a and b channels work on color values and are available only in the “Lab, separated channels” mode. The horizontal line represents the color channel value of the input image pixels. The vertical line represents the color channel value of the output image pixels. Positive a-values correspond to more magenta colors; negative a-values correspond to more greenish colors. Positive b-values correspond to more yellowish colors; negative b-values correspond to more blueish colors.</dd>
 <dd>
-<p>A straight line does not change anything. Shifting the center of the curve will give the image a color tint: shifting the a-channel upwards gives a magenta tint; shifting the b-channel upwards gives a yellow tint; shifting the a-channel downwards gives a green tint; shifting the b-channel downwards gives a blue tint.</p>
+<p>The default diagonal straight line does not change anything. Shifting the center of the curve will give the image a color tint: shifting the a-channel upwards gives a magenta tint; shifting the b-channel upwards gives a yellow tint; shifting the a-channel downwards gives a green tint; shifting the b-channel downwards gives a blue tint.</p>
 </dd>
 <dd>
 <p>Increasing/decreasing the steepness of a curve, without shifting its center, will increase/decrease the color saturation of the respective channel. With properly defined curves you can exert fine control on color saturation, depending on the input pixel&rsquo;s colors.</p>

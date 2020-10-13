@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4014,10 +4066,10 @@
     </h1>
 
     <p>Render a vector-based overlay onto your image. Watermarks are standard SVG documents and can be designed using <a href="http://www.inkscape.org/" target="_blank">Inkscape</a>.</p>
-<p>The SVG processor of darktable also substitutes strings within the SVG document, which allows you to include image dependent information in the watermark.</p>
-<p>User-designed watermarks are placed into the directory <code>$HOME/.config/darktable/watermarks</code>. Once in place, use the reload button update the list of available watermarks.</p>
+<p>The SVG processor of darktable can also substitute strings within the SVG document, which allows you to include image dependent information in the watermark.</p>
+<p>User-designed watermarks should be placed into the directory <code>$HOME/.config/darktable/watermarks</code>. Once in place, use the reload button update the list of available watermarks.</p>
 <p>The following is a list of variable strings that are supported for substitution within the SVG document.</p>
-<p>Besides this list you can also use the variable strings defined in the <a href="/dtdocs/special-topics/variables/">variables</a> section.</p>
+<p>In addition to this list you can also use the variable strings defined in the <a href="/dtdocs/special-topics/variables/">variables</a> section.</p>
 <pre><code>$(DARKTABLE.NAME)             The application name
 $(DARKTABLE.VERSION)          The version of darktable
 $(WATERMARK_TEXT)             A short free text (max. 63 characters)
@@ -4067,13 +4119,13 @@ $(GPS.LOCATION)               All three coordinates (latitude, longitude, elevat
 </code></pre><h1 id="module-controls">module controls</h1>
 <dl>
 <dt>marker</dt>
-<dd>Choose the watermark of interest. You can use the reload button to update the list with all newly added watermarks.</dd>
+<dd>Choose the watermark to apply. You can use the reload button to update the list to include any newly-added watermarks.</dd>
 <dt>text</dt>
 <dd>A free text field in which you can enter up to 63 characters to be printed where referenced by the corresponding watermark. An example is supplied as <code>simple-text.svg</code>.</dd>
 <dt>text color</dt>
-<dd>The text color. Clicking on the colored field will open a color selector dialog which offers you a choice of commonly used colors, or allows you to define a color in RGB color space.</dd>
+<dd>The color of the text. Click on the colored field to open a color selector dialog which offers you a choice of commonly used colors, or allows you to define a color in RGB color space.</dd>
 <dt>text font</dt>
-<dd>The text font (default &ldquo;DejaVu Sans Book&rdquo;). Clicking on the field opens a dialog box which shows the fonts available to your system. Fonts can be searched by name and a preview of each available font is shown next to the font name. You may specify your own sample text.</dd>
+<dd>The font to use (default &ldquo;DejaVu Sans Book&rdquo;). Clicking on the field opens a dialog box which shows the fonts available on your system. Fonts can be searched by name and a preview of each available font is shown next to the font name. You may specify your own sample text.</dd>
 <dt>opacity</dt>
 <dd>The opacity of the watermark&rsquo;s rendering.</dd>
 <dt>scale</dt>
@@ -4081,7 +4133,7 @@ $(GPS.LOCATION)               All three coordinates (latitude, longitude, elevat
 <dt>rotate</dt>
 <dd>The rotation angle of the watermark.</dd>
 <dt>scale on</dt>
-<dd>Defines the reference for the scale parameter. The default setting “image” scales the watermark relative to the horizontal image size. Alternatively you can scale the watermark relative to the “larger border” or “smaller border”.</dd>
+<dd>The reference for the scale parameter. The default setting “image” scales the watermark relative to the horizontal image size. Alternatively you can scale the watermark relative to the “larger border” or “smaller border”.</dd>
 <dt>alignment</dt>
 <dd>Use these controls to align the watermark to any edge or the center of the image.</dd>
 <dt>x offset</dt>

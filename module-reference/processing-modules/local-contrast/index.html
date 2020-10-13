@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4030,11 +4082,11 @@
 <dd>Add or remove detail. Higher values will increase local contrast.</dd>
 </dl>
 <h2 id="local-laplacian">local laplacian</h2>
-<p>To understand the parameters of the local laplacian filter, you can think of it as applying a curve to the image, similar to the following graph:</p>
+<p>To understand the parameters of the local laplacian filter, one can think of it as applying a curve to the image, similar to the following graph:</p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/local-contrast/local-laplacian-curve.png" alt="local laplacian curve"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/processing-modules/local-contrast/local-laplacian-curve.png#w50" alt="local laplacian curve"  />
 
 </p>
 <p>This curve will be applied to the image in a way that works locally and avoids halo artifacts.</p>
@@ -4045,7 +4097,7 @@
 <dt>highlights</dt>
 <dd>This affects one end of the S shaped contrast curve, effectively increasing or compressing contrast in the highlights. A low value will pull the highlights down.</dd>
 <dt>shadows</dt>
-<dd>Similar to the highlights parameter, this affects the other end of the S shaped contrast curve, and will increase or decrease contrast in the shadows. A higher value gives more contrast in the shadows. A lower value will lift the shadows and can effectively simulate a fill light. Note that this is done via local manipulation of the image. However, this means that a completely dark image cannot be brightened this way: only dark objects in front of bright objects will be affected.</dd>
+<dd>Similar to the highlights parameter, this affects the other end of the S shaped contrast curve, and will increase or decrease contrast in the shadows. A higher value gives more contrast in the shadows. A lower value lifts the shadows and can effectively simulate a fill light. Note that this is done via local manipulation of the image. However, this means that a completely dark image cannot be brightened in this way &ndash; only dark objects in front of bright objects are affected.</dd>
 <dt>midtone range</dt>
 <dd>This controls the extent of the S shaped part of the contrast curve. A larger value will make the S wider, and thus classify more values to be midtone range and fewer values to belong to the highlights and shadows part. In more high dynamic range settings it can be useful to reduce this value to achieve stronger range compression by lowering the contrast in the highlights and the shadows. Note however that for really strong HDR scenarios this may work best in combination with a <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a> which pre-compresses the range, perhaps with an approximately logarithmic base curve. The exposure fusion feature in the <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a> module may lead to more pleasing results at times, but is also more prone to producing halo effects.</dd>
 <dd>

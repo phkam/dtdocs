@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4016,35 +4068,35 @@
     <p>The following options control how images are processed.</p>
 <dl>
 <dt>always use LittleCMS 2 to apply output color profile</dt>
-<dd>If this option is activated, darktable will use the LittleCMS 2 system library instead of its own internal routines. This is significantly slower than the default but might give more accurate results in some cases (default off).</dd>
-<dd>
-<p>Note that if the given ICC is LUT-based or contains both a LUT and a matrix, darktable will use LittleCMS 2 to render the colors regardless of this configuration parameter&rsquo;s value.</p>
-</dd>
+<dd>If this option is activated, darktable will use the LittleCMS 2 system library to apply the output color profile instead of its own internal routines. This is significantly slower than the default but might give more accurate results in some cases.</dd>
+<dd>If the given ICC is LUT-based or contains both a LUT and a matrix, darktable will use LittleCMS 2 to render the colors regardless of this configuration parameter&rsquo;s value (default off).</dd>
 <dt>pixel interpolator</dt>
-<dd>Pixel interpolator used in rotation, lens correction, up-scaling and down-scaling; options are “bilinear”, “bicubic”, “lanczos2”, “lanczos3” (default).</dd>
+<dd>The pixel interpolator used in rotation, lens correction, up-scaling and down-scaling. Options are “bilinear”, “bicubic”, “lanczos2”, “lanczos3” (default).</dd>
 <dt>3D lut root folder</dt>
-<dd>Define the root folder (and sub-folders) that contains Lut files used by the <a href="/dtdocs/module-reference/processing-modules/lut-3d/"><em>lut 3D</em></a> module</dd>
+<dd>Define the root folder (and sub-folders) containing Lut files used by the <a href="/dtdocs/module-reference/processing-modules/lut-3d/"><em>lut 3D</em></a> module</dd>
 <dt>auto-apply pixel workflow defaults</dt>
 <dd>Choose which modules and module order to apply to new images by default:</dd>
-<dd>
+</dl>
+<ul>
+<li>
 <p><em>scene-referred</em> workflow is based on linear RGB modules. Selecting this option will automatically enable <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> and <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a> modules will set the pixelpipe order to the (scene-referred) order defined for darktable 3.0 and later.</p>
-</dd>
-<dd>
 <p>The <em>exposure</em> module will include an automatic adjustment of +0.5 EV to adjust the mid-grey to match that of the majority of SLR cameras. This adjustment can be overridden with an automatically-applied preset if the default produces consistently dark images for your camera.</p>
-</dd>
-<dd>
 <p>Finally, this setting automatically enables the &ldquo;compensate camera exposure&rdquo; option in the <em>exposure</em> module to adjust the global brightness appropriately in cases where the camera&rsquo;s exposure compensation dial was used to protect highlights in the image or Expose To The Right (ETTR) to optimally make use of the sensor&rsquo;s dynamic range.</p>
-</dd>
-<dd>
+</li>
+<li>
 <p><em>display-referred</em> (default) workflow is based on Lab modules and is the legacy mode from darktable 2.6 and earlier. Selecting this option will automatically enable the <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a> module and set the pixelpipe order to the legacy (display-referred) order used by default up to version 2.6.</p>
-</dd>
-<dd>
+</li>
+<li>
 <p><em>none</em> will not enable any modules by default and will set the pixelpipe to the (scene-referred) order defined for darktable 3.0 and later.</p>
-</dd>
+</li>
+</ul>
+<dl>
 <dt>auto-apply per camera basecurve presets</dt>
 <dd>Use the per-camera basecurve by default instead of the generic manufacturer one if there is one available. This should only be used in conjunction with the <em>display referred</em> workflow defined above (default off).</dd>
 <dt>auto-apply sharpen</dt>
 <dd>Auto-apply the sharpen module to new images by default. This option is not recommended on cameras without a low-pass filter. (default on, requires a restart).</dd>
+<dt>detect monochrome previews</dt>
+<dd>Enable this to analyse images during import and tag them with the <code>darkroom|mode|monochrome</code> tag if they are found to be monochrome. The analysis is based on the preview image embedded within the imported file. This makes for a more convenient workflow when working with monochrome images, but it slows down the import, so this setting is disabled by default.</dd>
 </dl>
 
 

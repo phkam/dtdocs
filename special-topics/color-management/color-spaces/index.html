@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,9 +4065,9 @@
         darktable&rsquo;s color spaces
     </h1>
 
-    <p>darktable&rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera raws. Both represent colors by a combination of red, green and blue. For the most part darktable&rsquo;s modules act in the CIELAB color space (often just called “Lab”) which describes color as a combination of lightness data (L) and a point in the a-b color plane. The final output of the image processing pipeline is once again in RGB, either shaped for the monitor display or for the output file.</p>
-<p>This process implies that the pixelpipe has two color conversion steps: <a href="/dtdocs/module-reference/processing-modules/input-color-profile/"><em>input color profile</em></a> and <a href="/dtdocs/module-reference/processing-modules/output-color-profile/"><em>output color profile</em></a>. In addition there is the <a href="/dtdocs/module-reference/processing-modules/demosaic/"><em>demosaic</em></a> step for raw images, where the colors of each pixel are reconstructed by interpolation.</p>
-<p>Each module has a fixed position in the pixelpipe which tells you which color space the module lives in:</p>
+    <p>darktable&rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera raws. Both represent colors by a combination of red, green and blue. Most of the actual image processing takes place in a large RGB &ldquo;working profile&rdquo; space, with some (mostly older) modules internally working in the CIELAB color space (often just called “Lab”). The final output of the image processing pipeline is once again in an RGB space shaped for either monitor display or the output file.</p>
+<p>This process implies that the pixelpipe has two fixed color conversion steps: <a href="/dtdocs/module-reference/processing-modules/input-color-profile/"><em>input color profile</em></a> and <a href="/dtdocs/module-reference/processing-modules/output-color-profile/"><em>output color profile</em></a>. In addition there is the <a href="/dtdocs/module-reference/processing-modules/demosaic/"><em>demosaic</em></a> step for raw images, where the colors of each pixel are reconstructed by interpolation.</p>
+<p>Each module has a position in the pixelpipe which tells you which color space the module lives in:</p>
 <dl>
 <dt>up to <a href="/dtdocs/module-reference/processing-modules/demosaic/"><em>demosaic</em></a></dt>
 <dd>Image is in raw data format with only latent colors. Each pixel carries lightness and color information for only one base color. Bear in mind that some of the modules in this part of the pipe can also act on non-raw input images in RGB format with full information on all three color channels.</dd>

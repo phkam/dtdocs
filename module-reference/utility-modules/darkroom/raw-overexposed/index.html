@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4013,16 +4065,25 @@
         raw overexposed warning
     </h1>
 
-    <p>This option warns you about areas of your raw input image with clipped color channels. Clipped color channels imply an overexposed image with loss of information in the affected areas. You may use the <a href="/dtdocs/module-reference/processing-modules/highlight-reconstruction/"><em>highlight reconstruction</em></a> or <a href="/dtdocs/module-reference/processing-modules/color-reconstruction/"><em>color reconstruction</em></a> modules to reconstruct these areas.</p>
+    <p>This option warns you about areas of your raw input image with clipped color channels. Clipped color channels imply an overexposed image with loss of information in the affected areas. You may use the <a href="/dtdocs/module-reference/processing-modules/highlight-reconstruction/"><em>highlight reconstruction</em></a> or <a href="/dtdocs/module-reference/processing-modules/color-reconstruction/"><em>color reconstruction</em></a> modules to attempt to reconstruct these areas.</p>
 <p>Right-click on the icon to open a dialog containing the following configuration parameters.</p>
 <dl>
 <dt>mode</dt>
-<dd><em>mark with CFA color</em>: Display a pattern of the respective primary colors (red, green, and blue) to indicate which color channels are clipped.</dd>
+<dd>Choose how to mark clipped areas:</dd>
 <dd>
-<p><em>mark with solid color</em>: Mark clipped areas with a user defined solid color (see below) independent of the affected color channels.</p>
+<ul>
+<li><em>mark with CFA color</em>: Display a pattern of the respective primary colors (red, green, and blue) to indicate which color channels are clipped.</li>
+</ul>
 </dd>
 <dd>
-<p><em>false color</em>: Set clipped color channels to zero in the affected areas.</p>
+<ul>
+<li><em>mark with solid color</em>: Mark clipped areas with a user defined solid color (see below) independent of the affected color channels.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>false color</em>: Set clipped color channels to zero in the affected areas.</li>
+</ul>
 </dd>
 <dt>color scheme</dt>
 <dd>Choose the solid color for the <em>mark with solid color</em> mode.</dd>

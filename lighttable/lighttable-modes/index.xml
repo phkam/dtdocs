@@ -23,8 +23,8 @@ You can navigate through the images using the arrow keys (←/→/↑/↓) or by
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/zoomable-lighttable/</guid>
-      <description>Zoomable lighttable mode inherits most of its features from the filemanager mode, with some notable changes.
-Scroll with your mouse wheel to zoom in and out. Move the mouse while pressing the left mouse button to navigate through your collection.</description>
+      <description>The zoomable lighttable mode provides an easy and intuitive way to navigate large collections of images.
+If you are trying to find something quickly in a collection, this mode allows you to zoom out so that you can see a large number of thumbnails, then you can move the lighttable around to browse them. When you spot something, you can easily zoom in to check if that is really what you were looking for and, if not, zoom out again and keep looking.</description>
     </item>
     
     <item>

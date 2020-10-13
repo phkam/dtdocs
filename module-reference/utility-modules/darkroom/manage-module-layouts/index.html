@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>darktable user manual - module groups (ToDo)</title>
+<title>darktable user manual - manage module layouts</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class=" active">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4010,10 +4062,126 @@
 
 <article role="main">
     <h1 class="title">
-        module groups (ToDo)
+        manage module layouts
     </h1>
 
-    
+    <p>Manage the layout and grouping of processing modules.</p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/manage-module-layouts.png#w100" alt="manage module layouts"  />
+
+</p>
+<p>This maintenance screen can be accessed from the <em>presets</em> menu beside the module group icons (below the histogram in the darkroom view).</p>
+<h1 id="module-controls">module controls</h1>
+<h2 id="preset-list">preset list</h2>
+<p>The panel on the left of the screen lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. Those at the bottom of the list are user-defined.</p>
+<p>To create a new (empty) preset, click on the <code>+</code> button at the bottom of the left-hand panel. Alternatively click on the <code>duplicate</code> button to the right of one of the existing module presets to copy that preset to a new one.</p>
+<p>Delete a user-defined preset with the <code>X</code> button.</p>
+<p>Rename a preset using the entry at the top of the right-hand panel.</p>
+<h2 id="module-groups">module groups</h2>
+<p>The panel on the right of the screen allows you to create and amend module groups.</p>
+<p>Add a new group by clicking on the <code>+</code> sign beside the &ldquo;module groups&rdquo; header. Remove a group by clicking on the <code>X</code> button beside the module group header.</p>
+<p>Add a module to a group by clicking the <code>+</code> sign at the bottom of the module group you wish to add it to, and select the module from the list that appears. Remove a module by clicking the <code>X</code> beside the module name.</p>
+<p>Change the icon assigned to a group by clicking on the existing group icon and selecting a new one from the drop-down list.</p>
+<p>Change order the groups are displayed in by clicking on the <code>&lt;</code> and <code>&gt;</code> buttons beside the group headers.</p>
+<p>Settings will be automatically saved when you exit the screen. Click <code>reset</code> to reset the settings to the start of your editing session.</p>
+<h1 id="system-defined-presets">system-defined presets</h1>
+<p>There are two standard module group layouts that ship with darktable, both of which are available for selection as presets. These module groups cannot be amended:</p>
+<ul>
+<li><strong>default</strong>: This is the default module group layout from darktable 3.4 onwards, and consists of a new simplified set of module groups.</li>
+<li><strong>legacy layout</strong>: This contains the default module groupings that were used in darktable prior to version 3.4</li>
+</ul>
+<p>In addition, if you have used a version of darktable prior to 3.4, two additional presets may also be automatically created when you upgrade. These will allow you to retain some or all of your previous module group layouts and can be edited or deleted:</p>
+<ul>
+<li><strong>previous config</strong>: Where a user previously set up favourites or altered the <em>hidden</em> flag on modules, this preset contains those customisations, retaining the legacy module groups.</li>
+<li><strong>previous config with new layout</strong>: Where a user previously set up favourites or altered the <em>hidden</em> flag on modules, this preset contains those customisations but with modules grouped according to the new (darktable 3.4+) group layout.</li>
+</ul>
+<h2 id="default-module-groups">default module groups</h2>
+<p>The default module group layout consists of 4 module groups</p>
+<dl>
+<dt>active modules</dt>
+<dd>This group indicates which modules are currently active in the pixel pipeline. Clicking on this icon a second time shows a complete list of visible modules</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-technical-icon.png" alt="module-group-technical-icon"  />
+
+ technical modules</dt>
+<dd>This group contains modules that deal with technical issues relsting to the physics of sensors and denoising, lenses and associated corrections, color profiles, dynamic range and tone mapping, and recovering from damage to the image by physical limitations (hot pixels, recovery from clipped highlights, etc.)</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-grading-icon.png" alt="module-group-grading-icon"  />
+
+ grading modules</dt>
+<dd>Everything concerning primary (corrective) and secondary (creative) subjective corrections of colors and tones</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-effects-icon.png" alt="module-group-effects-icon"  />
+
+ (special) effects modules</dt>
+<dd>Includes special effects such as retouching, liquifying, blooming, sharpness, etc..</dd>
+</dl>
+<h2 id="legacy-layout-module-groups">legacy layout module groups</h2>
+<p>The legacy versions of darktable had the following module groupings:</p>
+<dl>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-active-icon.png" alt="module-group-active-icon"  />
+
+ active modules</dt>
+<dd>Works the same as in the default layout.</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-basic-icon.png" alt="module-group-basic-icon"  />
+
+ basic modules</dt>
+<dd>A minimal set of modules normally required to render a presentable image.</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-tone-icon.png" alt="module-group-tone-icon"  />
+
+ tone modules</dt>
+<dd>Other modules relating to tone levels and contrast</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-color-icon.png" alt="module-group-color-icon"  />
+
+ color modules</dt>
+<dd>Modules relating to color grading and color profiles</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-correct-icon.png" alt="module-group-correct-icon"  />
+
+ corrective modules</dt>
+<dd>Modules relating to correcting problems relating to lens distortions, sensor noise, sharpening, etc..</dd>
+</dl>
+<h2 id="previous-config-module-groups">previous config module groups</h2>
+<p>These follow the layouts of the previous two groups, but include an additional <em>favourites</em> group where users made use of this feature in the past. Now that users may create their own custom groups, there is no longer a need for an explicit &ldquo;favourites&rdquo; group.</p>
+<dl>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-favorites-icon.png" alt="module-group-favourites-icon"  />
+
+ favourite modules</dt>
+<dd>This group was previously used by users to make it easier to find frequently-used modules, and is available under the &ldquo;previous config&rdquo; presets. New users can, of course, still create their own custom group and name it &ldquo;favourites&rdquo; if they so desire.</dd>
+</dl>
+<h2 id="active-module-group">active module group</h2>
+<p>In addition, all module layouts include the 
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-active-icon.png" alt="module-group-active-icon"  />
+
+ <em>active group</em>, which lists all modules that are currently active in the pixel pipeline.</p>
+
 
     
 </article>
@@ -4022,14 +4190,14 @@
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="next">&lt; mask manager</a>
+	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/image-info-line/" class="next">&lt; image information line</a>
 	
 	
     </div>
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/module-order/" class="prev">module order &gt;</a>
+	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="prev">mask manager &gt;</a>
 	
 	
     </div>

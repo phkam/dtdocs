@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>darktable user manual - color assessment (ToDo)</title>
+<title>darktable user manual - color assessment</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class=" active">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4010,10 +4062,31 @@
 
 <article role="main">
     <h1 class="title">
-        color assessment (ToDo)
+        color assessment
     </h1>
 
-    
+    <p>When developing an image, the way we perceive brightness, contrast and saturation is influenced by the surrounding ambient conditions. If an image is displayed against a dark background, as with the default theme in darktable, it can have the a number of adverse effects on our perception of that image:</p>
+<ul>
+<li>Exaggeration of the perceived exposure makes the image seems brighter than it really is. This is nicely illustrated by the <a href="https://en.wikipedia.org/wiki/Checker_shadow_illusion" target="_blank">Adelson checkerboard shadow effect</a>.</li>
+<li>A decrease in the perceived saturation in the image makes the colors seem less rich than they really are (the Hunt effect).</li>
+<li>A decrease in the perceived contrast in the image makes the tones seem flatter than they really are (Bartleson-Breneman effect 3)</li>
+</ul>
+<p>The end result is that the image can end up being too dark, and overly-processed in terms of contrast and color saturation. To avoid this, the &ldquo;ISO 12646:2008&rdquo; standard makes some recommendations about the conditions under which the colors of an image should be assessed. The <em>color assessment</em> module in the darkroom places a frame around the image to help the user better assess the colors in the image, along the lines of those recommendations.</p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/color-assessment-overview.png#w75" alt="color-assessment-overview"  />
+
+</p>
+<p>When the lightbulb icon (
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/bulb-icon.png" alt="bulb-icon"  />
+
+) is selected in the bottom panel, the image is zoomed out so that a thick mid-grey border appears around the image to act as a reference against which to compare the image&rsquo;s tones. A thinner white border is placed immediately around the image to give the eyes a basis for comparison when looking at parts of the image that are meant to be a bright white.</p>
+<p>Although the color assessment mode provides a mid-grey surrounding to the image, it is recommended that you also set your user interface (in <a href="/dtdocs/preferences-settings/general/"><code>preferences</code> -&gt; <code>general</code></a>) to one of the &ldquo;grey&rdquo; themes. These themes are designed to provide a user interface that is close to middle grey (it is actually slightly darker to allow better contrast with the text in the user interface). When one of these themes is used together with the color assessment mode, this will help to avoid the above perception issues.</p>
+<p>Color assessment mode can also be toggled by pressing <code>Ctrl+B</code>.</p>
+
 
     
 </article>

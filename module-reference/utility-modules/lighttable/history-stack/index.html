@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4041,17 +4093,29 @@
 </dd>
 </dl>
 <hr>
-<p><strong>Note (1):</strong> Automatic module presets are only added to an image when it is first opened in the darkroom. If you use “overwrite” mode to paste history stack entries to images that haven&rsquo;t previously been opened in the darkroom then the next time that image is opened in the darkroom, automatic presets will be applied to the image. It may therefore seem as if the “overwrite” mode did not accurately duplicate the existing history stack, but in this case, those automatic modules were added subsequently.</p>
-<hr>
-<p><strong>Note (2):</strong> The “append” mode allows you to later reconstruct your pre-existing history stack (because previous history items are retained in the stack of the destination image). However, in “overwrite” mode all previous edits are irrevocably lost.</p>
-<hr>
-<p><strong>Note (3):</strong> The &ldquo;mode&rdquo; parameter is retained when you quit darktable.</p>
+<dl>
+<dt>Notes</dt>
+<dd><ul>
+<li>Automatic module presets are only added to an image when it is first opened in the darkroom. If you use <em>overwrite</em> mode to paste history stack entries to images that haven&rsquo;t previously been opened in the darkroom then the next time that image is opened in the darkroom, automatic presets will be applied to the image. It may therefore seem as if the “overwrite” mode did not accurately duplicate the existing history stack, but in this case, those automatic modules were added subsequently.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>The <em>append</em> mode allows you to later reconstruct your pre-existing history stack (because previous history items are retained in the stack of the destination image). However, in “overwrite” mode all previous edits are irrevocably lost.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>The <em>mode</em> setting is retained when you quit darktable &ndash; if you change it for a one-off copy and paste, make sure to change it back again.</li>
+</ul>
+</dd>
+</dl>
 <hr>
 <dl>
 <dt>load sidecar file</dt>
 <dd>Open a dialog box which allows you to import the history stack from a selected XMP file. This copied history stack can then be pasted onto one or images.</dd>
 <dd>
-<p>Files that were exported by darktable typically contain the full history stack if the file format supports embedded metadata (see the <a href="/dtdocs/module-reference/utility-modules/lighttable/export-selected/">export selected</a> module for details of this feature and its limitations). You can load an exported image as a sidecar file in the same way as you can with an XMP file. This feature allows you to recover all parameter settings if you have accidentally lost or overwritten the XMP file. All you need is the source image, typically a raw, and the exported file.</p>
+<p>Images that were exported by darktable typically contain the full history stack if the file format supports embedded metadata (see the <a href="/dtdocs/module-reference/utility-modules/lighttable/export-selected/">export selected</a> module for details of this feature and its limitations). You can load an exported image as a sidecar file in the same way as you can with an XMP file. This feature allows you to recover all parameter settings if you have accidentally lost or overwritten the XMP file. All you need is the source image, typically a raw, and the exported file.</p>
 </dd>
 <dt>write sidecar files</dt>
 <dd>Write XMP sidecar files for all selected images. The filename is generated by appending “.xmp” to the name of the underlying input file.</dd>

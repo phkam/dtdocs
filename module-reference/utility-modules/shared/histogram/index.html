@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class="">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4014,23 +4066,47 @@
     </h1>
 
     <p>A graphical depiction of the developed image&rsquo;s light levels.</p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/histogram/histogram.png#w50" alt="histogram"  />
+
+</p>
 <p>Move the mouse over the panel to show buttons to adjust the display. The leftmost button cycles the mode between a &ldquo;regular&rdquo; and a waveform-style histogram. The next button controls how the data for the current mode is displayed. The three rightmost colored squares are toggles which enable or disable the display of the red, green and blue color channels.</p>
-<p>When the mouse is over the histogram panel, scrolling while holding down the <code>Ctrl</code> key will change the height of the panel. You can hide/show the histogram entirely with a keyboard shortcut (default <code>Ctrl+Shift+H</code>).</p>
-<p>For the purposes of speed, the histogram display is calculated from the image preview (the image which is displayed in the <a href="/dtdocs/module-reference/utility-modules/darkroom/navigation/">navigation</a> module) rather than the higher quality image displayed in the center view. The preview is calculated at a lower resolution and may use shortcuts to bypass time-consuming image processing steps. Hence the display may not represent fine detail in the image, and may deviate in other ways from the final developed image.</p>
+<p>When the mouse is over the histogram panel, scrolling while holding down the <code>Ctrl</code> key will change the height of the panel. You can show/hide the histogram entirely with a keyboard shortcut (default <code>Ctrl+Shift+H</code>).</p>
+<p>For the purposes of speed, the histogram display is calculated from the image preview (the image which is displayed in the <a href="/dtdocs/module-reference/utility-modules/darkroom/navigation/">navigation</a> module) rather than the higher quality image displayed in the center view. The preview is calculated at a lower resolution and may use shortcuts to bypass time-consuming image processing steps. Hence the display may not accurately represent fine detail in the image, and may deviate in other ways from the final developed image.</p>
 <h1 id="the-regular-histogram">the &ldquo;regular&rdquo; histogram</h1>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/histogram/histogram-regular.png#w50" alt="histogram-regular"  />
+
+</p>
 <p>This shows the distribution of pixels by lightness for each color channel channel. In its default state, data for all three RGB color channels is displayed. The x-axis runs from 0% to 100% lightness for each channel. The y-axis gives the count of pixels with the given lightness.</p>
 <p>Click the second-to-leftmost button on the panel to toggle between a logarithmic and a linear rendering of the y-axis data.</p>
 <h1 id="waveform">waveform</h1>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/histogram/histogram-waveform.png#w50" alt="histogram-waveform"  />
+
+</p>
 <p>The waveform scope includes spatial data about the image. The y-axis represents the distribution of pixels by lightness for each channel. The x-axis represents the distribution of this data across the x-axis of the image. The lightness of each point of the waveform represents the number of pixels at that position.</p>
 <p>The thick dotted horizontal line at the top of the waveform histogram represents 100% lightness. Any channel displayed above that line may be clipped in the resulting image. The thinner dotted horizontal line represents 50% lightness. The bottom of the scope represents 0% lightness.</p>
 <p>As with the &ldquo;regular&rdquo; histogram, it is possible to selectively display red, green, and blue channels, or (the default) all three of them.</p>
 <p>See <a href="https://www.darktable.org/2013/12/of-histograms-and-waveforms/" target="_blank">Of Histograms and Waveforms</a> for more on darktable&rsquo;s waveform scope.</p>
 <h1 id="rgb-parade">rgb parade</h1>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/histogram/histogram-parade.png#w50" alt="histogram-parade"  />
+
+</p>
 <p>This shows the same data as the waveform, but with the red, green, and blue channels presented side-by-side. When in waveform mode, clicking the second-to-leftmost button on the panel toggles between waveform (overlaid) and RGB parade rendering of the data.</p>
 <p>The RGB parade can be useful for matching the intensities of the red, green, and blue channels. It can also help with understanding the differences between and individual qualities of each channel.</p>
 <h1 id="exposure-adjustment">exposure adjustment</h1>
 <p>The histogram can be used to directly alter the <em>exposure</em> and <em>black level</em> of the <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a> module.</p>
-<p>For the regular histogram, <code>left-click</code> towards the right hand side of the histogram and then drag right to increase or drag left to decrease the exposure. In a similar manner you can control the black level by clicking and dragging in the left hand side.</p>
+<p>For the regular histogram, click towards the right hand side of the histogram and then drag right to increase or drag left to decrease the exposure. In a similar manner you can control the black level by clicking and dragging in the left hand side.</p>
 <p>For waveform-style scopes, dragging the upper portion of the histogram up/down will increase/decrease exposure. Dragging the lower portion up/down will increase/decrease the black level.</p>
 <p>Scrolling in the appropriate area &ndash; rather than dragging &ndash; will also adjust exposure and black point. Double-click in the histogram to reset the exposure module&rsquo;s parameters to their defaults.</p>
 <h1 id="histogram-profile">histogram profile</h1>
@@ -4045,7 +4121,7 @@
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="next">&lt; focus peaking (ToDo)</a>
+	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="next">&lt; focus peaking</a>
 	
 	
     </div>

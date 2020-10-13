@@ -819,7 +819,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/" class="">
-    searching for and grouping modules (ToDo)
+    searching and grouping modules
 </a>
 
 
@@ -1429,7 +1429,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-zones/" class="">
-    color zones (ToDo)
+    color zones
 </a>
 
 
@@ -1474,7 +1474,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/contrast-equalizer/" class="">
-    contrast equalizer (ToDo)
+    contrast equalizer
 </a>
 
 
@@ -1909,7 +1909,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/negadoctor/" class="">
-    negadoctor (ToDo)
+    negadoctor
 </a>
 
 
@@ -1999,7 +1999,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/retouch/" class="">
-    retouch (ToDo)
+    retouch
 </a>
 
 
@@ -2342,6 +2342,19 @@
     
     
     
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/color-assessment/" class="">
+    color assessment
+</a>
+
+
+    </li>
+    
     
     
     <li>
@@ -2425,14 +2438,27 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class=" active">
-    mask manager
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="">
+    manage module layouts
 </a>
 
 
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/" class=" active">
+    mask manager
+</a>
+
+
+    </li>
     
     
     
@@ -2605,6 +2631,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+    lua scripts installer
+</a>
+
+
+    </li>
     
     
     
@@ -2802,6 +2841,19 @@
     </li>
     
     
+    
+    <li>
+	
+
+
+
+
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/" class="">
+    focus peaking
+</a>
+
+
+    </li>
     
     
     
@@ -3242,7 +3294,7 @@
 
 
 <a href="https://elstoc.github.io/dtdocs/lua/usage/basic-principles/" class="">
-    basic principles -- luarc files
+    basic principles: luarc files
 </a>
 
 
@@ -4014,6 +4066,12 @@
     </h1>
 
     <p>Manage all masks and shapes for the current image.</p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager.png" alt="mask manager"  />
+
+</p>
 <p>This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.</p>
 <p>In the top line of the mask manager panel are buttons that can be used to create new shapes. These are the same as in the <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn mask</a> interface of the individual modules.</p>
 <p>The panel below these buttons displays a list of all masks and individual shapes defined for the current image.</p>
@@ -4035,7 +4093,7 @@
 <dd>Remove the shape from the current mask</dd>
 <dt>use inverted shape</dt>
 <dd>Invert the polarity of the selected shape</dd>
-<dt>mode: (union, intersection, difference, exclusion)</dt>
+<dt>mode</dt>
 <dd>Choose how this shape will interact with the preceding mask by selecting one of the four set operators defined below</dd>
 <dt>move up/down</dt>
 <dd>Move the shape up or down the list</dd>
@@ -4045,13 +4103,13 @@
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex1.png" alt="gradient"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex1.png#w25" alt="gradient"  />
 
 </p>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex2.png" alt="path"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex2.png#w25" alt="path"  />
 
 </p>
 <dl>
@@ -4059,61 +4117,63 @@
 <dd>This is the default set operator. It is depicted by the symbol 
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_union.png" alt="union_icon"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_union.png" alt="union-icon"  />
 
- to the left of the shape name. The shape adds to the existing mask in such a way that the resulting mask contains the pixels that are <em>either</em> selected in the existing mask <em>or</em> in the added shape. In overlapping areas the maximum value is taken.</dd>
-</dl>
+ to the left of the shape name. The shape adds to the existing mask in such a way that the resulting mask contains the pixels that are <em>either</em> selected in the existing mask <em>or</em> in the added shape. In overlapping areas the maximum value is taken:</dd>
+<dd>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex3.png" alt="union"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex3.png#w25" alt="union"  />
 
 </p>
-<dl>
+</dd>
 <dt>intersection</dt>
 <dd>This set operator is depicted by the symbol 
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_intersection.png" alt="intersection_icon"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_intersection.png" alt="intersection-icon"  />
 
- to the left of the shape name. The shape adds to the existing mask in such a way that the resulting mask contains only pixels that are selected in <em>both</em> the existing mask <em>and</em> the added shape. In overlapping areas the minimum value is used. In the given example we use this operator to “imprint” the path with a gradient.</dd>
-</dl>
+ to the left of the shape name. The shape adds to the existing mask in such a way that the resulting mask contains only pixels that are selected in <em>both</em> the existing mask <em>and</em> the added shape. In overlapping areas the minimum value is used. In the given example we use this operator to “imprint” the path with a gradient:</dd>
+<dd>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex4.png" alt="intersection"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex4.png#w25" alt="intersection"  />
 
 </p>
-<dl>
+</dd>
 <dt>difference</dt>
 <dd>This set operator is depicted by the symbol 
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_difference.png" alt="difference_icon"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_difference.png" alt="difference-icon"  />
 
- to the left of the shape name. In the non-overlapping area the existing mask is unchanged. In the resulting mask, pixels are selected only if they are selected in the existing mask but <em>not</em> in the added shape. This set operator can be chosen if you want to “cut out” a region from within an existing selection.</dd>
-</dl>
+ to the left of the shape name. In the non-overlapping area the existing mask is unchanged. In the resulting mask, pixels are selected only if they are selected in the existing mask but <em>not</em> in the added shape. This set operator can be chosen if you want to “cut out” a region from within an existing selection:</dd>
+<dd>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex5.png" alt="difference"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex5.png#w25" alt="difference"  />
 
 </p>
-<dl>
+</dd>
 <dt>exclusion</dt>
 <dd>This set operator is depicted by the symbol 
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_exclusion.png" alt="exclusion_icon"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_exclusion.png" alt="exclusion-icon"  />
 
- to the left of the shape name. The resulting mask has all pixels selected that are either selected in the existing mask and not in the added shape or vice versa. This is equivalent to an “exclusive or”.</dd>
-</dl>
+ to the left of the shape name. The resulting mask has all pixels selected that are either selected in the existing mask and not in the added shape or vice versa. This is equivalent to an “exclusive or”:</dd>
+<dd>
 <p>
 
 
-<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex6.png" alt="exclusion"  />
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex6.png#w25" alt="exclusion"  />
 
 </p>
+</dd>
+</dl>
 
 
     
@@ -4123,14 +4183,14 @@
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/image-info-line/" class="next">&lt; image information line</a>
+	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/" class="next">&lt; manage module layouts</a>
 	
 	
     </div>
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/module-groups/" class="prev">module groups (ToDo) &gt;</a>
+	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/module-order/" class="prev">module order &gt;</a>
 	
 	
     </div>
