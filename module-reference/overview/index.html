@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>darktable user manual - velvia</title>
+<title>darktable user manual - overview</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -1263,7 +1263,7 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/overview/" class="">
+<a href="https://elstoc.github.io/dtdocs/module-reference/overview/" class=" active">
     overview
 </a>
 
@@ -2238,7 +2238,7 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/velvia/" class=" active">
+<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/velvia/" class="">
     velvia
 </a>
 
@@ -4092,17 +4092,30 @@
 
 <article role="main">
     <h1 class="title">
-        velvia
+        overview
     </h1>
 
-    <p>Resaturate pixels in a weighted manner that gives more weight to blacks, whites and low-saturation pixels.</p>
-<h1 id="module-controls">module controls</h1>
+    <p>The modules in this reference section have been broken down into two types:</p>
 <dl>
-<dt>strength</dt>
-<dd>The strength of the effect</dd>
-<dt>mid-tones bias</dt>
-<dd>Reduce the effect on mid-tones in order to avoid unnatural skin tones. Reducing the mid-tone bias reduces mid-tone protection and makes the overall velvia effect stronger.</dd>
+<dt><a href="/dtdocs/module-reference/processing-modules/">processing modules</a></dt>
+<dd>These modules are used exclusively in the darkroom view. Together they form the <a href="/dtdocs/darkroom/processing-modules-and-pixelpipe/the-pixelpipe-and-module-order/">pixelpipe</a>, and they directly perform pixel operations on an image to take its from the original format through to the final output form.</dd>
+<dt><a href="/dtdocs/module-reference/utility-modules/">utility modules</a></dt>
+<dd>These modules are used not only in the darkroom view, but in all the other views as well. They perform any other ancillary functions related to managing the image metadata and tags, editing history, pixel pipeline order, snapshots and duplicates, image export and so on.</dd>
 </dl>
+<p>The two types of modules have a few aspects in common, which are described below.</p>
+<h1 id="module-header">module header</h1>
+<p>Each module will have a header which normally consists of the following elements:</p>
+<dl>
+<dt>module name</dt>
+<dd>The name of the module appears art the top, and if you <code>Click</code> on the name it will expand or collapse the rest of the module.</dd>
+<dt>reset parameters</dt>
+<dd>to the right of the module name there is normally a <em>reset parameters</em> button that can be used to reset the state of the module back to its original condition.</dd>
+<dt>presets menu</dt>
+<dd>At the far right of the module header is a <a href="/dtdocs/darkroom/interacting-with-modules/presets/">presets</a> menu. These are predominantly used in the processing modules, but many of the utility modules allow presets to be defined as well.</dd>
+</dl>
+<p>The processing modules will contain additional elements in their module header, and these are described in the <a href="/dtdocs/darkroom/interacting-with-modules/module-header/">darkroom module header</a> section.</p>
+<h1 id="module-sizing">module sizing</h1>
+<p>Some modules contain lists of infomation which can grow as more entries are added. To help manage screen real-estate, it is possible to shrink down or expand the number of entries that are displayed at one time in the list of a module. Place the mouse over an etry in the list, and use <code>Ctrl-scroll</code> to increase or reduce the number of entries that are shown. If the list contains more entries that can be shown at one time, a scrollbar to the right of the list can be used to scroll through all the entries of the list.</p>
 
 
     
@@ -4111,16 +4124,8 @@
 <div class="row">
     <div class="col-6">
 	
-	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/unbreak-input-profile/" class="next">&lt; unbreak input profile</a>
-	
-	
     </div>
     <div class="col-6">
-	
-	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/vibrance/" class="prev">vibrance &gt;</a>
-	
 	
     </div>
 </div>

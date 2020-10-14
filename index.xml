@@ -126,6 +126,16 @@ Even if your camera doesn&amp;rsquo;t support this feature, there is an alternat
     
     <item>
       <title>overview</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/overview/</guid>
+      <description>The modules in this reference section have been broken down into two types:
+ processing modules These modules are used exclusively in the darkroom view. Together they form the pixelpipe, and they directly perform pixel operations on an image to take its from the original format through to the final output form. utility modules These modules are used not only in the darkroom view, but in all the other views as well.</description>
+    </item>
+    
+    <item>
+      <title>overview</title>
       <link>https://elstoc.github.io/dtdocs/preferences-settings/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
