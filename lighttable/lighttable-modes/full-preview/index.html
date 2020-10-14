@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>darktable user manual - exposure</title>
+<title>darktable user manual - full preview</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -468,7 +468,7 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/full-preview/" class="">
+<a href="https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/full-preview/" class=" active">
     full preview
 </a>
 
@@ -1608,7 +1608,7 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/exposure/" class=" active">
+<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/exposure/" class="">
     exposure
 </a>
 
@@ -4077,37 +4077,14 @@
 
 <article role="main">
     <h1 class="title">
-        exposure
+        full preview
     </h1>
 
-    <p>Increase or decrease the overall brightness of an image.</p>
-<p>This module has two modes of operation:</p>
-<dl>
-<dt>manual</dt>
-<dd>Set the <em>exposure</em>, <em>black level</em> and <em>clipping threshold</em> manually</dd>
-<dt>automatic (RAW images only)</dt>
-<dd>Use an analysis of the image&rsquo;s histogram to automatically set the exposure. Darktable automatically selects the exposure compensation that is required to shift the selected <em>percentile</em> to the selected <em>target level</em> (see definitions below). This mode is particularly useful for automatically altering a large number of images to have the same exposure. A typical use case of automatic mode is deflickering of time-lapse photographs.</dd>
-</dl>
-<h1 id="module-controls">module controls</h1>
-<dl>
-<dt>mode</dt>
-<dd>Choose the mode of operation (automatic/manual)</dd>
-<dt>compensate camera exposure (manual mode)</dt>
-<dd>Automatically remove the camera exposure bias (taken from the image&rsquo;s Exif data)</dd>
-<dt>exposure (manual mode)</dt>
-<dd>Increase (move to the right) or decrease (move to the left) the exposure value (EV)</dd>
-<dt>clipping threshold (manual mode)</dt>
-<dd>Define what percentage of bright values are to be clipped in the calculation of the <em>exposure</em> and <em>black level correction</em>. Use the color picker to sample a portion of the image to be used for this calcuation.</dd>
-<dt>percentile (automatic mode)</dt>
-<dd>Define a location in the histogram to use for automatic exposure correction. A percentile of 50% denotes a position in the histogram where 50% of pixel values are above and 50% of pixel values are below that exposure.</dd>
-<dt>target level (automatic mode)</dt>
-<dd>Define the target level for automatic exposure correction (EV) relative to the white point of the camera.</dd>
-<dt>black level correction (manual and automatic modes)</dt>
-<dd>Adjust the black level point to unclip negative RGB values.</dd>
-</dl>
-<hr>
-<p><strong>Note:</strong> Do not use the black level correction to add more density in blacks as this can clip near-black colors out of gamut by generating negative RGB values. This can cause problems with some modules later in the pixelpipe.</p>
-<hr>
+    <p>From any of the lighttable modes, you can diplay a fully zoomed preview of the image that is currently under the mouse pointer by pressing and holding down the <code>W</code> key. This is useful to more closely inspect an image while rating and selecting images.</p>
+<p>Holding down the <code>Ctrl+W</code> key fully zooms into the image and also identifies any regions of sharpness in the image that may indicate the image is in focus. For this tool to work the input image needs to hold an embedded JPEG thumbnail, which is the case for most raw files.</p>
+<p>Regions in the image with a high level of sharpness are indicated with red borders. If there are no such regions found, any regions of moderate sharpness are identified with a blue border. Note that this is not the same as the <a href="/dtdocs/module-reference/utility-modules/shared/focus-peaking/">focus peaking</a> indicator, which is another way to identifying areas of sharpness within an image.</p>
+<p>Sometimes pressing <code>W</code> or <code>Ctrl+W</code> may not appear to have any effect &ndash; effect – in such cases, <code>Click</code> on the image thumbnail and press the corresponding key again.</p>
+<p>If you want the full preview to stay in place without having to hold the <code>W</code> key, you can use sticky preview mode with <code>Alt+W</code> key (no focus peaking) or <code>Ctrl+Alt+W</code> (with focus peaking). In sticky preview mode, you can zoom and pan within the image in a similar way to the <a href="/dtdocs/lighttable/lighttable-modes/culling/">culling</a> mode. Use the <code>W</code> key to go back to the original view.</p>
 
 
     
@@ -4117,15 +4094,11 @@
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/dithering/" class="next">&lt; dithering</a>
+	<a href="https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/culling/" class="next">&lt; culling</a>
 	
 	
     </div>
     <div class="col-6">
-	
-	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/fill-light/" class="prev">fill light &gt;</a>
-	
 	
     </div>
 </div>
