@@ -668,8 +668,8 @@ The display-referred workflow places more emphasis on performing image processin
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/full-preview/</guid>
-      <description>From any of the lighttable modes, you can diplay a fully zoomed preview of the image that is currently under the mouse pointer by pressing and holding down the W key. This is useful to more closely inspect an image while rating and selecting images.
-Holding down the Ctrl+W key fully zooms into the image and also identifies any regions of sharpness in the image that may indicate the image is in focus.</description>
+      <description>From any of the lighttable modes, you can diplay a fully zoomed preview of the image that is currently under the mouse pointer by pressing and holding down W. This is useful to more closely inspect an image while rating and selecting images.
+Holding down Ctrl+W fully zooms into the image and also identifies any regions of sharpness in the image that may indicate the image is in focus. For this tool to work the input image needs to hold an embedded JPEG thumbnail, which is the case for most raw files.</description>
     </item>
     
     <item>
