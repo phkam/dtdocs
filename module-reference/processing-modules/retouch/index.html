@@ -4270,7 +4270,17 @@
 <dt>current</dt>
 <dd>Indicates which layer is currently selected (also marked with the light grey dot on the bar graph).</dd>
 <dt>merge from</dt>
-<dd>This setting allows a common edit to be applied to multiple consecutive scales within a group starting from the coarsest scale (not including the residual image) down to the scale selected. For example, if &ldquo;merge from&rdquo; is set to 3 and the maximum scale is 5 then all edits that are added to scale 5 will be applied to scales 3 to 5. Edits added to scale 4 will be applied to scales 3 and 4, and edits added to scale 3 will be applied only to scale 3.</dd>
+<dd>This setting allows a common edit to be applied to multiple consecutive scales within a group starting from the coarsest scale (not including the residual image) down to the scale selected. For example, if &ldquo;merge from&rdquo; is set to 3 and the maximum scale is 5 then all edits that are added to scale 5 will be applied to scales 3 to 5. Edits added to scale 4 will be applied to scales 3 and 4, and edits added to scale 3 will be applied only to scale 3. If you set <em>merge from</em> to <code>0</code>, then merging is disabled, and all edits apply only to the scale that are defined in. Setting <em>merge from</em> to the highest scale (in this example, 5) would also effectively disable any merging.</dd>
+</dl>
+<pre><code>           merge_from
+               v
+   0   1   2   3   4   5    scale
+               &lt;-------o    scale 5 edits
+               &lt;---o        scale 4 edits
+               o            scale 3 edits
+           o                scale 2 edits
+       o                    scale 1 edits
+</code></pre><dl>
 <dt>
 
 
