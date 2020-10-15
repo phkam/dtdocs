@@ -767,6 +767,10 @@
   </url>
   
   <url>
+    <loc>https://elstoc.github.io/dtdocs/</loc>
+  </url>
+  
+  <url>
     <loc>https://elstoc.github.io/dtdocs/module-reference/processing-modules/hot-pixels/</loc>
   </url>
   
@@ -1012,10 +1016,6 @@
   
   <url>
     <loc>https://elstoc.github.io/dtdocs/module-reference/processing-modules/unbreak-input-profile/</loc>
-  </url>
-  
-  <url>
-    <loc>https://elstoc.github.io/dtdocs/</loc>
   </url>
   
   <url>
