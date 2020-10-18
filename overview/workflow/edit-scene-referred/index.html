@@ -4194,17 +4194,17 @@
 <dt><a href="/dtdocs/module-reference/processing-modules/denoise-profiled/"><em>denoise (profiled)</em></a></dt>
 <dd>The <em>denoise (profiled)</em> module is usually your best option for reducing noise in an image. This module offers an almost “single-click” solution to remove noise. From a user perspective the effect only depends on camera type and ISO value, both derived from Exif data. All other settings are taken from a database of noise profiles that the darktable team has collected &ndash; now covering well above 300 popular camera models. The simplest way to use this module is <em>non-local means (auto)</em> mode. The wavelet feature of this module is also quite effective against color noise. It is recommended that you use this module at 100% zoom so that you can accurately see the effects of your changes.</dd>
 <dd>
-<p>Other modules that allow for image denoising include <a href="/dtdocs/module-reference/processing-modules/raw-denoise/"><em>raw denoise</em></a>, <a href="/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/"><em>denoise (bilateral filter)</em></a>, <a href="/dtdocs/module-reference/processing-modules/denoise-non-local-means/"><em>denoise (non-local means)</em></a>, and the <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> module, which is based on wavelets. If your camera is not yet supported by <em>denoise (profiled)</em>, denoising based on <a href="/dtdocs/module-reference/processing-modules/denoise-non-local-means/"><em>denoise (non-local means)</em></a> is probably the most convenient, as it allows you to treat color and luminance noise separately.</p>
+<p>Other modules that allow for image denoising include <a href="/dtdocs/module-reference/processing-modules/raw-denoise/"><em>raw denoise</em></a>, <a href="/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/"><em>denoise (bilateral filter)</em></a>, <a href="/dtdocs/module-reference/processing-modules/denoise-non-local-means/"><em>denoise (non-local means)</em></a>, and the <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> module, which is based on wavelets. If your camera is not yet supported by <em>denoise (profiled)</em>, <em>denoise (non-local means)</em> is probably the most convenient alternative, as it allows you to treat color and luminance noise separately.</p>
 </dd>
 <dt><a href="/dtdocs/module-reference/processing-modules/haze-removal/"><em>haze removal</em></a></dt>
 <dd>Does what is says on the tin &ndash; removes atmospheric haze.</dd>
 <dt><a href="/dtdocs/module-reference/processing-modules/channel-mixer/"><em>channel mixer</em></a></dt>
 <dd>This module offers a range of presets for making black and white images emulating classic film. It can also be used to tweak your color profile matrices, for example, to deal with color gamut issues.</dd>
 <dt><a href="/dtdocs/module-reference/processing-modules/lens-correction/"><em>lens correction</em></a></dt>
-<dd>If your camera/lens combination is supported, use this module to correct for standard lens distortions, where corrections have not already been performed in-camera. The <a href="/dtdocs/module-reference/processing-modules/crop-rotate/"><em>crop and rotate</em></a> or <a href="/dtdocs/module-reference/processing-modules/perspective-correction/"><em>perspective correction</em></a> modules can also be helpful for simulating the effects of a tilt-shift lens.</dd>
+<dd>If your camera/lens combination is supported, use this module to correct for standard lens distortions, where corrections have not already been performed in-camera. The <a href="/dtdocs/module-reference/processing-modules/crop-rotate/"><em>crop and rotate</em></a> or <a href="/dtdocs/module-reference/processing-modules/perspective-correction/"><em>perspective correction</em></a> modules can also be used to simulate the effects of a tilt-shift lens.</dd>
 </dl>
 <h1 id="modules-to-be-used-with-care">modules to be used with care</h1>
-<p>There are some modules for which there is not yet an alternative well suited to the scene-referred workflow. If required, they should be used sparingly and with care.</p>
+<p>There are some modules for which there is not yet an alternative that is well-suited to the scene-referred workflow. If required, these modules should be used sparingly and with care.</p>
 <dl>
 <dt><a href="/dtdocs/module-reference/processing-modules/vibrance/"><em>vibrance</em></a></dt>
 <dd>Tends to darken colors. Consider using using <a href="/dtdocs/module-reference/processing-modules/color-zones/"><em>color zones</em></a> with a saturation parametric mask to give more control.</dd>
@@ -4225,9 +4225,9 @@
 <li>Use the <a href="/dtdocs/module-reference/processing-modules/lowlight-vision/"><em>lowlight vision</em></a> module to simulate human vision making low light pictures look closer to reality.</li>
 <li>Use the <a href="/dtdocs/module-reference/processing-modules/graduated-density/"><em>graduated density</em></a> filter to add a neutral or colored gradient to your image for exposure and color correction.</li>
 </ul>
-<p>We suggest you peruse the <a href="/dtdocs/module-reference/processing-modules/">processing module reference</a> section to see what else is available.</p>
-<h1 id="non-recommended-modules">non-recommended modules</h1>
-<p>There are a number of modules in darktable which are not really recommended within a scene-referred workflow. This doesn&rsquo;t mean these modules can&rsquo;t be used, it&rsquo;s just that they can produce undesirable effects when their sliders are pushed too far, and there are better alternatives in a linear workflow. In each case, the preferred alternative module is listed.</p>
+<p>Please see the <a href="/dtdocs/module-reference/processing-modules/">processing module reference</a> for a list of the available modules.</p>
+<h1 id="modules-to-avoid">modules to avoid</h1>
+<p>There are a number of modules which are no longer recommended for use within a scene-referred workflow. This doesn&rsquo;t mean they can&rsquo;t be used, but they can produce undesirable effects when their sliders are pushed too far, and there are better alternatives. In each case, the preferred alternative module is listed along with a brief explanation.</p>
 <dl>
 <dt><a href="/dtdocs/module-reference/processing-modules/tone-mapping/"><em>local tone mapping</em></a></dt>
 <dd><em>prefer <a href="/dtdocs/module-reference/processing-modules/tone-equalizer/">tone equalizer</a></em></dd>
