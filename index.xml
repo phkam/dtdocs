@@ -201,7 +201,7 @@ To use the tethering feature you need to connect your camera to your PC using a 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/overview/sidecar-files/sidecar/</guid>
-      <description>darktable is a non-destructive image editor and opens all images in read-only mode. Any data created within darktable (metadata, tags, and image processing steps) are stored in separate .xmp sidecar files. These files allow darktable to store information about the images as well as the full editing history without touching the original raw files. When you import an image into darktable for the first time, an XMP file is automatically generated (XMP generation can be disabled in preferences -&amp;gt; storage but this is not recommended in normal use).</description>
+      <description>darktable is a non-destructive image editor and opens all images in read-only mode. Any data created within darktable (metadata, tags, and image processing steps) are stored in separate .xmp sidecar files. These files allow darktable to store information about the images as well as the full editing history without touching the original raw files. When you import an image into darktable for the first time, an XMP file is automatically generated (XMP generation can be disabled in preferences &amp;gt; storage but this is not recommended in normal use).</description>
     </item>
     
     <item>
@@ -284,7 +284,7 @@ darktable-cli [&amp;lt;input file or folder&amp;gt;] [&amp;lt;xmp file&amp;gt;] 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/color-management/display-profile/</guid>
-      <description>For darktable to accurately render colors on screen it needs to find the correct display profile for your monitor. In general this requires your monitor to be properly calibrated and profiled, and it needs the profile to be correctly installed on your system. darktable queries your X display server&amp;rsquo;s xatom as well as the system service colord (if available) for the right profile. If required you can enforce a specific method in preferences -&amp;gt; miscellaneous.</description>
+      <description>For darktable to accurately render colors on screen it needs to find the correct display profile for your monitor. In general this requires your monitor to be properly calibrated and profiled, and it needs the profile to be correctly installed on your system. darktable queries your X display server&amp;rsquo;s xatom as well as the system service colord (if available) for the right profile. If required you can enforce a specific method in preferences &amp;gt; miscellaneous.</description>
     </item>
     
     <item>
@@ -609,7 +609,7 @@ the presets menu The presets menu will contain one or more of the following entr
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/color-management/rendering-method/</guid>
       <description>darktable can render colors either with its internal algorithms or by using the external library LittleCMS2. darktable&amp;rsquo;s internal method is, by an order of magnitude, faster than the external one. The external option gives you a choice of the rendering intent and might offer a slightly higher accuracy in some cases.
-You can change the default method in preferences -&amp;gt;processing -&amp;gt; always use LittleCMS 2 to apply output color profile</description>
+You can change the default method in preferences -&amp;gt;processing &amp;gt; always use LittleCMS 2 to apply output color profile</description>
     </item>
     
     <item>
@@ -638,7 +638,7 @@ The history stack can be queried and modified within the history stack module in
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/lighttable/digital-asset-management/thumbnails/</guid>
-      <description>Each image in the current collection is represented by a thumbnail in the lighttable view and filmstrip module. A cache of the last recently used thumbnails is stored in a file on disk and loaded into memory at startup. The size of this cache can be adjusted in preferences -&amp;gt; cpu/gpu/memory.
+      <description>Each image in the current collection is represented by a thumbnail in the lighttable view and filmstrip module. A cache of the last recently used thumbnails is stored in a file on disk and loaded into memory at startup. The size of this cache can be adjusted in preferences &amp;gt; cpu/gpu/memory.
 thumbnail creation Thumbnails are created whenever an image is imported into darktable for the first time, after an image has been modified in the darkroom, or when revisiting an image whose thumbnail is no longer available.</description>
     </item>
     
@@ -760,7 +760,7 @@ The principle OpenCL function flow is like this:</description>
       
       <guid>https://elstoc.github.io/dtdocs/lighttable/digital-asset-management/star-color/</guid>
       <description>Star ratings and color labels help you to sort and rank images according to your own criteria. An image&amp;rsquo;s star rating and its color labels can be displayed over thumbnails in the lighttable view and filmstrip module.
-star ratings You can give an image a rating from zero to five stars. The quality criteria which lead to a rating are up to you. Whenever you import images, each image receives a default rating which you can define in preferences -&amp;gt; import.</description>
+star ratings You can give an image a rating from zero to five stars. The quality criteria which lead to a rating are up to you. Whenever you import images, each image receives a default rating which you can define in preferences &amp;gt; import.</description>
     </item>
     
     <item>
@@ -870,7 +870,7 @@ You can combine images into a group by selecting them and clicking the â€œgroupâ
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/overview/user-interface/keyboard-shortcuts/</guid>
-      <description>Much of the functionality in darktable can be controlled via keyboard shortcuts which can be customised in preferences -&amp;gt; shortcuts.
+      <description>Much of the functionality in darktable can be controlled via keyboard shortcuts which can be customised in preferences &amp;gt; shortcuts.
 Press the H button in any darktable view to show a list of all shortcuts that are applicable to the current view.</description>
     </item>
     
@@ -991,7 +991,7 @@ As with any mask, if the value for a pixel in a raster mask is zero the input to
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/</guid>
       <description>At the top of the right-hand panel in the darkroom view is a module that allows you to search for and select from pre-defined groups of processing modules:
- The appearance of the module groups and search functionality can be modified in preferences -&amp;gt; darkroom -&amp;gt; show module groups and/or search text entry. Here, you can choose to show only the module groups, only the search entry, or both.
+ The appearance of the module groups and search functionality can be modified in preferences &amp;gt; darkroom &amp;gt; show module groups and/or search text entry. Here, you can choose to show only the module groups, only the search entry, or both.
 groups Click on one of the module group icons above the search module textbox to see all of the modules which belong to that group.</description>
     </item>
     
@@ -1012,7 +1012,7 @@ In practice the image processing steps in darktable&amp;rsquo;s modules can some
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/variables/</guid>
       <description>darktable supports variable substitution in a number of modules and preference settings. For example:
- Defining file names in the export selected lighttable module Displaying image information in the darkroom&amp;rsquo;s image information line Displaying image information in the lighttable&amp;rsquo;s overlays and tooltips (see preferences -&amp;gt; lighttable) Placing text on an image in the watermark processing module  available variables The following variables are available:
+ Defining file names in the export selected lighttable module Displaying image information in the darkroom&amp;rsquo;s image information line Displaying image information in the lighttable&amp;rsquo;s overlays and tooltips (see preferences &amp;gt; lighttable) Placing text on an image in the watermark processing module  available variables The following variables are available:
 $(ROLL_NAME) roll of the input image $(FILE_FOLDER) folder containing the input image $(FILE_NAME) basename of the input image $(FILE_EXTENSION) extension of the input image $(ID) the image id $(VERSION) the duplicate version number $(VERSION_IF_MULTI) same as $(VERSION) but null string if only one version exists $(VERSION_NAME) version name from metadata $(SEQUENCE) a sequence number within export job $(MAX_WIDTH) maximum image width to limit within export session $(MAX_HEIGHT) maximum image height to limit within export session $(YEAR) year at date of export $(MONTH) month at date of export $(DAY) day at date of export $(HOUR) hour at time of export $(MINUTE) minute at time of export $(SECOND) second at time of export $(EXIF_YEAR) Exif year $(EXIF_MONTH) Exif month $(EXIF_DAY) Exif day $(EXIF_HOUR) Exif hour $(EXIF_MINUTE) Exif minute $(EXIF_SECOND) Exif second $(EXIF_ISO) ISO value $(EXIF_EXPOSURE) Exif exposure $(EXIF_EXPOSURE_BIAS) Exif exposure bias $(EXIF_APERTURE) Exif aperture $(EXIF_FOCAL_LENGTH) Exif focal length $(EXIF_FOCUS_DISTANCE) Exif focus distance $(LONGITUDE) longitude $(LATITUDE) latitude $(ELEVATION) elevation $(STARS) star rating $(LABELS) colorlabels $(MAKER) camera maker $(MODEL) camera model $(LENS) lens $(TITLE) title from metadata $(DECRIPTION) description from metadata $(CREATOR) creator from metadata $(PUBLISHER) publisher from metadata $(RIGHTS) rights from metadata $(PICTURES_FOLDER) pictures folder $(HOME) home folder $(DESKTOP) desktop folder $(OPENCL) whether OpenCL is activated $(TAGS) tags list (Xmp.</description>
     </item>
     
@@ -1072,7 +1072,7 @@ In order to obtain profiling info you need to start darktable from a terminal wi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/opencl/scheduling-profile/</guid>
-      <description>darktable can use the CPU and one or several OpenCL capable GPUs. Depending on the relative performance of these devices, users can choose among certain scheduling profiles to optimize performance. This is achieved by setting the configuration parameter preferences -&amp;gt; cpu/gpu/memory -&amp;gt; OpenCL scheduling profile which offers the following choices:
+      <description>darktable can use the CPU and one or several OpenCL capable GPUs. Depending on the relative performance of these devices, users can choose among certain scheduling profiles to optimize performance. This is achieved by setting the configuration parameter preferences &amp;gt; cpu/gpu/memory &amp;gt; OpenCL scheduling profile which offers the following choices:
  default If an OpenCL capable GPU is found darktable uses it for processing the center image view while the navigation preview window is processed on the CPU in parallel.</description>
     </item>
     
@@ -1204,7 +1204,7 @@ Pre-defined presets (those that are included by default within darktable) are sh
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/base-curve/</guid>
       <description>Simulate the in-camera JPEG by applying a characteristic base curve to the image.
 darktable comes with a number of base curve presets that attempt to mimic the curves of various camera manufacturers. These presets are automatically applied according to the manufacturer ID found in the image&amp;rsquo;s Exif data. Camera-specific base curve presets are also available for some camera models.
-This module will be enabled by default if the default pixel workflow is set to &amp;ldquo;display-referred&amp;rdquo; in preferences -&amp;gt; processing.</description>
+This module will be enabled by default if the default pixel workflow is set to &amp;ldquo;display-referred&amp;rdquo; in preferences &amp;gt; processing.</description>
     </item>
     
     <item>
@@ -1717,9 +1717,9 @@ When hovering with the mouse over thumbnails, darktable will update this view, d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/image-info-line/</guid>
-      <description>Display information about the current image in a darkroom panel. The contents of this line can be set in preferences -&amp;gt; darkroom.
+      <description>Display information about the current image in a darkroom panel. The contents of this line can be set in preferences &amp;gt; darkroom.
 See the variables section for information about the variables that can be used here. You can also insert a newline with $(NL).
-The image information line can be displayed in the top, bottom, left or right panel depending on an additional configuration item in preferences -&amp;gt; darkroom.</description>
+The image information line can be displayed in the top, bottom, left or right panel depending on an additional configuration item in preferences &amp;gt; darkroom.</description>
     </item>
     
     <item>
@@ -1834,7 +1834,7 @@ module controls  radius The radius of the blur soften with The blur algorithm to
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/</guid>
       <description>This panel provides an interface for installing darktable lua scripts. The first time it is run, instructions are displayed in the module.
-It can be disabled with an option in preferences -&amp;gt; lua options.</description>
+It can be disabled with an option in preferences &amp;gt; lua options.</description>
     </item>
     
     <item>
@@ -2119,7 +2119,7 @@ module controls  remove Remove the selected images from the darktable database. 
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/tethering/session/</guid>
       <description>A session is a sequence of exposures taken in tethering mode and placed into a single film roll. A new session means the creation of a new film roll.
-The session module allows you to set a jobcode, which can be used to create your new film roll. See preferences -&amp;gt; import -&amp;gt; session options for details about how to create new film rolls using the $(JOBCODE) variable in the session module.</description>
+The session module allows you to set a jobcode, which can be used to create your new film roll. See preferences &amp;gt; import &amp;gt; session options for details about how to create new film rolls using the $(JOBCODE) variable in the session module.</description>
     </item>
     
     <item>

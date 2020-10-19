@@ -79,7 +79,7 @@ In order to obtain profiling info you need to start darktable from a terminal wi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/opencl/scheduling-profile/</guid>
-      <description>darktable can use the CPU and one or several OpenCL capable GPUs. Depending on the relative performance of these devices, users can choose among certain scheduling profiles to optimize performance. This is achieved by setting the configuration parameter preferences -&amp;gt; cpu/gpu/memory -&amp;gt; OpenCL scheduling profile which offers the following choices:
+      <description>darktable can use the CPU and one or several OpenCL capable GPUs. Depending on the relative performance of these devices, users can choose among certain scheduling profiles to optimize performance. This is achieved by setting the configuration parameter preferences &amp;gt; cpu/gpu/memory &amp;gt; OpenCL scheduling profile which offers the following choices:
  default If an OpenCL capable GPU is found darktable uses it for processing the center image view while the navigation preview window is processed on the CPU in parallel.</description>
     </item>
     

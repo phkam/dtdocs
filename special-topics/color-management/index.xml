@@ -23,7 +23,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/color-management/display-profile/</guid>
-      <description>For darktable to accurately render colors on screen it needs to find the correct display profile for your monitor. In general this requires your monitor to be properly calibrated and profiled, and it needs the profile to be correctly installed on your system. darktable queries your X display server&amp;rsquo;s xatom as well as the system service colord (if available) for the right profile. If required you can enforce a specific method in preferences -&amp;gt; miscellaneous.</description>
+      <description>For darktable to accurately render colors on screen it needs to find the correct display profile for your monitor. In general this requires your monitor to be properly calibrated and profiled, and it needs the profile to be correctly installed on your system. darktable queries your X display server&amp;rsquo;s xatom as well as the system service colord (if available) for the right profile. If required you can enforce a specific method in preferences &amp;gt; miscellaneous.</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/color-management/rendering-method/</guid>
       <description>darktable can render colors either with its internal algorithms or by using the external library LittleCMS2. darktable&amp;rsquo;s internal method is, by an order of magnitude, faster than the external one. The external option gives you a choice of the rendering intent and might offer a slightly higher accuracy in some cases.
-You can change the default method in preferences -&amp;gt;processing -&amp;gt; always use LittleCMS 2 to apply output color profile</description>
+You can change the default method in preferences -&amp;gt;processing &amp;gt; always use LittleCMS 2 to apply output color profile</description>
     </item>
     
     <item>

@@ -14,7 +14,7 @@
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/base-curve/</guid>
       <description>Simulate the in-camera JPEG by applying a characteristic base curve to the image.
 darktable comes with a number of base curve presets that attempt to mimic the curves of various camera manufacturers. These presets are automatically applied according to the manufacturer ID found in the image&amp;rsquo;s Exif data. Camera-specific base curve presets are also available for some camera models.
-This module will be enabled by default if the default pixel workflow is set to &amp;ldquo;display-referred&amp;rdquo; in preferences -&amp;gt; processing.</description>
+This module will be enabled by default if the default pixel workflow is set to &amp;ldquo;display-referred&amp;rdquo; in preferences &amp;gt; processing.</description>
     </item>
     
     <item>

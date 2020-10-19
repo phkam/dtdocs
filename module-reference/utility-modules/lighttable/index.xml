@@ -56,7 +56,7 @@ import from filesystem You can import either a single image or a folder of image
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/lua-scripts-installer/</guid>
       <description>This panel provides an interface for installing darktable lua scripts. The first time it is run, instructions are displayed in the module.
-It can be disabled with an option in preferences -&amp;gt; lua options.</description>
+It can be disabled with an option in preferences &amp;gt; lua options.</description>
     </item>
     
     <item>

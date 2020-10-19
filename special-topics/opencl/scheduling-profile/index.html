@@ -4410,7 +4410,7 @@
         scheduling profile
     </h1>
 
-    <p>darktable can use the CPU and one or several OpenCL capable GPUs. Depending on the relative performance of these devices, users can choose among certain scheduling profiles to optimize performance. This is achieved by setting the configuration parameter <a href="/dtdocs/preferences-settings/cpu-gpu-memory/"><code>preferences</code> -&gt; <code>cpu/gpu/memory</code> -&gt; <code>OpenCL scheduling profile</code></a> which offers the following choices:</p>
+    <p>darktable can use the CPU and one or several OpenCL capable GPUs. Depending on the relative performance of these devices, users can choose among certain scheduling profiles to optimize performance. This is achieved by setting the configuration parameter <a href="/dtdocs/preferences-settings/cpu-gpu-memory/"><code>preferences &gt; cpu/gpu/memory &gt; OpenCL scheduling profile</code></a> which offers the following choices:</p>
 <dl>
 <dt>default</dt>
 <dd>If an OpenCL capable GPU is found darktable uses it for processing the center image view while the <a href="/dtdocs/module-reference/utility-modules/darkroom/navigation/">navigation preview window</a> is processed on the CPU in parallel. This is the preferred setting for systems with a reasonably fast CPU and a moderately fast GPU. The exact allocation of devices to the various pixelpipe types can be finetuned with the “opencl_device_priority” configuration parameter (see <a href="/dtdocs/special-topics/opencl/multiple-devices/">multiple devices</a>).</dd>
@@ -4419,7 +4419,7 @@
 <dt>multiple GPUs</dt>
 <dd>This setting addresses systems with multiple GPUs whose relative performance does not differ significantly. Whenever a processing job is started darktable uses any currently idle GPU but not the CPU. Users of systems with a variety of GPUs will need better control on their relative priority. They would be better off selecting the “default” profile and fine-tuning their system with the “opencl_device_priority” configuration parameter (see <a href="/dtdocs/special-topics/opencl/multiple-devices/">multiple devices</a>).</dd>
 </dl>
-<p>On first start-up or after any detected change in the GPU configuration of your system darktable tries to identify the best suited profile for you. You can change it at any time in <a href="/dtdocs/preferences-settings/cpu-gpu-memory/"><code>preferences</code> -&gt; <code>cpu/gpu/memory</code></a>.</p>
+<p>On first start-up or after any detected change in the GPU configuration of your system darktable tries to identify the best suited profile for you. You can change it at any time in <a href="/dtdocs/preferences-settings/cpu-gpu-memory/"><code>preferences &gt; cpu/gpu/memory</code></a>.</p>
 
 
     

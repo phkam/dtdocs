@@ -32,7 +32,7 @@ This can include sequence, bracket and delayed captures. You are also able to co
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/tethering/session/</guid>
       <description>A session is a sequence of exposures taken in tethering mode and placed into a single film roll. A new session means the creation of a new film roll.
-The session module allows you to set a jobcode, which can be used to create your new film roll. See preferences -&amp;gt; import -&amp;gt; session options for details about how to create new film rolls using the $(JOBCODE) variable in the session module.</description>
+The session module allows you to set a jobcode, which can be used to create your new film roll. See preferences &amp;gt; import &amp;gt; session options for details about how to create new film rolls using the $(JOBCODE) variable in the session module.</description>
     </item>
     
   </channel>

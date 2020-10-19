@@ -4412,7 +4412,7 @@
 
     <p>The huge diversity of systems and the marked differences between OpenCL vendors and driver versions makes it impossible to give an comprehensive overview of how to setup OpenCL. We only can give you an example, in this case for NVIDIA driver version 331.89 on Ubuntu 14.04. We hope that this will serve you as a first impression and will help to solve possible problems of your specific setup.</p>
 <p>The principle OpenCL function flow is like this:</p>
-<p><code>darktable</code> -&gt; <code>libOpenCL.so</code> -&gt; <code>libnvidia-opencl.so.1</code> -&gt; <code>kernel driver module(s)</code> -&gt; <code>GPU</code></p>
+<p><code>darktable &gt; libOpenCL.so &gt; libnvidia-opencl.so.1 &gt; kernel driver module(s) &gt; GPU</code></p>
 <ul>
 <li>
 <p>darktable dynamically loads <code>libOpenCL.so</code>, a system library which must be accessible to the system&rsquo;s dynamic loader (<code>ld.so</code>).</p>
