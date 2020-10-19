@@ -609,7 +609,7 @@ the presets menu The presets menu will contain one or more of the following entr
       
       <guid>https://elstoc.github.io/dtdocs/special-topics/color-management/rendering-method/</guid>
       <description>darktable can render colors either with its internal algorithms or by using the external library LittleCMS2. darktable&amp;rsquo;s internal method is, by an order of magnitude, faster than the external one. The external option gives you a choice of the rendering intent and might offer a slightly higher accuracy in some cases.
-You can change the default method in preferences -&amp;gt;processing &amp;gt; always use LittleCMS 2 to apply output color profile</description>
+You can change the default method in preferences &amp;gt; processing &amp;gt; always use LittleCMS 2 to apply output color profile</description>
     </item>
     
     <item>
