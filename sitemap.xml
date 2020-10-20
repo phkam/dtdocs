@@ -151,6 +151,10 @@
   </url>
   
   <url>
+    <loc>https://elstoc.github.io/dtdocs/lighttable/</loc>
+  </url>
+  
+  <url>
     <loc>https://elstoc.github.io/dtdocs/lighttable/lighttable-view-layout/</loc>
   </url>
   
@@ -187,10 +191,6 @@
   </url>
   
   <url>
-    <loc>https://elstoc.github.io/dtdocs/lighttable/</loc>
-  </url>
-  
-  <url>
     <loc>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-pixelpipe-and-module-order/</loc>
   </url>
   
@@ -223,6 +223,10 @@
   </url>
   
   <url>
+    <loc>https://elstoc.github.io/dtdocs/darkroom/</loc>
+  </url>
+  
+  <url>
     <loc>https://elstoc.github.io/dtdocs/special-topics/program-invocation/darktable-generate-cache/</loc>
   </url>
   
@@ -236,10 +240,6 @@
   
   <url>
     <loc>https://elstoc.github.io/dtdocs/overview/user-interface/filmstrip/</loc>
-  </url>
-  
-  <url>
-    <loc>https://elstoc.github.io/dtdocs/darkroom/</loc>
   </url>
   
   <url>
