@@ -1923,17 +1923,6 @@ To use this module, first reduce the filter size (to concentrate its effect) and
     </item>
     
     <item>
-      <title>more modules</title>
-      <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/more-modules/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/more-modules/</guid>
-      <description>Control the visibility of darktable&amp;rsquo;s image processing modules.
-By default only a standard set of modules is shown to the user. The more modules module can be used to make additional modules visible, or to hide modules that you don&amp;rsquo;t typically use.
-Each module is shown with a small icon next to its name. Click to toggle a module&amp;rsquo;s status between visible, hidden and favourite. Favourite modules are indicated by a star in front of the icon and, in addition to appearing in their normal module group, will also be visible in the favourites module group.</description>
-    </item>
-    
-    <item>
       <title>navigation</title>
       <link>https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/navigation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
