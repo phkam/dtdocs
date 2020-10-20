@@ -4420,61 +4420,62 @@
         developing monochrome images
     </h1>
 
-    <p>Photography has a long history of producing black-and-white images, and many still enjoy this aspect of photography even today. While there are specialised/modified cameras around with a true monochrome sensor, many will use a regular camera to capture a color image, and turn it into a monochrome image during the post-processing.</p>
-<p>There are number of features in darktable that are helpful in singling out images for special monochrome treatment, and for converting from a color image to a monochrome. There are two main approaches to converting a color image to a monochrome image:</p>
+    <p>Photography has a long history of producing monochrome images, and many still enjoy this aspect of photography. While there are some specialised/modified cameras with a truly monochrome sensor, most still use a regular camera to capture a color image, and turn it into a monochrome image during post-processing.</p>
+<p>There are two main approaches this conversion:</p>
 <ul>
 <li>
-<p>a physical approach, where we attempt to simulate how a silver-based photographic film emulsion would react to the light captured at the scene.</p>
+<p>A <em>physical approach</em>, where we attempt to simulate how a silver-based photographic film emulsion would react to the light captured at the scene.</p>
 </li>
 <li>
-<p>a perceptual approach, where we develop a color image and reduce the color saturation in a perceptual color space such as <em>CIE Lab</em>.</p>
+<p>A <em>perceptual approach</em>, where we develop a color image and reduce the color saturation in a perceptual color space such as <em>CIE Lab</em>.</p>
 </li>
 </ul>
 <p>These approaches and other monochrome-related features in darktable are discussed in the following sections.</p>
-<h1 id="importing-and-flagging-images-for-monochrome-treatment">importing and flagging images for monochrome treatment</h1>
-<p>When importing an image, there are a number of flags that can be set to indicate that the image should be singled out for monochrome treatment.</p>
+<h1 id="importing-and-flagging-images-as-monochrome">importing and flagging images as monochrome</h1>
+<p>When importing an image, there are a number of properties that can be used to indicate that the image requires a monochrome treatment:</p>
 <ul>
 <li>
-<p>If the image was taken using an achromatic camera, the image will be flagged as monochrome.</p>
+<p>If the image was taken using an achromatic camera, the image will be automatically flagged as monochrome.</p>
 </li>
 <li>
-<p>When you capture a scene from which you would like to produce a monochrome image, it can be helpful to put your camera into a &ldquo;back-and-white&rdquo; creative mode. This allows you to visualise what the scene would look like in black-and-white through your camera&rsquo;s liveview screen or electronic viewfinder. The camera will still capture the full color data in the raw file, but the embedded jpeg preview image will in black-and-white. When you import such an image, darktable can check if the embedded preview is in black and white or not, and if so, flag the image as an image requiring monochrome treatment.</p>
-<p>Checking whether the preview is back-and-white or not slows down the import process, so this checking is disabled by default. You can enable this check in <a href="/dtdocs/preferences-settings/processing/"><code>preferences</code> -&gt; <code>processing</code> -&gt; <code>detect monochrome previews</code></a></p>
+<p>When you capture a scene from which you would like to produce a monochrome image, it can be helpful to put your camera into a &ldquo;black &amp; white&rdquo; creative mode. This allows you to visualise what the scene would look like in monochrome through your camera&rsquo;s liveview screen or electronic viewfinder. The camera will still capture the full color data in the raw file, but the embedded jpeg preview image will be monochrome. When you import such an image, darktable can automatically flag the image as monochrome based on the preview image.</p>
+<p>Checking whether the preview is monochrome slows down the import process, so this is disabled by default. You can enable this check in <a href="/dtdocs/preferences-settings/processing/"><code>preferences &gt; processing &gt; detect monochrome previews</code></a></p>
 </li>
 <li>
-<p>When processing a raw file, one of the steps is to <a href="/dtdocs/module-reference/processing-modules/demosaic/"><em>demosaic</em></a> the image. If you set the <em>demosaicing method</em> to be <em>passthrough (monochrome)</em>, then this will discard color information during the demosaicing process, and darktable will flag the image as requiring monochrome treatment.</p>
+<p>When processing a raw file, one of the first steps is to <a href="/dtdocs/module-reference/processing-modules/demosaic/"><em>demosaic</em></a> the image. If you set the <em>demosaicing method</em> to &ldquo;passthrough (monochrome)&rdquo;, this discards color information during the demosaicing process, and darktable will flag the image as monochrome.</p>
+<p><strong>Note:</strong> You should only use this for images taken on a camera where the Bayer filter has been removed.</p>
 </li>
 <li>
-<p>After you have imported the image, you can manually flag an image as requiring monochrome treatment (or not) using the <em>metadata</em> tab on the lighttable <a href="../module-references/utility-modules/lighttable/selected-files.md"><em>selected images</em></a> module,</p>
+<p>After you have imported the image, you can manually flag an image as monochrome (or not) using the <em>metadata</em> tab on the lighttable&rsquo;s <a href="../module-references/utility-modules/lighttable/selected-files.md">selected images</a> module,</p>
 </li>
 </ul>
-<p>If any of the above methods result in an image being flagged as &ldquo;monochrome&rdquo;, darktable modules can use this information to present the user with some monochrome-specific module controls and/or apply special processing to thw image, compared with regular color images.</p>
-<p>The <code>darktable|mode|monochrome</code> tag will be automatically applied to any images flagged as monochrome, and if you have enabled any permanent overlay information on your lighttable, such images will be marked with a visual indicator <code>B&amp;W</code> next to the file type information. By automatically applying this tag and visual indicator, darktable makes it easy to set up filters to single out any images for monochrome treatment, and to see at a glance which images in the current collection are bearing a <em>monochrome</em> flag.</p>
-<h1 id="physical-approach">physical approach</h1>
-<p>This style of approach tends to work with linear scene-referred data from the sendor, and it tries to mimic the response that you would see from using photographic film with a silver emulsion. It consists of three steps:</p>
+<p>If any of the above methods result in an image being flagged as monochrome, darktable modules can use this information to present the user with some monochrome-specific module controls and/or apply special processing to the image.</p>
+<p>The <code>darktable|mode|monochrome</code> tag will be automatically applied to any images flagged as monochrome, and if you have enabled any permanent overlay information on your lighttable thumbnails, such images will be marked with a visual indicator <code>B&amp;W</code> next to the file type information. By automatically applying this tag and visual indicator, darktable makes it easy to set up filters to single out any images for monochrome treatment, and to see at a glance which images in the current collection bear the <em>monochrome</em> tag.</p>
+<h1 id="monochrome-conversion">monochrome conversion</h1>
+<h2 id="physical-approach">physical approach</h2>
+<p>This approach tends to work with linear scene-referred data from the sensor, and attempts to mimic the response of a photographic film with a silver emulsion. It consists of three steps:</p>
 <ol>
 <li>
-<p>Map the color channels from the sensor into a single monochrome channel. Different types of black-and-white photographic film will have different levels of sensitivity to various wavelengths of light, and so this can be simulated by giving the three color channels different weightings when combining them together into a single monochrome channel. The <a href="/dtdocs/module-reference/processing-modules/channel-mixer/"><em>channel mixer</em></a> allows the three channels to be mixed into a grey channel by varying amounts, and it includes a number of presets that are designed to emulate the characteristics of some well-known types of photographic film. This <em>channel mixer</em> will come after the <a href="/dtdocs/module-reference/processing-modules/input-color-profile/"><em>input color profile</em></a> module, and the <em>channel mixer</em> presets assume that a <em>linear Rec709 RGB</em> working profile was applied. If another linear working profile is used, the weights of the <em>RGB</em> channels will need to be adjusted accordingly.</p>
+<p>Map the color channels from the sensor into a single monochrome channel. Different types of monochrome photographic film have different levels of sensitivity to various wavelengths of light, and this can be simulated by giving the three color channels different weightings when combining them together into a single monochrome channel. The <a href="/dtdocs/module-reference/processing-modules/channel-mixer/"><em>channel mixer</em></a> module allows the three channels to be mixed into a grey channel by varying amounts, and it includes a number of presets that are designed to emulate the characteristics of some well-known types of photographic film. The <em>channel mixer</em> module comes after the <a href="/dtdocs/module-reference/processing-modules/input-color-profile/"><em>input color profile</em></a> module in the pixelpipe, and the <em>channel mixer</em> presets assume that a <em>linear Rec709 RGB</em> working profile has been applied. If another linear working profile is used, the weights of the <em>RGB</em> channels will need to be adjusted accordingly.</p>
 </li>
 <li>
 <p>Apply a luminosity saturation curve. As a piece of photographic film is exposed to more intense light, its repsonse will fall off as the silver emulsion becomes saturated. This saturation curve is simulated by the <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module.</p>
 </li>
 <li>
-<p>Developing a black-and-white film in the darkroom traditionally involved &ldquo;dodging and burning&rdquo; to control the level of exposure across different parts of the image. This can be emulated in darktable by using either the <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a> module with manually created <a href="/dtdocs/darkroom/masking-and-blending/overview/"><em>masks</em></a>, or by using the [<em>tone equalizer</em>}(../module-reference/processing-modules/tone-equalizer.md) module which will automatically generate a mask for you using a guided filter.</p>
+<p>Developing a monochrome film in the darkroom traditionally involves &ldquo;dodging and burning&rdquo; to control the level of exposure across different parts of the image. This can be emulated in darktable by using either the <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a> module with manually created <a href="/dtdocs/darkroom/masking-and-blending/overview/">masks</a>, or by using the <a href="/dtdocs/module-reference/processing-modules/tone-equalizer/"><em>tone equalizer</em></a> module, which will automatically generate a mask for you using a guided filter.</p>
 </li>
 </ol>
-<p>As previously mentioned, it is possible to produce a monochrome image by using a pass-through mode on the <em>demosaic</em> module, however this works by discarding some of the channels from the sensor, and the <em>channel mixer</em> provides a more flexible approach.</p>
-<h1 id="perceptual-approach">perceptual approach</h1>
+<h2 id="perceptual-approach">perceptual approach</h2>
 <p>The other option for producing a monochrome image is to reduce the color saturation in the image, which can be done in a linear colorspace, or in a color space oriented towards modelling human perception.</p>
 <ul>
 <li>
-<p>The <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> module operates in linear RGB, and allows you to reduce the color saturation in the image using either the inout or output color saturation slider (which you choose depends on whether you want to make any other adjustments to either the color or monochrome image in the color balance module. The color balance module will tend to give a predicable result.</p>
+<p>The <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> module operates in linear RGB, and allows you to reduce the color saturation in the image using either the inout or output color saturation slider &ndash; which you choose depends on whether you want to make any other adjustments to either the color or monochrome image in the color balance module. The color balance module tends to give a predicable and perceptually uniform result.</p>
 </li>
 <li>
-<p>The <a href="/dtdocs/module-reference/processing-modules/monochrome/"><em>monochrome</em></a> module works in Lab color space, and it allows the user to graphically define a weighted combination of colors to determine the density of the blacks in the monochrome image. The interface can be somewhat sensitive to the settings, with small changes producing large effects, and you may experiences problems with the global contrast and/or black pixel artifacts.</p>
+<p>The <a href="/dtdocs/module-reference/processing-modules/monochrome/"><em>monochrome</em></a> module works in Lab color space, and it allows the user to graphically define a weighted combination of colors to determine the density of the blacks in the monochrome image. The interface can be somewhat sensitive to the settings, with small changes producing large effects, and you may experience problems with the global contrast and/or black pixel artifacts.</p>
 </li>
 <li>
-<p>Other modules such as <a href="/dtdocs/module-reference/processing-modules/color-zones/"><em>color zones</em></a> can be used to remove color saturation from the image, but these don&rsquo;t offer any real advantage over the simplicity of the <em>color balance</em> module&rsquo;s saturation sliders.</p>
+<p>Other modules such as <a href="/dtdocs/module-reference/processing-modules/color-zones/"><em>color zones</em></a> can also be used to remove color saturation from the image, but these don&rsquo;t offer any real advantage over the simplicity of the <em>color balance</em> module&rsquo;s saturation sliders.</p>
 </li>
 </ul>
 
