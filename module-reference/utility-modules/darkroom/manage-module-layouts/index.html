@@ -4441,17 +4441,25 @@
 <p>There are two standard module group layouts that ship with darktable, both of which are available for selection as presets. These module groups cannot be amended:</p>
 <ul>
 <li><strong>default</strong>: This is the default module group layout from darktable 3.4 onwards, and consists of a new simplified set of module groups.</li>
-<li><strong>legacy layout</strong>: This contains the default module groupings that were used in darktable prior to version 3.4</li>
+<li><strong>all modules</strong>: This contains the complete set of modules, sorted by the traditional module groupings.</li>
+<li><strong>scene referred</strong>: This contains the modules commonly used for the <a href="/dtdocs/overview/workflow/edit-scene-referred/">scene-referred workflow</a>.</li>
+<li><strong>display referred</strong>: This contains the modules commonly used for the <a href="/dtdocs/overview/workflow/edit-display-referred/">display-referred workflow</a>.</li>
+<li><strong>minimal</strong>: This contains a limited set of modules that are most important when first starting out with darktable. It is suggested that beginners could start by copying this minimal preset, and adding to it as they gain experience with additional modules.</li>
 </ul>
 <p>In addition, if you have used a version of darktable prior to 3.4, two additional presets may also be automatically created when you upgrade. These will allow you to retain some or all of your previous module group layouts and can be edited or deleted:</p>
 <ul>
 <li><strong>previous config</strong>: Where a user previously set up favourites or altered the <em>hidden</em> flag on modules, this preset contains those customisations, retaining the legacy module groups.</li>
 <li><strong>previous config with new layout</strong>: Where a user previously set up favourites or altered the <em>hidden</em> flag on modules, this preset contains those customisations but with modules grouped according to the new (darktable 3.4+) group layout.</li>
 </ul>
-<h2 id="default-module-groups">default module groups</h2>
-<p>The default module group layout consists of 4 module groups</p>
+<h2 id="default-preset">default preset</h2>
+<p>The <em>default</em> module group layout consists of 4 module groups</p>
 <dl>
-<dt>active modules</dt>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-active-icon.png" alt="module-group-active-icon"  />
+
+ active modules</dt>
 <dd>This group indicates which modules are currently active in the pixel pipeline. Clicking on this icon a second time shows a complete list of visible modules</dd>
 <dt>
 
@@ -4475,8 +4483,8 @@
  (special) effects modules</dt>
 <dd>Includes special effects such as retouching, liquifying, blooming, sharpness, etc..</dd>
 </dl>
-<h2 id="legacy-layout-module-groups">legacy layout module groups</h2>
-<p>The legacy versions of darktable had the following module groupings:</p>
+<h2 id="all-modules-preset">all modules preset</h2>
+<p>The <em>all modules</em> preset contains all modules, sorted according to the following groups:</p>
 <dl>
 <dt>
 
@@ -4490,7 +4498,7 @@
 
 <img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-basic-icon.png" alt="module-group-basic-icon"  />
 
- basic modules</dt>
+ base modules</dt>
 <dd>A minimal set of modules normally required to render a presentable image.</dd>
 <dt>
 
@@ -4513,6 +4521,77 @@
 
  corrective modules</dt>
 <dd>Modules relating to correcting problems relating to lens distortions, sensor noise, sharpening, etc..</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-effects-icon.png" alt="module-group-effects-icon"  />
+
+ (special) effects modules</dt>
+<dd>Includes special effects such as retouching, liquifying, blooming, sharpness, etc..</dd>
+</dl>
+<h2 id="scene-referred-and-display-referred-presets">scene-referred and display-referred presets</h2>
+<p>The <em>scene-referred</em> and <em>display-referred</em> presets define groups of modules relevant to those workflows, sorted into groups as shown below:</p>
+<dl>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-active-icon.png" alt="module-group-active-icon"  />
+
+ active modules</dt>
+<dd>Works the same as in the default layout.</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-basic-icon.png" alt="module-group-basic-icon"  />
+
+ base modules</dt>
+<dd>A basic set of modules to adjust the cropping/orientation, adjust the exposure, and apply tone mappings and contrast as appropriate to the workflow.</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-color-icon.png" alt="module-group-color-icon"  />
+
+ color modules</dt>
+<dd>Modules relating to color grading and color saturation.</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-correct-icon.png" alt="module-group-correct-icon"  />
+
+ corrective modules</dt>
+<dd>Modules relating to correcting problems relating to lens distortions, sensor noise, sharpening, retouching, etc..</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-effects-icon.png" alt="module-group-effects-icon"  />
+
+ (special) effects modules</dt>
+<dd>Includes special effects such as applying watermarks and framing, vignetting, etc..</dd>
+</dl>
+<h2 id="minimal-preset">minimal preset</h2>
+<p>The <em>minimal</em> preset provides a minimal set of modules targeted as a starting point for beginners, and consists of the following module groups:</p>
+<dl>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-basic-icon.png" alt="module-group-basic-icon"  />
+
+ base modules</dt>
+<dd>A basic set of modules to adjust the cropping/orientation, adjust the exposure, and apply a basic tone mapping via base curve or basic adjustments.</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-grading-icon.png" alt="module-group-grading-icon"  />
+
+ grading modules</dt>
+<dd>Modules dealing with creative tone and color grading.</dd>
+<dt>
+
+
+<img src="https://elstoc.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-effects-icon.png" alt="module-group-effects-icon"  />
+
+ (special) effects modules</dt>
+<dd>Includes special effects such as retouching, sharpening, watermarks, etc..</dd>
 </dl>
 <h2 id="previous-config-module-groups">previous config module groups</h2>
 <p>These follow the layouts of the previous two groups, but include an additional <em>favourites</em> group where users made use of this feature in the past. Now that users may create their own custom groups, there is no longer a need for an explicit &ldquo;favourites&rdquo; group.</p>
