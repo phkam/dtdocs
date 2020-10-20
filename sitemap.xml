@@ -11,6 +11,10 @@
   </url>
   
   <url>
+    <loc>https://elstoc.github.io/dtdocs/guides-tutorials/monochrome/</loc>
+  </url>
+  
+  <url>
     <loc>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/filemanager/</loc>
   </url>
   
@@ -164,10 +168,6 @@
   
   <url>
     <loc>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/multiple-instances/</loc>
-  </url>
-  
-  <url>
-    <loc>https://elstoc.github.io/dtdocs/guides-tutorials/other-resources/</loc>
   </url>
   
   <url>
@@ -556,6 +556,10 @@
   
   <url>
     <loc>https://elstoc.github.io/dtdocs/preferences-settings/miscellaneous/</loc>
+  </url>
+  
+  <url>
+    <loc>https://elstoc.github.io/dtdocs/guides-tutorials/other-resources/</loc>
   </url>
   
   <url>

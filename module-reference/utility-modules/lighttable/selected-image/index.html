@@ -3726,6 +3726,22 @@
 
 
 
+<a href="https://elstoc.github.io/dtdocs/guides-tutorials/monochrome/" class="">
+    developing monochrome images
+</a>
+
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://elstoc.github.io/dtdocs/guides-tutorials/other-resources/" class="">
     other resources
 </a>
@@ -4418,6 +4434,8 @@
 
     <p>Perform actions on images that have been selected in the lighttable view.</p>
 <h1 id="module-controls">module controls</h1>
+<p>The module controls are spread over two tabs, one for manipulating the image files, and the other for manipulating the metadata related to the images.</p>
+<h2 id="images-tab">images tab</h2>
 <dl>
 <dt>remove</dt>
 <dd>Remove the selected images from the darktable database. Removed images can no longer be viewed or edited within darktable but the image files remain on the filesystem along with any XMP sidecar files. As darktable keeps the XMP files up-to-date with your latest development history, you can later fully restore your work by re-importing the images.</dd>
@@ -4441,6 +4459,23 @@
 <dd>Create a new group from selected images (see <a href="/dtdocs/lighttable/digital-asset-management/grouping/">image grouping</a>).</dd>
 <dt>ungroup</dt>
 <dd>Remove selected images from a group (see <a href="/dtdocs/lighttable/digital-asset-management/grouping/">image grouping</a>).</dd>
+</dl>
+<h2 id="metadata-tab">metadata tab</h2>
+<dl>
+<dt>checkboxes</dt>
+<dd>Use the checkboxes to select which types metadata (ratings, tags, metadata, colors, geo tags) you want to operate on.</dd>
+<dt>copy</dt>
+<dd>Use this button to copy the metadata of the selected image onto the clipboard. If you have more than one image selected, or no images selected, then this button is unavailable.</dd>
+<dt>paste</dt>
+<dd>Use this button to paste any metadata in the clipboard onto the selected images.</dd>
+<dt>clear</dt>
+<dd>Use this button to clear from the image any metadata of the types selected in the checkboxes.</dd>
+<dt>mode</dt>
+<dd>when pasting metadata onto images, this menu controls whether the existing metadata should be merged with the metadata on the clipboard (<em>merge</em>), or whether the metadata types selected in the checkboxes should be completely replaced by the metadata from the clipboard (<em>overwrite</em>).</dd>
+<dt>monochrome</dt>
+<dd>this button flags in the image metadata that the image is intended to be developed as a monochrome image, and should receive any monochrome-specific workflow treatment that is offered by the processing modules. Refer to the <a href="/dtdocs/guides-tutorials/monochrome/">developing monochrome images</a> section for more details.</dd>
+<dt>color</dt>
+<dd>this button removes the monochrome workflow flags from the image metadata so that the image will receive the default workflow treatment that is normally used in darktable when developing photos.</dd>
 </dl>
 
 

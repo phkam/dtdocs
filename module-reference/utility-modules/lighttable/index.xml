@@ -76,7 +76,8 @@ module controls  select all Select all images shown in the current lighttable vi
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/selected-image/</guid>
       <description>Perform actions on images that have been selected in the lighttable view.
-module controls  remove Remove the selected images from the darktable database. Removed images can no longer be viewed or edited within darktable but the image files remain on the filesystem along with any XMP sidecar files. As darktable keeps the XMP files up-to-date with your latest development history, you can later fully restore your work by re-importing the images.</description>
+module controls The module controls are spread over two tabs, one for manipulating the image files, and the other for manipulating the metadata related to the images.
+images tab  remove Remove the selected images from the darktable database. Removed images can no longer be viewed or edited within darktable but the image files remain on the filesystem along with any XMP sidecar files.</description>
     </item>
     
     <item>
