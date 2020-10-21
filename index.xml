@@ -142,7 +142,7 @@ Even if your camera doesn&amp;rsquo;t support this feature, there is an alternat
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/overview/</guid>
       <description>The modules in this reference section are broken down into two types:
- processing modules These modules are used exclusively in the darkroom view to perform pixel operations on your image. Together they form the pixelpipe. utility modules These modules may be used in any darktable view. They perform other ancillary functions related to managing the image metadata and tags, editing history, pixel pipeline order, snapshots and duplicates, image export and so on.</description>
+ processing modules These modules are used exclusively in the darkroom view, and each performs its set of pixel processing operations on the image before passing the image up to the next modules so it can add its processing on top. Together this set of processing steps performed by each module forms the pixelpipe. utility modules These modules may be used in any darktable view.</description>
     </item>
     
     <item>
@@ -221,9 +221,7 @@ To use the tethering feature you need to connect your camera to your PC using a 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-anatomy-of-a-module/</guid>
-      <description>The basic element of image processing in darktable is the module. In order to process a raw image a number of modules act on the input image in sequence, each performing a different operation on the image data.
-Every processing module executes independently in a similar manner:
- Receive input data from the last executed module Perform some processing (the module&amp;rsquo;s operation) on the input data to generate the output data.</description>
+      <description>The basic element of image processing in darktable is the processing module. In order to process a raw image a number of modules act on the input image in sequence, each performing a different operation on the image data. For those familiar with Adobe Photoshop, the concept of a processing module in darktable is somewhat similar to an adjustment layer in that that are both making an adjustment to an image, and each one is building on top of all the processing steps that came before.</description>
     </item>
     
     <item>
@@ -444,7 +442,7 @@ In order for darktable to consider a file for import, it must have one of the fo
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-pixelpipe-and-module-order/</guid>
       <description>The ordered sequence of processing modules operating on an input file to generate an output image is known as the &amp;ldquo;pixelpipe&amp;rdquo;.
-The order of the pixelpipe is represented graphically by the order in which modules are presented in the user interface &amp;ndash; the pixelpipe runs from the bottom to the top of the modules as they appear in the darkroom view (RAW image at the bottom of the pixelpipe and output image at the top).</description>
+The order of the pixelpipe is represented graphically by the order in which modules are presented in the user interface &amp;ndash; the pixelpipe starts with a RAW image at the bottom of the list, and applies the processing modules one by one, piling up layer upon layer of processing from the bottom up, until it reaches the top of the list, at which point we have a fully processed image.</description>
     </item>
     
     <item>

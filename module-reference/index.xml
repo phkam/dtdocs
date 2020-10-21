@@ -13,7 +13,7 @@
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/overview/</guid>
       <description>The modules in this reference section are broken down into two types:
- processing modules These modules are used exclusively in the darkroom view to perform pixel operations on your image. Together they form the pixelpipe. utility modules These modules may be used in any darktable view. They perform other ancillary functions related to managing the image metadata and tags, editing history, pixel pipeline order, snapshots and duplicates, image export and so on.</description>
+ processing modules These modules are used exclusively in the darkroom view, and each performs its set of pixel processing operations on the image before passing the image up to the next modules so it can add its processing on top. Together this set of processing steps performed by each module forms the pixelpipe. utility modules These modules may be used in any darktable view.</description>
     </item>
     
   </channel>

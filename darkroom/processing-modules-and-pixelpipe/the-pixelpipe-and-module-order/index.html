@@ -4153,7 +4153,7 @@
     </h1>
 
     <p>The ordered sequence of <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> operating on an input file to generate an output image is known as the &ldquo;pixelpipe&rdquo;.</p>
-<p>The order of the pixelpipe is represented graphically by the order in which modules are presented in the user interface &ndash; the pixelpipe runs from the bottom to the top of the modules as they appear in the darkroom view (RAW image at the bottom of the pixelpipe and output image at the top).</p>
+<p>The order of the pixelpipe is represented graphically by the order in which modules are presented in the user interface &ndash; the pixelpipe starts with a RAW image at the bottom of the list, and applies the processing modules one by one, piling up layer upon layer of processing from the bottom up, until it reaches the top of the list, at which point we have a fully processed image.</p>
 <hr>
 <p><strong>Note:</strong> The order in which processing modules are executed exactly matches the order in which the modules appear in darktable&rsquo;s user interface. <strong>Changing the order of the modules in the user interface will change how your image is processed.</strong></p>
 <hr>

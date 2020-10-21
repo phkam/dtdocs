@@ -4152,7 +4152,8 @@
         the anatomy of a module
     </h1>
 
-    <p>The basic element of image processing in darktable is the <em>module</em>. In order to process a raw image a number of modules act on the input image in sequence, each performing a different <em>operation</em> on the image data.</p>
+    <p>The basic element of image processing in darktable is the <a href="/dtdocs/module-reference/processing-modules/"><em>processing module</em></a>. In order to process a raw image a number of modules act on the input image in sequence, each performing a different <em>operation</em> on the image data. For those familiar with Adobe Photoshop, the concept of a <em>processing module</em> in darktable is somewhat similar to an <em>adjustment layer</em> in that that are both making an adjustment to an image, and each one is building on top of all the processing steps that came before.</p>
+<p>There are also <a href="/dtdocs/module-reference/utility-modules/"><em>utility modules</em></a> in darktable, however these are not directly involved in the image processing, and are instead providing a GUI that allows you to manage your images, tag them, export them and so on.</p>
 <p>Every processing module executes independently in a similar manner:</p>
 <ol>
 <li>Receive <em>input data</em> from the last executed module</li>
