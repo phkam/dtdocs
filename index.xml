@@ -1494,7 +1494,7 @@ The buttons on the top-right allow you to create new duplicates of the current i
       <description>Export images that have been selected in the lighttable.
 Files can be exported to a file on disk, email, various on-line storage locations, a webalbum, or a book template.
 You can also press Ctrl+E within the darkroom mode to export the currently-edited image using the last settings from this module.
-module controls  target storage The type of location to store your selected images. A number of different back-ends are implemented, including file on disk, a LaTeX book template and various web albums.</description>
+module controls storage options  target storage The type of location to store your selected images. A number of different back-ends are implemented, including file on disk, a LaTeX book template and various web albums.</description>
     </item>
     
     <item>

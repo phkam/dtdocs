@@ -4162,6 +4162,7 @@
 <p>Files can be exported to a file on disk, email, various on-line storage locations, a webalbum, or a book template.</p>
 <p>You can also press <code>Ctrl+E</code> within the darkroom mode to export the currently-edited image using the last settings from this module.</p>
 <h1 id="module-controls">module controls</h1>
+<h2 id="storage-options">storage options</h2>
 <dl>
 <dt>target storage</dt>
 <dd>The type of location to store your selected images. A number of different back-ends are implemented, including file on disk, a LaTeX book template and various web albums. Depending on the selected target, you will be asked to provide additional information, like filenames, or account name and password.</dd>
@@ -4186,25 +4187,44 @@
 <li><em>skip</em>: Do not export images where the destination filename already exists.</li>
 </ul>
 </dd>
+</dl>
+<h2 id="format-options">format options</h2>
+<dl>
 <dt>file format</dt>
 <dd>Images can be exported to various file formats. Depending on the chosen format additional parameters may appear. For some formats you need to choose the desired bit depth and compression method.</dd>
 <dt>quality</dt>
 <dd>For some export formats you can define an output quality. Higher values will lead to larger file sizes. The default quality (95) is a good setting for very high quality exports, e.g. for archiving or printing purposes. If you need a good compromise between size and quality, e.g. for online image display or uploads, you should consider a value of “90” instead.</dd>
-<dt>unit</dt>
+<dt>bit depth</dt>
+<dd>For some export formats you can define the number of bits used for each color channel. More bits means less posterization/color banding.</dd>
+<dt>compression</dt>
+<dd>For some export formats, it is possible to choose what sort of compression shall be applied.</dd>
+<dt>compression level</dt>
+<dd>For export formats where <em>compression</em> can be specified, the <em>compression level</em> can be used to specify how much compression to apply. The higher the level, the more the data will be compressed, at the cost of more CPU cycles.</dd>
+<dt>b&amp;w image</dt>
+<dd>For TIFF export format, it is possible to same a monochrome image. This setting controls whether the resulting file should contain RGB values to represent the shades of grey, or by writing a single greyscale channel. The latter option will reuslt in smaller files.</dd>
+</dl>
+<h2 id="global-options">global options</h2>
+<dl>
+<dt>set size</dt>
 <dd>Choose how to measure the maximum size of your exported image</dd>
 <dd>
 <ul>
-<li><em>pixels (file size)</em>: Enter the maximum width and height in pixels.</li>
+<li><em>in pixels (for file)</em>: Enter the maximum width and height in pixels. Entering a value of <code>0</code> places no restriction on that dimension.</li>
 </ul>
 </dd>
 <dd>
 <ul>
-<li><em>cm (print size)</em>: Enter the maximum width and height in cm and define the image&rsquo;s dpi. The equivalent size in pixels will be automatically calculated.</li>
+<li><em>in cm (for print)</em>: Enter the maximum width and height in cm and define the image&rsquo;s dpi. The equivalent size in pixels will be automatically calculated.</li>
 </ul>
 </dd>
 <dd>
 <ul>
-<li><em>in (print size)</em>: Enter the maximum width and height in inches and define the image&rsquo;s dpi. The equivalent size in pixels will be automatically calculated.</li>
+<li><em>in inch (for print)</em>: Enter the maximum width and height in inches and define the image&rsquo;s dpi. The equivalent size in pixels will be automatically calculated.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>by scale (for file)</em>: Enter a multiplier to specify by how much the output image should be scaled compared to the input image. For example, entering a value of <code>0.5</code> will result in an output image with only half the number of pixels along the width and height dimensions that were in the original image.</li>
 </ul>
 </dd>
 <dt>dpi</dt>
