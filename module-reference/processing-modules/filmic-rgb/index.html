@@ -4385,12 +4385,17 @@
 </dd>
 <dd>
 <ul>
-<li><em>max RGB</em> is the maximum value of the three channels R, G and B. This is the same behaviour as the previous version of the <em>filmic rgb</em> module. It tends to darken the blues, especially skies, and to yield halos/fringes, especially if some channels are clipped.</li>
+<li><em>no</em> means that the ratios between the RGB channels are not preserved. It will tend to saturate the shadows and desaturate the highlights. It can be helpful when there are out-of-gamut blues or reds.</li>
 </ul>
 </dd>
 <dd>
 <ul>
-<li><em>luminance Y</em> is a linear combination of the three channels R, G and B. It tends to darken and increase local contrast in the reds.</li>
+<li><em>max RGB</em> is the maximum value of the three channels R, G and B. This is the same behaviour as the previous version of the <em>filmic rgb</em> module. It tends to darken the blues, especially skies, and to yield halos/fringes, especially if some channels are clipped. It can also flatten the local contrast somewhat.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>luminance Y</em> is a linear combination of the three channels R, G and B. It tends to darken and increase local contrast in the reds, and tends not to behave so well with saturated and out-of-gamut blues.</li>
 </ul>
 </dd>
 <dd>
@@ -4399,7 +4404,12 @@
 </ul>
 </dd>
 <dd>
-<p>There is no &ldquo;right&rdquo; choice for the norm, and the appropriate choice depends strongly on the image to which it is applied - you should experiment and decide for yourself on case-by-case basis.</p>
+<ul>
+<li><em>RGB euclidean norm</em> has the property of being RGB-space-agnostic, so it will yeild the same results regardless which working color profile is used. It weighs more heavily on highlights than the power norm and gives more highlights desaturation, and is probably the closest to color film look.</li>
+</ul>
+</dd>
+<dd>
+<p>There is no &ldquo;right&rdquo; choice for the norm, and the appropriate choice depends strongly on the image to which it is applied - you should experiment and decide for yourself which setting gives the most pleasing result with the fewest artifacts.</p>
 </dd>
 <dt>contrast in highlights</dt>
 <dd>This control selects the desired curvature at the highlights end of the <em>filmic rgb</em> spline curve. Selecting <em>hard</em> (default) places a tighter constraint on the slope of the spline, which makes the curve sharper and hence introduces more tonal compression in the highlights. Selecting <em>soft</em> loosens this constraint, resulting in a gentler curve with less tonal compression in the highlights.</dd>
