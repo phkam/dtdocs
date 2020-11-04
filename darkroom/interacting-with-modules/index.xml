@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/darkroom/interacting-with-modules/module-header/</guid>
-      <description>At the top of each image operation module is the module header.
+      <description>At the top of each processing module is the module header.
  Click on the module name to expand the module and display the parameters that control its operation.
 By default darktable will only allow one processing module to be expanded at a time &amp;ndash; if you click the header of another module, the previously-opened module&amp;rsquo;s controls are collapsed. If you want expand more than one module, you may expand further modules with Shift+click and all previously expanded modules will remain open.</description>
     </item>
