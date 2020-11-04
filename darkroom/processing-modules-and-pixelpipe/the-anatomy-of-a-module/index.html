@@ -4155,14 +4155,29 @@
     <p>The basic element of image processing in darktable is the <a href="/dtdocs/module-reference/processing-modules/"><em>processing module</em></a>. In order to process a raw image a number of such modules act on the input image in sequence, each performing a different <em>operation</em> on the image data. For those familiar with Adobe Photoshop, the concept of a <em>processing module</em> in darktable is analagous to that of an <em>adjustment layer</em> in that both make an incremental adjustment to the image, building on top of the adjustments that came before.</p>
 <p>darktable also provides <a href="/dtdocs/module-reference/utility-modules/"><em>utility modules</em></a>, however these are not directly involved in image processing, and instead provide a GUI that allows you to manage your images, tag them, export them and so on.</p>
 <p>Every processing module executes independently in a similar manner:</p>
+<p>
+
+
+<img src="https://elstoc.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-anatomy-of-a-module/module-anatomy.png#w100" alt="module anatomy"  />
+
+</p>
 <ol>
-<li>Receive <em>input data</em> from the last executed module</li>
-<li>Perform some processing (the module&rsquo;s <em>operation</em>) on the input data to generate the output data. The <em>operation</em> is what distinguishes individual darktable modules from one another. See <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> for details of the available processing modules.</li>
-<li>Modify the module&rsquo;s output data (if required) by applying a <a href="/dtdocs/darkroom/masking-and-blending/masks/"><em>mask</em></a>, which is used to selectively apply (or partially apply) the module&rsquo;s operation to only some parts of the image.</li>
-<li>Modify the [masked] output data (if required) by combining it with the input data using a <a href="/dtdocs/darkroom/masking-and-blending/blend-modes/"><em>blending operator</em></a></li>
-<li>Pass the output to the next module</li>
+<li>
+<p>Receive <em>input data</em> from the last executed module. Perform some processing on that data to generate the module&rsquo;s <em>output data</em>. This <em>operation</em> is what distinguishes individual <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> from one another.</p>
+</li>
+<li>
+<p>Generate a mask, which defines an <em>opacity</em> for each pixel in the image. The opacity is later used to control how strongly the module&rsquo;s operation is applied to each part of the image.</p>
+<p>The user may define their own mask by drawing shapes on the image or by using the properties of the individual pixels of either the input or output image (see <a href="/dtdocs/darkroom/masking-and-blending/masks/"><em>masks</em></a> for details). This mask may then be further modified with a global opacity setting, which impacts every pixel equally.</p>
+<p>If no drawn/parametric mask is used, the output of this step is a mask where every pixel has the same opacity (governed by the global opacity setting). If no opacity is defined (no blending is performed) a global opacity of 1.0 (or 100%) is assumed.</p>
+</li>
+<li>
+<p>Combine the module&rsquo;s <em>input data</em> and <em>output data</em> using a <a href="/dtdocs/darkroom/masking-and-blending/blend-modes/"><em>blending operator</em></a> to produce the <em>blended output</em>.</p>
+</li>
+<li>
+<p>Combine the <em>blended output</em> with the <em>mask</em> and the <em>input data</em>, to produce the <em>final output</em>, which is passed to the next module. This combination is performed pixel-by-pixel, where a mask opacity of 100% returns the <em>blended output</em> for that pixel, an opacity of 0 returns the <em>input data</em> for that pixel and an intermediate opacity blends the two proportionally.</p>
+</li>
 </ol>
-<p>Steps 3 and 4 are not supported by all modules. For example, the <a href="/dtdocs/module-reference/processing-modules/demosaic/"><em>demosaic</em></a> module must be applied to the entire raw file in order to produce a legible image so it does not make sense to mask or blend its output.</p>
+<p>Steps 2 and 3 are not supported by all modules. For example, the <a href="/dtdocs/module-reference/processing-modules/demosaic/"><em>demosaic</em></a> module must be applied to the entire raw file in order to produce a legible image so it does not make sense to mask or blend its output.</p>
 <p>Each of the above steps is defined in more detail in subsequent sections.</p>
 
 
