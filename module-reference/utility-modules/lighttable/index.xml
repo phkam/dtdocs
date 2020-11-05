@@ -35,7 +35,7 @@ A GPS receiver calculates its current position based on the information it recei
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/history-stack/</guid>
       <description>Manipulate the history stack of one or more selected images.
-module controls  copy Copy the history stack of the selected image. A dialog appears within which you may choose which items from the history stack to include. If more than one image is selected, the history stack is taken from the image that was selected first. Double-clicking on an item copies that item only and immediately closes the dialog. copy all Copy the complete history stack from the selected image; all items will be included.</description>
+module controls  copy parts&amp;hellip; Copy the history stack of the selected image. A dialog appears within which you may choose which items from the history stack to include. If more than one image is selected, the history stack is taken from the image that was selected first. Double-clicking on an item copies that item only and immediately closes the dialog.</description>
     </item>
     
     <item>

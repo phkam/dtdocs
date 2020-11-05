@@ -4161,17 +4161,30 @@
     <p>Manipulate the history stack of one or more selected images.</p>
 <h1 id="module-controls">module controls</h1>
 <dl>
-<dt>copy</dt>
+<dt>copy parts&hellip;</dt>
 <dd>Copy the history stack of the selected image. A dialog appears within which you may choose which items from the history stack to include. If more than one image is selected, the history stack is taken from the image that was selected first. Double-clicking on an item copies that item only and immediately closes the dialog.</dd>
-<dt>copy all</dt>
-<dd>Copy the complete history stack from the selected image; all items will be included. If more than one image is selected, the history stack is taken from the image that was selected first.</dd>
+<dt>copy</dt>
+<dd>Copy the complete history stack from the selected image; all items will be included except for certain items deemed unsafe to copy. If more than one image is selected, the history stack is taken from the image that was selected first.</dd>
+<dd>
+<p>Information relating to the internal display encoding and the mask management functions will not be copied, and the following modules will also be excluded from the <em>copy all</em> operation:</p>
+</dd>
+</dl>
+<ul>
+<li><a href="/dtdocs/module-reference/processing-modules/orientation/"><em>orientation</em></a></li>
+<li><a href="/dtdocs/module-reference/processing-modules/lens-correction/"><em>lens correction</em></a></li>
+<li><a href="/dtdocs/module-reference/processing-modules/raw-black-white-point/"><em>raw black/white point</em></a></li>
+<li><a href="/dtdocs/module-reference/processing-modules/rotate-pixels/"><em>rotate pixels</em></a></li>
+<li><a href="/dtdocs/module-reference/processing-modules/scale-pixels/"><em>scale pixels</em></a></li>
+<li><a href="/dtdocs/module-reference/processing-modules/white-balance/"><em>white balance</em></a></li>
+</ul>
+<dl>
 <dt>compress history</dt>
 <dd>Generate the shortest history stack that reproduces the current image. If any module appears multiple times in the stack, these occurrences will be <em>compressed</em> into a single step in the history. <em>Beware, this action can not be undone!</em></dd>
 <dt>discard history</dt>
 <dd>Physically delete the history stack of the selected images. <em>Beware, this action can not be undone!</em></dd>
-<dt>paste</dt>
+<dt>paste parts&hellip;</dt>
 <dd>Paste a previously copied history stack onto all selected images. A dialog appears within which you may choose which items from the source history stack to include.</dd>
-<dt>paste all</dt>
+<dt>paste</dt>
 <dd>Paste all items of a copied history stack onto all selected images.</dd>
 <dt>mode</dt>
 <dd>This setting defines how the paste actions behave when applied to an image that already has a history stack. In simple terms the “overwrite” mode deletes the previous history stack before pasting, whereas “append” will concatenate the two history stacks together.</dd>
