@@ -4162,11 +4162,14 @@
 <h1 id="module-controls">module controls</h1>
 <dl>
 <dt>copy parts&hellip;</dt>
-<dd>Copy the history stack of the selected image. A dialog appears within which you may choose which items from the history stack to include. If more than one image is selected, the history stack is taken from the image that was selected first. Double-clicking on an item copies that item only and immediately closes the dialog.</dd>
+<dd>Copy the history stack of the selected image. A dialog appears within which you may choose which items from the history stack to include. If more than one image is selected, the history stack is taken from the image that was selected first. Double-click on an item to copy that item only and immediately close the dialog.</dd>
 <dt>copy</dt>
-<dd>Copy the complete history stack from the selected image; all items will be included except for certain items deemed unsafe to copy. If more than one image is selected, the history stack is taken from the image that was selected first.</dd>
+<dd>Copy the complete history stack from the selected image. If more than one image is selected, the history stack is taken from the image that was selected first.</dd>
 <dd>
-<p>Information relating to the internal display encoding and the mask management functions will not be copied, and the following modules will also be excluded from the <em>copy all</em> operation:</p>
+<p>Information relating to internal display encoding and mask management is considered unsafe to automatically copy to other images and will therefore not be copied when using this button. These modules may still be pasted onto images using the <em>paste parts&hellip;</em> button.</p>
+</dd>
+<dd>
+<p>The following modules will be excluded from the <em>copy</em> operation:</p>
 </dd>
 </dl>
 <ul>
