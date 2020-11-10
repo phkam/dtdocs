@@ -1171,8 +1171,7 @@ As an example, the following program will print the list of all images in your l
       <guid>https://elstoc.github.io/dtdocs/guides-tutorials/other-resources/</guid>
       <description>The official places to obtain information concerning darktable are the following:
  darktable.org GitHub wiki  The following articles provide some useful background information about darktable&amp;rsquo;s scene-referred workflow:
- darktable 3.0 for dummies in 3 modules darktable 3.0 for dummies &amp;ndash; hardcore edition darktable 3.0: RGB or Lab? Which modules? Help!  The following resources can provide a deeper understanding of the functionality of some specific processing modules:
- Image processing and the pixel pipeline in darktable 3.</description>
+ darktable 3.0 for dummies in 3 modules darktable 3.0 for dummies &amp;ndash; hardcore edition darktable 3.0: RGB or Lab? Which modules? Help! darktable&amp;rsquo;s filmic FAQ Introducing color calibration module  The following resources can provide a deeper understanding of the functionality of some specific processing modules:</description>
     </item>
     
     <item>
@@ -1307,6 +1306,16 @@ All images imported imported into darktable are stored in darktable&amp;rsquo;s 
 This module can be used to revert parasitic color casts or to enhance the visual atmosphere of an image using color grading, a popular technique in the cinema industry.
 overview The color balance module allows you to shift colors selectively by luminance range: shadows, mid-tones, and highlights. It does so using two different methods:
  lift, gamma, gain the classic method, which allows a more separated control of shadows versus highlights.</description>
+    </item>
+    
+    <item>
+      <title>color calibration</title>
+      <link>https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-calibration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-calibration/</guid>
+      <description>The color calibration module takes Red, Green and Blue color channels as inputs, and uses matrix multiplication to mix those channels together and produce output Red, Green and Blue channels. This simple yet powerful technique can be used to achive a number of things:
+  It can be used as a simple channel mixer, similar to the channel mixer module. One difference is that it doesn&amp;rsquo;t clip the channels exceeding a value of 1.</description>
     </item>
     
     <item>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>darktable user manual - styles</title>
+<title>darktable user manual - color calibration</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -1391,7 +1391,7 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-calibration/" class="">
+<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-calibration/" class=" active">
     color calibration
 </a>
 
@@ -2721,7 +2721,7 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/styles/" class=" active">
+<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/styles/" class="">
     styles
 </a>
 
@@ -4148,13 +4148,7 @@
 
 
 
-
-
-
-
-<a href='https://elstoc.github.io/dtdocs/'>Home</a> / <a href='https://elstoc.github.io/dtdocs/module-reference/'>Module Reference</a> / <a href='https://elstoc.github.io/dtdocs/module-reference/utility-modules/'>utility modules</a> / <a href='https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/'>lighttable</a> / styles
-
-
+<a href='https://elstoc.github.io/dtdocs/'>Home</a> / <a href='https://elstoc.github.io/dtdocs/module-reference/'>Module Reference</a> / <a href='https://elstoc.github.io/dtdocs/module-reference/processing-modules/'>processing modules</a> / color calibration
 
 
 
@@ -4170,32 +4164,134 @@
 
 
     <h1 class="title">
-        styles
+        color calibration
     </h1>
 
-    <p>Create named styles from selected images' <a href="/dtdocs/darkroom/processing-modules-and-pixelpipe/history-stack/">history stacks</a> and apply styles to selected images.</p>
-<p>Styles can either be created within this panel or in the <a href="/dtdocs/module-reference/utility-modules/darkroom/history-stack/">history stack</a> module in the darkroom.</p>
-<p>A list of all available styles is displayed at the top of the module. A search field above the list allows you to locate a style by name or description. This module also allows styles to be edited and deleted.</p>
-<p>Double-click on a style name to apply that style to all selected images.  A style may also be applied to all selected images by pressing a shortcut key assigned to it (see <a href="/dtdocs/preferences-settings/shortcuts/"><code>preferences &gt; shortcuts</code></a>) while in either lighttable or darkroom view.</p>
+    <p>The <em>color calibration</em> module takes Red, Green and Blue color channels as inputs, and uses matrix multiplication to mix those channels together and produce output Red, Green and Blue channels. This simple yet powerful technique can be used to achive a number of things:</p>
+<ul>
+<li>
+<p>It can be used as a simple channel mixer, similar to the <a href="/dtdocs/module-reference/processing-modules/channel-mixer/"><em>channel mixer</em></a> module. One difference is that it doesn&rsquo;t clip the channels exceeding a value of 1.0, meaning it is well suited for use as part of a linear scene-referred pipeline. Another difference is that the <em>color calibration</em> module offers a &ldquo;normalisation&rdquo; feature to make it easier to adjust the mixer coefficients while minimising the imapact on other image attributes such as overall brightness.</p>
+</li>
+<li>
+<p>It can be used to white balance an image. In this case, it needs to work in tandem with the <a href="/dtdocs/module-reference/processing-modules/white-balance/">_white balance</a> module, The <em>white balance</em> module does an initial rough white balance (assuming a D65 illuminant was used to light the scene), as this is required for the demosac module to work effectively. The <em>color calibration</em> will then perfom a more accurate white balance after the input color profile has been applied, using more sophisticated algorithms than those available in the <em>white balance</em> module_. To ensure that the two modules work together properly and don&rsquo;t conflict, <a href="/dtdocs/preferences-settings/processing/"><code>preferences &gt; processing &gt; auto-apply chromatic adaptation defaults</code></a> controls whether the tehincal white balancing is shared between the _color calibration_ and _white balance_ module, or whether the _white balance_ module will be soley responsible for technical white balancing. Neither option precludes the use of other modules such as <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> further down the pixel pipeline for creative color grading.</p>
+</li>
+<li>
+<p>As well as mixing the R, G &amp; B channels directly, the <em>color calibration</em> module can make adjustments to color saturation and brightness of the image, based on the amounts of the red, green and blue components in each pixel.</p>
+</li>
+<li>
+<p>Like the <em>channel mixer</em> module, the <em>color calibration</em> module can be used to combine the R, G &amp; B channels by different weightings in order to produce a monochrome image.</p>
+</li>
+</ul>
+<h1 id="chromatic-adaptation-transformation-white-balancing">Chromatic Adaptation Transformation (white balancing)</h1>
+<p>If the white balancing (Chromatic Adaptation Transformation, or CAT) capabilities have been enabled by setting <a href="/dtdocs/preferences-settings/processing/"><code>preferences &gt; processing &gt; auto-apply chromatic adaptation defaults</code></a> to <em>modern</em>, then the <em>white balance</em> module is set up to do a simple white balance assuming a D65 illuminant, based on the standard matrix coefficients of the camera concerned, so that the demosaicing of the raw image can be performed. The rest of the white balancing is deferred to the <em>color calibration</em> module. When using <em>color calibration</em>, the white balancing is done in a specially designed RGB space known as a <em>CAT space</em>. The CAT space could be CAT16 from the CIECAM 2016 color model, Bradfield linear from the ICC v4 standard, Bradfield non-linear, or even XYZ (this last one is mainly for testing and debugging).</p>
+<p>Once the CAT space is chosen, the white balancing method used within that space can be:</p>
+<ul>
+<li>
+<p>Standardised CIE illuminants (by <em>illuminant</em> we mean what was the color of the light that was used to illuminate the scene). These include daylight, incandescent, fluorescent, equi-energy and black-body illuminants, as well as LED lighting. These values are all pre-computed, so as long as your camera sensor is properly profiled, you can just use them as-is.</p>
+</li>
+<li>
+<p>For the Daylight and Planckian Black Body illuminants, because they lie near the Planckian locus, it makes sense to talk about &ldquo;color temperature&rdquo;, and so a slider is provided to allow some fine adjustment along that locus. For other illuminants, the concept of &ldquo;color temperature&rdquo; doesn&rsquo;t make sense, and so there is no color temperature slider presented. If an illuminant that does not fall near the Planckian locus, then adjustments can be made manually us mentioned below.</p>
+</li>
+<li>
+<p>Manual color picker: if there is a neutral grey patch available in the image, that the color of the illuminant can be selected manually selected using the color picker, or can be manual specified using hue and saturation sliders. In cases wherre there is no suitable reference patch, the following two AI methods will likely give a better result, although which method is better will depend on the specifics of the image. These manual methods replace the &ldquo;temperature&rdquo; and &ldquo;tint&rdquo; sliders you may see in other software, since the concept of color temperature is no longer meaningful once we move too far off the Planckian locus.</p>
+</li>
+<li>
+<p>AI Auto-detection based on image surfaces: this gets the average color of image patches that have a high covariance between chroma channels in Yuv space and a high intra-channel variance. In other words, it looks for parts of the image that appear as though they should be grey, and discards flat colored surfaces that may be legitimately non-grey. It also discards chroma noise as well as chromatic aberrations.</p>
+</li>
+<li>
+<p>AI Auto-detection based on edges in the image: unlike the <em>white balance</em> module auto-white balcing which relies on the &ldquo;Grey World&rdquo; assumption, this method of auto-detecting a suitable illuminant uses the &ldquo;Grey Edge&rdquo; assumption by calculating this gets the Minkowski p-norm (p = 8) of the laplacian and trying to minimize it. That is to say, it assumes that edges between objects should have the same gradient over all channels (grey edges). It is more sensitive to noise than the previous surface-based detection method.</p>
+</li>
+</ul>
+<p>Another important CAT-related feature <em>gamut handling</em>. When performing a white balance, colors in the image can get pushed out of gamut (that is, it may no longer be possible to represent certain colors as a valid [R,G,B] triplet with positive values in the working color space). By using a combination of <em>gamut compression</em> (which uses XYZ scaling) and <em>negative RGB vaue clipping</em>, the colors can be squeezed back into gamut, albeit with some loss of hue accuracy. One example where this feature is very useful is for scenes where there are blue LED lights, which are often quite problematic and result in ugly gamut clipping in the final image.</p>
+<p>It is also worth noting that, unlike the <em>white balance</em> module,  <em>color calibration</em> module works with masks. This means you can set up parametric and drawn masks to single out and apply CAT one one part of the image, and then create a second instance of the module to apply a CAT for a different iluminant on the rest of the image by inverting the mask.</p>
+<h1 id="rgb-matrix-multiplication">RGB matrix multiplication</h1>
+<p>At its most basic level, you can think of the <em>color calibration</em> module as a type of matrix multiplication between a 3x3 matrix and the input [R G B] values. This is in fact very similar to what a matrix-based ICC color profile does, except that the user can input the matrix coefficients via the darktable GUI rather than reading the coefficients from a file.</p>
+<pre><code>┌ R_out ┐     ┌ Rr Rg Rb ┐     ┌ R_in ┐
+│ G_out │  =  │ Gr Gg Gb │  X  │ G_in │
+└ B_out ┘     └ Br Bg Bb ┘     └ B_in ┘
+</code></pre><p>If, for example, you&rsquo;ve been provided with a matrix to transform from one color space to another, you can enter the matrix coefficients into the <em>channel mixer</em> as follows:</p>
+<ul>
+<li>select the <em>red</em> tab and then set the Rr, Rg &amp; Rb values using the red, green and blue input sliders</li>
+<li>select the <em>green</em> tab and then set the Gr, Gg &amp; Gb values using the red, green and blue input sliders</li>
+<li>select the <em>blue</em> tab and then set the Br, Bg &amp; Bb values using the red, green and blue input sliders</li>
+</ul>
+<p>By default, the mixing function in <em>color calibration</em> just copies the input [R G B] channels straight over to the matching output channels. This is equivalent to multiplying by the identify matrix:</p>
+<pre><code>┌ R_out ┐     ┌ 1  0  0 ┐      ┌ R_in ┐
+│ G_out │  =  │ 0  1  0 │   X  │ G_in │
+└ B_out ┘     └ 0  0  1 ┘      └ B_in ┘
+</code></pre><p>To get an intuitive understanding of how the mixing sliders on the red, greeen and blue tabs behave:</p>
+<ul>
+<li>for the <em>red</em> destination, adjusting sliders to the right will make the R, G or B areas of the image more red. Moving the slider to the left will make those areas more cyan.</li>
+<li>for the <em>green</em> destination, adjusting sliders to the right will make the R, G or B areas of the image more green. Moving the slider to the left will make those areas more magenta.</li>
+<li>for the <em>blue</em> destination, adjusting sliders to the right will make the R, G or B areas of the image more blue. Moving the slider to the left will make those areas more yellow.</li>
+</ul>
+<h1 id="brightness-and-colorfulness">brightness and colorfulness</h1>
+<p>The brightness and colorfulness (color saturation) of pixels in an image can also be adjusted. This uses the same basic algorithm as what the <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module uses for tone mapping (which preserved RGB ratios) and for midtones saturation (which massages the RGB ratios). For example, if you want to darken the pixels which have a high blue component and brighten the ones having a high red component, you can do this by decreasing the blue slider and increasing the red slider on the brightness tab. Similarly, on the colorfulness tab, you can influence the overall color saturation of individual pixels based on how much of one component or another each pixel has.</p>
+<h1 id="monochrome">monochrome</h1>
+<p>Another very useful application of <em>color calibration</em> is the ability to mix the channels together to produce a grayscale output &ndash; a monochrome image. Select the <em>gray</em> tab, and set the red, green and blue sliders to control how much each
+channel contributes to the brightness of the output. This is equivalent to the following matrix multiplication:</p>
+<pre><code>GRAY_out  =   [ r  g  b ]  X  ┌ R_in ┐
+                              │ G_in │
+                              └ B_in ┘
+</code></pre><p>When dealing with skin tones, the relative weights of the three channels will affect the level of detail in the image. Placing more weight on red (e.g. <code>[0.9, 0.3, -0.3]</code>) will make for smooth skin tones, whereas emphasising green (e.g. <code>[0.4, 0 .75, -0.15]</code>) will bring out more detail. In both cases the blue channel is reduced to avoid emphasising unwanted skin texture.</p>
 <h1 id="module-controls">module controls</h1>
+<h2 id="cat-tab">CAT tab</h2>
+<p>This tab will only be available if <a href="/dtdocs/preferences-settings/processing/"><code>preferences &gt; processing &gt; auto-apply chromatic adaptation defaults</code></a> is set to <em>modern</em>. In that case, the <em>white balance</em> module will be forced into <em>camera reference</em> (D65 illuminant) mode.</p>
 <dl>
-<dt>create duplicate</dt>
-<dd>When applying a style to images, tick this box to create a duplicate of each image before applying the chosen style to that duplicate. Disable this option to apply the chosen style directly to the selected images. Beware that in this case any existing history stack is overwritten (depending on the mode &ndash; see below) and cannot be recovered.</dd>
-<dt>mode</dt>
-<dd>As with the <a href="/dtdocs/module-reference/utility-modules/lighttable/history-stack/">history stack</a> module, this combobox allows you to either &ldquo;append&rdquo; the style to the current history stack or to &ldquo;overwrite&rdquo; the history stack of the target image.</dd>
-<dt>create</dt>
-<dd>Create new style(s) using the history stack of the selected image(s). For each selected image a style creation window is shown. You must supply a unique name for each new style and you can also add an optional description. You will be given the option to de-select any history stack items that you don&rsquo;t want to be part of the created style.</dd>
-<dd>
-<p>The panel supports a hierarchical view, meaning that you can create categories using the pipe symbol “|” as a separator. For example “print|tone curve +0.5 EV” will create a &ldquo;print&rdquo; category with a style of &ldquo;tone curve +0.5 EV&rdquo; below it.</p>
-</dd>
-<dt>edit</dt>
-<dd>Select &ldquo;edit&rdquo; to bring up a dialog which allows you to include or exclude specific items from the stack of an existing style. Check the “duplicate” option if you want to create a new style, instead of overwriting the existing one. In this case you will need to provide a unique name for the new style.</dd>
-<dt>remove</dt>
-<dd>Delete the selected style, without any further prompt.</dd>
-<dt>import</dt>
-<dd>Import a previously saved style. Styles are stored as XML files with the extension <code>.dtstyle</code>.</dd>
-<dt>export</dt>
-<dd>Save the selected style to disk as a <code>.dtstyle</code> file. This allows styles to be published and shared with other users.</dd>
+<dt>adaptation</dt>
+<dd>This menu selects the color space in which the module will do its work, for the chromatic adaptation transform as well as any channel mixing. It can work in the linear or non-linear Bradfield LMS color spaces, in the CIECAM16 LMS color space, or it can work directly in the XYZ color space (scaled by luminance Y). It is also possible to disable CAT white balancing altogether, in which case the module works in XYZ space.</dd>
+<dt>color picker icon</dt>
+<dd>Used to select a region in the image for spot white-balance, or to restrict the region considered by the AI auto-detect algorithms. The color swatch next to this icon shows the color of the illuminant (ie. the color of the light that was used to light up the scene) which will be used in the CAT compensation.</dd>
+<dt>illuminant</dt>
+<dd>This menu selects the type of illuminant what should be assumed when doing the white balancing. It can be set to:</dd>
+</dl>
+<ul>
+<li><em>same as pipeline (D50)</em>, where the D65 illuminant white balance parameters for the camera that was set by the <em>white balance</em> module is adjusted to a D50 illuminant</li>
+<li>one of the CIE standard illuminants (daylight, incandescent, fluorescent, equi-energy, or black body), or a non-standard <em>LED light</em> illuminant.</li>
+<li><em>custom</em>, in which case the illuminant color can be set using the color picker icon, or by setting the hue and chroma (saturation) in LCh perceptual color space using the sliders</li>
+<li><em>(AI) detect from image surfaces</em>, where the white balance is auto-detected, placing a greater weighting on colors in the image close to grey</li>
+<li><em>(AI) detect from image edges</em>, where the auto-balance is auto-detected, assuming the average differences across edges in the image are achromatic.</li>
+<li><em>as shot in camera</em>, in which case the illuminant will be calculated based on the white balance settings provided by the camera.</li>
+</ul>
+<dl>
+<dt>temperature</dt>
+<dd>For the standard illuminants, the <em>temperature</em> slider allows you to adjust the color temperature of the illuminant. Moving the slider to the right means the illuminant is assumed to have been more blue, which will make the white-balanced picture appear warmer/more red after the white balance compensation in applied. Moving the slider to the left sets the illuminant to a more red color, which makes the image appear cooler/mor blue after compensation.</dd>
+<dt>hue</dt>
+<dd>For custom white balance, the <em>hue</em> slider allows the hue of illuminant color in LCh color space to be manually set.</dd>
+<dt>chroma</dt>
+<dd>For custom white balance, the <em>chroma</em> slider allows the Chroma (or saturation) of illuminant color in LCh color space to be manually set.</dd>
+<dt>gamut compression</dt>
+<dd>Allows the color gamut to be compressed in order to bring out-of-gamut colors back into gamut, and avoid nasty &ldquo;color clipping&rdquo;.</dd>
+</dl>
+<h2 id="r-g-and-b-tabs">R, G and B tabs</h2>
+<p>These tabs allow the red, green and blue channel outputs for each pixel to be make up of a weighted sum of the red, green and blue channel inputs. Each tab has 3 sliders, and there are 3 tabs, so the sliders are effectively setting the coefficients of a 3x3 matrix, just like in the <em>channel mixer</em> module</p>
+<dl>
+<dt>input red/green/blue</dt>
+<dd>These sliders set the mix of how heavily the input R, G and B channels influence the output channel relating to the tab concerned.</dd>
+<dt>normalize channels</dt>
+<dd>If this checkbox is selected, then the coefficients set on the sliders for this tab are normalised to try to preserve the overall brightness of this channel in the final image as compared to the input image.</dd>
+</dl>
+<h2 id="colorfulness-tab">colorfulness tab</h2>
+<dl>
+<dt>input red/green/blue</dt>
+<dd>these sliders allow the color saturation of pixels in the image to be adjusted, depending on how much red, green or blue components those pixels contain. For example, adjusting the <em>input red</em> slider will affect the color saturation of pixels containing a lot of red much more than colors containing only a small amount of red.</dd>
+<dt>normalize channels</dt>
+<dd>If this checkbox is selected, try to keep the average amount of overall saturation in the image constant between the input and output images.</dd>
+</dl>
+<h2 id="brightness-tab">brightness tab</h2>
+<dl>
+<dt>input red/green/blue</dt>
+<dd>these sliders allow the brightness of certain colors in the image to be adjusted, depending on how much red, green or blue components those colors contain. For example, adjusting the <em>input red</em> slider will affect the brightness of colors containing a lot of red much more than colors containing only a small amount of red. When darkening/brightening a pixel, the ratio of the R, G and B channels for that pixel is maintained, in order to preserve the hue.</dd>
+<dt>normalize channels</dt>
+<dd>If this checkbox is selected, try to keep the average overall brightness of the image constant between the input and output images.</dd>
+</dl>
+<h2 id="grey-tab">grey tab</h2>
+<p>This tab is useful to convert a color image into a greyscale image.</p>
+<dl>
+<dt>input red/green/blue</dt>
+<dd>these sliders allow a weight to be set for how much each of the R, G and B channels contribute to the grey level of the output. The image will only be converted to monochrome if one of the sliders is moved away from zero. Adding more blue will tend to bring out more details, adding more red will tend to smooth over skin tones.</dd>
+<dt>normalize channels</dt>
+<dd>If this checkbox is selected, try to keep the overall brightness of the monochrome image constant as you adjust the sliders.</dd>
 </dl>
 
 
@@ -4206,14 +4302,14 @@
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/selected-image/" class="next">&lt; selected images</a>
+	<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-balance/" class="next">&lt; color balance</a>
 	
 	
     </div>
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/utility-modules/lighttable/timeline/" class="prev">timeline &gt;</a>
+	<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-contrast/" class="prev">color contrast &gt;</a>
 	
 	
     </div>
