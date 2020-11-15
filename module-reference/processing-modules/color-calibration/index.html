@@ -4182,6 +4182,11 @@
 <p>Like the <em>channel mixer</em> module, the <em>color calibration</em> module can be used to combine the R, G &amp; B channels by different weightings in order to produce a monochrome image.</p>
 </li>
 </ul>
+<p>Note that the all the channel mixing is done in the adaptation color space. If you want to disable white balancing in this instance of the <em>color calibration</em> module and work directly in the pipeline RGB color space, you need to set the <em>adaptation</em> parameter to <em>bypass</em>. If you do want to work in an adaptation space (eg. XYZ) but don&rsquo;t want to do white balancing in this instance of the module, then choose the desired <em>adaptation</em> color space and set the <em>illiminant</em> to <em>same as pipeline (D50)</em>.</p>
+<hr>
+<p><strong>Note:</strong> if you have two instances of <em>color calibration</em> module both set up to do white balancing, a warning icon is displayed next to the module title and a warning is message is given in the module GUI. In such cases, you normally need to disable CAT in one of the instances in order to avoid double-corrections. An exception to this might be if you use masks to set up that the two instances do white balancing in non-overlapping areas of the image.</p>
+<p>You will also see a warning if you try to do white balancing in a <em>color calibration</em> module, and the <em>white balance</em> module is not set to <em>camera reference</em>. In this case, either set the <em>white balance</em> module to <em>camera reference</em> mode, or disable CAT in the <em>color calibration</em> module.</p>
+<hr>
 <h1 id="chromatic-adaptation-transformation-white-balancing">Chromatic Adaptation Transformation (white balancing)</h1>
 <p>If the white balancing (Chromatic Adaptation Transformation, or CAT) capabilities have been enabled by setting <a href="/dtdocs/preferences-settings/processing/"><code>preferences &gt; processing &gt; auto-apply chromatic adaptation defaults</code></a> to <em>modern</em>, then the <em>white balance</em> module is set up to do a simple white balance assuming a D65 illuminant, based on the standard matrix coefficients of the camera concerned, so that the demosaicing of the raw image can be performed. The rest of the white balancing is deferred to the <em>color calibration</em> module. When using <em>color calibration</em>, the white balancing is done in a specially designed RGB space known as a <em>CAT space</em>. The CAT space could be CAT16 from the CIECAM 2016 color model, Bradfield linear from the ICC v4 standard, Bradfield non-linear, or even XYZ (this last one is mainly for testing and debugging).</p>
 <p>Once the CAT space is chosen, the white balancing method used within that space can be:</p>
@@ -4246,7 +4251,7 @@ channel contributes to the brightness of the output. This is equivalent to the f
 <dd>This menu selects the type of illuminant what should be assumed when doing the white balancing. It can be set to:</dd>
 </dl>
 <ul>
-<li><em>same as pipeline (D50)</em>, where the D65 illuminant white balance parameters for the camera that was set by the <em>white balance</em> module is adjusted to a D50 illuminant</li>
+<li><em>same as pipeline (D50)</em>, which disables any white balancing from being sone in this instance of the module.</li>
 <li>one of the CIE standard illuminants (daylight, incandescent, fluorescent, equi-energy, or black body), or a non-standard <em>LED light</em> illuminant.</li>
 <li><em>custom</em>, in which case the illuminant color can be set using the color picker icon, or by setting the hue and chroma (saturation) in LCh perceptual color space using the sliders</li>
 <li><em>(AI) detect from image surfaces</em>, where the white balance is auto-detected, placing a greater weighting on colors in the image close to grey</li>
@@ -4264,7 +4269,7 @@ channel contributes to the brightness of the output. This is equivalent to the f
 <dd>Allows the color gamut to be compressed in order to bring out-of-gamut colors back into gamut, and avoid nasty &ldquo;color clipping&rdquo;.</dd>
 </dl>
 <h2 id="r-g-and-b-tabs">R, G and B tabs</h2>
-<p>These tabs allow the red, green and blue channel outputs for each pixel to be make up of a weighted sum of the red, green and blue channel inputs. Each tab has 3 sliders, and there are 3 tabs, so the sliders are effectively setting the coefficients of a 3x3 matrix, just like in the <em>channel mixer</em> module</p>
+<p>These tabs allow the R, G and B channel outputs for each pixel to be make up of a weighted sum of the R, G and B channel inputs. Each tab has 3 sliders, and there are 3 tabs, so the sliders are effectively setting the coefficients of a 3x3 matrix, just like in the <em>channel mixer</em> module</p>
 <dl>
 <dt>input red/green/blue</dt>
 <dd>These sliders set the mix of how heavily the input R, G and B channels influence the output channel relating to the tab concerned.</dd>
@@ -4281,7 +4286,7 @@ channel contributes to the brightness of the output. This is equivalent to the f
 <h2 id="brightness-tab">brightness tab</h2>
 <dl>
 <dt>input red/green/blue</dt>
-<dd>these sliders allow the brightness of certain colors in the image to be adjusted, depending on how much red, green or blue components those colors contain. For example, adjusting the <em>input red</em> slider will affect the brightness of colors containing a lot of red much more than colors containing only a small amount of red. When darkening/brightening a pixel, the ratio of the R, G and B channels for that pixel is maintained, in order to preserve the hue.</dd>
+<dd>these sliders allow the brightness of certain colors in the image to be adjusted, depending on how much R, G or B components those colors contain. For example, adjusting the <em>input red</em> slider will affect the brightness of colors containing a lot of R channel much more than colors containing only a small amount of R channel. When darkening/brightening a pixel, the ratio of the R, G and B channels for that pixel is maintained, in order to preserve the hue.</dd>
 <dt>normalize channels</dt>
 <dd>If this checkbox is selected, try to keep the average overall brightness of the image constant between the input and output images.</dd>
 </dl>
