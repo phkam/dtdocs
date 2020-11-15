@@ -77,8 +77,8 @@ overview The color balance module allows you to shift colors selectively by lumi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-calibration/</guid>
-      <description>The color calibration module takes Red, Green and Blue color channels as inputs, and uses matrix multiplication to mix those channels together and produce output Red, Green and Blue channels. This simple yet powerful technique can be used to achive a number of things:
-  It can be used as a simple channel mixer, similar to the channel mixer module. One difference is that it doesn&amp;rsquo;t clip the channels exceeding a value of 1.</description>
+      <description>A fully-featured color-space correction, white balance adjustment and channel mixer module. The color calibration module takes Red, Green and Blue color channels as inputs, and uses matrix multiplication to mix those channels together and produce output Red, Green and Blue channels. This simple yet powerful technique can be used in the following ways:
+  As a simple channel mixer, adjusting the output R, G and B channels based on the input R, G and B channels.</description>
     </item>
     
     <item>
