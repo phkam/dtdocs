@@ -77,8 +77,8 @@ overview The color balance module allows you to shift colors selectively by lumi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elstoc.github.io/dtdocs/module-reference/processing-modules/color-calibration/</guid>
-      <description>A fully-featured color-space correction, white balance adjustment and channel mixer module. The color calibration module takes Red, Green and Blue color channels as inputs, and uses matrix multiplication to mix those channels together and produce output Red, Green and Blue channels. This simple yet powerful module can be used in the following ways:
-  To adjust the white balance, working in tandem with the white balance module. In this case, the white balance module performs an initial white balance step (which is still required in order for the demosac module to work effectively).</description>
+      <description>A fully-featured color-space correction, white balance adjustment and channel mixer. This simple yet powerful module can be used in the following ways:
+  To adjust the white balance (chromatic adaptation), working in tandem with the white balance module. In this case, the white balance module performs an initial white balance step (which is still required in order for the demosac module to work effectively). The color calibration module then calculates a more accurate white balance after the input color profile has been applied.</description>
     </item>
     
     <item>
