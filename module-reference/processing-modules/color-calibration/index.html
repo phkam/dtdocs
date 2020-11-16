@@ -4167,13 +4167,13 @@
         color calibration
     </h1>
 
-    <p>A fully-featured color-space correction, white balance adjustment and channel mixer module. The <em>color calibration</em> module takes Red, Green and Blue color channels as inputs, and uses matrix multiplication to mix those channels together and produce output Red, Green and Blue channels. This simple yet powerful technique can be used in the following ways:</p>
+    <p>A fully-featured color-space correction, white balance adjustment and channel mixer module. The <em>color calibration</em> module takes Red, Green and Blue color channels as inputs, and uses matrix multiplication to mix those channels together and produce output Red, Green and Blue channels. This simple yet powerful module can be used in the following ways:</p>
 <ul>
 <li>
-<p>As a simple channel mixer, adjusting the output R, G and B channels based on the input R, G and B channels.</p>
+<p>To adjust the white balance, working in tandem with the <a href="/dtdocs/module-reference/processing-modules/white-balance/"><em>white balance</em></a> module. In this case, the <em>white balance</em> module performs an initial white balance step (which is still required in order for the demosac module to work effectively). The <em>color calibration</em> module then calculates a more accurate white balance after the input color profile has been applied.</p>
 </li>
 <li>
-<p>To adjust the white balance, working in tandem with the <a href="/dtdocs/module-reference/processing-modules/white-balance/"><em>white balance</em></a> module. In this case, the <em>white balance</em> module performs an initial white balance step (still required in order for the demosac module to work effectively). The <em>color calibration</em> module then calculates a more accurate white balance after the input color profile has been applied, using more sophisticated algorithms than those available in the <em>white balance</em> module.</p>
+<p>As a simple channel mixer, adjusting the output R, G and B channels based on the input R, G and B channels.</p>
 </li>
 <li>
 <p>To adjust the color saturation and brightness of the image, based on the amounts of the red, green and blue components in each pixel, while preserving the chroma using similar techniques as the <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module.</p>
@@ -4182,13 +4182,20 @@
 <p>To create a monochrome image by using weightings on the R, G and B channels to produce a grey output.</p>
 </li>
 </ul>
-<p>Note that channel mixing is performed in the color space defined by the <em>adaptation</em> control on the <em>CAT</em> tab. You can disable the module&rsquo;s white balance mode in a given module instance, working instead in the pipeline RGB color space, by setting the <em>adaptation</em> parameter to &ldquo;none (bypass)&rdquo;. If you wish to work in one of the <em>adaptation</em> color spaces (e.g. XYZ) but don&rsquo;t wish to perform white balancing in the module, choose the desired <em>adaptation</em> color space and set the <em>illiminant</em> to &ldquo;same as pipeline (D50)&rdquo;.</p>
+<p>All of this module&rsquo;s adjustments are performed in the color space defined by the <em>adaptation</em> control on the CAT tab. The module can be made into a &ldquo;pure&rdquo; channel mixer (without white balance) in pipeline RGB color space by setting the <em>adaptation</em> to &ldquo;none (bypass)&rdquo;. To perform channel mixing in one of the <em>adaptation</em> color spaces without white balancing, set the <em>illuminant</em> to &ldquo;same as pipeline (D50)&rdquo;.</p>
 <h1 id="chromatic-adaptation-transformation-white-balance">Chromatic Adaptation Transformation (white balance)</h1>
-<p>The <em>color calibration</em> module can be used to perform white balancing using the Chromatic Adaptation Transformation (CAT) tab. When used in this mode the <em>white balance</em> module should be adjusted to perform a simple white balance assuming a D65 illuminant (&ldquo;camera reference&rdquo; mode). The remainder of the white balance adaptation is then performed by the <em>color calibration</em> module.</p>
+<p>Chromatic adaptation aims to predict how all surfaces in the scene would look if they had been lit by another illuminant. What we actually want to predict, though, is how those surfaces would have looked like if they had been lit by the same illuminant as your monitor. White balance on the other hand aims only at ensuring whites are really whites, that is R = G = B, and doesn’t really care about the rest of the color range.</p>
+<p>Chromatic adaptation functionality is controlled within the Chromatic Adaptation Transformation (CAT) tab of the <em>color calibration</em> module. When used in this way the <em>white balance</em> module only needs to perform a basic white balance operation assuming a D65 illuminant (&ldquo;camera reference&rdquo; mode). The remainder of the white balance adaptation is then performed by the <em>color calibration</em> module.</p>
 <p>The <em>color calibration</em> and <em>white balance</em> modules can be automatically applied in this way for new edits by setting the chromatic adaptation workflow option (<a href="/dtdocs/preferences-settings/processing/"><code>preferences &gt; processing &gt; auto-apply chromatic adaptation defaults</code></a>) to &ldquo;modern&rdquo;. If you prefer to perform all white balancing within the <em>white balance</em> module, a &ldquo;legacy&rdquo; option is also available. Neither option precludes the use of other modules such as <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> further down the pixel pipeline for creative color grading.</p>
+<p>By default, <em>color calibration</em> will:</p>
+<ul>
+<li>read the raw EXIF to fetch the scene white balance set by the camera</li>
+<li>adjust this setting with the reference white balance used in the white balance module</li>
+<li>adjust this setting again with the input color profile in use (only the standard matrix)</li>
+</ul>
 <p>It is also worth noting that, unlike the <em>white balance</em> module, <em>color calibration</em> can be used with <a href="/dtdocs/darkroom/masking-and-blending/masks/">masks</a>. This means you can apply CAT using one illuminant to part of the image, and (with a second module instance) apply a CAT with a different iluminant to the rest of the image by inverting that mask (using the <a href="/dtdocs/darkroom/masking-and-blending/masks/raster/">raster mask</a> functionality).</p>
 <h2 id="cat-warnings">CAT Warnings</h2>
-<p>This module relies on a number of assumptions in order to work correctly and it can be easy to inadvertently set modules up in a way that breaks these assumptions in subtle ways. To help you to avoid these kind of mistakes, the <em>color calibration</em> module will show warnings in the following circumstances.</p>
+<p>The CAT modes in this module rely on a number of assumptions in order to work correctly and it can be easy to inadvertently break these assumptions in subtle ways. To help you to avoid these kind of mistakes, the <em>color calibration</em> module will show warnings in the following circumstances.</p>
 <ul>
 <li>
 <p>If the <em>color calibration</em> module is set up to perform white balancing but the <em>white balance</em> module is not set to &ldquo;camera reference&rdquo;. This error can be resolved either by setting the <em>white balance</em> module to &ldquo;camera reference&rdquo; or by disabling CAT in the <em>color balance</em> module. Note that some sensors may require minor corrections within the <em>white balance</em> module and in these cases this warning can be ignored. A similar warning is also displayed in the <em>white balance</em> module.</p>
@@ -4198,6 +4205,7 @@
 <p>By default, if an instance of the <em>color calibration</em> module is already performing white balancing, each new instance you create will automatically have its adaptation set to &ldquo;none (bypass)&rdquo; to avoid this &ldquo;double-correction&rdquo; error.</p>
 </li>
 </ul>
+<p>The white balance modes in <em>color balance</em> can be disabled by either setting the <em>adaptation</em> to &ldquo;none (bypass)&rdquo; or setting the <em>illuminant</em> to &ldquo;same as pipeline (D50)&rdquo; in the CAT tab.</p>
 <h1 id="rgb-matrix-multiplication-channel-mixer">RGB matrix multiplication (channel mixer)</h1>
 <p>At its most basic level, you can think of the R, G and B tabs of the <em>color calibration</em> module as a type of matrix multiplication between a 3x3 matrix and the input [R G B] values. This is in fact very similar to what a matrix-based ICC color profile does, except that the user can input the matrix coefficients via the darktable GUI rather than reading the coefficients from a file.</p>
 <pre><code>┌ R_out ┐     ┌ Rr Rg Rb ┐     ┌ R_in ┐
@@ -4233,7 +4241,7 @@ channel contributes to the brightness of the output. This is equivalent to the f
 <p>Control the working color space of the module and optionally perform white balancing.</p>
 <dl>
 <dt>adaptation</dt>
-<dd>The working color space in which the module will perform its chromatic adaptation transform and channel mixing.</dd>
+<dd>The working color space in which the module will perform its chromatic adaptation transform and channel mixing. The following options are provided:</dd>
 <dd>
 <ul>
 <li><em>Linear Bradford (1985)</em>: This is more accurate for illuminants close to daylight but produced out-of-gamut colors for more difficult illuminants.</li>
@@ -4248,20 +4256,18 @@ channel contributes to the brightness of the output. This is equivalent to the f
 </ul>
 </dd>
 <dd><ul>
-<li><em>XYZ</em>: A simple scaling space (scaled by luminance Y). This is generally not recommended</li>
+<li><em>XYZ</em>: A simple scaling space (scaled by luminance Y). This is generally not recommended except for testing and debugging purposes.</li>
 </ul>
 </dd>
 <dd><ul>
 <li><em>none (disable)</em>: Disable any adaptation and use pipeline working RGB space.</li>
 </ul>
 </dd>
-<dt>color picker</dt>
-<dd>Use the color picker to select a region in the image for spot white-balance, or to restrict the region considered by the AI auto-detect algorithms. The color swatch next to this icon shows the color of the calculated illuminant (the color of the light that was used to illuminate the scene) that will be used in the CAT compensation.</dd>
 <dt>illuminant</dt>
-<dd>The type of illuminant assumed when performing white balancing. These options all make different assumptions about the light that illuminated the scene. Choose from the following:</dd>
+<dd>The type of illuminant assumed to have lit the scene. Choose from the following:</dd>
 <dd>
 <ul>
-<li><em>same as pipeline (D50)</em>: Do not perform white balancing in this module instance but perform any channel mixing using the selected <em>adaptation</em> color space.</li>
+<li><em>same as pipeline (D50)</em>: Do not perform white balancing in this module instance but perform channel mixing using the selected <em>adaptation</em> color space.</li>
 </ul>
 </dd>
 <dd><ul>
@@ -4269,7 +4275,7 @@ channel contributes to the brightness of the output. This is equivalent to the f
 </ul>
 </dd>
 <dd><ul>
-<li><em>custom</em>: If a neutral grey patch is available in the image, the color of the illuminant can be selected using the color picker, or can be manually specified using hue and saturation sliders (in LCh perceptual color space). Where there is no suitable reference patch, the following two AI methods will likely give a better result, although which method is better will depend on the specifics of the image. These manual methods replace the &ldquo;temperature&rdquo; and &ldquo;tint&rdquo; controls you may see in other software, since the concept of color temperature is no longer meaningful once we move too far from the Planckian locus. The color picker can also be used to restrict the area used for AI detection (below).</li>
+<li><em>custom</em>: If a neutral grey patch is available in the image, the color of the illuminant can be selected using the color picker, or can be manually specified using hue and saturation sliders (in LCh perceptual color space). The color swatch next to the color picker shows the color of the calculated illuminant (the light that was used to illuminate the scene) that will be used in the CAT compensation. The color picker can also be used to restrict the area used for AI detection (below).</li>
 </ul>
 </dd>
 <dd><ul>
