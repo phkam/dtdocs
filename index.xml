@@ -1064,6 +1064,17 @@ In order to obtain profiling info you need to start darktable from a terminal wi
     </item>
     
     <item>
+      <title>contributing to dtdocs</title>
+      <link>https://elstoc.github.io/dtdocs/special-topics/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/special-topics/contributing/</guid>
+      <description>This page defines the style guide for dtdocs and information about how to contribute to the project.
+It is included in the user manual so that you can see how the page is rendered as well as how it is written. Please go to GitHub to see the source for this page.
+format This website is authored in pure markdown, using some extensions. It is initially designed to work with the Hugo SSG but indended to be portable enough that it can be easily rendered with another application if required.</description>
+    </item>
+    
+    <item>
       <title>scheduling profile</title>
       <link>https://elstoc.github.io/dtdocs/special-topics/opencl/scheduling-profile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

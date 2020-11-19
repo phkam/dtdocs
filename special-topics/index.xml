@@ -37,5 +37,16 @@ scene-referred module order The default ordering of modules when using the new s
  raw black/white point invert white balance highlight reconstruction chromatic aberrations hot pixels raw denoise demosaic denoise (profiled) denoise (bilateral filter) rotate pixels scale pixels lens correction haze removal perspective correction orientation crop and rotate liquify spot removal retouch exposure local tone mapping tone equalizer graduated density unbreak input profile legacy equalizer input color profile negadoctor denoise (non-local means) color look up table defringe contrast equalizer lowpass highpass sharpen lut 3D color mapping channel mixer basic adjustments color balance rgb curve rgb levels base curve filmic (legacy) FILMIC RGB &amp;ndash; transition from scene-referred to display-referred space contrast brightness saturation tone curve levels shadows and highlights zone system global tonemap fill light local contrast color correction color contrast velvia vibrance color zones bloom colorize lowlight vision monochrome grain soften split-toning vignetting color reconstruction output color profile dithering framing watermark  key:</description>
     </item>
     
+    <item>
+      <title>contributing to dtdocs</title>
+      <link>https://elstoc.github.io/dtdocs/special-topics/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elstoc.github.io/dtdocs/special-topics/contributing/</guid>
+      <description>This page defines the style guide for dtdocs and information about how to contribute to the project.
+It is included in the user manual so that you can see how the page is rendered as well as how it is written. Please go to GitHub to see the source for this page.
+format This website is authored in pure markdown, using some extensions. It is initially designed to work with the Hugo SSG but indended to be portable enough that it can be easily rendered with another application if required.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>darktable user manual - defringe</title>
+<title>darktable user manual - contributing to dtdocs</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -1556,7 +1556,7 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/defringe/" class=" active">
+<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/defringe/" class="">
     defringe
 </a>
 
@@ -4116,7 +4116,7 @@
 
 
 
-<a href="https://elstoc.github.io/dtdocs/special-topics/contributing/" class="">
+<a href="https://elstoc.github.io/dtdocs/special-topics/contributing/" class=" active">
     contributing to dtdocs
 </a>
 
@@ -4159,13 +4159,7 @@
 
 
 
-
-
-
-
-<a href='https://elstoc.github.io/dtdocs/'>Home</a> / <a href='https://elstoc.github.io/dtdocs/module-reference/'>Module Reference</a> / <a href='https://elstoc.github.io/dtdocs/module-reference/processing-modules/'>processing modules</a> / defringe
-
-
+<a href='https://elstoc.github.io/dtdocs/'>Home</a> / <a href='https://elstoc.github.io/dtdocs/special-topics/'>Special Topics</a> / contributing to dtdocs
 
 
 
@@ -4179,25 +4173,158 @@
 
 
     <h1 class="title">
-        defringe
+        contributing to dtdocs
     </h1>
 
-    <p>Remove color fringing, which often results from Longitudinal Chromatic Aberrations (LCA), also known as Axial Chromatic Aberrations.</p>
-<p>This module uses edge-detection. Where pixels are detected as a fringe, the color is rebuilt from less saturated neighboring pixels.</p>
-<h1 id="module-controls">module controls</h1>
+    <p>This page defines the style guide for dtdocs and information about how to contribute to the project.</p>
+<p>It is included in the user manual so that you can see how the page is rendered as well as how it is written. Please go to <a href="https://github.com/elstoc/dtdocs/blob/master/content/special-topics/memory.md" target="_blank">GitHub</a> to see the source for this page.</p>
+<h1 id="format">format</h1>
+<p>This website is authored in pure markdown, using some extensions. It is initially designed to work with the Hugo SSG but indended to be portable enough that it can be easily rendered with another application if required.</p>
+<p>File should be rendered in UTF-8 and should not include any column wrapping.</p>
+<h1 id="structure">structure</h1>
+<p>The following shows the structure of an example main chapter with subsections in the dtdocs website.</p>
+<pre><code>example-chapter/
+   _index.md
+   section1-with-subsections/
+      subsection1/
+         image.png
+      _index.md
+      subsection1.md
+      subsection2.md
+   section2.md
+   section3.md
+</code></pre><p>A couple of notes on the above structure:</p>
+<ul>
+<li><code>_index.md</code> files do not contain any content (they contain metadata only) and are used to render section headers and ToC entries. In the above example <code>example-chapter/_index.md</code> defines the title of the example chapter and the order in which it appears in the main table of contents. Similarly <code>example-chapter/section1-with-subsections/_index.md</code> defines metadata for the first section of the chapter.</li>
+<li>Media files should be contained in a directory with the same name as the page to which they relate. In this example, <code>example-chapter/section1-with-subsections/subsection1</code> contains media related to the <code>subsection1.md</code> page.</li>
+</ul>
+<h1 id="metadata">metadata</h1>
+<p>Metadata for the markdown files is presented at the head of the page using yaml. Any metadata may be defined &ndash; the module reference sections contain quite a lot of specific metadata &ndash; however the following defines some minimal metadata for the example page <code>example-chapter/section1-with-subsections/subsection1.md</code>.</p>
+<pre><code>---
+title: Sub Section 1 Title
+id: subsection1
+weight: 10
+---
+</code></pre><dl>
+<dt>title</dt>
+<dd>This should contain the rendered title of your page. To include a colon within a title, enclose the title in double-quotes.</dd>
+<dt>id</dt>
+<dd>This is the id used to identify the page by Hugo. It should usually be the same name as the file (for content files) or the parent directory (for <code>_index.md</code> files).</dd>
+<dt>weight</dt>
+<dd>This is an optional metadata field used to define the order in which sections are presented in the Table of Contents. If the <em>weight</em> field is not included, pages will be rendered in alphabetic order by default. For example, to define the sections and subsections of the above example in reverse order, the following metadata would need to be set:</dd>
+</dl>
+<pre><code>   example-chapter/
+      section1-with-subsections/
+         _index.md               # weight: 30 (place section1 page at the end of example-chapter)
+         subsection1.md             # weight: 20 (place subsection1 page at the end of section1)
+         subsection2.md             # weight: 10 (place subsection2 page at the start of section1)
+      section2.md                # weight: 20 (place section2 in the middle of example-chapter)
+      section3.md                # weight: 10 (place section3 at the start of example-chapter)
+</code></pre><h1 id="content">content</h1>
+<h2 id="general-style-guidance">general style guidance</h2>
+<ul>
+<li>All content should be authored in plain markdown without shortcodes and HTML should be kept to an absolute minimum , if used at all</li>
+<li>Minimalism is an absolute must. Fewer words are preferred</li>
+<li>Markdown files should be as short as possible</li>
+<li>Follow the naming and capitalization norms present in the GUI of the application - namely all headers and titles are in lower case, except for the very top-level chapter names</li>
+<li>Headers in a file should not exceed level three (###)</li>
+<li>The primary authoring language is English</li>
+<li>Assume the reader has the application open while reading the user manual and only include images where they contribute to the explanation of complex functionality</li>
+<li>Use image callouts if you need to annotate an image (i.e. mark parts of the image with a letter or number and then explain the meaning in some text following the image). Do not place words directly into the image for annotations, as this makes localization difficult. See <a href="/dtdocs/darkroom/processing-modules-and-pixelpipe/the-anatomy-of-a-module/">this page</a> for an example.</li>
+<li>Changes to the content should be proposed via pull request or a similar mechanism</li>
+<li>Your submissions will be copy edited, don&rsquo;t take it personally</li>
+</ul>
+<h2 id="definition-lists">definition lists</h2>
+<p>The standard method of presenting information about darktable module controls is with the use of definition lists.</p>
 <dl>
-<dt>operation mode</dt>
-<dd><em>global average</em>: This mode is is usually the fastest but might show slightly incorrect previews at high magnification. It might also protect the wrong regions of color too much or too little by comparison with local average.</dd>
+<dt>the gui name of a control</dt>
+<dd>A declaration of what the control does. For example &ldquo;Set the exposure in EV units&rdquo;.</dd>
 <dd>
-<p><em>local average</em>: This mode is slower because it computes local color references for every pixel. However it might protect color better than global average and allows for rebuilding color where actually required.</p>
+<p>You can include as many paragraphs as you like, but try to limit to 2 or 3 where possible.</p>
 </dd>
+<dt>the gui name of a combobox</dt>
+<dd>Comboboxes often have multiple options that all need to be displayed with separate definitions. Use bulleted lists with <em>italics</em> for the combobox values.</dd>
+<dd><ul>
+<li><em>the first value</em>: What the first value means</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>the second value</em>: What the second value means</li>
+</ul>
+</dd>
+</dl>
+<p>Definition lists are also used throughout the document, wherever a named piece of functionality needs to be defined. See, for example, <a href="/dtdocs/special-topics/program-invocation/darktable-cli/">darktable-cli</a>.</p>
+<h2 id="notes">Notes</h2>
+<p>If you wish to present an important note to the user, use the following format:</p>
+<hr>
+<p><strong>Note</strong>: This is an important note.</p>
+<hr>
+<h2 id="links">Links</h2>
+<p>Internal links must be relative to the current file and must point to a valid markdown (.md) file. Start links with either <code>./</code> to represent the current directory or <code>../</code> to represent the parent directory.</p>
+<ul>
+<li>Links to a processing module should be in italics, e.g. <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a></li>
+<li>Links to a utility module should be in plaintext, e.g. <a href="/dtdocs/module-reference/utility-modules/darkroom/history-stack/">history stack</a></li>
+<li>Link to a top level section by referencing the <code>_index.md</code> file, e.g. <a href="/dtdocs/module-reference/">module reference</a></li>
+<li>Link to a tab in the preferences dialog: <a href="/dtdocs/preferences-settings/general/"><code>preferences &gt; general</code></a></li>
+<li>Link to a specific preference setting: <a href="/dtdocs/preferences-settings/general/"><code>preferences &gt; general &gt; interface language</code></a></li>
+</ul>
+<h2 id="images">Images</h2>
+<p>Several keywords or filename suffixes are used to determine how an image is rendered.</p>
+<dl>
+<dt>icon</dt>
+<dd>To insert an image as an icon, ensure that the &ldquo;alt text&rdquo; has the word &ldquo;icon&rdquo; at the end. The markdown <code>![squirrel icon](./contributing/contributing.png)</code> causes the following output: 
+
+
+<img src="https://elstoc.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel icon"  />
+
+</dd>
+<dt>image width</dt>
+<dd>You can set the image width to 25, 50, 75 or 100 per cent of the rendered page width by including &ldquo;#wxx&rdquo; after the image name in the link, where xx is the desired width.</dd>
+<dd><code>![squirrel](./contributing/squirrel.png#w25)</code></dd>
 <dd>
-<p><em>static threshold</em>: This mode does not use a color reference but directly uses the threshold as given by the user.</p>
+
+
+<img src="https://elstoc.github.io/dtdocs/special-topics/contributing/squirrel.png#w25" alt="squirrel"  />
+
 </dd>
-<dt>edge detection radius</dt>
-<dd>The algorithm uses the difference between the input image and a gaussian-blurred version of the same image to detect edges. This parameter controls the spatial extent of the gaussian blur used in the edge detection. Try increasing this value if you want a stronger detection of the fringes or the thickness of the fringe edges is too high.</dd>
-<dt>threshold</dt>
-<dd>The threshold over which the edge of a pixel is counted as a “fringe”. Try lowering this value if there is not enough fringe detected and increasing it if too many pixels are desaturated.</dd>
+<dd><code>![squirrel](./contributing/squirrel.png#w50)</code></dd>
+<dd>
+
+
+<img src="https://elstoc.github.io/dtdocs/special-topics/contributing/squirrel.png#w50" alt="squirrel"  />
+
+</dd>
+<dd><code>![squirrel](./contributing/squirrel.png#w75)</code></dd>
+<dd>
+
+
+<img src="https://elstoc.github.io/dtdocs/special-topics/contributing/squirrel.png#w75" alt="squirrel"  />
+
+</dd>
+<dd><code>![squirrel](./contributing/squirrel.png#w100)</code></dd>
+<dd>
+
+
+<img src="https://elstoc.github.io/dtdocs/special-topics/contributing/squirrel.png#w100" alt="squirrel"  />
+
+</dd>
+<dt>inline</dt>
+<dd>With the exception of icons, images are included as block elements by default. You can override this by including &ldquo;#inline&rdquo; after the image name. This can be combined with the width setting as follows.</dd>
+<dd>This image 
+
+
+<img src="https://elstoc.github.io/dtdocs/special-topics/contributing/squirrel.png#w25#inline" alt="squirrel"  />
+
+ has been made inline using the syntax <code>![squirrel](./contributing/squirrel.png#w25#inline)</code></dd>
+<dt>default</dt>
+<dd>By default images will be presented as block elements with no restriction on their width. Be careful with this is it can render in unpredictable ways:</dd>
+<dd><code>![squirrel](./contributing/squirrel.png)</code></dd>
+<dd>
+
+
+<img src="https://elstoc.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  />
+
+</dd>
 </dl>
 
 
@@ -4208,15 +4335,11 @@
     <div class="col-6">
 	
 	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/crop-rotate/" class="next">&lt; crop &amp; rotate</a>
+	<a href="https://elstoc.github.io/dtdocs/special-topics/module-order/" class="next">&lt; default module order</a>
 	
 	
     </div>
     <div class="col-6">
-	
-	
-	<a href="https://elstoc.github.io/dtdocs/module-reference/processing-modules/demosaic/" class="prev">demosaic &gt;</a>
-	
 	
     </div>
 </div>
