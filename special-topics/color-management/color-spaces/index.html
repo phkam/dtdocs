@@ -4182,40 +4182,31 @@
         darktable&rsquo;s color spaces
     </h1>
 
-    <p>darktable&rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera raws. Both store visual information as a combination of primary colours like red, green and blue which, together, describe a light emission to be later recreated by a display.</p>
+    <p>darktable&rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera RAWs. Both store visual information as a combination of primary colours (such as red, green and blue) which together describe a light emission to be later recreated by a display.</p>
 <p>The following image illustrates this concept.</p>
 <p>
 
 
-<img src="https://darktable-org.github.io/dtdocs/special-topics/color-management/color-spaces/spectral-decomposition.png" alt="Spectral decomposition of a light emission into 3 RGB intensities"  />
+<img src="https://darktable-org.github.io/dtdocs/special-topics/color-management/color-spaces/spectral-decomposition.png#w100" alt="Spectral decomposition of a light emission into 3 RGB intensities"  />
 
 </p>
-<p>On the left-hand-side of the image is a colored light that we need to represent digitally. Using three ideal color filters, we can decompose it into three colored primary lights at different intensities. To recreate the original colored light from our ideal decomposition, in the center of the image, we simply need to recombine those 3 primary lights by addition.</p>
-<p>The decomposition process is performed in camera sensors, by the color filter array (CFA), and
-is not ideal, so we cannot recreate the original emission directly by a simple addition:
-we will need intermediate scalings of the 3 intensities.
-On screens, the LED bulbs are dimmed proportionnaly to each intensity, and
-the three lights emissions are physically added to recompose the original emission.
-In-between, digital images store the intensities of these 3 primary lights as numbers for each pixel, depicted on the right as shades of grey.</p>
-<p>Instead of LED light bulbs, you could use a combination of white lights powered proportionaly to these intensities, projecting through appropriately colored filters, to reconstruct the original colored light on a white screen. This experiment can be performed at home using gels and dimmeable white bulbs - it is roughly what old color CRT displays did, and what video-projectors still do.</p>
-<p>While a set of display intensities can be simply turned into light together to recreate an original light on a screen, for example if we created a synthetic image in-computer,
-a the set of captured intensities from a sensor needs some scaling in order for the
-light addition to reproduce the original light emission.
-It means that every set of intensities, expressed as an RGB set, is linked to a set of filters
-(or primary LED colors) that defines a color space: any RGB set is circumstancially tied to a
-colorspace.
-Not only do we need to temper the captured intensities to make them summable again,
-but if we are to recompose the original light on a display that does not have the same
-filters or primaries as the space in which our set belongs, these intensities
-will need to be rescaled to take into account the change of filters. The method for the scaling is described in color profiles, usually stored in .icc files.</p>
-<p>It is important to note that color is not a physical property of light &ndash; it exists only in the human brain, as a product of the decomposition of a light emission by the cone cells in the retina, again very similar in principle to the above filtering example. An &ldquo;RGB&rdquo; value should be understood as &ldquo;light emissions encoded on 3 channels connected to 3 primaries&rdquo;, but the primaries themselves may look different from what humans would call &ldquo;green&rdquo;, &ldquo;red&rdquo; or &ldquo;blue&rdquo;.</p>
-<p>Most of darktable&rsquo;s actual image processing takes place in a large RGB &ldquo;working profile&rdquo; space, with some (mostly older) modules internally working in the CIELab 1976 color space (often just called “Lab”). The final output of the image processing pipeline is once again in an RGB space shaped for either monitor display or the output file.</p>
+<p>On the left-hand-side of the image is a colored light that we need to represent digitally. Using three ideal color filters, we can decompose this light into three colored primary lights at different intensities. In order to recreate the original colored light from our ideal decomposition, as illustrated in the center of the image, we simply need to recombine those 3 primary lights by addition.</p>
+<p>It should be possible to reproduce this original light by taking a combination of white lights at the correct intensities and projecting that light through appropriately colored filters. This experiment can be performed at home using gels and dimmable white bulbs. This is roughly what old color CRT displays did and how video projectors still work.</p>
+<p>In photography, the initial decomposition step is performed by the color filter array that sits on top of your camera&rsquo;s sensor. This decomposition is not ideal, so it is not possible to recreate the original emission directly by a simple addition. Instead we need to provide some intermediate scaling to adjust the three intensities.</p>
+<p>On screens, the LED bulbs are dimmed proportionally to each intensity, and the emissions of the three lights physically added to reconstruct the original emission. Digital images store the intensities of these primary lights as a set of 3 numbers for each pixel, depicted on the right of the above image as shades of grey.</p>
+<p>While a set of display intensities can be easily combined to recreate an original light on a screen (for example, if we created a synthetic image in-computer) the set of captured intensities from a sensor needs some scaling in order for the on-screen light addition to reasonably reproduce the original light emission. This means that every set of intensities, expressed as an RGB set, must be linked to a set of filters (or primary LED colors) that define a <em>color space</em> &ndash; any RGB set only makes sense with reference to a color space.</p>
+<p>Not only do we need to temper the captured intensities to make them summable again, but if we are to recompose the original light on a display that does not have the same colored filters or primaries as the space in which our RGB set belongs, these intensities need to be rescaled to take into account the differing filters on the display. The mechanism for this scaling is described in <em>color profiles</em>, usually stored within .icc files.</p>
+<hr>
+<p><strong>Note</strong>: Color is not a physical property of light &ndash; it exists only in the human brain, as a product of the decomposition of a light emission by the cone cells in the retina, again very similar in principle to the above filtering example. An &ldquo;RGB&rdquo; value should be understood as &ldquo;light emissions encoded on 3 channels connected to 3 primaries&rdquo;, but the primaries themselves may look different from what humans would call &ldquo;red&rdquo;, &ldquo;green&rdquo; or &ldquo;blue&rdquo;.</p>
+<hr>
+<p>To summarize, the filters described here are overlapping band-pass filters. Since they overlap, summing them back together would not preserve the energy of the original spectrum so, long story short, we need to dial them down with regard to the retina cone response</p>
+<p>Most of darktable&rsquo;s actual image processing takes place in a large RGB &ldquo;working profile&rdquo; space, with some (mostly older) modules internally working in the CIELab 1976 color space (often just called “Lab”). The final output of the image processing pipeline is once again in an RGB space shaped for either the monitor display or the output file.</p>
 <p>This process implies that the pixelpipe has two fixed color conversion steps: <a href="/dtdocs/module-reference/processing-modules/input-color-profile/"><em>input color profile</em></a> and <a href="/dtdocs/module-reference/processing-modules/output-color-profile/"><em>output color profile</em></a>. In addition there is the <a href="/dtdocs/module-reference/processing-modules/demosaic/"><em>demosaic</em></a> step for raw images, where the colors of each pixel are reconstructed by interpolation.</p>
 <p>Each module has a position in the pixelpipe which tells you which color space the module lives in:</p>
 <ul>
 <li>
 <p>up to <a href="/dtdocs/module-reference/processing-modules/demosaic/"><em>demosaic</em></a>
-: The raw image information does not yet constitute an &ldquo;image&rdquo; but merely &ldquo;data&rdquo; about the light captured by the camera. Each pixel carries a single intensity for one single primary color, and camera primaries are very different from human primaries. Bear in mind that some of the modules in this part of the pipe can also act on non-raw input images in RGB format with full information on all three color channels.</p>
+: The raw image information does not yet constitute an &ldquo;image&rdquo; but merely &ldquo;data&rdquo; about the light captured by the camera. Each pixel carries a single intensity for one single primary color, and camera primaries are very different from primaries used in models of human vision. Bear in mind that some of the modules in this part of the pipe can also act on non-raw input images in RGB format with full information on all three color channels.</p>
 </li>
 <li>
 <p>between <a href="/dtdocs/module-reference/processing-modules/demosaic/"><em>demosaic</em></a> and <a href="/dtdocs/module-reference/processing-modules/input-color-profile/"><em>input color profile</em></a>

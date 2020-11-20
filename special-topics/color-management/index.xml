@@ -52,9 +52,9 @@ You can change the default method in preferences &amp;gt; processing &amp;gt; al
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/special-topics/color-management/color-spaces/</guid>
-      <description>darktable&amp;rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera raws. Both store visual information as a combination of primary colours like red, green and blue which, together, describe a light emission to be later recreated by a display.
+      <description>darktable&amp;rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera RAWs. Both store visual information as a combination of primary colours (such as red, green and blue) which together describe a light emission to be later recreated by a display.
 The following image illustrates this concept.
- On the left-hand-side of the image is a colored light that we need to represent digitally. Using three ideal color filters, we can decompose it into three colored primary lights at different intensities.</description>
+ On the left-hand-side of the image is a colored light that we need to represent digitally. Using three ideal color filters, we can decompose this light into three colored primary lights at different intensities.</description>
     </item>
     
     <item>
