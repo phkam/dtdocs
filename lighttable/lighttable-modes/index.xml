@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lighttable modes on darktable user manual</title>
-    <link>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/</link>
+    <link>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/</link>
     <description>Recent content in lighttable modes on darktable user manual</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>filemanager</title>
-      <link>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/filemanager/</link>
+      <link>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/filemanager/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/filemanager/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/filemanager/</guid>
       <description>This is the default mode for viewing image thumbnails in the lighttable view. Images are displayed in a grid with a fixed number of images per row.
 The number of images in each row can be altered using the slider in the bottom panel, or by pressing Ctrl+scroll while hovering over the center view.
 You can navigate through the images using the arrow keys (←/→/↑/↓) or by scrolling with your mouse.</description>
@@ -19,20 +19,20 @@ You can navigate through the images using the arrow keys (←/→/↑/↓) or by
     
     <item>
       <title>zoomable lighttable</title>
-      <link>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/zoomable-lighttable/</link>
+      <link>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/zoomable-lighttable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/zoomable-lighttable/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/zoomable-lighttable/</guid>
       <description>The zoomable lighttable mode provides an easy and intuitive way to navigate large collections of images.
 If you are trying to find something quickly in a collection, this mode allows you to zoom out so that you can see a large number of thumbnails, then you can move the lighttable around to browse them. When you spot something, you can easily zoom in to check if that is really what you were looking for and, if not, zoom out again and keep looking.</description>
     </item>
     
     <item>
       <title>culling</title>
-      <link>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/culling/</link>
+      <link>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/culling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/culling/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/culling/</guid>
       <description>Culling mode allows you to display images side by side to easily compare them.
 There are two different ways to define how many images are shown at the same time: “fixed” and “dynamic”. Switch between these methods while in culling mode by pressing &amp;lt;.
  fixed mode The number of images displayed is always the same, independent of the selection length. This number can be set with a slider on the bottom panel.</description>
@@ -40,10 +40,10 @@ There are two different ways to define how many images are shown at the same tim
     
     <item>
       <title>full preview</title>
-      <link>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/full-preview/</link>
+      <link>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/full-preview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/lighttable/lighttable-modes/full-preview/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/full-preview/</guid>
       <description>From any of the lighttable modes, you can diplay a fully zoomed preview of the image that is currently under the mouse pointer by pressing and holding down W. This is useful to more closely inspect an image while rating and selecting images.
 Holding down Ctrl+W fully zooms into the image and also identifies any regions of sharpness in the image that may indicate the image is in focus. For this tool to work the input image needs to hold an embedded JPEG thumbnail, which is the case for most raw files.</description>
     </item>

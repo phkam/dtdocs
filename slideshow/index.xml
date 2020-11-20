@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slideshow on darktable user manual</title>
-    <link>https://elstoc.github.io/dtdocs/slideshow/</link>
+    <link>https://darktable-org.github.io/dtdocs/slideshow/</link>
     <description>Recent content in Slideshow on darktable user manual</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://elstoc.github.io/dtdocs/slideshow/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://darktable-org.github.io/dtdocs/slideshow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>overview</title>
-      <link>https://elstoc.github.io/dtdocs/slideshow/overview/</link>
+      <link>https://darktable-org.github.io/dtdocs/slideshow/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/slideshow/overview/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/slideshow/overview/</guid>
       <description>The slideshow view allows you to watch a slideshow of your current collection. Entering the slideshow view will start the slideshow, using the currently selected collection with the associated filtering rules and sort order applied. To learn more about how to define the collection and filtering rules, see the section on collections. Select the sort criteria and sort order of the images in the top panel.
 The image display is optimized to take full advantage of your screen size.</description>
     </item>
     
     <item>
       <title>usage</title>
-      <link>https://elstoc.github.io/dtdocs/slideshow/usage/</link>
+      <link>https://darktable-org.github.io/dtdocs/slideshow/usage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/slideshow/usage/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/slideshow/usage/</guid>
       <description>The slideshow view is in an early stage of development with only a basic set of features.
 F11 toggle full-screen mode. + or increase delay between each image. up arrow - or decrease delay between each image. down arrow left-click or right arrow or switch to the next image of the collection. shift+right arrow right-click or left arrow or switch to the previous image of the collection. shift+left arrow spacebar start and stop auto-advance mode which automatically switches to the next images every five seconds by default.</description>
     </item>

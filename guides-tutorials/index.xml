@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guides &amp; Tutorials on darktable user manual</title>
-    <link>https://elstoc.github.io/dtdocs/guides-tutorials/</link>
+    <link>https://darktable-org.github.io/dtdocs/guides-tutorials/</link>
     <description>Recent content in Guides &amp; Tutorials on darktable user manual</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://elstoc.github.io/dtdocs/guides-tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://darktable-org.github.io/dtdocs/guides-tutorials/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>developing monochrome images</title>
-      <link>https://elstoc.github.io/dtdocs/guides-tutorials/monochrome/</link>
+      <link>https://darktable-org.github.io/dtdocs/guides-tutorials/monochrome/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/guides-tutorials/monochrome/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/guides-tutorials/monochrome/</guid>
       <description>Photography has a long history of producing monochrome images, and many still enjoy this aspect of photography. While there are some specialised/modified cameras with a truly monochrome sensor, most still use a regular camera to capture a color image, and turn it into a monochrome image during post-processing.
 There are two main approaches this conversion:
   A physical approach, where we attempt to simulate how a silver-based photographic film emulsion would react to the light captured at the scene.</description>
@@ -19,10 +19,10 @@ There are two main approaches this conversion:
     
     <item>
       <title>other resources</title>
-      <link>https://elstoc.github.io/dtdocs/guides-tutorials/other-resources/</link>
+      <link>https://darktable-org.github.io/dtdocs/guides-tutorials/other-resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/guides-tutorials/other-resources/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/guides-tutorials/other-resources/</guid>
       <description>The official places to obtain information concerning darktable are the following:
  darktable.org GitHub wiki  The following articles provide some useful background information about darktable&amp;rsquo;s scene-referred workflow:
  darktable 3.0 for dummies in 3 modules darktable 3.0 for dummies &amp;ndash; hardcore edition darktable 3.0: RGB or Lab? Which modules? Help! darktable&amp;rsquo;s filmic FAQ Introducing color calibration module  The following resources can provide a deeper understanding of the functionality of some specific processing modules:</description>

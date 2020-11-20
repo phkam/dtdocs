@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Map on darktable user manual</title>
-    <link>https://elstoc.github.io/dtdocs/map/</link>
+    <link>https://darktable-org.github.io/dtdocs/map/</link>
     <description>Recent content in Map on darktable user manual</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://elstoc.github.io/dtdocs/map/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://darktable-org.github.io/dtdocs/map/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>overview</title>
-      <link>https://elstoc.github.io/dtdocs/map/overview/</link>
+      <link>https://darktable-org.github.io/dtdocs/map/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/map/overview/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/map/overview/</guid>
       <description>The map view is where you geo-tag your images.
 Map view shows a world map with the currently open image or film roll of images, pinned to their geo-tagged location. This requires that the image was geo-tagged by a camera with that feature. Some newer cameras, including smartphones, are already equipped with GPS receivers. Other cameras may need additional GPS hardware to do this.
 Even if your camera doesn&amp;rsquo;t support this feature, there is an alternative method &amp;ndash; darktable can match the Exif time and date data in your image(s) to a separate GPX data tracking file created by a GPS tracker recording your movements.</description>
@@ -19,10 +19,10 @@ Even if your camera doesn&amp;rsquo;t support this feature, there is an alternat
     
     <item>
       <title>map view layout</title>
-      <link>https://elstoc.github.io/dtdocs/map/map-view-layout/</link>
+      <link>https://darktable-org.github.io/dtdocs/map/map-view-layout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/map/map-view-layout/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/map/map-view-layout/</guid>
       <description>left panel From top to bottom:
  collect images Filter the list of images displayed in the map view. recently used collections View recently used collections of images. image information Display image information.  right panel From top to bottom:
  find location Search for a place on map. map settings Set up your map overlay information and map providers. tagging Tag selected images.  bottom panel  filmstrip Drag images from the filmstrip onto the map as described in the find location module documentation.</description>

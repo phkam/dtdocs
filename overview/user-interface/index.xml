@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>user interface on darktable user manual</title>
-    <link>https://elstoc.github.io/dtdocs/overview/user-interface/</link>
+    <link>https://darktable-org.github.io/dtdocs/overview/user-interface/</link>
     <description>Recent content in user interface on darktable user manual</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://elstoc.github.io/dtdocs/overview/user-interface/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://darktable-org.github.io/dtdocs/overview/user-interface/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>views</title>
-      <link>https://elstoc.github.io/dtdocs/overview/user-interface/views/</link>
+      <link>https://darktable-org.github.io/dtdocs/overview/user-interface/views/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/overview/user-interface/views/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/views/</guid>
       <description>There are five different views available in darktable:
  lighttable Manage images and collections. darkroom Develop a single image. tethering Remotely capture and save images taken with a connected camera. map Show images with a geo-tag data on a map and manually geo-tag new images. slideshow Display images as a slideshow, processing them on-the-fly. print Send images to your printer.  You can switch between views by clicking the view name at the top of the right panel (the currently active view is highlighted) or by using one of the following keyboard shortcuts:</description>
     </item>
     
     <item>
       <title>screen layout</title>
-      <link>https://elstoc.github.io/dtdocs/overview/user-interface/screen-layout/</link>
+      <link>https://darktable-org.github.io/dtdocs/overview/user-interface/screen-layout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/overview/user-interface/screen-layout/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/screen-layout/</guid>
       <description>The layout of all views is similar and consists of a center area with panels at the edges:
   center area Contains information and functionality specific to the current view. left panel Contains modules primarily used to provide information. right panel Contains modules primarily used for image processing. top banner Contains information about the current darktable version and allows you to switch between views. Also used by some modules to show hints and messages.</description>
     </item>
     
     <item>
       <title>filmstrip</title>
-      <link>https://elstoc.github.io/dtdocs/overview/user-interface/filmstrip/</link>
+      <link>https://darktable-org.github.io/dtdocs/overview/user-interface/filmstrip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/overview/user-interface/filmstrip/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/filmstrip/</guid>
       <description>The filmstrip, when enabled, is shown at the bottom of the screen (except in the lighttable view, where it is replaced with the timeline module) and displays the images from the collection that is currently selected in the lighttable view. You can navigate along the filmstrip by scrolling with the mouse wheel.
 The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by double clicking its thumbnail in the filmstrip.</description>
     </item>
     
     <item>
       <title>top panel</title>
-      <link>https://elstoc.github.io/dtdocs/overview/user-interface/top-panel/</link>
+      <link>https://darktable-org.github.io/dtdocs/overview/user-interface/top-panel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/overview/user-interface/top-panel/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/top-panel/</guid>
       <description>The top panel is common to all darktable views and provides a number of common utility functions.
  On the right-hand-side
  view Choose which images to view in the lighttable/filmstrip, based on star rating and reject status. sort by Choose the sort order of images in the lighttable/filmstrip using various image properties.  On the left-hand-side (icons)
@@ -50,10 +50,10 @@ The filmstrip allows you to interact with images while you are not in the lightt
     
     <item>
       <title>keyboard shortcuts</title>
-      <link>https://elstoc.github.io/dtdocs/overview/user-interface/keyboard-shortcuts/</link>
+      <link>https://darktable-org.github.io/dtdocs/overview/user-interface/keyboard-shortcuts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://elstoc.github.io/dtdocs/overview/user-interface/keyboard-shortcuts/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/keyboard-shortcuts/</guid>
       <description>Much of the functionality in darktable can be controlled via keyboard shortcuts which can be customised in preferences &amp;gt; shortcuts.
 Press the H button in any darktable view to show a list of all shortcuts that are applicable to the current view.</description>
     </item>
