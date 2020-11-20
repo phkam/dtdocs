@@ -4182,9 +4182,11 @@
         display profile
     </h1>
 
-    <p>For darktable to accurately render colors on screen it needs to find the correct display profile for your monitor. In general this requires your monitor to be properly calibrated and profiled, and it needs the profile to be correctly installed on your system. darktable queries your X display server&rsquo;s xatom as well as the system service colord (if available) for the right profile. If required you can enforce a specific method in <a href="/dtdocs/preferences-settings/miscellaneous/"><code>preferences &gt; miscellaneous</code></a>.</p>
+    <p>For darktable to faithfully render colors on screen it needs to find the correct display profile for your monitor. In general this requires your monitor to be properly calibrated and profiled, and it needs the profile to be correctly installed on your system. darktable queries your X display server&rsquo;s xatom as well as the system service colord (if available) for the right profile. If required you can enforce a specific method in <a href="/dtdocs/preferences-settings/miscellaneous/"><code>preferences &gt; miscellaneous</code></a>.</p>
 <p>To investigate your display profile configuration you can run the <a href="/dtdocs/special-topics/program-invocation/darktable-cmstest/"><code>darktable-cmstest</code></a> binary (Linux only) which prints out useful information (e.g. profile name per-monitor) and tells you if the system is correctly configured.</p>
 <p>In rare cases you may need to manually select the display profile. This is possible from the <a href="/dtdocs/module-reference/utility-modules/darkroom/soft-proof/">soft proof</a> and <a href="/dtdocs/module-reference/utility-modules/darkroom/gamut/">gamut check</a> option dialogs in the darkroom view and the display profile dialog in the lighttable view.</p>
+<p>Bear in mind that high-tier consumer-grade screens do not need an user-made profiling, since they are properly factory-calibrated to sRGB, unless you need to perform soft-proofing with professional expectations.</p>
+<p>A poorly made display profile will be more harmful than sticking to the default sRGB profile, since the default might be slightly inaccurate but will at least be reliable. Advanced and professional users are advised to proceed with custom profiles production only if they have training to assess the quality of the resulting profile and understanding of the profiling options.</p>
 
 
     

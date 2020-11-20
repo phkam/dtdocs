@@ -23,7 +23,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/special-topics/color-management/display-profile/</guid>
-      <description>For darktable to accurately render colors on screen it needs to find the correct display profile for your monitor. In general this requires your monitor to be properly calibrated and profiled, and it needs the profile to be correctly installed on your system. darktable queries your X display server&amp;rsquo;s xatom as well as the system service colord (if available) for the right profile. If required you can enforce a specific method in preferences &amp;gt; miscellaneous.</description>
+      <description>For darktable to faithfully render colors on screen it needs to find the correct display profile for your monitor. In general this requires your monitor to be properly calibrated and profiled, and it needs the profile to be correctly installed on your system. darktable queries your X display server&amp;rsquo;s xatom as well as the system service colord (if available) for the right profile. If required you can enforce a specific method in preferences &amp;gt; miscellaneous.</description>
     </item>
     
     <item>
@@ -52,7 +52,9 @@ You can change the default method in preferences &amp;gt; processing &amp;gt; al
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/special-topics/color-management/color-spaces/</guid>
-      <description>darktable&amp;rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera raws. Both represent colors by a combination of red, green and blue. Most of the actual image processing takes place in a large RGB &amp;ldquo;working profile&amp;rdquo; space, with some (mostly older) modules internally working in the CIELAB color space (often just called “Lab”). The final output of the image processing pipeline is once again in an RGB space shaped for either monitor display or the output file.</description>
+      <description>darktable&amp;rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera raws. Both store visual information as a combination of primary colours like red, green and blue which, together, describe a light emission to be later recreated by a display.
+The following image illustrates this concept.
+ On the left-hand-side of the image is a colored light that we need to represent digitally. Using three ideal color filters, we can decompose it into three colored primary lights at different intensities.</description>
     </item>
     
     <item>
@@ -61,8 +63,7 @@ You can change the default method in preferences &amp;gt; processing &amp;gt; al
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/special-topics/color-management/unbounded-colors/</guid>
-      <description>Theoretically the individual components of color data are confined to certain minimum and maximum levels. As an example the intensity of an individual red, green or blue color channel in RGB can be anything in the range between 0% and 100% (or between 0.0 and 1.0). Likewise the L channel in Lab can be anything between 0 (pure black) and 100 (pure white).
-In practice the image processing steps in darktable&amp;rsquo;s modules can sometimes lead to values which lie outside of these confined ranges.</description>
+      <description>Screens and most image file formats can only encode RGB intensities confined within a certain range. For example, images encoded on 8 bits can only contain values from 0 to 255, images on 10 bits from 0 to 1023, and so on… Graphic standards postulate that the maximum of that range, no matter its actual value, will always represent the maximum brightness that the display medium is able to render, usually between 100 and 160 Cd/m² (or nits) depending on the actual standard.</description>
     </item>
     
     <item>
