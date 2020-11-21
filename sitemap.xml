@@ -503,10 +503,6 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/special-topics/contributing/</loc>
-  </url>
-  
-  <url>
     <loc>https://darktable-org.github.io/dtdocs/special-topics/color-pipeline/</loc>
   </url>
   
@@ -528,6 +524,10 @@
   
   <url>
     <loc>https://darktable-org.github.io/dtdocs/lua/usage/calling-from-dbus/</loc>
+  </url>
+  
+  <url>
+    <loc>https://darktable-org.github.io/dtdocs/special-topics/contributing/</loc>
   </url>
   
   <url>
