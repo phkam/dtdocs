@@ -53,7 +53,8 @@ The display-referred workflow places more emphasis on performing image processin
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/overview/workflow/export-metadata-upload/</guid>
-      <description>Changes to an image are not saved directly to the image file as they are in a regular image editor. Rather, darktable is a non-destructive editor, which means that all changes are recorded in darktable&amp;rsquo;s library database, and the original image is left untouched. Therefore, you need to export images in order to bake your processing options and metadata changes into an output file that can be distributed outside of darktable.</description>
+      <description>Changes to an image are not saved directly to the image file contrary to a regular image editor. Rather, darktable is a non-destructive editor, which means that all changes are recorded in darktable&amp;rsquo;s library database, and the original image is left untouched. Therefore, you need to export images in order to bake your processing options and metadata changes into an output file that can be distributed outside of darktable.
+Images are exported from the lighttable view, using the export selected module in the right panel.</description>
     </item>
     
   </channel>

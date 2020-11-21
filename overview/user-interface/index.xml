@@ -13,7 +13,7 @@
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/views/</guid>
       <description>There are five different views available in darktable:
- lighttable Manage images and collections. darkroom Develop a single image. tethering Remotely capture and save images taken with a connected camera. map Show images with a geo-tag data on a map and manually geo-tag new images. slideshow Display images as a slideshow, processing them on-the-fly. print Send images to your printer.  You can switch between views by clicking the view name at the top of the right panel (the currently active view is highlighted) or by using one of the following keyboard shortcuts:</description>
+ lighttable Manage images and collections. darkroom Develop a single image. map Show images with a geo-tag data on a map and manually geo-tag new images. print Send images to your printer. slideshow Display images as a slideshow, processing them on-the-fly. tethering Remotely capture and save images taken with a connected camera.  You can switch between views by clicking the view name at the top of the right panel (the currently active view is highlighted) or by using one of the following keyboard shortcuts:</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/filmstrip/</guid>
       <description>The filmstrip, when enabled, is shown at the bottom of the screen (except in the lighttable view, where it is replaced with the timeline module) and displays the images from the collection that is currently selected in the lighttable view. You can navigate along the filmstrip by scrolling with the mouse wheel.
-The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by double clicking its thumbnail in the filmstrip.</description>
+The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip.</description>
     </item>
     
     <item>
@@ -43,9 +43,7 @@ The filmstrip allows you to interact with images while you are not in the lightt
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/top-panel/</guid>
       <description>The top panel is common to all darktable views and provides a number of common utility functions.
- On the right-hand-side
- view Choose which images to view in the lighttable/filmstrip, based on star rating and reject status. sort by Choose the sort order of images in the lighttable/filmstrip using various image properties.  On the left-hand-side (icons)
- grouping Expand or collapse grouped images thumbnail overlays Define what information is displayed over thumbnails in the lighttable/filmstrip.</description>
+ On the left-hand-side  view Choose which images to view in the lighttable/filmstrip, based on star rating and reject status. sort by Choose the property to sort by from the dropdown.  sort order Switch the sort order (ascending / descending) with the arrow-toggle.  On the right-hand-side   grouping Expand or collapse grouped images  thumbnail overlays Define what information is displayed over thumbnails in the lighttable/filmstrip.</description>
     </item>
     
     <item>
@@ -55,7 +53,7 @@ The filmstrip allows you to interact with images while you are not in the lightt
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/keyboard-shortcuts/</guid>
       <description>Much of the functionality in darktable can be controlled via keyboard shortcuts which can be customised in preferences &amp;gt; shortcuts.
-Press the H button in any darktable view to show a list of all shortcuts that are applicable to the current view.</description>
+Press the H button (for help) in any darktable view to show a list of all shortcuts that are applicable to the current view.</description>
     </item>
     
   </channel>
