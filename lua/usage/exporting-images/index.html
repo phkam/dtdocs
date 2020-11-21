@@ -4208,7 +4208,7 @@ darktable.preferences.register(&quot;scp_export&quot;,&quot;export_path&quot;,
 darktable.register_storage(&quot;scp_export&quot;,&quot;Export via scp&quot;,
   function( storage, image, format, filename,
      number, total, high_quality, extra_data)
-    if coroutine.yield(&quot;RUN_COMMAND&quot;,&quot;scp &quot;..filename..&quot; &quot;..
+    if not darktable.control.execute(&quot;scp &quot;..filename..&quot; &quot;..
       darktable.preferences.read(&quot;scp_export&quot;,
          &quot;export_path&quot;,&quot;string&quot;)) then
       darktable.print_error(&quot;scp failed for &quot;..tostring(image))

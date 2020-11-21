@@ -4223,7 +4223,7 @@ local scp_path = darktable.new_widget(&quot;entry&quot;){
 darktable.register_storage(&quot;scp_export&quot;,&quot;Export via scp&quot;,
   function( storage, image, format, filename,
      number, total, high_quality, extra_data)
-    if coroutine.yield(&quot;RUN_COMMAND&quot;,&quot;scp &quot;..filename..&quot; &quot;..
+    if not darktable.control.execute(scp &quot;..filename..&quot; &quot;..
       scp_path.text
     ) then
       darktable.print_error(&quot;scp failed for &quot;..tostring(image))
