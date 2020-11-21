@@ -1075,6 +1075,15 @@ format This website is authored in pure markdown, using some extensions. It is i
     </item>
     
     <item>
+      <title>darktable color pipeline</title>
+      <link>https://darktable-org.github.io/dtdocs/special-topics/color-pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/special-topics/color-pipeline/</guid>
+      <description>Most image processing applications you may be familiar with come from the 1990&amp;rsquo;s and/or inherit a 1990&amp;rsquo;s workflow. These applications used to process images encoded in 8 bits unsigned integers, because it was both memory and computationaly efficient. But, because of the integer format, which implies rounding errors, they had to use a &amp;ldquo;gamma&amp;rdquo;, which essentially is a transfert function applying a power 1/2.2 or 1/2.4 to encode the RGB values and increase the bit-depth in low-lights, to reduce rounding errors there because human being are very sensitive to low-lights.</description>
+    </item>
+    
+    <item>
       <title>scheduling profile</title>
       <link>https://darktable-org.github.io/dtdocs/special-topics/opencl/scheduling-profile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
