@@ -22,8 +22,8 @@ To use this module, type in a place name or address, press Enter and a list of r
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/locations/</guid>
-      <description>In the locations panel you can create areas or locations and organize them as hierarchical tags. The pipe “|” character can be used to insert a new level, i.e. a group of locations.
-A location is shown on as a shape on the map when selected. A location can have the shape of circle, ellipse, square or rectangle (initially a shape will be a square or circle, and it can be made into a rectangle or an ellipse by adjusting the width and/or height of the shape).</description>
+      <description>Create areas or locations and organize them as hierarchical tags. The pipe “|” character can be used to insert a new level (a group of locations).
+A location is shown as a shape on the map when selected. Initially each location will be represented as a square or circle and can be changed to a rectangle or ellipse by adjusting the shape&amp;rsquo;s width and/or height. Each location is stored as tag entry under the geotagging collection.</description>
     </item>
     
     <item>

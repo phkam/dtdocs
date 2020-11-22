@@ -4218,24 +4218,22 @@
         locations
     </h1>
 
-    <p>In the locations panel you can create areas or locations and organize them as hierarchical tags. The pipe “|” character can be used to insert a new level, i.e. a group of locations.</p>
-<p>A location is shown on as a shape on the map when selected. A location can have the shape of circle, ellipse, square or rectangle (initially a shape will be a square or circle, and it can be made into a rectangle or an ellipse by adjusting the width and/or height of the shape). Each location is an entry of geotagging collection under tagged.</p>
+    <p>Create areas or locations and organize them as hierarchical tags. The pipe “|” character can be used to insert a new level (a group of locations).</p>
+<p>A location is shown as a shape on the map when selected. Initially each location will be represented as a square or circle and can be changed to a rectangle or ellipse by adjusting the shape&rsquo;s width and/or height. Each location is stored as tag entry under the geotagging collection.</p>
 <h1 id="module-controls">module controls</h1>
 <dl>
 <dt>shape</dt>
-<dd>The circle or rectangle symbol selects the shape to be used for the new locations.</dd>
+<dd>Select the circle or rectangle symbol to choose the default shape for new locations.</dd>
 <dt>new location / new sub-location</dt>
-<dd>When no location is selected the button new location lets you create a location at root level. When a location is selected the button new sub-location lets you create a sub-location within that selected location.</dd>
+<dd>When no location is selected the <em>new location</em> button lets you create a location at root level. When a location is selected the <em>new sub-location</em> button lets you create a sub-location within the selected location.</dd>
 </dl>
 <h2 id="actions-on-the-locations-list">actions on the locations list</h2>
 <dl>
-<dt><code>Left-Click</code></dt>
+<dt><code>click</code></dt>
 <dd>Select (or de-select) a location. If the location is not visible on the map, the map is automatically centred on that location.</dd>
-<dt><code>Ctrl-Left-Click</code></dt>
-<dd>Edit the name of the location. Press <code>Esc</code> to close the editing window without saving any change.</dd>
-<dt><code>Enter</code></dt>
-<dd>Save changes to the name of the location.</dd>
-<dt><code>Right-Click</code></dt>
+<dt><code>Ctrl+click</code></dt>
+<dd>Edit the name of the location. Press <code>Enter</code> to save changes or <code>Esc</code> to close the editing window without saving.</dd>
+<dt><code>right-click</code></dt>
 <dd>Call up a sub-menu which allows you to:</dd>
 <dd><ul>
 <li>Edit the name of the location.</li>
@@ -4246,30 +4244,30 @@
 </ul>
 </dd>
 <dd><ul>
-<li>Update the filmstrip. The filmstrip is populated all images falling under the selected location.</li>
+<li>Update the filmstrip &ndash; the filmstrip will be populated all images within the selected location.</li>
 </ul>
 </dd>
 <dd><ul>
-<li>Change to the lighttable view and select a collection that contains all the images falling within the selected location.</li>
+<li>Switch to the lighttable view and show a collection that contains all the images within the selected location.</li>
 </ul>
 </dd>
 </dl>
 <h2 id="actions-on-locations-in-the-map">actions on locations in the map</h2>
 <dl>
-<dt><code>Left-Click</code> and <code>Drag</code></dt>
+<dt><code>click</code> and drag</dt>
 <dd>Move the location shape to a new position on the map.</dd>
-<dt><code>Ctrl-Click</code> or <code>Ctrl-Shift-Left-Click</code></dt>
+<dt><code>Ctrl+click</code> or <code>Ctrl+Shift+click</code></dt>
 <dd>Move an image or a group of images to place them inside a location shape.</dd>
-<dt><code>Scroll-Up</code> and <code>Scroll-Down</code></dt>
-<dd>When inside a location shape (but not over an image), increase or decrease the size of the location shape.</dd>
-<dd>When hovering over an image, display the different thumbnails of images located at that poistion on the map.</dd>
-<dd>When outside a location shape (and not over an image) zoom in or zoom out of the map.</dd>
-<dt><code>Shift-Scroll-Up</code> or <code>Shift-Scroll-Down</code></dt>
+<dt><code>scroll</code></dt>
+<dd>When inside a location shape (but not over an image), increase or decrease the size of that shape.</dd>
+<dd>When hovering over an image, display the different thumbnails of images located at that position on the map.</dd>
+<dd>When outside a location shape (and not over an image) zoom the map in or out.</dd>
+<dt><code>Shift+scroll</code></dt>
 <dd>Increase or decrease the width of the location shape.</dd>
-<dt><code>Ctrl-Scroll-Up</code> or <code>Ctrl-Scroll-Down</code></dt>
-<dd>Increase or decrease or increase the height of the location shape.</dd>
-<dt><code>Left-Click</code> on a location shape</dt>
-<dd>If the <em>show all</em> checkbox is selected, use <code>Left-Click</code> to select a different location.</dd>
+<dt><code>Ctrl+scroll</code></dt>
+<dd>Increase or decrease the height of the location shape.</dd>
+<dt><code>click</code> on a location shape</dt>
+<dd>Select a different location when the <em>show all</em> checkbox is selected.</dd>
 </dl>
 
 
