@@ -23,9 +23,9 @@ Even if your camera doesn&amp;rsquo;t support this feature, there is an alternat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/map/map-view-layout/</guid>
-      <description>left panel From top to bottom:
- collect images Filter the list of images displayed in the map view. recently used collections View recently used collections of images. image information Display image information.  right panel From top to bottom:
- find location Search for a place on map. locations Manage a heirarchical list of location tags and their corresponding regions on the map. map settings Set up your map overlay information and map providers.</description>
+      <description>left panel These modules are identical to the lighttable view. From top to bottom:
+ collect images Filter the list of images displayed in the map view. recently used collections View recently used collections of images. image information Display image information.  right panel Here you can find the modules specific for the map view. From top to bottom:
+ find location Search for a place on map. locations Manage a hierarchical list of location tags and their corresponding regions on the map.</description>
     </item>
     
   </channel>
