@@ -23,7 +23,10 @@
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/screen-layout/</guid>
       <description>The layout of all views is similar and consists of a center area with panels at the edges:
-  center area Contains information and functionality specific to the current view. left panel Contains modules primarily used to provide information. right panel Contains modules primarily used for image processing. top banner Contains information about the current darktable version and allows you to switch between views. Also used by some modules to show hints and messages.</description>
+   center area : Contains information and functionality specific to the current view.
+  left panel : Contains modules primarily used to provide information.
+  right panel : Contains modules primarily used for image processing.
+  top banner : Contains information about the current darktable version and allows you to switch between views.</description>
     </item>
     
     <item>
