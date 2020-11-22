@@ -49,6 +49,16 @@ You can navigate through the images using the arrow keys (←/→/↑/↓) or by
     </item>
     
     <item>
+      <title>find location</title>
+      <link>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/find-location/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/find-location/</guid>
+      <description>Search for a location on the map. You must be connected to the internet to use this feature.
+To use this module, type in a place name or address, press Enter and a list of results will be shown. Click on one of the resulting items and the map will zoom to that location. An outline covering that location or a pin pointing at the location will be displayed. Drag images from the filmstrip at the bottom of the screen to their location on the map.</description>
+    </item>
+    
+    <item>
       <title>import, rate &amp; tag images</title>
       <link>https://darktable-org.github.io/dtdocs/overview/workflow/import-rate-tag/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -356,6 +366,16 @@ Each change you make to the image in the darkroom is turned into a history stack
     </item>
     
     <item>
+      <title>locations</title>
+      <link>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/locations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/locations/</guid>
+      <description>In the locations panel you can create areas or locations and organize them as hierarchical tags. The pipe “|” character can be used to insert a new level, i.e. a group of locations.
+A location is shown on as a shape on the map when selected. A location can have the shape of circle, ellipse, square or rectangle (initially a shape will be a square or circle, and it can be made into a rectangle or an ellipse by adjusting the width and/or height of the shape).</description>
+    </item>
+    
+    <item>
       <title>lua API</title>
       <link>https://darktable-org.github.io/dtdocs/lua/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -372,7 +392,7 @@ Each change you make to the image in the darkroom is turned into a history stack
       <guid>https://darktable-org.github.io/dtdocs/map/map-view-layout/</guid>
       <description>left panel From top to bottom:
  collect images Filter the list of images displayed in the map view. recently used collections View recently used collections of images. image information Display image information.  right panel From top to bottom:
- find location Search for a place on map. map settings Set up your map overlay information and map providers. tagging Tag selected images.  bottom panel  filmstrip Drag images from the filmstrip onto the map as described in the find location module documentation.</description>
+ find location Search for a place on map. locations Manage a heirarchical list of location tags and their corresponding regions on the map. map settings Set up your map overlay information and map providers.</description>
     </item>
     
     <item>
@@ -577,6 +597,16 @@ import  ignore JPEG images when importing film rolls When you have RAW+JPEG imag
       <guid>https://darktable-org.github.io/dtdocs/overview/sidecar-files/local-copies/</guid>
       <description>Many users have huge image collections stored on extra hard drives in their desktop computer, or on an external storage medium like a RAID NAS, etc.
 It is a common requirement to be able to develop a number of images while travelling using a laptop and then later synchronize them back to the original storage medium. However, copying images manually from the main storage to the laptop and back is cumbersome and prone to errors.</description>
+    </item>
+    
+    <item>
+      <title>map settings</title>
+      <link>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/map-settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/map-settings/</guid>
+      <description>Select preferred map data from various providers. Some will provide additional layers (satellite view etc.) which you can toggle.
+module controls  show OSD Choose whether to display the OSD controls on top-left of the center view. filtered images When selected, only the images from the filmstrip are displayed in the center view. If not selected, all images in the current library are displayed as long as the corresponding images have GPS data associated with them.</description>
     </item>
     
     <item>
@@ -1570,16 +1600,6 @@ Quickly navigate through the images in the filmstrip by scrolling with the mouse
     </item>
     
     <item>
-      <title>find location</title>
-      <link>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/find-location/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/find-location/</guid>
-      <description>Search for a location on the map. You must be connected to the internet to use this feature.
-To use this module, type in a place name or address, press Enter and a list of results will be shown. Click on one of the resulting items and the map will zoom to that location. An outline covering that location or a pin pointing at the location will be displayed. Drag images from the filmstrip at the bottom of the screen to their location on the map.</description>
-    </item>
-    
-    <item>
       <title>focus peaking</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1893,16 +1913,6 @@ This module accepts .cube and .png (haldclut) files. The 3D LUT data is not save
       <description>Manage the layout and grouping of processing modules.
  This maintenance screen can be accessed from the presets menu beside the module group icons (below the histogram in the darkroom view).
 module controls preset list The panel on the left of the screen lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. Those at the bottom of the list are user-defined.</description>
-    </item>
-    
-    <item>
-      <title>map settings</title>
-      <link>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/map-settings/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/map-settings/</guid>
-      <description>Select preferred map data from various providers. Some will provide additional layers (satellite view etc.) which you can toggle.
-module controls  show OSD Choose whether to display the OSD controls on top-left of the center view. filtered images When selected, only the images from the filmstrip are displayed in the center view. If not selected, all images in the current library are displayed as long as the corresponding images have GPS data associated with them.</description>
     </item>
     
     <item>

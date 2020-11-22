@@ -25,7 +25,7 @@ Even if your camera doesn&amp;rsquo;t support this feature, there is an alternat
       <guid>https://darktable-org.github.io/dtdocs/map/map-view-layout/</guid>
       <description>left panel From top to bottom:
  collect images Filter the list of images displayed in the map view. recently used collections View recently used collections of images. image information Display image information.  right panel From top to bottom:
- find location Search for a place on map. map settings Set up your map overlay information and map providers. tagging Tag selected images.  bottom panel  filmstrip Drag images from the filmstrip onto the map as described in the find location module documentation.</description>
+ find location Search for a place on map. locations Manage a heirarchical list of location tags and their corresponding regions on the map. map settings Set up your map overlay information and map providers.</description>
     </item>
     
   </channel>

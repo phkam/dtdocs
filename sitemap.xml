@@ -23,6 +23,10 @@
   </url>
   
   <url>
+    <loc>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/find-location/</loc>
+  </url>
+  
+  <url>
     <loc>https://darktable-org.github.io/dtdocs/overview/workflow/import-rate-tag/</loc>
   </url>
   
@@ -159,6 +163,10 @@
   </url>
   
   <url>
+    <loc>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/locations/</loc>
+  </url>
+  
+  <url>
     <loc>https://darktable-org.github.io/dtdocs/lua/api/</loc>
   </url>
   
@@ -252,6 +260,10 @@
   
   <url>
     <loc>https://darktable-org.github.io/dtdocs/overview/sidecar-files/local-copies/</loc>
+  </url>
+  
+  <url>
+    <loc>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/map-settings/</loc>
   </url>
   
   <url>
@@ -727,10 +739,6 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/find-location/</loc>
-  </url>
-  
-  <url>
     <loc>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/</loc>
   </url>
   
@@ -860,10 +868,6 @@
   
   <url>
     <loc>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/map-settings/</loc>
   </url>
   
   <url>
