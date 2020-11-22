@@ -990,8 +990,7 @@ As with any mask, if the value for a pixel in a raster mask is zero the input to
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/</guid>
       <description>At the top of the right-hand panel in the darkroom view is a module that allows you to search for and select from pre-defined groups of processing modules:
- The appearance of the module groups and search functionality can be modified in preferences &amp;gt; darkroom &amp;gt; show module groups and/or search text entry. Here, you can choose to show only the module groups, only the search entry, or both.
-groups Click on one of the module group icons above the search module textbox to see all of the modules which belong to that group.</description>
+ darktable ships with some standard pre-defined module group presets, which can be selected from the presets menu on the right-hand-side of the module groups list. You can also customize and create your own groups by selecting &amp;ldquo;manage presets&amp;hellip;&amp;rdquo; from the same drop-down menu.</description>
     </item>
     
     <item>
@@ -1902,8 +1901,8 @@ This module accepts .cube and .png (haldclut) files. The 3D LUT data is not save
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/</guid>
       <description>Manage the layout and grouping of processing modules.
- This maintenance screen can be accessed from the presets menu beside the module group icons (below the histogram in the darkroom view).
-module controls preset list The panel on the left of the screen lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. Those at the bottom of the list are user-defined.</description>
+ This maintenance screen can be accessed from the presets menu beside the module search box or group icons (below the histogram in the darkroom view).
+module controls preset list The left-hand panel lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. User-defined presets are placed at the bottom of the list.</description>
     </item>
     
     <item>

@@ -73,8 +73,7 @@ the presets menu The presets menu will contain one or more of the following entr
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/</guid>
       <description>At the top of the right-hand panel in the darkroom view is a module that allows you to search for and select from pre-defined groups of processing modules:
- The appearance of the module groups and search functionality can be modified in preferences &amp;gt; darkroom &amp;gt; show module groups and/or search text entry. Here, you can choose to show only the module groups, only the search entry, or both.
-groups Click on one of the module group icons above the search module textbox to see all of the modules which belong to that group.</description>
+ darktable ships with some standard pre-defined module group presets, which can be selected from the presets menu on the right-hand-side of the module groups list. You can also customize and create your own groups by selecting &amp;ldquo;manage presets&amp;hellip;&amp;rdquo; from the same drop-down menu.</description>
     </item>
     
   </channel>

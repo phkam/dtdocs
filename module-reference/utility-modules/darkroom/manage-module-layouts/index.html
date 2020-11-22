@@ -4225,36 +4225,39 @@
 <img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/manage-module-layouts.png#w100" alt="manage module layouts"  />
 
 </p>
-<p>This maintenance screen can be accessed from the <em>presets</em> menu beside the module group icons (below the histogram in the darkroom view).</p>
+<p>This maintenance screen can be accessed from the <em>presets</em> menu beside the module search box or group icons (below the histogram in the darkroom view).</p>
 <h1 id="module-controls">module controls</h1>
 <h2 id="preset-list">preset list</h2>
-<p>The panel on the left of the screen lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. Those at the bottom of the list are user-defined.</p>
-<p>To create a new (empty) preset, click on the <code>+</code> button at the bottom of the left-hand panel. Alternatively click on the <code>duplicate</code> button to the right of one of the existing module presets to copy that preset to a new one.</p>
+<p>The left-hand panel lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. User-defined presets are placed at the bottom of the list.</p>
+<p>To create a new (empty) preset, click on the <code>+</code> button at the bottom of the left-hand panel. Alternatively click on the <code>duplicate</code> button to the right of one of the existing module presets to copy that preset to a new one. The above screenshot shows a new preset which has been created by duplicating the &ldquo;modules: default&rdquo; preset.</p>
 <p>Delete a user-defined preset with the <code>X</code> button.</p>
-<p>Rename a preset using the entry at the top of the right-hand panel.</p>
+<p>Rename a preset using the text entry box at the top of the right-hand panel.</p>
 <h2 id="module-groups">module groups</h2>
-<p>The panel on the right of the screen allows you to create and amend module groups.</p>
-<p>Add a new group by clicking on the <code>+</code> sign beside the &ldquo;module groups&rdquo; header. Remove a group by clicking on the <code>X</code> button beside the module group header.</p>
-<p>Add a module to a group by clicking the <code>+</code> sign at the bottom of the module group you wish to add it to, and select the module from the list that appears. Remove a module by clicking the <code>X</code> beside the module name.</p>
+<p>The right-hand panel allows you to create and amend module groups for the selected preset.</p>
+<p>Add a new group by clicking on the <code>+</code> sign beside the &ldquo;module groups&rdquo; header. Remove a group by clicking on the <code>X</code> button beside the header of that module group.</p>
+<p>Add a module to a group by clicking the <code>+</code> sign at the bottom of the group, and select the required module from the list that appears. Remove a module by clicking the <code>X</code> beside the module name.</p>
 <p>Change the icon assigned to a group by clicking on the existing group icon and selecting a new one from the drop-down list.</p>
 <p>Change order the groups are displayed in by clicking on the <code>&lt;</code> and <code>&gt;</code> buttons beside the group headers.</p>
 <p>Settings will be automatically saved when you exit the screen. Click <code>reset</code> to reset the settings to the start of your editing session.</p>
 <h1 id="system-defined-presets">system-defined presets</h1>
-<p>There are five standard module group layouts that ship with darktable, each of which is available for selection as a preset. These module groups cannot be amended:</p>
+<p>There are seven standard presets that ship with darktable, which cannot be amended:</p>
 <ul>
-<li><strong>default</strong>: This is the default module group layout from darktable 3.4 onwards, and consists of a new simplified set of module groups.</li>
-<li><strong>all modules</strong>: This contains the complete set of modules, sorted by the traditional module groupings used before darktable 3.4.</li>
-<li><strong>scene referred</strong>: This contains the modules commonly used for the <a href="/dtdocs/overview/workflow/edit-scene-referred/">scene-referred workflow</a>.</li>
-<li><strong>display referred</strong>: This contains the modules commonly used for the <a href="/dtdocs/overview/workflow/edit-display-referred/">display-referred workflow</a>.</li>
-<li><strong>minimal</strong>: This contains a limited set of modules that are most important when first starting out with darktable. It is suggested that beginners start by copying this minimal preset, and add to it as they gain experience with additional modules.</li>
+<li><strong>modules: all</strong>: This contains the complete set of modules, sorted by the traditional module groupings used before darktable 3.4.</li>
+<li><strong>modules: default</strong>: This is the default module group layout from darktable 3.4 onwards, and consists of a new simplified set of module groups.</li>
+<li><strong>modules: deprecated</strong>: This contains a list of deprecated modules. This is the only way to access deprecated modules for new edits but be warned: these modules will be removed for new edits in the next release of darktable. This group cannot be duplicated and the modules within it cannot be added to user-created groups.</li>
+<li><strong>search only</strong>: Display the module search box but do not show module groups.</li>
+<li><strong>workflow: beginner</strong>: This contains a limited set of modules that are most important when first starting out with darktable. It is suggested that beginners start by copying this minimal preset, and add to it as they gain experience with additional modules.</li>
+<li><strong>workflow: display referred</strong>: This contains the modules commonly used for the <a href="/dtdocs/overview/workflow/edit-display-referred/">display-referred workflow</a>.</li>
+<li><strong>workflow: scene referred</strong>: This contains the modules commonly used for the <a href="/dtdocs/overview/workflow/edit-scene-referred/">scene-referred workflow</a>.</li>
 </ul>
-<p>In addition, if you have used a version of darktable prior to 3.4, two additional presets may also be automatically created when you upgrade. These allow you to retain some or all of your previous module group layouts and can be edited or deleted:</p>
+<p>For each preset you can also choose whether or not to show the search line using the tick box at the top of the screen.</p>
+<p>In addition, if you have upgraded an older version of darktable to 3.4, two additional presets may be automatically created as part of the upgrade. These allow you to retain some or all of your previous module group layouts and can be edited or deleted as required:</p>
 <ul>
-<li><strong>previous config</strong>: Where a user previously set up favourites or altered the <em>hidden</em> flag on modules, this preset contains those customisations, retaining the legacy module groups.</li>
-<li><strong>previous config with new layout</strong>: Where a user previously set up favourites or altered the <em>hidden</em> flag on modules, this preset contains those customisations but with modules grouped according to the new (darktable 3.4+) group layout.</li>
+<li><strong>previous config</strong>: Where you have previously set up favourites or altered the <em>hidden</em> flag on modules, this preset contains those customisations, retaining the legacy module groups.</li>
+<li><strong>previous config with new layout</strong>: Where you have previously set up favourites or altered the <em>hidden</em> flag on modules, this preset contains those customisations but with modules grouped according to the new (darktable 3.4+) default group layout.</li>
 </ul>
-<h2 id="default-preset">default preset</h2>
-<p>The <em>default</em> layout consists of the following module groups</p>
+<h2 id="_modules-default_"><em>modules: default</em></h2>
+<p>The <em>modules: default</em> layout preset consists of the following module groups</p>
 <dl>
 <dt>
 
@@ -4262,24 +4265,24 @@
 <img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-technical-icon.png" alt="module-group-technical-icon"  />
 
  technical modules</dt>
-<dd>This group contains modules that deal with technical issues relsting to the physics of sensors and denoising, lenses and associated corrections, color profiles, dynamic range and tone mapping, and recovering from damage to the image by physical limitations (hot pixels, recovery from clipped highlights, etc.)</dd>
+<dd>Modules that deal with technical issues relating to the physics of sensors and denoising, lenses and associated corrections, color profiles, dynamic range and tone mapping, and recovering from damage to the image by physical limitations (hot pixels, clipped highlights, etc.)</dd>
 <dt>
 
 
 <img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-grading-icon.png" alt="module-group-grading-icon"  />
 
  grading modules</dt>
-<dd>Everything concerning primary (corrective) and secondary (creative) subjective corrections of colors and tones</dd>
+<dd>Modules concerned with primary (corrective) and secondary (creative) subjective corrections of colors and tones</dd>
 <dt>
 
 
 <img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-effects-icon.png" alt="module-group-effects-icon"  />
 
  (special) effects modules</dt>
-<dd>Includes special effects such as retouching, liquifying, blooming, sharpness, etc..</dd>
+<dd>&ldquo;Special effect&rdquo; modules such as retouch, liquify, bloom, sharpen, etc..</dd>
 </dl>
-<h2 id="all-modules-preset">all modules preset</h2>
-<p>The <em>all modules</em> preset contains all modules, sorted according to the following groups:</p>
+<h2 id="_modules-all_"><em>modules: all</em></h2>
+<p>The <em>modules: all</em> preset contains all modules, sorted according to the following groups:</p>
 <dl>
 <dt>
 
@@ -4315,10 +4318,10 @@
 <img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-effects-icon.png" alt="module-group-effects-icon"  />
 
  (special) effects modules</dt>
-<dd>Includes special effects such as retouching, liquifying, blooming, sharpness, etc..</dd>
+<dd>Includes special effects such as retouch, liquify, bloom, sharpen, etc..</dd>
 </dl>
-<h2 id="scene-referred-and-display-referred-presets">scene-referred and display-referred presets</h2>
-<p>The <em>scene-referred</em> and <em>display-referred</em> presets define groups of modules relevant to those workflows, sorted into groups as shown below:</p>
+<h2 id="_workflow-scene-referred_-_workflow-display-referred_"><em>workflow: scene-referred</em>, <em>workflow: display-referred</em></h2>
+<p>The <em>workflow: scene-referred</em> and <em>workflow: display-referred</em> presets define groups of modules relevant to those workflows, sorted into groups as shown below:</p>
 <dl>
 <dt>
 
@@ -4347,10 +4350,10 @@
 <img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-effects-icon.png" alt="module-group-effects-icon"  />
 
  (special) effects modules</dt>
-<dd>Includes special effects such as applying watermarks and framing, vignetting, etc..</dd>
+<dd>Includes special effects such as watermarks, framing, vignetting, etc..</dd>
 </dl>
-<h2 id="minimal-preset">minimal preset</h2>
-<p>The <em>minimal</em> preset provides a minimal set of modules targeted as a starting point for beginners, and consists of the following module groups:</p>
+<h2 id="_workflow-beginner_"><em>workflow: beginner</em></h2>
+<p>The <em>workflow: beginner</em> preset provides a minimal set of modules targeted as a starting point for beginners, and consists of the following module groups:</p>
 <dl>
 <dt>
 
@@ -4372,10 +4375,10 @@
 <img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-effects-icon.png" alt="module-group-effects-icon"  />
 
  (special) effects modules</dt>
-<dd>Includes special effects such as retouching, sharpening, watermarks, etc..</dd>
+<dd>Includes special effects such as retouch, sharpen, watermarks, etc..</dd>
 </dl>
 <h2 id="previous-config-module-groups">previous config module groups</h2>
-<p>These follow the layouts of the previous two groups, but include an additional <em>favourites</em> group where users made use of this feature in the past. Now that users may create their own custom groups, there is no longer a need for an explicit &ldquo;favourites&rdquo; group.</p>
+<p>These follow the layouts of the previous two groups, but include an additional <em>favourites</em> group where users made use of this feature in prior versions of darktable. Now that users may create their own custom groups, there is no longer a need for an explicit &ldquo;favourites&rdquo; group.</p>
 <dl>
 <dt>
 
@@ -4391,7 +4394,7 @@
 
 <img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/module-group-active-icon.png" alt="module-group-active-icon"  />
 
- <em>active group</em>, which lists all modules that are currently active in the pixel pipeline.</p>
+ <em>active group</em>, which lists all modules that are currently active in the pixelpipe.</p>
 
 
     
