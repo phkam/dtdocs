@@ -1301,6 +1301,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/astrophoto-denoise/" class="">
+    astrophoto denoise
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/base-curve/" class="">
     base curve
 </a>
@@ -1347,7 +1362,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/channel-mixer/" class="">
-    channel mixer
+    channel mixer (deprecated)
 </a>
 
     </li>
@@ -1586,36 +1601,6 @@
 
 
 
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/" class="">
-    denoise (bilateral filter)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/" class="">
-    denoise (non-local means)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-profiled/" class="">
     denoise (profiled)
 </a>
@@ -1662,7 +1647,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/fill-light/" class="">
-    fill light
+    fill light (deprecated)
 </a>
 
     </li>
@@ -1707,7 +1692,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/global-tonemap/" class="">
-    global tonemap
+    global tonemap (deprecated)
 </a>
 
     </li>
@@ -1827,7 +1812,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/invert/" class="">
-    invert
+    invert (deprecated)
 </a>
 
     </li>
@@ -2201,6 +2186,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/surface-blur/" class="">
+    surface blur
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-curve/" class="">
     tone curve
 </a>
@@ -2232,7 +2232,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-mapping/" class="">
-    tone mapping
+    tone mapping (deprecated)
 </a>
 
     </li>
@@ -2337,7 +2337,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/zone-system/" class="">
-    zone system
+    zone system (deprecated)
 </a>
 
     </li>
@@ -4227,7 +4227,7 @@
 <p>As another example, if you are tackling chroma noise with a <a href="/dtdocs/darkroom/masking-and-blending/blend-modes/">blend mode</a>, you can push the rightmost part of the curve up, as colors do not change a lot on fine grain scales. This will help especially if you see some isolated pixel left un-denoised.</p>
 </dd>
 <dd>
-<p>The best way to use the R, G, and B curves is to examine each of the channels in turn using the <a href="/dtdocs/module-reference/processing-modules/channel-mixer/"><em>channel mixer</em></a> module in gray mode, denoise that channel, and then repeat for the other channels. This way, you can take into account the fact that some channels may be noisier than others. Beware that guessing which channel is noisy without actually seeing the channels individually is not straightforward and can be counterintuitive. A pixel which is completely red may not be caused by noise on the R channel, but actually by noise on G and B channels.</p>
+<p>The best way to use the R, G, and B curves is to examine each of the channels in turn using the <a href="/dtdocs/module-reference/processing-modules/color-calibration/"><em>color calibration</em></a> module in gray mode, denoise that channel, and then repeat for the other channels. This way, you can take into account the fact that some channels may be noisier than others. Beware that guessing which channel is noisy without actually seeing the channels individually is not straightforward and can be counterintuitive. A pixel which is completely red may not be caused by noise on the R channel, but actually by noise on G and B channels.</p>
 </dd>
 <dd>
 <p>See the <a href="/dtdocs/darkroom/interacting-with-modules/wavelets/">wavelet</a> section for more details.</p>

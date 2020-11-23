@@ -1301,6 +1301,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/astrophoto-denoise/" class="">
+    astrophoto denoise
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/base-curve/" class="">
     base curve
 </a>
@@ -1347,7 +1362,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/channel-mixer/" class="">
-    channel mixer
+    channel mixer (deprecated)
 </a>
 
     </li>
@@ -1586,36 +1601,6 @@
 
 
 
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/" class="">
-    denoise (bilateral filter)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/" class="">
-    denoise (non-local means)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-profiled/" class="">
     denoise (profiled)
 </a>
@@ -1662,7 +1647,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/fill-light/" class="">
-    fill light
+    fill light (deprecated)
 </a>
 
     </li>
@@ -1707,7 +1692,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/global-tonemap/" class="">
-    global tonemap
+    global tonemap (deprecated)
 </a>
 
     </li>
@@ -1827,7 +1812,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/invert/" class="">
-    invert
+    invert (deprecated)
 </a>
 
     </li>
@@ -2201,6 +2186,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/surface-blur/" class="">
+    surface blur
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-curve/" class="">
     tone curve
 </a>
@@ -2232,7 +2232,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-mapping/" class="">
-    tone mapping
+    tone mapping (deprecated)
 </a>
 
     </li>
@@ -2337,7 +2337,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/zone-system/" class="">
-    zone system
+    zone system (deprecated)
 </a>
 
     </li>
@@ -4227,7 +4227,7 @@
 <p>While you can use the <em>exposure</em> module to tweak the black level to supply more contrast, you need to be very careful doing this as you can end up with negative RGB values. It is better to increase the contrast by adjusting the toe of the <em>base curve</em>, however this can be a little fiddly and it is one of the reasons why the <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module was introduced to darktable.</p>
 </dd>
 <dt>noise reduction</dt>
-<dd>As with the <em>scene-referred</em> workflow, the best starting point for noise reduction is the <a href="/dtdocs/module-reference/processing-modules/denoise-profiled/"><em>denoise (profiled)</em></a> module.  Similarly, you may also choose to use <a href="/dtdocs/module-reference/processing-modules/raw-denoise/"><em>raw denoise</em></a>, <a href="/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/"><em>denoise (bilateral filter)</em></a>, <a href="/dtdocs/module-reference/processing-modules/denoise-non-local-means/"><em>denoise (non-local means)</em></a>, or the <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> module.</dd>
+<dd>As with the <em>scene-referred</em> workflow, the best starting point for noise reduction is the <a href="/dtdocs/module-reference/processing-modules/denoise-profiled/"><em>denoise (profiled)</em></a> module.  Similarly, you may also choose to use <a href="/dtdocs/module-reference/processing-modules/raw-denoise/"><em>raw denoise</em></a>, <a href="/dtdocs/module-reference/processing-modules/surface-blur/"><em>surface blur</em></a>, <a href="/dtdocs/module-reference/processing-modules/astrophoto-denoise/"><em>astrophoto denoise</em></a>, or the <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> module.</dd>
 <dt>fixing spots</dt>
 <dd>As with the <em>scene-referred</em> workflow, you can use the <a href="/dtdocs/module-reference/processing-modules/retouch/"><em>retouch</em></a>, <a href="/dtdocs/module-reference/processing-modules/spot-removal/"><em>spot removal</em></a> and <a href="/dtdocs/module-reference/processing-modules/hot-pixels/"><em>hot pixels</em></a> modules to correct artifacts in your image.</dd>
 <dt>geometrical corrections</dt>
@@ -4235,11 +4235,11 @@
 <dt>bringing back detail</dt>
 <dd>Raw images often contain more information than you can see at first sight, especially in the shadows. The <a href="/dtdocs/module-reference/processing-modules/shadows-and-highlights/"><em>shadows and highlights</em></a> module helps bring these details back into visible tonal values. Structural details in fully blown-out highlights, by nature of the digital sensor, can not be recovered. However, you can correct unfavorable color casts in these areas with the <a href="/dtdocs/module-reference/processing-modules/highlight-reconstruction/"><em>highlight reconstruction</em></a> module. The <a href="/dtdocs/module-reference/processing-modules/color-reconstruction/"><em>color reconstruction</em></a> module is able to fill overexposed areas with suitable colors based on their surroundings. The <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module also offers highlight reconstruction, but be sure to disable <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a> first.</dd>
 <dt>adjusting tonal values</dt>
-<dd>Almost every workflow is likely to include adjusting the image&rsquo;s tonal range and darktable offers several modules to assist with this. The most basic is the <a href="/dtdocs/module-reference/processing-modules/contrast-brightness-saturation/"><em>contrast brightness saturation</em></a> module. In the <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> module, tonal values are adjusted by constructing a curve. The <a href="/dtdocs/module-reference/processing-modules/levels/"><em>levels</em></a> and <a href="/dtdocs/module-reference/processing-modules/rgb-levels/"><em>rgb levels</em></a> modules offer a concise interface, with three markers in a histogram. In addition, the <a href="/dtdocs/module-reference/processing-modules/zone-system/"><em>zone system</em></a> module allows control over tonal values by zones, inspired by the work of Ansel Adams. And of course, there is nothing to stopping you from using the <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module in a <em>display-referred</em> workflow if you so wish (after disabling <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a>).</dd>
+<dd>Almost every workflow is likely to include adjusting the image&rsquo;s tonal range and darktable offers several modules to assist with this. The most basic is the <a href="/dtdocs/module-reference/processing-modules/contrast-brightness-saturation/"><em>contrast brightness saturation</em></a> module. In the <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> module, tonal values are adjusted by constructing a curve. The <a href="/dtdocs/module-reference/processing-modules/levels/"><em>levels</em></a> and <a href="/dtdocs/module-reference/processing-modules/rgb-levels/"><em>rgb levels</em></a> modules offer a concise interface, with three markers in a histogram. And of course, there is nothing to stopping you from using the <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module in a <em>display-referred</em> workflow if you so wish (after disabling <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a>).</dd>
 <dt>enhancing local contrast</dt>
 <dd>Local contrast enhancement can emphasize detail and clarity in your image. Carefully used, it can give your photograph the right pop. Several modules are available for this task. The <a href="/dtdocs/module-reference/processing-modules/local-contrast/"><em>local contrast</em></a> module is easy to handle, with just a few parameters. A much more versatile, but also more complex, technique is offered by the <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> module. Take a look at its presets to get a feeling for how it works. The <em>contrast equalizer</em> is darktable&rsquo;s &ldquo;Swiss Army Knife&rdquo; for many adjustments where spatial dimension plays a role. Note that the location of this module in the pixel pipeline differs significantly between the <em>scene-referred</em> and <em>display-referred</em> workflows.</dd>
 <dt>color adjustments</dt>
-<dd>darktable offers many modules for adjusting colors in an image. A very straightforward technique is implemented in the <a href="/dtdocs/module-reference/processing-modules/color-correction/"><em>color correction</em></a> module. Use this module to give an image an overall tint or to adjust overall color saturation. The <a href="/dtdocs/module-reference/processing-modules/color-zones/"><em>color zones</em></a> module offers a much finer control to adjust saturation, lightness and hue, in user defined zones. The <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> module &ndash; in addition to the classical adjustment of tonal values &ndash; gives you fine control over the colors in an image. Finally, if you intend to convert an image into black &amp; white, a good starting point, with an easy to use and intuitive user interface, is offered by the <a href="/dtdocs/module-reference/processing-modules/monochrome/"><em>monochrome</em></a> module. Alternatively, you might consider using the <a href="/dtdocs/module-reference/processing-modules/channel-mixer/"><em>channel mixer</em></a>.</dd>
+<dd>darktable offers many modules for adjusting colors in an image. A very straightforward technique is implemented in the <a href="/dtdocs/module-reference/processing-modules/color-correction/"><em>color correction</em></a> module. Use this module to give an image an overall tint or to adjust overall color saturation. The <a href="/dtdocs/module-reference/processing-modules/color-zones/"><em>color zones</em></a> module offers a much finer control to adjust saturation, lightness and hue, in user defined zones. The <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> module &ndash; in addition to the classical adjustment of tonal values &ndash; gives you fine control over the colors in an image. Finally, if you intend to convert an image into black &amp; white, a good starting point, with an easy to use and intuitive user interface, is offered by the <a href="/dtdocs/module-reference/processing-modules/monochrome/"><em>monochrome</em></a> module. Alternatively, you might consider using the <a href="/dtdocs/module-reference/processing-modules/color-calibration/"><em>color calibration</em></a> module.</dd>
 <dt>sharpening</dt>
 <dd>If you start your workflow from a raw image, your final output will need to be sharpened. The <a href="/dtdocs/module-reference/processing-modules/sharpen/"><em>sharpen</em></a> module can do this with the classical USM (unsharp mask) approach, available in most image processing software. Another very versatile way to enhance edges in an image is offered by the <a href="/dtdocs/module-reference/processing-modules/highpass/"><em>highpass</em></a> module, in combination with darktable&rsquo;s rich set of <a href="/dtdocs/darkroom/masking-and-blending/blend-modes/"><em>blending</em></a> operators.</dd>
 <dt>artistic effects</dt>

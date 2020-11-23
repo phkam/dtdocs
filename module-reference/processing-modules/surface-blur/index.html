@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>darktable user manual - denoise (bilateral filter)</title>
+<title>darktable user manual - surface blur</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -1301,6 +1301,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/astrophoto-denoise/" class="">
+    astrophoto denoise
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/base-curve/" class="">
     base curve
 </a>
@@ -1347,7 +1362,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/channel-mixer/" class="">
-    channel mixer
+    channel mixer (deprecated)
 </a>
 
     </li>
@@ -1586,36 +1601,6 @@
 
 
 
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/" class=" active">
-    denoise (bilateral filter)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/" class="">
-    denoise (non-local means)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-profiled/" class="">
     denoise (profiled)
 </a>
@@ -1662,7 +1647,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/fill-light/" class="">
-    fill light
+    fill light (deprecated)
 </a>
 
     </li>
@@ -1707,7 +1692,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/global-tonemap/" class="">
-    global tonemap
+    global tonemap (deprecated)
 </a>
 
     </li>
@@ -1827,7 +1812,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/invert/" class="">
-    invert
+    invert (deprecated)
 </a>
 
     </li>
@@ -2201,6 +2186,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/surface-blur/" class=" active">
+    surface blur
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-curve/" class="">
     tone curve
 </a>
@@ -2232,7 +2232,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-mapping/" class="">
-    tone mapping
+    tone mapping (deprecated)
 </a>
 
     </li>
@@ -2337,7 +2337,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/zone-system/" class="">
-    zone system
+    zone system (deprecated)
 </a>
 
     </li>
@@ -4193,7 +4193,7 @@
 
 
 
-<a href='https://darktable-org.github.io/dtdocs/'>Home</a> / <a href='https://darktable-org.github.io/dtdocs/module-reference/'>Module Reference</a> / <a href='https://darktable-org.github.io/dtdocs/module-reference/processing-modules/'>processing modules</a> / denoise (bilateral filter)
+<a href='https://darktable-org.github.io/dtdocs/'>Home</a> / <a href='https://darktable-org.github.io/dtdocs/module-reference/'>Module Reference</a> / <a href='https://darktable-org.github.io/dtdocs/module-reference/processing-modules/'>processing modules</a> / surface blur
 
 
 
@@ -4209,11 +4209,11 @@
 
 
     <h1 class="title">
-        denoise (bilateral filter)
+        surface blur
     </h1>
 
     <p>Denoise high ISO images.</p>
-<p>This module reduces noise in the image while preserving sharp edges. This is accomplished by averaging pixels with their neighbors, taking into account not only their geometric distance but also their distance on the range scale (i.e. differences in the RGB values).  This module is particularly effective if one RGB channel is more noisy than the others. In such a case, use the <a href="/dtdocs/module-reference/processing-modules/channel-mixer/"><em>channel mixer</em></a> module to examine the channels one by one, in order to set the blur intensities accordingly.</p>
+<p>This module reduces noise in the image while preserving sharp edges. This is accomplished by averaging pixels with their neighbors, taking into account not only their geometric distance but also their distance on the range scale (i.e. differences in the RGB values).  This module is particularly effective if one RGB channel is more noisy than the others. In such a case, use the <a href="/dtdocs/module-reference/processing-modules/color-calibration/"><em>color calibration</em></a> module to examine the channels one by one, in order to set the blur intensities accordingly.</p>
 <p>As denoising is a resource-intensive process, it slows down pixelpipe processing significantly. Consider activating this module late in your workflow.</p>
 <h1 id="module-controls">module controls</h1>
 <dl>
@@ -4231,14 +4231,14 @@
     <div class="col-6">
 	
 	
-	<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/demosaic/" class="next">&lt; demosaic</a>
+	<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/spot-removal/" class="next">&lt; spot removal</a>
 	
 	
     </div>
     <div class="col-6">
 	
 	
-	<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/" class="prev">denoise (non-local means) &gt;</a>
+	<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-curve/" class="prev">tone curve &gt;</a>
 	
 	
     </div>

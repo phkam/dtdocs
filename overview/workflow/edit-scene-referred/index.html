@@ -1301,6 +1301,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/astrophoto-denoise/" class="">
+    astrophoto denoise
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/base-curve/" class="">
     base curve
 </a>
@@ -1347,7 +1362,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/channel-mixer/" class="">
-    channel mixer
+    channel mixer (deprecated)
 </a>
 
     </li>
@@ -1586,36 +1601,6 @@
 
 
 
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/" class="">
-    denoise (bilateral filter)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/" class="">
-    denoise (non-local means)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-profiled/" class="">
     denoise (profiled)
 </a>
@@ -1662,7 +1647,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/fill-light/" class="">
-    fill light
+    fill light (deprecated)
 </a>
 
     </li>
@@ -1707,7 +1692,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/global-tonemap/" class="">
-    global tonemap
+    global tonemap (deprecated)
 </a>
 
     </li>
@@ -1827,7 +1812,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/invert/" class="">
-    invert
+    invert (deprecated)
 </a>
 
     </li>
@@ -2201,6 +2186,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/surface-blur/" class="">
+    surface blur
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-curve/" class="">
     tone curve
 </a>
@@ -2232,7 +2232,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-mapping/" class="">
-    tone mapping
+    tone mapping (deprecated)
 </a>
 
     </li>
@@ -2337,7 +2337,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/zone-system/" class="">
-    zone system
+    zone system (deprecated)
 </a>
 
     </li>
@@ -4254,11 +4254,11 @@
 <dt><a href="/dtdocs/module-reference/processing-modules/denoise-profiled/"><em>denoise (profiled)</em></a></dt>
 <dd>The <em>denoise (profiled)</em> module is usually your best option for reducing noise in an image. This module offers an almost “single-click” solution to remove noise. From a user perspective the effect only depends on camera type and ISO value, both derived from Exif data. All other settings are taken from a database of noise profiles that the darktable team has collected &ndash; now covering well above 300 popular camera models. The simplest way to use this module is <em>non-local means (auto)</em> mode. The wavelet feature of this module is also quite effective against color noise. It is recommended that you use this module at 100% zoom so that you can accurately see the effects of your changes.</dd>
 <dd>
-<p>Other modules that allow for image denoising include <a href="/dtdocs/module-reference/processing-modules/raw-denoise/"><em>raw denoise</em></a>, <a href="/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/"><em>denoise (bilateral filter)</em></a>, <a href="/dtdocs/module-reference/processing-modules/denoise-non-local-means/"><em>denoise (non-local means)</em></a>, and the <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> module, which is based on wavelets. If your camera is not yet supported by <em>denoise (profiled)</em>, <em>denoise (non-local means)</em> is probably the most convenient alternative, as it allows you to treat color and luminance noise separately.</p>
+<p>Other modules that allow for image denoising include <a href="/dtdocs/module-reference/processing-modules/raw-denoise/"><em>raw denoise</em></a>, <a href="/dtdocs/module-reference/processing-modules/surface-blur/"><em>surface blur</em></a>, <a href="/dtdocs/module-reference/processing-modules/astrophoto-denoise/"><em>astrophoto denoise</em></a>, and the <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> module, which is based on wavelets. If your camera is not yet supported by <em>denoise (profiled)</em>, <em>astrophoto denoise</em> is probably the most convenient alternative, as it allows you to treat color and luminance noise separately.</p>
 </dd>
 <dt><a href="/dtdocs/module-reference/processing-modules/haze-removal/"><em>haze removal</em></a></dt>
 <dd>Does what is says on the tin &ndash; removes atmospheric haze.</dd>
-<dt><a href="/dtdocs/module-reference/processing-modules/channel-mixer/"><em>channel mixer</em></a></dt>
+<dt><a href="/dtdocs/module-reference/processing-modules/color-calibration/"><em>color calibration</em></a></dt>
 <dd>This module offers a range of presets for making black and white images emulating classic film. It can also be used to tweak your color profile matrices, for example, to deal with color gamut issues.</dd>
 <dt><a href="/dtdocs/module-reference/processing-modules/lens-correction/"><em>lens correction</em></a></dt>
 <dd>If your camera/lens combination is supported, use this module to correct for standard lens distortions, where corrections have not already been performed in-camera. The <a href="/dtdocs/module-reference/processing-modules/crop-rotate/"><em>crop and rotate</em></a> or <a href="/dtdocs/module-reference/processing-modules/perspective-correction/"><em>perspective correction</em></a> modules can also be used to simulate the effects of a tilt-shift lens.</dd>
@@ -4289,12 +4289,12 @@
 <h1 id="modules-to-avoid">modules to avoid</h1>
 <p>There are a number of modules which are no longer recommended for use within a scene-referred workflow. This doesn&rsquo;t mean they can&rsquo;t be used, but they can produce undesirable effects when their sliders are pushed too far, and there are better alternatives. In each case, the preferred alternative module is listed along with a brief explanation.</p>
 <dl>
-<dt><a href="/dtdocs/module-reference/processing-modules/tone-mapping/"><em>local tone mapping</em></a></dt>
+<dt><a href="/dtdocs/module-reference/processing-modules/tone-mapping/"><em>local tone mapping (deprecated)</em></a></dt>
 <dd><em>prefer <a href="/dtdocs/module-reference/processing-modules/tone-equalizer/">tone equalizer</a></em></dd>
 <dd>
 <p>This module applies a bilateral blur over a non-linear (log) mapping that can provoke halos and fringing. This is common issue for modules performing blurs and occlusions that operate over a non-linear encoding.</p>
 </dd>
-<dt><a href="/dtdocs/module-reference/processing-modules/global-tonemap/"><em>global tonemap</em></a></dt>
+<dt><a href="/dtdocs/module-reference/processing-modules/global-tonemap/"><em>global tonemap (deprecated)</em></a></dt>
 <dd><em>prefer <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/">filmic rgb</a></em></dd>
 <dd>
 <p>This module tries to deal with HDR images using the Lab color space, which is not well suited for high dyanamic ranges. The <em>filmic rgb</em> module operates in a linear space and can easily scale over a wide range of input values from the scene and fit them into the narrower dynamic range demanded by display and printing devices.</p>
@@ -4320,11 +4320,11 @@
 <p>The USM algorithm used in the <em>sharpen</em> module suffers from same issues as the <em>highpass</em> module, and can easily cause artifacts. Use the presets offered by the <em>contrast equalizer</em> for de-blurring, or <em>local contrast</em> for general sharpness.</p>
 </dd>
 <dt><a href="/dtdocs/module-reference/processing-modules/monochrome/"><em>monochrome</em></a></dt>
-<dd><em>prefer <a href="/dtdocs/module-reference/processing-modules/channel-mixer/">channel mixer</a> (or <a href="/dtdocs/module-reference/processing-modules/color-balance/">color balance</a>)</em></dd>
+<dd><em>prefer <a href="/dtdocs/module-reference/processing-modules/color-calibration/">color calibration</a> (or <a href="/dtdocs/module-reference/processing-modules/color-balance/">color balance</a>)</em></dd>
 <dd>
-<p>The <em>monochrome</em> module can be quite fiddly to use. The <em>channel mixer</em> presets better emulate what physically happens with film, or you can set the <em>output saturation</em> slider in the <em>color balance</em> module to 0% for a more perceptual approach.</p>
+<p>The <em>monochrome</em> module can be quite fiddly to use. The <em>color calibration</em> presets better emulate what physically happens with film, or you can set the <em>output saturation</em> slider in the <em>color balance</em> module to 0% for a more perceptual approach.</p>
 </dd>
-<dt><a href="/dtdocs/module-reference/processing-modules/fill-light/"><em>fill light</em></a></dt>
+<dt><a href="/dtdocs/module-reference/processing-modules/fill-light/"><em>fill light (deprecated)</em></a></dt>
 <dd><em>prefer <a href="/dtdocs/module-reference/processing-modules/tone-equalizer/">tone equalizer</a> (or <a href="/dtdocs/module-reference/processing-modules/exposure/">exposure</a>)</em></dd>
 <dd>
 <p>Used to add light to a scene, this module again uses blurs in Lab space. The <em>tone equalizer</em> works in linear space, or you can also achieve a similar effect by using the <em>exposure</em> module with a <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn mask</a>.</p>
@@ -4334,7 +4334,7 @@
 <dd>
 <p>Again, this module uses blurs in Lab space. Either use the <em>tone equalizer</em> module or the <em>exposure</em> module with a <a href="/dtdocs/darkroom/masking-and-blending/masks/parametric/">parametric mask</a>, both of which operate with linear encodings.</p>
 </dd>
-<dt><a href="/dtdocs/module-reference/processing-modules/zone-system/"><em>zone system</em></a></dt>
+<dt><a href="/dtdocs/module-reference/processing-modules/zone-system/"><em>zone system (deprecated)</em></a></dt>
 <dd><em>prefer <a href="/dtdocs/module-reference/processing-modules/tone-equalizer/">tone equalizer</a> (or <a href="/dtdocs/module-reference/processing-modules/exposure/">exposure</a>)</em></dd>
 <dd>
 <p>This module again operates in Lab space, and becomes problematic if you push it too far. It is better to use the <em>tone equalizer</em> or multiple instances of the <em>exposure</em> module with parametric masks to narrow down on a zone.</p>

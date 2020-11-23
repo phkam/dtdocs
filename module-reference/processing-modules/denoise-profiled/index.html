@@ -1301,6 +1301,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/astrophoto-denoise/" class="">
+    astrophoto denoise
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/base-curve/" class="">
     base curve
 </a>
@@ -1347,7 +1362,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/channel-mixer/" class="">
-    channel mixer
+    channel mixer (deprecated)
 </a>
 
     </li>
@@ -1586,36 +1601,6 @@
 
 
 
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/" class="">
-    denoise (bilateral filter)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/" class="">
-    denoise (non-local means)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-profiled/" class=" active">
     denoise (profiled)
 </a>
@@ -1662,7 +1647,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/fill-light/" class="">
-    fill light
+    fill light (deprecated)
 </a>
 
     </li>
@@ -1707,7 +1692,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/global-tonemap/" class="">
-    global tonemap
+    global tonemap (deprecated)
 </a>
 
     </li>
@@ -1827,7 +1812,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/invert/" class="">
-    invert
+    invert (deprecated)
 </a>
 
     </li>
@@ -2201,6 +2186,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/surface-blur/" class="">
+    surface blur
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-curve/" class="">
     tone curve
 </a>
@@ -2232,7 +2232,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-mapping/" class="">
-    tone mapping
+    tone mapping (deprecated)
 </a>
 
     </li>
@@ -2337,7 +2337,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/zone-system/" class="">
-    zone system
+    zone system (deprecated)
 </a>
 
     </li>
@@ -4219,7 +4219,7 @@
 <p>The <em>denoise (profiled)</em> module implements two main algorithms, each of which is available in either an easy-to-use &ldquo;auto&rdquo; mode or a more advanced mode, with additional controls:</p>
 <dl>
 <dt>non-local means</dt>
-<dd>This algorithm works in the spatial domain in much the same way as the <a href="/dtdocs/module-reference/processing-modules/denoise-non-local-means/"><em>denoise (non-local means)</em></a> module. This algorithm averages each pixel with some surrounding pixels in the image. The weight of such a pixel in the averaging process depends on the similarity of its neighborhood with the neighborhood of the pixel being denoised. A patch with a defined size is used to measure that similarity.</dd>
+<dd>This algorithm works in the spatial domain in much the same way as the <a href="/dtdocs/module-reference/processing-modules/astrophoto-denoise/"><em>astrophoto denoise</em></a> module. This algorithm averages each pixel with some surrounding pixels in the image. The weight of such a pixel in the averaging process depends on the similarity of its neighborhood with the neighborhood of the pixel being denoised. A patch with a defined size is used to measure that similarity.</dd>
 <dd>
 <p>Note that this algorithm is quite resource-intensive.</p>
 </dd>
@@ -4267,7 +4267,7 @@
 <p>When you take non-local means out of auto mode, the <em>adjust autoset parameters</em> slider will be replaced by the following controls. You can use the auto-adjust slider to arrive at some initial settings then, when you switch to manual mode, the sliders will show the set of manual settings that are equivalent to that auto-adjust setting. You can then continue to fine-tune the manual settings using the initial auto setting as a starting point.</p>
 <dl>
 <dt>patch size</dt>
-<dd>Control the size of the patches being matched when deciding which pixels to average &ndash; see <a href="/dtdocs/module-reference/processing-modules/denoise-non-local-means/"><em>denoise (non-local means)</em></a>. Set this to higher values as the noise gets higher. Be aware that high values may smooth out small edges. The effect of this slider on processing time is minimal.</dd>
+<dd>Control the size of the patches being matched when deciding which pixels to average &ndash; see <a href="/dtdocs/module-reference/processing-modules/astrophoto-denoise/"><em>astrophoto denoise</em></a>. Set this to higher values as the noise gets higher. Be aware that high values may smooth out small edges. The effect of this slider on processing time is minimal.</dd>
 <dt>search radius</dt>
 <dd>Control how far away from a pixel the algorithm will try to find similar patches. Increasing the value can give better results for very noisy images when coarse grain noise is visible, but the processing time is hugely impacted by this parameter (the processing time is in the order of the square of this parameter). A lower value will make execution faster, a higher value will make it slower. It most cases it is better to use the scattering parameter, which has a similar effect but without the heavy processing cost.</dd>
 <dt>scattering (coarse-grain noise)</dt>
@@ -4292,7 +4292,7 @@
 <img src="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-profiled/denoise-rgb.png" alt="denoise-rgb"  />
 
 </p>
-<p>If you want to denoise the channels separately, the best way to do this is to use an instance of the <a href="/dtdocs/module-reference/processing-modules/channel-mixer/"><em>channel mixer</em></a> module immediately before the <em>denoise (profiled)</em> module so that it outputs a grey channel based on the <em>red</em> channel only, then denoise that monochrome image using the <em>red</em> wavelet curve. Repeat this procedure for the blue and green channels. This procedure is time-consuming, but gives the best result because looking at the color of a noisy pixel is not a reliable way to determine which channel to adjust (e.g. a noisy red pixel could be due to a noise peak on the red channel, but could also be due to a noise lull on the blue and green channels).</p>
+<p>If you want to denoise the channels separately, the best way to do this is to use an instance of the <a href="/dtdocs/module-reference/processing-modules/color-calibration/"><em>color calibration</em></a> module immediately before the <em>denoise (profiled)</em> module so that it outputs a grey channel based on the <em>red</em> channel only, then denoise that monochrome image using the <em>red</em> wavelet curve. Repeat this procedure for the blue and green channels. This procedure is time-consuming, but gives the best result because looking at the color of a noisy pixel is not a reliable way to determine which channel to adjust (e.g. a noisy red pixel could be due to a noise peak on the red channel, but could also be due to a noise lull on the blue and green channels).</p>
 <p>The issue with denoising the <em>RGB</em> channels individually like this is that there can still be some residual chroma noise at the end that requires excessive smoothing to eliminate. This was in fact one of the key motivations behind implementing the <em>Y0U0V0 color mode</em>.</p>
 <h2 id="wavelets-advanced-sliders">wavelets advanced sliders</h2>
 <p>When you take <em>wavelets</em> out of <em>auto</em> mode, the <em>adjust autoset parameters</em> slider will be replaced by the <em>preserve shadows</em> and <em>bias correction</em> controls listed above in the <em>common controls</em> section.</p>
@@ -4305,7 +4305,7 @@
     <div class="col-6">
 	
 	
-	<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/" class="next">&lt; denoise (non-local means)</a>
+	<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/demosaic/" class="next">&lt; demosaic</a>
 	
 	
     </div>

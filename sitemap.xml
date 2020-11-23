@@ -587,6 +587,10 @@
   </url>
   
   <url>
+    <loc>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/astrophoto-denoise/</loc>
+  </url>
+  
+  <url>
     <loc>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/base-curve/</loc>
   </url>
   
@@ -684,14 +688,6 @@
   
   <url>
     <loc>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/demosaic/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/</loc>
   </url>
   
   <url>
@@ -1008,6 +1004,10 @@
   
   <url>
     <loc>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/lighttable/styles/</loc>
+  </url>
+  
+  <url>
+    <loc>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/surface-blur/</loc>
   </url>
   
   <url>

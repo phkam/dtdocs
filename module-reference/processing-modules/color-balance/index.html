@@ -1301,6 +1301,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/astrophoto-denoise/" class="">
+    astrophoto denoise
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/base-curve/" class="">
     base curve
 </a>
@@ -1347,7 +1362,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/channel-mixer/" class="">
-    channel mixer
+    channel mixer (deprecated)
 </a>
 
     </li>
@@ -1586,36 +1601,6 @@
 
 
 
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/" class="">
-    denoise (bilateral filter)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
-<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/" class="">
-    denoise (non-local means)
-</a>
-
-    </li>
-    
-    
-    
-    <li>
-	<i class="no-toggle"></i>
-	
-
-
-
-
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-profiled/" class="">
     denoise (profiled)
 </a>
@@ -1662,7 +1647,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/fill-light/" class="">
-    fill light
+    fill light (deprecated)
 </a>
 
     </li>
@@ -1707,7 +1692,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/global-tonemap/" class="">
-    global tonemap
+    global tonemap (deprecated)
 </a>
 
     </li>
@@ -1827,7 +1812,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/invert/" class="">
-    invert
+    invert (deprecated)
 </a>
 
     </li>
@@ -2201,6 +2186,21 @@
 
 
 
+<a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/surface-blur/" class="">
+    surface blur
+</a>
+
+    </li>
+    
+    
+    
+    <li>
+	<i class="no-toggle"></i>
+	
+
+
+
+
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-curve/" class="">
     tone curve
 </a>
@@ -2232,7 +2232,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-mapping/" class="">
-    tone mapping
+    tone mapping (deprecated)
 </a>
 
     </li>
@@ -2337,7 +2337,7 @@
 
 
 <a href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/zone-system/" class="">
-    zone system
+    zone system (deprecated)
 </a>
 
     </li>
@@ -4277,7 +4277,7 @@
 <p>If you want more control, you can define three control patches by using the color pickers beside each factor slider to sample luminance in selected areas. The shadows color picker samples the minimum luminance, the mid-tones color picker samples the average, and the highlights color picker samples the maximum luminance. The most sensitive parameter is the mid-tones factor, since selecting a slightly different area can lead to dramatic parameter changes. Using the factors color pickers alone, without triggering the luma optimization, will allow you to perform adjustments without general optimization, but each parameter is always computed taking the other two into account. Once patches are selected, the label changes to read “optimize luma from patches”. To reset one patch, you can just redo the selection. Patches are not saved in the parameters and are retained only during the current session.</p>
 </dd>
 <dd>
-<p>It is important to note that the luminance adjustment targets only the output of the <em>color balance</em> module and does not account for other luminance adjustments performed in modules coming later in the pixelpipe (e.g. <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a>, <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a>, <a href="/dtdocs/module-reference/processing-modules/color-zones/"><em>color zones</em></a>, <a href="/dtdocs/module-reference/processing-modules/levels/"><em>levels</em></a>, <a href="/dtdocs/module-reference/processing-modules/global-tonemap/"><em>global tonemapping</em></a>). Using the <em>color balance</em> to remap the luminance globally on the image is not recommended because it does not preserve the original colors, and modules such as <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> or <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> are better suited for this purpose. Luminance adjustments in <em>color balance</em> are better suited for local correction, in combination with color adjustments, for color-grading with masks.</p>
+<p>It is important to note that the luminance adjustment targets only the output of the <em>color balance</em> module and does not account for other luminance adjustments performed in modules coming later in the pixelpipe (e.g. <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a>, <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a>, <a href="/dtdocs/module-reference/processing-modules/color-zones/"><em>color zones</em></a>, <a href="/dtdocs/module-reference/processing-modules/levels/"><em>levels</em></a>). Using the <em>color balance</em> to remap the luminance globally on the image is not recommended because it does not preserve the original colors, and modules such as <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> or <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> are better suited for this purpose. Luminance adjustments in <em>color balance</em> are better suited for local correction, in combination with color adjustments, for color-grading with masks.</p>
 </dd>
 <dt>neutralize colors</dt>
 <dd>In an image where some areas are exposed to direct sunlight and some areas are exposed to reflected light (shadows), or where several artificial light sources are present simultaneously, shadows and highlights often have different color temperatures. These images are particularly difficult to correct since no general white balance will match all the colors at once. The color neutralization optimizer aims at helping you find the complementary color for shadows, midtones, and highlights so that all the color casts are reverted, and the average color of the image is a neutral grey.</dd>

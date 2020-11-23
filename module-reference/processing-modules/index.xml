@@ -7,6 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>astrophoto denoise</title>
+      <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/astrophoto-denoise/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/astrophoto-denoise/</guid>
+      <description>Remove image noise while preserving structure.
+This is accomplished by averaging each pixel with some surrounding pixels in the image. The weight of such a pixel in the averaging process depends on the similarity of its neighborhood with the neighborhood of the pixel being denoised. A patch with a defined size is used to measure that similarity.
+As denoising is a resource-intensive process, it slows down pixelpipe processing significantly. Consider activating this module late in your workflow.</description>
+    </item>
+    
+    <item>
       <title>base curve</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/base-curve/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -38,14 +49,14 @@ module controls  size The spacial extent of the bloom effect threshold The thres
     </item>
     
     <item>
-      <title>channel mixer</title>
+      <title>channel mixer (deprecated)</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/channel-mixer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/channel-mixer/</guid>
-      <description>A simple yet powerful tool to manage color channels.
-This module accepts red, green and blue channels as an input and provides red, green, blue, gray, hue, saturation and lightness channels as output. It allows you to independently control how much each input channel contributes to each output channel.
-RGB matrix multiplication You can think of the channel mixer as a type of matrix multiplication between a 3x3 matrix and the input [R G B] values.</description>
+      <description>Please note that this module is deprecated in darktable 3.4 and should no longer be used for new edits. Please use the color calibration module instead.
+ A simple yet powerful tool to manage color channels.
+This module accepts red, green and blue channels as an input and provides red, green, blue, gray, hue, saturation and lightness channels as output. It allows you to independently control how much each input channel contributes to each output channel.</description>
     </item>
     
     <item>
@@ -207,27 +218,6 @@ bayer filters The sensor cells of a digital camera are not color-sensitive &amp;
     </item>
     
     <item>
-      <title>denoise (bilateral filter)</title>
-      <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-bilateral-filter/</guid>
-      <description>Denoise high ISO images.
-This module reduces noise in the image while preserving sharp edges. This is accomplished by averaging pixels with their neighbors, taking into account not only their geometric distance but also their distance on the range scale (i.e. differences in the RGB values). This module is particularly effective if one RGB channel is more noisy than the others. In such a case, use the channel mixer module to examine the channels one by one, in order to set the blur intensities accordingly.</description>
-    </item>
-    
-    <item>
-      <title>denoise (non-local means)</title>
-      <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-non-local-means/</guid>
-      <description>Remove image noise while preserving structure.
-This is accomplished by averaging each pixel with some surrounding pixels in the image. The weight of such a pixel in the averaging process depends on the similarity of its neighborhood with the neighborhood of the pixel being denoised. A patch with a defined size is used to measure that similarity.
-As denoising is a resource-intensive process, it slows down pixelpipe processing significantly. Consider activating this module late in your workflow.</description>
-    </item>
-    
-    <item>
       <title>denoise (profiled)</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/denoise-profiled/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -259,14 +249,15 @@ This module has two modes of operation:
     </item>
     
     <item>
-      <title>fill light</title>
+      <title>fill light (deprecated)</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/fill-light/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/fill-light/</guid>
-      <description>Locally modify exposure based on pixel lightness.
+      <description>Please note that this module is deprecated in darktable 3.4 and should no longer be used for new edits. Please use the tone equalizer module or the exposure module with a drawn mask.
+ Locally modify exposure based on pixel lightness.
 This module pushes exposure by increasing lightness with a Gaussian curve of a specified width, centered on a given lightness.
-module controls  exposure The fill-light exposure (EV) center The median lightness impacted by the fill-light. The lightness must be set manually but a color picker can be used to provide a guide based on a sample from the image. The lightness of the selected point/area is displayed in the gradient bar.</description>
+module controls  exposure The fill-light exposure (EV) center The median lightness impacted by the fill-light.</description>
     </item>
     
     <item>
@@ -291,14 +282,14 @@ module controls  border size The size of the frame as a percentage of the underl
     </item>
     
     <item>
-      <title>global tonemap</title>
+      <title>global tonemap (deprecated)</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/global-tonemap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/global-tonemap/</guid>
-      <description>Compress the tonal range of an HDR image into the limited tonal range of a typical LDR output file.
-Global tonemap processes each pixel of an HDR image, without taking the local surrounding into account. This is generally faster than local tone mapping, but might lead to less convincing results with very high-dynamic-range scenes.
-module controls  operator The operator to use. Reinhard, Filmic and Drago global tonemap operators are available.</description>
+      <description>Please note that this module is deprecated in darktable 3.4 and should no longer be used for new edits. Please use the filmic rgb module instead.
+ Compress the tonal range of an HDR image into the limited tonal range of a typical LDR output file.
+Global tonemap processes each pixel of an HDR image, without taking the local surrounding into account. This is generally faster than local tone mapping (deprecated), but might lead to less convincing results with very high-dynamic-range scenes.</description>
     </item>
     
     <item>
@@ -377,13 +368,13 @@ module controls  threshold How strong a pixel&amp;rsquo;s value needs to deviate
     </item>
     
     <item>
-      <title>invert</title>
+      <title>invert (deprecated)</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/invert/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/invert/</guid>
-      <description>Invert scanned negatives.
-For negatives that have been imaged using a DSLR, consider using the negadoctor module.
+      <description>Please note that this module is deprecated in darktable 3.4 and should no longer be used for new edits. Please use the negadoctor module instead.
+ Invert scanned negatives.
 module controls  color of film material Clicking on the colored field will open a color selector dialog which offers you a choice of commonly used colors, or allows you to define an RGB color. You can also activate the color picker to take a color probe from your image – preferably from the unexposed border of your negative.</description>
     </item>
     
@@ -649,6 +640,16 @@ To use this module, first select the desired shape by clicking the corresponding
     </item>
     
     <item>
+      <title>surface blur</title>
+      <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/surface-blur/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/surface-blur/</guid>
+      <description>Denoise high ISO images.
+This module reduces noise in the image while preserving sharp edges. This is accomplished by averaging pixels with their neighbors, taking into account not only their geometric distance but also their distance on the range scale (i.e. differences in the RGB values). This module is particularly effective if one RGB channel is more noisy than the others. In such a case, use the color calibration module to examine the channels one by one, in order to set the blur intensities accordingly.</description>
+    </item>
+    
+    <item>
       <title>tone curve</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-curve/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -666,18 +667,18 @@ Activate the color picker to show the picked values in the histogram (Ctrl+click
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-equalizer/</guid>
       <description>Perform dodging and burning on an image while preserving local contrast.
-This module can selectively brighten or darken up to 9 different ranges of luminosity. When used together with filmic rgb, it replaces the need for other tone-mapping modules such as the base curve, shadows and highlights, tone curve and zone system modules. It works in linear RGB space and uses a mask to guide the dodging and burning adjustments, helping to preserve local contrast within the image.</description>
+This module can selectively brighten or darken up to 9 different ranges of luminosity. When used together with filmic rgb, it replaces the need for other tone-mapping modules such as the base curve, shadows and highlights, tone curve and zone system (deprecated) modules. It works in linear RGB space and uses a mask to guide the dodging and burning adjustments, helping to preserve local contrast within the image.</description>
     </item>
     
     <item>
-      <title>tone mapping</title>
+      <title>tone mapping (deprecated)</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-mapping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/tone-mapping/</guid>
-      <description>Compress the tonal range of HDR images so that they fit into the limits of an LDR image, using Durand&amp;rsquo;s 2002 algorithm.
-The underlying algorithm uses a bilateral filter to decompose an image into a coarse base layer and a detail layer. The contrast of the base layer is compressed, while the detail layer is preserved, then both layers are re-combined.
-module controls  contrast compression The contrast compression level of the base layer.</description>
+      <description>Please note that this module is deprecated in darktable 3.4 and should no longer be used for new edits. Please use the tone equalizer module instead.
+ Compress the tonal range of HDR images so that they fit into the limits of an LDR image, using Durand&amp;rsquo;s 2002 algorithm.
+The underlying algorithm uses a bilateral filter to decompose an image into a coarse base layer and a detail layer. The contrast of the base layer is compressed, while the detail layer is preserved, then both layers are re-combined.</description>
     </item>
     
     <item>
@@ -745,14 +746,14 @@ White balance is not intended as a &amp;ldquo;creative&amp;rdquo; module &amp;nd
     </item>
     
     <item>
-      <title>zone system</title>
+      <title>zone system (deprecated)</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/zone-system/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/zone-system/</guid>
-      <description>Adjust the lightness of an image using Ansel Adams&#39; zone system.
-The lightness of the image (the L channel in Lab color space) is divided into a number of zones ranging from pure black to pure white. These zones are displayed in a zonebar beneath a preview image. The number of zones can be changed by mouse-scrolling on that bar (default 10 zones).
- The zonebar is split horizontally with the lower part showing the zones of the module&amp;rsquo;s input and the upper part the zones of the module&amp;rsquo;s output.</description>
+      <description>Please note that this module is deprecated in darktable 3.4 and should no longer be used for new edits. Please use the tone equalizer or multiple instances of the exposure module with parametric masks to narrow down on a zone.
+ Adjust the lightness of an image using Ansel Adams&#39; zone system.
+The lightness of the image (the L channel in Lab color space) is divided into a number of zones ranging from pure black to pure white.</description>
     </item>
     
   </channel>
