@@ -4207,29 +4207,16 @@
     </h1>
 
     <p>The following options control functionality in the <a href="/dtdocs/darkroom/">darkroom</a> view and associated modules.</p>
+<h1 id="general">general</h1>
 <dl>
 <dt>pen pressure control for brush masks</dt>
 <dd>Controls how the pressure reading of a graphics tablet impacts newly generated <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn mask</a> brush strokes. You can control the brush width, hardness and opacity. “Absolute” control means that the pressure reading directly defines the attribute with a value between 0% and 100%. “Relative” means that the pressure reading adjusts the attribute between zero and the pre-defined default value (default off).</dd>
 <dt>smoothing of brush strokes</dt>
 <dd>Sets the level for smoothing of <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn mask</a> brush strokes. Stronger smoothing leads to fewer nodes and easier editing at the expense of lower accuracy.</dd>
-<dt>display of individual color channels</dt>
-<dd>Controls how individual color channels are displayed when activated in the <a href="/dtdocs/darkroom/masking-and-blending/masks/parametric/">parametric masks</a> feature. You can choose between “false color” and “grey scale” (default &ldquo;false color&rdquo;).</dd>
 <dt>pattern for the image information line</dt>
 <dd>Set the information to be displayed in the <a href="/dtdocs/module-reference/utility-modules/darkroom/image-info-line/">image information line</a>. You can use any variables in the <a href="/dtdocs/special-topics/variables/">variables</a> section as well as <code>$(NL)</code> for a new line.</dd>
 <dt>position of the image information line</dt>
 <dd>Choose the darkroom panel in which the <a href="/dtdocs/module-reference/utility-modules/darkroom/image-info-line/">image information line</a> is displayed. Choose between “top left” “top right” “top center” “bottom” and “hidden” (default &ldquo;bottom&rdquo;).</dd>
-<dt>sort built-in presets first</dt>
-<dd>Choose how the presets menu is sorted for processing modules. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on).</dd>
-<dt>hide built-in presets</dt>
-<dd>If enabled, only user-defined presets will be shown in presets menu for processing modules &ndash; built-in presets will be hidden (default off).</dd>
-<dt>expand a single darkroom module at a time</dt>
-<dd>Controls how <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> are expanded in the darkroom. If this option is enabled, expanding a module by clicking collapses any currently expanded module. If you want to expand a module without collapsing the others you can do so with <code>Shift+click</code>. Disabling this option inverts the meaning of <code>click</code> and <code>Shift+click</code> (default on).</dd>
-<dt>only collapse modules in current group</dt>
-<dd>When choosing to expand a single darkroom module at a time (using the logic defined in the previous setting), only collapse other modules that appear in the current visible group. Disable this option to ensure that modules in non-visible groups are also collapsed (default on).</dd>
-<dt>expand the module when it is activated, and collapse it when disabled</dt>
-<dd>Select this option for the darkroom to automatically expand or collapse <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> when they are enabled or disabled. (default off)</dd>
-<dt>scroll to darkroom modules when expanded/collapsed</dt>
-<dd>With this option enabled the darkroom side panel will scroll a <a href="/dtdocs/module-reference/processing-modules/">processing module</a> to the top when it is expanded or collapsed (default on).</dd>
 <dt>border around image in darkroom mode</dt>
 <dd>Process the center image in darkroom mode with a border of the given number of pixels (default 20).</dd>
 <dt>show scrollbars for center view</dt>
@@ -4251,37 +4238,7 @@
 <dd>(default &ldquo;<em>at most ppg (reasonable)</em>&quot;).</dd>
 <dt>reduce resolution of preview image</dt>
 <dd>Reduce the resolution of the <a href="/dtdocs/module-reference/utility-modules/darkroom/navigation/">navigation preview</a> image (choose from &ldquo;original&rdquo;, &ldquo;1/2&rdquo;, &ldquo;1/3&rdquo; or &ldquo;1/4&rdquo; size). This may improve the speed of the rendering but take care as it can also hinder accurate color-picking and masking (default &ldquo;original&rdquo;).</dd>
-<dt>white balance slider colors</dt>
-<dd>Controls the appearance of the sliders in the <a href="/dtdocs/module-reference/processing-modules/white-balance/">white balance</a> module.</dd>
-<dd><ul>
-<li><em>no color</em>: background of the sliders is not colored at all.</li>
-</ul>
-</dd>
-<dd><ul>
-<li><em>illuminant color</em>: slider colors represent the color of the light source, i.e. the color you are adjusting to in order to achieve neutral white</li>
-</ul>
-</dd>
-<dd><ul>
-<li><em>effect emulation</em>: slider colors represent the effect the adjustment would have had on the scene. This is how most other raw processors show temperature/tint sliders colors.</li>
-</ul>
-</dd>
-<dd>(default <em>no color</em>)</dd>
-<dt>colorbalance slider block layout</dt>
-<dd>Controls the appearance of the shadows/mid-tones/highlights sections in the <a href="/dtdocs/module-reference/processing-modules/color-balance/">color balance</a> module.</dd>
-<dd><ul>
-<li><em>list</em>: all sliders are shown in one long list (with headers)</li>
-</ul>
-</dd>
-<dd><ul>
-<li><em>tabs</em>: use tabs to switch between the blocks of sliders</li>
-</ul>
-</dd>
-<dd><ul>
-<li><em>columns</em>: the blocks of sliders are shown next to each other (in narrow columns)</li>
-</ul>
-</dd>
-<dd>(default <em>list</em>)</dd>
-<dt>show right-side buttons in darkroom module headers</dt>
+<dt>show right-side buttons in processing module headers</dt>
 <dd>Choose whether to show the three buttons (multi-instance, reset, presets) on the right-hand-side of the <a href="/dtdocs/darkroom/interacting-with-modules/module-header/">module header</a> for processing modules. These buttons will always appear when the mouse is over the module. At other times they will be shown or hidden according to this preference selection:</dd>
 <dd><ul>
 <li><em>always</em>: always show all buttons</li>
@@ -4316,6 +4273,51 @@
 </ul>
 </dd>
 <dd>(default <em>always</em>)</dd>
+</dl>
+<h1 id="modules">modules</h1>
+<dl>
+<dt>display of individual color channels</dt>
+<dd>Controls how individual color channels are displayed when activated in the <a href="/dtdocs/darkroom/masking-and-blending/masks/parametric/">parametric masks</a> feature. You can choose between “false color” and “grey scale” (default &ldquo;false color&rdquo;).</dd>
+<dt>hide built-in presets for processing modules</dt>
+<dd>If enabled, only user-defined presets will be shown in presets menu for processing modules &ndash; built-in presets will be hidden (default off).</dd>
+<dt>expand a single processing module at a time</dt>
+<dd>Controls how <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> are expanded in the darkroom. If this option is enabled, expanding a module by clicking collapses any currently expanded module. If you want to expand a module without collapsing the others you can do so with <code>Shift+click</code>. Disabling this option inverts the meaning of <code>click</code> and <code>Shift+click</code> (default on).</dd>
+<dt>only collapse modules in current group</dt>
+<dd>When choosing to expand a single processing module at a time (using the logic defined in the previous setting), only collapse other modules that appear in the current visible group. Disable this option to ensure that modules in non-visible groups are also collapsed (default on).</dd>
+<dt>expand the module when it is activated, and collapse it when disabled</dt>
+<dd>Select this option for the darkroom to automatically expand or collapse <a href="/dtdocs/module-reference/processing-modules/">processing modules</a> when they are enabled or disabled. (default off)</dd>
+<dt>scroll to processing modules when expanded/collapsed</dt>
+<dd>With this option enabled the darkroom side panel will scroll a <a href="/dtdocs/module-reference/processing-modules/">processing module</a> to the top when it is expanded or collapsed (default on).</dd>
+<dt>white balance slider colors</dt>
+<dd>Controls the appearance of the sliders in the <a href="/dtdocs/module-reference/processing-modules/white-balance/">white balance</a> module.</dd>
+<dd><ul>
+<li><em>no color</em>: background of the sliders is not colored at all.</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>illuminant color</em>: slider colors represent the color of the light source, i.e. the color you are adjusting to in order to achieve neutral white</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>effect emulation</em>: slider colors represent the effect the adjustment would have had on the scene. This is how most other raw processors show temperature/tint sliders colors.</li>
+</ul>
+</dd>
+<dd>(default <em>no color</em>)</dd>
+<dt>colorbalance slider block layout</dt>
+<dd>Controls the appearance of the shadows/mid-tones/highlights sections in the <a href="/dtdocs/module-reference/processing-modules/color-balance/">color balance</a> module.</dd>
+<dd><ul>
+<li><em>list</em>: all sliders are shown in one long list (with headers)</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>tabs</em>: use tabs to switch between the blocks of sliders</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>columns</em>: the blocks of sliders are shown next to each other (in narrow columns)</li>
+</ul>
+</dd>
+<dd>(default <em>list</em>)</dd>
 </dl>
 
 
