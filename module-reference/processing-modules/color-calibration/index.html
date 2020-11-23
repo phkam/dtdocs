@@ -4215,32 +4215,60 @@
     <p>A fully-featured color-space correction, white balance adjustment and channel mixer. This simple yet powerful module can be used in the following ways:</p>
 <ul>
 <li>
-<p>To adjust the white balance (chromatic adaptation), working in tandem with the <a href="/dtdocs/module-reference/processing-modules/white-balance/"><em>white balance</em></a> module. In this case, the <em>white balance</em> module performs an initial white balance step (which is still required in order for the demosac module to work effectively). The <em>color calibration</em> module then calculates a more accurate white balance after the input color profile has been applied.</p>
+<p>To adjust the white balance (chromatic adaptation), working in tandem with the <a href="/dtdocs/module-reference/processing-modules/white-balance/"><em>white balance</em></a> module. In this case, the <em>white balance</em> module performs an initial white balance step (which is still required in order for the demosac module to work effectively). The <em>color calibration</em> module then calculates a more perceptually-accurate white balance after the input color profile has been applied.</p>
 </li>
 <li>
-<p>As a simple RGB channel mixer, adjusting the output R, G and B channels based on the R, G and B input channels.</p>
+<p>As a simple RGB channel mixer, adjusting the output R, G and B channels based on the R, G and B input channels, to perform cross-talk color-grading.</p>
 </li>
 <li>
 <p>To adjust the color saturation and brightness of the pixels, based on the relative strength of the R, G and B channels of each pixel.</p>
 </li>
 <li>
-<p>To produce a greyscale output based on the relative strengths of the R, G and B channels.</p>
+<p>To produce a greyscale output based on the relative strengths of the R, G and B channels, in a way similar to the response of black and white film to a light spectrum.</p>
 </li>
 </ul>
 <h1 id="chromatic-adaptation-transformation-white-balance">Chromatic Adaptation Transformation (white balance)</h1>
 <p>Chromatic adaptation aims to predict how all surfaces in the scene would look if they had been lit by another illuminant. What we actually want to predict, though, is how those surfaces would have looked if they had been lit by the same illuminant as your monitor. White balance, on the other hand, aims only at ensuring that whites are really whites (R = G = B) and doesn’t really care about the rest of the color range.</p>
-<p>Chromatic adaptation is controlled within the Chromatic Adaptation Transformation (CAT) tab of the <em>color calibration</em> module. When used in this way the <em>white balance</em> module only needs to perform a basic white balance operation assuming a D65 illuminant (&ldquo;camera reference&rdquo; mode). The remainder of the white balance (chromatic adaptation) is then performed by the <em>color calibration</em> module.</p>
+<p>Chromatic adaptation is controlled within the Chromatic Adaptation Transformation (CAT) tab of the <em>color calibration</em> module. When used in this way the <em>white balance</em> module only needs to perform a basic white balance operation assuming a D65 illuminant (&ldquo;camera reference&rdquo; mode), which is expected by input color profiles. The remainder of the white balance (chromatic adaptation) is then performed by the <em>color calibration</em> module, on top of the <em>white balance</em> and <em>input color profile</em> corrections. The use of custom matrices, in <em>input color profile</em> is therefore discouraged, and the coefficients in <em>white balance</em> need to be accurate.</p>
 <p>The <em>color calibration</em> and <em>white balance</em> modules can be automatically applied to achieve this for new edits by setting the chromatic adaptation workflow option (<a href="/dtdocs/preferences-settings/processing/"><code>preferences &gt; processing &gt; auto-apply chromatic adaptation defaults</code></a>) to &ldquo;modern&rdquo;. If you prefer to perform all white balancing within the <em>white balance</em> module, a &ldquo;legacy&rdquo; option is also available. Neither option precludes the use of other modules such as <a href="/dtdocs/module-reference/processing-modules/color-balance/"><em>color balance</em></a> further down the pixel pipeline for creative color grading.</p>
 <p>By default, <em>color calibration</em> will perform chromatic adaptation by:</p>
 <ul>
-<li>reading the raw EXIF to fetch the scene white balance set by the camera</li>
-<li>adjusting this setting with the reference white balance used in the white balance module</li>
-<li>further adjusting this setting with the input color profile in use (only the standard matrix)</li>
+<li>reading the raw EXIF to fetch the scene white balance set by the camera,</li>
+<li>adjusting this setting with the camera reference white balance used in the <em>white balance</em> module,</li>
+<li>further adjusting this setting with the input color profile in use (only the standard matrix).</li>
 </ul>
+<p>Personal presets or settings used in <em>white balance</em> or in <em>input color profile</em> are ignored when building <em>color calibration</em> default settings, since the program cannot trace what they do. DNG raw files are also ignored since they can (but not have to) interpolate between 2 embedded DNG profiles to perform white balance, which can lead to different settings scenarios. For these cases, users will have to configure the settings themselves and use their camera manufacturer&rsquo;s documentation to take the appropriate color correction steps.</p>
 <p>It is also worth noting that, unlike the <em>white balance</em> module, <em>color calibration</em> can be used with <a href="/dtdocs/darkroom/masking-and-blending/masks/">masks</a>. This means that you can selectively correct different parts of the image to account for differing light sources.</p>
 <p>To achieve this, create an instance of the <em>color calibration</em> module to perform global adjustments using a mask to exclude those parts of the image that you wish to handle differently. Then create a second instance of the module reusing the mask from the first instance (inverted) using a <a href="/dtdocs/darkroom/masking-and-blending/masks/raster/">raster mask</a>.</p>
+<h2 id="cat-settings">CAT settings</h2>
+<p>The default illuminant and the space used by the CAT (chromatic adaptation transform) are initialised from the raw file EXIF metadata. There are 4 options to set them in-software:</p>
+<ul>
+<li>
+<p>Using the color-picker, right of the color patch, to select a neutral color on the picture or the whole image. In this case, the algorithm finds the average color in the color-picker area and sets it as the illuminant. This relies on the &ldquo;grey-world&rdquo; assumption, which predicts the average color of a natural scene is neutral, and does not work for artificial scenes, with painted surfaces for example.</p>
+</li>
+<li>
+<p>Using the <em>(AI) detect from edges</em> method, which relies on a machine-learning detection over the whole image. It finds the average gradient color over edges found in the image and sets it as the illuminant. It relies on the &ldquo;grey-edge&rdquo; assumption, which may fail if large chromatic aberrations are present. As any edge-detection method, it is sensible to noise and poorly suited for high-ISO images, but it is very well suited for artificial scenes where no neutral colors are available.</p>
+</li>
+<li>
+<p>Using the <em>(AI) detect from surfaces</em> method, which is a combination of the two previous ones, performed on the whole image. It finds the average color on the picture but weighs more heavily and areas where sharp details are found and colors are strongly correlated. This makes it more immune to noise than the <em>edge</em> variant and more immune to legitimate non-neutral surfaces than the naive average, but sharp colored textures (like green grass) are likely to make it fail.</p>
+</li>
+<li>
+<p>Using the <em>as shot in camera</em> method allows you to restore the camera defaults and re-reads the raw EXIF.</p>
+</li>
+</ul>
+<p>At any time, a color patch shows the color of the current illuminant projected to sRGB space. The CAT aims at turning this color into pure white, which does not necessarily means shifting the image toward its <em>perceptual</em> opponent color. If the illuminant is properly set, by turning off the <em>color calibration</em> module, you should see in the image the same tint as the color patch.</p>
+<p>Left of the color patch is the <em>CCT</em> approximation (correlated color temperature). This is the closest temperature, in kelvin, from the current illuminant in use. Setting white balance as a combination of temperature and tint is customary in image processing software, however when the illuminant is far from daylight, the CCT becomes inaccurate and irrelevant, and the CIE (International Commission on Illumination) discourages its use in such conditions. The CCT reading informs you of the closest CCT match found:</p>
+<ul>
+<li>when the CCT is followed by <em>(daylight)</em>, it means the current illuminant is close to an ideal daylight spectrum ± 0.5 %, therefore the number is meaningful.</li>
+<li>when the CCT is followed by <em>(black  body)</em>, it means the current illuminant is close to an ideal black body (planckian) spectrum ± 0.5 %, therfore the number is meaningful.</li>
+<li>when the CCT is followed by <em>(invalid)</em>, it means the CCT figure is meaningless and most likely wrong, because we are too far from either a daylight or a black body light spectrum.</li>
+</ul>
+<p>When any of the 4 above illuminant detection methods is used, the program checks where the found illuminant sits from the 2 idealized spectra we can use and sets the most accurate spectrum model to use in the <em>illuminant</em> parameter. The user-interface will change accordingly: a temperature slider is available for <em>D (daylight)</em> and <em>Planckian (black body)</em>, for which the CCT is meaningful, otherwise general hue and chroma sliders in CIE Luv space are offered for the <em>custom</em> illuminant.</p>
+<p>When you switch from a <em>custom</em> illuminant to, for example, a <em>D (daylight)</em>, the closest CCT from your custom illuminant gets transfered and used by the daylight model. This conversion is almost non-destructive (± 0.5 %) if the <em>(daylight)</em> tag was displayed in the CCT reading when using the <em>custom</em> illuminant. The same applies to <em>Planckian (black body)</em> illuminant. Switching from any illuminant to <em>custom</em> is 100% non-destructive regarding the original setting. Switching from <em>custom</em> to any other illuminant is destructive and most likely innacurate if the CCT reading is tagged <em>(invalid)</em>.</p>
+<p>Other hard-set <em>illuminants</em> are available (<em>A</em>, <em>E</em>, <em>F</em>, <em>LED</em>) through a list. Their values come from standard CIE illuminants and are absolute. You can use them directly if you know exactly what kind of light bulb was used to lit the scene and if you trust your camera input profile and its reference D65 coefficients to be accurate.</p>
+<p>The illuminant detection modes also set the best suited CAT space. The <em>linear Bradford</em> CAT is known to be more perceptually accurate for daylight and black body illuminants between 2800 K and 6500 K. The <em>CAT 16</em> is known to hold the gamut better for difficult illuminants such as blue lights.</p>
 <h2 id="cat-warnings">CAT warnings</h2>
-<p>The chromatic adaptation in this module relies on a number of assumptions in order to work correctly and it can be easy to inadvertently break these assumptions in subtle ways. To help you to avoid these kind of mistakes, the <em>color calibration</em> module will show warnings in the following circumstances.</p>
+<p>The chromatic adaptation in this module relies on a number of assumptions, about earlier steps in the pipeline, in order to work correctly and it can be easy to inadvertently break these assumptions in subtle ways. To help you to avoid these kind of mistakes, the <em>color calibration</em> module will show warnings in the following circumstances.</p>
 <ul>
 <li>
 <p>If the <em>color calibration</em> module is set up to perform chromatic adaptation but the <em>white balance</em> module is not set to &ldquo;camera reference&rdquo;, warnings will be shown in both modules. These errors can be resolved either by setting the <em>white balance</em> module to &ldquo;camera reference&rdquo; or by disabling chromatic adaptation in the <em>color calibration</em> module. Note that some sensors may require minor corrections within the <em>white balance</em> module in which case these warnings can be ignored.</p>
@@ -4251,11 +4279,15 @@
 </li>
 </ul>
 <p>The chromatic adaptation modes in <em>color calibration</em> can be disabled by either setting the <em>adaptation</em> to &ldquo;none (bypass)&rdquo; or setting the <em>illuminant</em> to &ldquo;same as pipeline (D50)&rdquo; in the CAT tab.</p>
+<p>Warnings are meant to prevent common and easy mistakes while using the automatic default presets in the module in a typical raw photographs editing workflow. When using custom presets or particular workflows, such as editing film scans or JPEGs, these warnings can and should be ignored.</p>
 <h1 id="channel-mixing">channel mixing</h1>
 <p>The remainder of this module is a standard channel mixer, allowing you to adjust the output R, G, B, colorfulness, brightness and grey of the module based on the relative strengths of the R, G and B input channels.</p>
-<p>Channel mixing is performed in the color space defined by the <em>adaptation</em> control on the CAT tab. The <em>color calibration</em> module can be made into a &ldquo;pure&rdquo; channel mixer (without chromatic adaptation) in pipeline RGB color space by setting the <em>adaptation</em> to &ldquo;none (bypass)&rdquo;. To perform channel mixing in one of the <em>adaptation</em> color spaces without chromatic adaptation, set the <em>illuminant</em> to &ldquo;same as pipeline (D50)&rdquo;.</p>
+<p>Channel mixing is performed in the color space defined by the <em>adaptation</em> control on the CAT tab. To all pratical ends, these CAT spaces are particular RGB spaces tied to human physiology and proportional to the scene light emissions, but they still behave as any RGB space. The use of any of the CAT spaces can make the channel mixer tuning process easier, due to their connection with physiology, but it is also possible to mix channels in the RGB working space of the pipeline by setting the <em>adaptation</em> to &ldquo;none (bypass)&rdquo;. To perform channel mixing in one of the <em>adaptation</em> color spaces without chromatic adaptation, set the <em>illuminant</em> to &ldquo;same as pipeline (D50)&rdquo;.</p>
+<hr>
+<p>**Note: ** the actual colors of the CAT or RGB primaries used for the channel mixing, projected to sRGB display space, are painted in the background of the RGB sliders, so you can get a sense of the color shift resulting of your settings change.</p>
+<hr>
 <h2 id="rgb-matrix-multiplication">RGB matrix multiplication</h2>
-<p>At its most basic level, you can think of the R, G and B tabs of the <em>color calibration</em> module as a type of matrix multiplication between a 3x3 matrix and the input [R G B] values. This is in fact very similar to what a matrix-based ICC color profile does, except that the user can input the matrix coefficients via the darktable GUI rather than reading the coefficients from a file.</p>
+<p>At its most basic level, you can think of the R, G and B tabs of the <em>color calibration</em> module as a type of matrix multiplication between a 3x3 matrix and the input [R G B] values. This is in fact very similar to what a matrix-based ICC color profile does, except that the user can input the matrix coefficients via the darktable GUI rather than reading the coefficients from an ICC profile file.</p>
 <pre><code>┌ R_out ┐     ┌ Rr Rg Rb ┐     ┌ R_in ┐
 │ G_out │  =  │ Gr Gg Gb │  X  │ G_in │
 └ B_out ┘     └ Br Bg Bb ┘     └ B_in ┘
@@ -4345,13 +4377,13 @@ channel contributes to the brightness of the output. This is equivalent to the f
 <p>This control is only provided for illuminants that lie near the Planckian locus and provides fine-adjustment along that locus. For other illuminants the concept of &ldquo;color temperature&rdquo; doesn&rsquo;t make sense, so no temperature slider is provided.</p>
 </dd>
 <dt>hue</dt>
-<dd>For custom white balance, set the <em>hue</em> of the illuminant color in LCh color space.</dd>
+<dd>For custom white balance, set the <em>hue</em> of the illuminant color in LCh color space derivated from CIE Luv space.</dd>
 <dt>chroma</dt>
-<dd>For custom white balance, set the <em>chroma</em> (or saturation) of the illuminant color in LCh color space.</dd>
+<dd>For custom white balance, set the <em>chroma</em> (or saturation) of the illuminant color in LCh color space derivated from CIE Luv space.</dd>
 <dt>gamut compression</dt>
-<dd>When performing chromatic adaptation, colors in the image can be pushed out of gamut (that is, it may no longer be possible to represent certain colors as a valid [R,G,B] triplet with positive values in the working color space). By using a combination of <em>gamut compression</em> (which uses XYZ scaling) and <em>negative RGB vaue clipping</em>, the colors can be squeezed back into gamut, albeit with some loss of hue accuracy. One example where this feature is very useful is for scenes where there are blue LED lights, which are often quite problematic and result in ugly gamut clipping in the final image.</dd>
+<dd>Most camera sensors are slightly sensible to invisible wavelengths in UV, which get recorded on the blue channel and produce imaginary colors. Once corrected by the input color profile, they will end out of gamut and produce visual artifacts in gradients. Then, the chromatic adaptation may, once again, push valid colors out of gamut, and the out-of-gamut colors even further away (that is, it may no longer be possible to represent certain colors as a valid [R,G,B] triplet with positive values in the working color space). <em>Gamut compression</em> uses a perceptual, non-destructive method, that tries to compress the saturation while preserving the luminance as-is and hue as close as possible, in order to fit the whole image into the pipeline working space gamut. One example where this feature is very useful is for scenes where there are blue LED lights, which are often quite problematic and result in ugly gamut clipping in the final image.</dd>
 <dt>clip negative RGB from gamut</dt>
-<dd>Remove any negative RGB values (set them to zero).</dd>
+<dd>Remove any negative RGB values (set them to zero). This helps dealing with bad black level as well as blue channel clipping issues, with blue LED lights.</dd>
 </dl>
 <h2 id="r-g-and-b-tabs">R, G and B tabs</h2>
 <p>These tabs allow the R, G and B output channels for each pixel to be calculated using a weighted sum of the R, G and B input channels. Each tab has 3 sliders, and there are 3 tabs, so the sliders are effectively setting the coefficients of a 3x3 matrix, as described above.</p>
