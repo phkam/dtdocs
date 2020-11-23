@@ -261,7 +261,7 @@ This is the only time darktable will run Lua scripts by itself. These scripts ca
       <guid>https://darktable-org.github.io/dtdocs/darkroom/masking-and-blending/blend-modes/</guid>
       <description>Blend modes define how the input and output of a module are combined (blended) together before a module&amp;rsquo;s final output is passed to the next module in the pixelpipe. Most of the blend modes should be familiar from other imaging software and are thoroughly discussed in the GIMP user manual.
 This section therefore only discusses some of the darktable-specific blend modes in detail.
- normal The most commonly used blend mode, &amp;ldquo;normal&amp;rdquo; simply mixes input and output to an extent determined by the opacity parameter.</description>
+Some blend modes depend on a fulcrum for their operation.</description>
     </item>
     
     <item>

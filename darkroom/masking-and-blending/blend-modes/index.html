@@ -4214,6 +4214,7 @@
 
     <p>Blend modes define how the input and output of a module are combined (blended) together before a module&rsquo;s final output is passed to the next module in the pixelpipe. Most of the blend modes should be familiar from other imaging software and are thoroughly discussed in the <a href="https://docs.gimp.org/2.8/en/gimp-concepts-layer-modes.html" target="_blank">GIMP user manual</a>.</p>
 <p>This section therefore only discusses some of the darktable-specific blend modes in detail.</p>
+<p>Some blend modes depend on a fulcrum for their operation. This fulcrum usually defines the point at which the blend mode results in a &ldquo;no-operation&rdquo; which may be white or grey depending on the blend mode. The additional <em>blend fulcrum</em> parameter allows the position of this fulcrum to be adjusted where blending is performed within the RGB scene-referred color space. The effect depends on the operator used. For example, values above the fulcrum might be brightened and values below darkened, or vice versa.</p>
 <dl>
 <dt>normal</dt>
 <dd>The most commonly used blend mode, &ldquo;normal&rdquo; simply mixes input and output to an extent determined by the opacity parameter. This mode is commonly used to reduce the strength of a module&rsquo;s effect by reducing the opacity. This is also usually the blend mode of choice when applying a module&rsquo;s effect selectively with masks.</dd>
@@ -4240,8 +4241,6 @@
 <dd>Only available with modules that work in the RGB color space, this blend mode mixes color from the input and output images, while lightness is taken only from the input image. In contrast to “color” this blend mode does not involve clamping.</dd>
 <dt>color adjustment</dt>
 <dd>Some modules act predominantly on the tonal values of an image but also perform some color saturation adjustments (e.g. the <a href="/dtdocs/module-reference/processing-modules/levels/"><em>levels</em></a> and <a href="/dtdocs/module-reference/processing-modules/tone-curve/"><em>tone curve</em></a> modules). This blend mode takes the lightness from the module&rsquo;s output and mixes colors from input and output, enabling control of the module&rsquo;s color adjustments.</dd>
-<dt>blend fulcrum</dt>
-<dd>Some blend modes depend on a fulcrum for their operation. This additional parameter allows the position of this fulcrum to be adjusted for these blending operators within RGB scene-referred blending. The effect depends on the operator used.</dd>
 </dl>
 
 
