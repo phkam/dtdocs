@@ -4215,6 +4215,8 @@
 <dd>The pixel interpolator used in rotation, lens correction, up-scaling and down-scaling. Options are “bilinear”, “bicubic”, “lanczos2”, “lanczos3” (default).</dd>
 <dt>3D lut root folder</dt>
 <dd>Define the root folder (and sub-folders) containing Lut files used by the <a href="/dtdocs/module-reference/processing-modules/lut-3d/"><em>lut 3D</em></a> module</dd>
+<dt>auto-apply chromatic adaptation defaults</dt>
+<dd>Choose which module is responsible for performing white balance adjustments (chromatic adaptation) by default. Select &ldquo;legacy&rdquo; (default) to perform basic chromatic adaptation within the <a href="/dtdocs/module-reference/processing-modules/white-balance/"><em>white balance</em></a> module only. Select &ldquo;modern&rdquo; to use a combination of the <em>white balance</em> and <a href="/dtdocs/module-reference/processing-modules/color-calibration/"><em>color calibration</em></a> modules to perform modern chromatic adaptation with improved color science. These settings are applied by default to new edits and will not impact old edits.</dd>
 <dt>auto-apply pixel workflow defaults</dt>
 <dd>Choose which modules and module order to apply to new images by default:</dd>
 </dl>
