@@ -2110,15 +2110,6 @@ The module has no controls.</description>
     </item>
     
     <item>
-      <title>Search</title>
-      <link>https://darktable-org.github.io/dtdocs/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darktable-org.github.io/dtdocs/search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>select</title>
       <link>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/lighttable/select/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
