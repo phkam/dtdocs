@@ -14,7 +14,7 @@
 
 
 
-      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.e4b61fed98f00b9bfb56cfa19d9c53f2dae53f386b48a95080f7b5eb196762a5.css">
+      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.e3b170e9c2d94279173e953e17c1697ea40a3bfa60e65df687b560ef9ea95fd2.css">
       
 
 <script src="https://darktable-org.github.io/dtdocs/js/jquery.js"></script>
@@ -38,20 +38,16 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-	    
-            
-            <li class="nav-item">
-		<a class="nav-link" href="/dtdocs/search/">
-		    
-		    <span>Search</span>
-		    <span class="sr-only">(Current)</span>
-		</a>
-		
-            </li>
+           <form class="form-inline my-2 my-lg-0">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" autocomplete="off" aria-label="Search">
+           </form>
         </ul>
-        
     </div>
 </header>
+
+<div id="search-results" class="search-results">
+</div>
+
 
 
         <div class="container-fluid">
@@ -2714,7 +2710,7 @@
    </ul>
 
 		</nav>
-		<div class="content col-sm-12 order-sm-1 col-md-6 mx-md-auto order-md-12">
+		<div class="content col-sm-12 order-sm-1 col-md-9 mx-md-auto order-md-12">
 		    
 
 
@@ -2800,7 +2796,7 @@
 
 
 
-		</div>
+      </div>
 	    </div>
 
             
@@ -2812,6 +2808,31 @@
 </html>
 
 <script>
+(function($) {
+  
+
+  $.fn.scrollToMiddle = function(options) {
+    var settings = $.extend({
+        duration: 0
+    }, options );
+
+    return this.each(function() {
+      var $el = $(this);
+      var elOffset = $el.offset().top;
+      var elHeight = $el.height();
+      var windowHeight = $(window).height();
+      var offset;
+      if (elHeight < windowHeight) {
+        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+      }
+      else {
+        offset = elOffset;
+      }
+      $('.navigation').scrollTop(offset);
+    });
+  };
+}(jQuery));
+
 $('.navigation').css('opacity', '0');
  $(document).ready(function(){
      $('.parent ul').hide();
@@ -2820,7 +2841,7 @@ $('.navigation').css('opacity', '0');
      $('.active').siblings('ul').show();
      $('.active').children('i.toggle').removeClass("fa-plus-squre").addClass("fa-minus-square-o");
      $('.active').parents('li').children('.toggle').removeClass("fa-plus-square").addClass("fa-minus-square-o");
-
+     $('.active').scrollToMiddle();
 
      $('.toggle').on('click', function (e) {
        e.stopPropagation();
