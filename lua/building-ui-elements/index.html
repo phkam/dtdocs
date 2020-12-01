@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>darktable user manual - using darktable from a lua script</title>
+<title>darktable user manual - building user interface elements</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -425,7 +425,7 @@
    
 
       <a href="https://darktable-org.github.io/dtdocs/darkroom/darkroom-view-layout/" class="">
-          the darkroom view layout
+          darkroom view layout
       </a>
 
    </li>
@@ -803,7 +803,7 @@
    
 
       <a href="https://darktable-org.github.io/dtdocs/print/print-view-layout/" class="">
-          the print view layout
+          print view layout
       </a>
 
    </li>
@@ -2159,20 +2159,11 @@
       </a>
 
    <ul>
-   <li class="parent">
-      <i class="fa fa-plus-square toggle"></i>
-   
-
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/" class="">
-          usage
-      </a>
-
-   <ul>
    <li>
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/overview/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/overview/" class="">
           overview
       </a>
 
@@ -2182,7 +2173,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/basic-principles/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/basic-principles/" class="">
           basic principles: luarc files
       </a>
 
@@ -2192,7 +2183,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/a-simple-example/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/a-simple-example/" class="">
           a simple lua example
       </a>
 
@@ -2202,7 +2193,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/printing-labeled-images/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/printing-labeled-images/" class="">
           printing labeled images
       </a>
 
@@ -2212,7 +2203,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/simple-shortcut/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/simple-shortcut/" class="">
           adding a simple shortcut
       </a>
 
@@ -2222,7 +2213,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/exporting-images/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/exporting-images/" class="">
           exporting images with lua
       </a>
 
@@ -2232,7 +2223,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/building-ui-elements/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/building-ui-elements/" class=" active">
           building user interface elements
       </a>
 
@@ -2242,7 +2233,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/sharing-scripts/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/sharing-scripts/" class="">
           sharing scripts
       </a>
 
@@ -2252,7 +2243,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/calling-from-dbus/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/calling-from-dbus/" class="">
           calling lua from dbus
       </a>
 
@@ -2262,12 +2253,10 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/darktable-from-lua/" class=" active">
+      <a href="https://darktable-org.github.io/dtdocs/lua/darktable-from-lua/" class="">
           using darktable from a lua script
       </a>
 
-   </li>
-   </ul>
    </li>
    
    <li>
@@ -2719,20 +2708,19 @@
     <span class="crumb">
 	
 
-
-<a href='https://darktable-org.github.io/dtdocs/'>Home</a> / <a href='https://darktable-org.github.io/dtdocs/lua/'>Scripting with Lua</a> / <a href='https://darktable-org.github.io/dtdocs/lua/usage/'>usage</a> / using darktable from a lua script
+<a href='https://darktable-org.github.io/dtdocs/'>Home</a> / <a href='https://darktable-org.github.io/dtdocs/lua/'>Scripting with Lua</a> / building user interface elements
     </span>
 </div>
     
 <div class="prev-next row">
     <div class="col-6">
     
-	<a href="https://darktable-org.github.io/dtdocs/lua/usage/calling-from-dbus/" class="next">&lt; calling lua from dbus</a>
+	<a href="https://darktable-org.github.io/dtdocs/lua/exporting-images/" class="next">&lt; exporting images with lua</a>
 	
     </div>
     <div class="col-6">
     
-	<a href="https://darktable-org.github.io/dtdocs/lua/api/" class="prev">lua API &gt;</a>
+	<a href="https://darktable-org.github.io/dtdocs/lua/sharing-scripts/" class="prev">sharing scripts &gt;</a>
 	
     </div>
 </div>
@@ -2741,32 +2729,50 @@
 <article role="main">
 
     <h1 class="title">
-        using darktable from a lua script
+        building user interface elements
     </h1>
 
-    <p><em>Warning: This feature is very experimental. It is known that several elements don&rsquo;t yet work in library mode. Careful testing is highly recommended.</em></p>
-<p>The lua interface allows you to use darktable from any lua script. This will load darktable as a library and provide you with most of the lua API (darktable is configured headless, so the functions relating to the user interface are not available).</p>
-<p>As an example, the following program will print the list of all images in your library:</p>
-<pre><code>#!/usr/bin/env lua
-package = require &quot;package&quot;
-package.cpath=package.cpath..&quot;;./lib/darktable/lib?.so&quot;
+    <p>Our previous example was a bit limited. In particular the use of a preference for the export path wasn&rsquo;t very nice. We can do better than that by adding elements to the user interface in the export dialog.</p>
+<p>UI elements are created via the <code>darktable_new_widget</code> function. This function takes a type of widget as a parameter and returns a new object corresponding to that widget. You can then set various fields in that widget to set its parameters. You will then use that object as a parameter to various functions that will add it to the darktable UI. The following simple example adds a lib in the lighttable view with a simple label</p>
+<pre><code>local my_label = darktable.new_widget(&quot;label&quot;)
+my_label.label = &quot;Hello, world !&quot;
 
-dt = require(&quot;darktable&quot;)(
-&quot;--library&quot;, &quot;./library.db&quot;,
-&quot;--datadir&quot;, &quot;./share/darktable&quot;,
-&quot;--moduledir&quot;, &quot;./lib/darktable&quot;,
-&quot;--configdir&quot;, &quot;./configdir&quot;,
-&quot;--cachedir&quot;,&quot;cachedir&quot;,
-&quot;--g-fatal-warnings&quot;)
+dt.register_lib(&quot;test&quot;,&quot;test&quot;,false,{
+    [dt.gui.views.lighttable] = {&quot;DT_UI_CONTAINER_PANEL_LEFT_CENTER&quot;,20},
+    },my_label)
+</code></pre><p>There is a nice syntactic trick to make UI elements code easier to read and write. You can call these objects as functions with a table of key values as an argument. This allows the following example to work. It creates a container widget with two sub-widgets: a label and a text entry field.</p>
+<pre><code>   local my_widget = darktable.new_widget(&quot;box&quot;){
+      orientation = &quot;horizontal&quot;,
+      darktable.new_widget(&quot;label&quot;){ label = &quot;here =&gt; &quot; },
+      darktable.new_widget(&quot;entry&quot;){ tooltip = &quot;please enter text here&quot; }
+   }
+</code></pre><p>Now that we know that, let&rsquo;s improve our script a bit.</p>
+<pre><code>darktable = require &quot;darktable&quot;
 
-require(&quot;darktable.debug&quot;)
+local scp_path = darktable.new_widget(&quot;entry&quot;){
+  tooltip =&quot;Complete path to copy to. Can include user and hostname&quot;,
+  text = &quot;&quot;,
+  reset_callback = function(self) self.text = &quot;&quot; end
+}
 
-for k,v in ipairs(dt.database) do
-   print(tostring(v))
-end
-</code></pre><p>Note the third line that points to the location of the <code>libdarktable.so</code> file.</p>
-<p>Also note that the call to require returns a function that can be called only once and allows you to set darktable&rsquo;s command line parameter. The <code>:memory:</code> parameter to <code>--library</code> is useful here if you don&rsquo;t want to work on your personal library.</p>
-
+darktable.register_storage(&quot;scp_export&quot;,&quot;Export via scp&quot;,
+  function( storage, image, format, filename,
+     number, total, high_quality, extra_data)
+    if not darktable.control.execute(scp &quot;..filename..&quot; &quot;..
+      scp_path.text
+    ) then
+      darktable.print_error(&quot;scp failed for &quot;..tostring(image))
+    end
+    end,
+    nil, --finalize
+    nil, --supported
+    nil, --initialize
+    darktable.new_widget(&quot;box&quot;) {
+    orientation =&quot;horizontal&quot;,
+    darktable.new_widget(&quot;label&quot;){label = &quot;target SCP PATH &quot;},
+    scp_path,
+})
+</code></pre>
 
     
 </article>
@@ -2774,12 +2780,12 @@ end
 <div class="prev-next row">
     <div class="col-6">
     
-	<a href="https://darktable-org.github.io/dtdocs/lua/usage/calling-from-dbus/" class="next">&lt; calling lua from dbus</a>
+	<a href="https://darktable-org.github.io/dtdocs/lua/exporting-images/" class="next">&lt; exporting images with lua</a>
 	
     </div>
     <div class="col-6">
     
-	<a href="https://darktable-org.github.io/dtdocs/lua/api/" class="prev">lua API &gt;</a>
+	<a href="https://darktable-org.github.io/dtdocs/lua/sharing-scripts/" class="prev">sharing scripts &gt;</a>
 	
     </div>
 </div>

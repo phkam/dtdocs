@@ -51,7 +51,7 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/overview/</loc>
+    <loc>https://darktable-org.github.io/dtdocs/lua/overview/</loc>
   </url>
   
   <url>
@@ -99,10 +99,6 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/</loc>
-  </url>
-  
-  <url>
     <loc>https://darktable-org.github.io/dtdocs/overview/user-interface/</loc>
   </url>
   
@@ -111,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/basic-principles/</loc>
+    <loc>https://darktable-org.github.io/dtdocs/lua/basic-principles/</loc>
   </url>
   
   <url>
@@ -120,6 +116,10 @@
   
   <url>
     <loc>https://darktable-org.github.io/dtdocs/lighttable/digital-asset-management/collections/</loc>
+  </url>
+  
+  <url>
+    <loc>https://darktable-org.github.io/dtdocs/darkroom/darkroom-view-layout/</loc>
   </url>
   
   <url>
@@ -159,10 +159,6 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/api/</loc>
-  </url>
-  
-  <url>
     <loc>https://darktable-org.github.io/dtdocs/map/map-view-layout/</loc>
   </url>
   
@@ -172,6 +168,10 @@
   
   <url>
     <loc>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/multiple-instances/</loc>
+  </url>
+  
+  <url>
+    <loc>https://darktable-org.github.io/dtdocs/print/print-view-layout/</loc>
   </url>
   
   <url>
@@ -187,15 +187,7 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/darkroom/darkroom-view-layout/</loc>
-  </url>
-  
-  <url>
     <loc>https://darktable-org.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-pixelpipe-and-module-order/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darktable-org.github.io/dtdocs/print/print-view-layout/</loc>
   </url>
   
   <url>
@@ -211,7 +203,7 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/a-simple-example/</loc>
+    <loc>https://darktable-org.github.io/dtdocs/lua/a-simple-example/</loc>
   </url>
   
   <url>
@@ -331,7 +323,7 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/printing-labeled-images/</loc>
+    <loc>https://darktable-org.github.io/dtdocs/lua/printing-labeled-images/</loc>
   </url>
   
   <url>
@@ -371,7 +363,7 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/simple-shortcut/</loc>
+    <loc>https://darktable-org.github.io/dtdocs/lua/simple-shortcut/</loc>
   </url>
   
   <url>
@@ -443,7 +435,7 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/exporting-images/</loc>
+    <loc>https://darktable-org.github.io/dtdocs/lua/exporting-images/</loc>
   </url>
   
   <url>
@@ -479,7 +471,7 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/building-ui-elements/</loc>
+    <loc>https://darktable-org.github.io/dtdocs/lua/building-ui-elements/</loc>
   </url>
   
   <url>
@@ -519,11 +511,11 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/sharing-scripts/</loc>
+    <loc>https://darktable-org.github.io/dtdocs/lua/sharing-scripts/</loc>
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/calling-from-dbus/</loc>
+    <loc>https://darktable-org.github.io/dtdocs/lua/calling-from-dbus/</loc>
   </url>
   
   <url>
@@ -555,11 +547,15 @@
   </url>
   
   <url>
-    <loc>https://darktable-org.github.io/dtdocs/lua/usage/darktable-from-lua/</loc>
+    <loc>https://darktable-org.github.io/dtdocs/lua/darktable-from-lua/</loc>
   </url>
   
   <url>
     <loc>https://darktable-org.github.io/dtdocs/guides-tutorials/</loc>
+  </url>
+  
+  <url>
+    <loc>https://darktable-org.github.io/dtdocs/lua/api/</loc>
   </url>
   
   <url>

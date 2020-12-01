@@ -114,10 +114,10 @@ While the mouse is over an image thumbnail or images are selected, there are a n
     
     <item>
       <title>overview</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/usage/overview/</link>
+      <link>https://darktable-org.github.io/dtdocs/lua/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darktable-org.github.io/dtdocs/lua/usage/overview/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lua/overview/</guid>
       <description>Lua scripts can be used to define actions for darktable to perform when an event is triggered. One example might be calling an external application during file export in order to apply additional processing steps outside of darktable.
 Lua is an independent project founded in 1993, providing a powerful, fast, lightweight, embeddable scripting language. Lua is widely used by many open source applications, in commercial programs, and for games programming.</description>
     </item>
@@ -244,10 +244,10 @@ darktable&amp;rsquo;s requirements are no exception. All calculations are perfor
     
     <item>
       <title>basic principles: luarc files</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/usage/basic-principles/</link>
+      <link>https://darktable-org.github.io/dtdocs/lua/basic-principles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darktable-org.github.io/dtdocs/lua/usage/basic-principles/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lua/basic-principles/</guid>
       <description>At startup, darktable will automatically run the Lua scripts $DARKTABLE/share/darktable/luarc and $HOME/.config/darktable/luarc (where $DARKTABLE represents the darktable installation directory and $HOME represents your home directory).
 This is the only time darktable will run Lua scripts by itself. These scripts can register callbacks to perform actions on various darktable events. This callback mechanism is the primary method of triggering lua actions.</description>
     </item>
@@ -271,6 +271,16 @@ Some blend modes depend on a fulcrum for their operation.</description>
       <guid>https://darktable-org.github.io/dtdocs/lighttable/digital-asset-management/collections/</guid>
       <description>A collection is a set of images defined by a specific combination of selection criteria. The most basic kind of collection is a film roll, which contains all of the images that have been imported from a specific folder on disk.
 You can easily construct other kinds of collections based on various image attributes (Exif data, filename, tags etc.). Multiple criteria can be logically combined to narrow or extend your collection (see collect images).</description>
+    </item>
+    
+    <item>
+      <title>darkroom view layout</title>
+      <link>https://darktable-org.github.io/dtdocs/darkroom/darkroom-view-layout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/darkroom/darkroom-view-layout/</guid>
+      <description>left panel From top to bottom:
+ navigation Navigate and zoom the center view snapshots Take and view snapshots for comparison with the current edit duplicate manager View and manage duplicates global color picker Select and display color information taken from parts of the image tagging Manage tags image information Display information about the current image mask manager View and edit drawn shapes  right panel From top to bottom:</description>
     </item>
     
     <item>
@@ -354,15 +364,6 @@ Each change you make to the image in the darkroom is turned into a history stack
     </item>
     
     <item>
-      <title>lua API</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darktable-org.github.io/dtdocs/lua/api/</guid>
-      <description>darktable&amp;rsquo;s Lua API is documented in its own manual with a detailed description of all data structures and functions. You can download the API manual from here.</description>
-    </item>
-    
-    <item>
       <title>map view layout</title>
       <link>https://darktable-org.github.io/dtdocs/map/map-view-layout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -390,6 +391,17 @@ Each change you make to the image in the darkroom is turned into a history stack
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/multiple-instances/</guid>
       <description>Many of darktable&amp;rsquo;s modules can be applied more than once in the pixelpipe. Each instance of a module behaves independently, taking its input from the module below in the pixelpipe delivering its output to the module above.
 As with the base instance of a module, all instances can be moved independently within the pixelpipe either by holding Ctrl+Shift while dragging &amp;amp; dropping or by choosing &amp;ldquo;move up&amp;rdquo; or &amp;ldquo;move down&amp;rdquo; in the multiple instances drop-down menu.</description>
+    </item>
+    
+    <item>
+      <title>print view layout</title>
+      <link>https://darktable-org.github.io/dtdocs/print/print-view-layout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/print/print-view-layout/</guid>
+      <description>The central area displays the image layout on the paper (the white area). Some gray borders may be displayed around the image to represent the printable area (the page minus the borders) not filled by the image.
+The filmstrip below the image allows you to select more images.
+left panel  collect images Filter the list of images displayed in the lighttable. image information Display image information  right panel  print settings Adjust print settings and initiate printing.</description>
     </item>
     
     <item>
@@ -427,16 +439,6 @@ In order for darktable to consider a file for import, it must have one of the fo
     </item>
     
     <item>
-      <title>the darkroom view layout</title>
-      <link>https://darktable-org.github.io/dtdocs/darkroom/darkroom-view-layout/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darktable-org.github.io/dtdocs/darkroom/darkroom-view-layout/</guid>
-      <description>left panel From top to bottom:
- navigation Navigate and zoom the center view snapshots Take and view snapshots for comparison with the current edit duplicate manager View and manage duplicates global color picker Select and display color information taken from parts of the image tagging Manage tags image information Display information about the current image mask manager View and edit drawn shapes  right panel From top to bottom:</description>
-    </item>
-    
-    <item>
       <title>the pixelpipe and module order</title>
       <link>https://darktable-org.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-pixelpipe-and-module-order/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -444,17 +446,6 @@ In order for darktable to consider a file for import, it must have one of the fo
       <guid>https://darktable-org.github.io/dtdocs/darkroom/processing-modules-and-pixelpipe/the-pixelpipe-and-module-order/</guid>
       <description>The ordered sequence of processing modules operating on an input file to generate an output image is known as the &amp;ldquo;pixelpipe&amp;rdquo;.
 The order of the pixelpipe is represented graphically by the order in which modules are presented in the user interface &amp;ndash; the pixelpipe starts with a RAW image at the bottom of the list, and applies the processing modules one by one, piling up layer upon layer of processing from the bottom up, until it reaches the top of the list, where it outputs the fully processed image.</description>
-    </item>
-    
-    <item>
-      <title>the print view layout</title>
-      <link>https://darktable-org.github.io/dtdocs/print/print-view-layout/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darktable-org.github.io/dtdocs/print/print-view-layout/</guid>
-      <description>The central area displays the image layout on the paper (the white area). Some gray borders may be displayed around the image to represent the printable area (the page minus the borders) not filled by the image.
-The filmstrip below the image allows you to select more images.
-left panel  collect images Filter the list of images displayed in the lighttable. image information Display image information  right panel  print settings Adjust print settings and initiate printing.</description>
     </item>
     
     <item>
@@ -489,10 +480,10 @@ controls  zoom Scroll with the mouse wheel to zoom in and out of the lighttable 
     
     <item>
       <title>a simple lua example</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/usage/a-simple-example/</link>
+      <link>https://darktable-org.github.io/dtdocs/lua/a-simple-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darktable-org.github.io/dtdocs/lua/usage/a-simple-example/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lua/a-simple-example/</guid>
       <description>Let&amp;rsquo;s start with a simple example which will print some code on the console. Create a file called luarc in darktable&amp;rsquo;s configuration directory (usually $HOME/.config/darktable/) and add the following line to it:
 print(&amp;quot;Hello World !&amp;quot;) Start darktable and you will see the sentence &amp;ldquo;Hello World !&amp;rdquo; printed on the console. Nothing fancy but it&amp;rsquo;s a start.
 At this point, there is nothing darktable-specific in the script. We simply use Lua&amp;rsquo;s standard print function to print a string.</description>
@@ -713,10 +704,10 @@ general  number of folder levels to show in lists The number of folder levels to
     
     <item>
       <title>printing labeled images</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/usage/printing-labeled-images/</link>
+      <link>https://darktable-org.github.io/dtdocs/lua/printing-labeled-images/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darktable-org.github.io/dtdocs/lua/usage/printing-labeled-images/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lua/printing-labeled-images/</guid>
       <description>This first example showed us the very basics of lua and allowed us to check that everything is working properly. Let&amp;rsquo;s do something a little bit more complex. Let&amp;rsquo;s try to print the list of images that have a &amp;ldquo;red&amp;rdquo; label attached to them. But first of all, what is an image?
 local darktable = require &amp;quot;darktable&amp;quot; local debug = require &amp;quot;darktable.debug&amp;quot; print(darktable.debug.dump(darktable.database[1])) Running the code above will produce a lot of output.</description>
     </item>
@@ -793,10 +784,10 @@ Press Ctrl+Z to undo the last modification and Ctrl+Y to redo the last undone mo
     
     <item>
       <title>adding a simple shortcut</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/usage/simple-shortcut/</link>
+      <link>https://darktable-org.github.io/dtdocs/lua/simple-shortcut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darktable-org.github.io/dtdocs/lua/usage/simple-shortcut/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lua/simple-shortcut/</guid>
       <description>So far, all our scripts have done things during startup. This is of limited use and doesn&amp;rsquo;t allow us to react to real user actions. To do more advanced things we need to register a function that will be called on a given event. The most common event to react to is a keyboard shortcut.
 darktable = require &amp;quot;darktable&amp;quot; local function hello_shortcut(event, shortcut) darktable.print(&amp;quot;Hello, I just received &#39;&amp;quot;..event.. &amp;quot;&#39; with parameter &#39;&amp;quot;.</description>
     </item>
@@ -933,10 +924,10 @@ darktable-cmstest is called without command line parameters.</description>
     
     <item>
       <title>exporting images with lua</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/usage/exporting-images/</link>
+      <link>https://darktable-org.github.io/dtdocs/lua/exporting-images/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darktable-org.github.io/dtdocs/lua/usage/exporting-images/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lua/exporting-images/</guid>
       <description>So far we have learned to use lua to adapt darktable to our particular workflow. Let&amp;rsquo;s look now at how to use lua to easily export images to an online service. If you are able to upload an image to a service via the command line then you can use lua to integrate this into darktable&amp;rsquo;s user interface.
 In this next example we will use lua to export via scp. A new storage type will appear in darktable&amp;rsquo;s UI which will export images to a remote target via the copy mechanism in ssh.</description>
     </item>
@@ -1013,10 +1004,10 @@ As with any mask, if the value for a pixel in a raster mask is zero the input to
     
     <item>
       <title>building user interface elements</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/usage/building-ui-elements/</link>
+      <link>https://darktable-org.github.io/dtdocs/lua/building-ui-elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darktable-org.github.io/dtdocs/lua/usage/building-ui-elements/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lua/building-ui-elements/</guid>
       <description>Our previous example was a bit limited. In particular the use of a preference for the export path wasn&amp;rsquo;t very nice. We can do better than that by adding elements to the user interface in the export dialog.
 UI elements are created via the darktable_new_widget function. This function takes a type of widget as a parameter and returns a new object corresponding to that widget. You can then set various fields in that widget to set its parameters.</description>
     </item>
@@ -1092,20 +1083,20 @@ In order to obtain profiling info you need to start darktable from a terminal wi
     
     <item>
       <title>sharing scripts</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/usage/sharing-scripts/</link>
+      <link>https://darktable-org.github.io/dtdocs/lua/sharing-scripts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darktable-org.github.io/dtdocs/lua/usage/sharing-scripts/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lua/sharing-scripts/</guid>
       <description>So far, all of our lua code has been in luarc. That&amp;rsquo;s a good way to develop your script but not very practical for distribution. We need to make this into a proper lua module. To do that, we save the code in a separate file (scp-storage.lua in this case):
 --[[ SCP STORAGE a simple storage to export images via scp AUTHOR Jérémy Rosen (jeremy.rosen@enst-bretagne.fr) INSTALLATION * copy this file in $CONFIGDIR/lua/ where CONFIGDIR is your darktable configuration directory * add the following line in the file $CONFIGDIR/luarc require &amp;quot;scp-storage&amp;quot; USAGE * select &amp;quot;Export via SCP&amp;quot; in the storage selection menu * set the target directory * export your images LICENSE GPLv2 ]] darktable = require &amp;quot;darktable&amp;quot; darktable.</description>
     </item>
     
     <item>
       <title>calling lua from dbus</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/usage/calling-from-dbus/</link>
+      <link>https://darktable-org.github.io/dtdocs/lua/calling-from-dbus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darktable-org.github.io/dtdocs/lua/usage/calling-from-dbus/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lua/calling-from-dbus/</guid>
       <description>It is possible to send a lua command to darktable via its DBus interface. The method org.darktable.service.Remote.Lua takes a single string parameter which is interpreted as a lua command. The command will be executed in the current lua context and should return either nil or a string. The result will be passed back as the result of the DBus method.
 If the Lua call results in an error, the DBus method call will return an error org.</description>
     </item>
@@ -1163,13 +1154,22 @@ database  check for database maintenance Indicates when darktable should check f
     
     <item>
       <title>using darktable from a lua script</title>
-      <link>https://darktable-org.github.io/dtdocs/lua/usage/darktable-from-lua/</link>
+      <link>https://darktable-org.github.io/dtdocs/lua/darktable-from-lua/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darktable-org.github.io/dtdocs/lua/usage/darktable-from-lua/</guid>
+      <guid>https://darktable-org.github.io/dtdocs/lua/darktable-from-lua/</guid>
       <description>Warning: This feature is very experimental. It is known that several elements don&amp;rsquo;t yet work in library mode. Careful testing is highly recommended.
 The lua interface allows you to use darktable from any lua script. This will load darktable as a library and provide you with most of the lua API (darktable is configured headless, so the functions relating to the user interface are not available).
 As an example, the following program will print the list of all images in your library:</description>
+    </item>
+    
+    <item>
+      <title>lua API</title>
+      <link>https://darktable-org.github.io/dtdocs/lua/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/lua/api/</guid>
+      <description>darktable&amp;rsquo;s Lua API is documented in its own manual with a detailed description of all data structures and functions. You can download the API manual from here.</description>
     </item>
     
     <item>

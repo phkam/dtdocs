@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>darktable user manual - calling lua from dbus</title>
+<title>darktable user manual - overview</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -425,7 +425,7 @@
    
 
       <a href="https://darktable-org.github.io/dtdocs/darkroom/darkroom-view-layout/" class="">
-          the darkroom view layout
+          darkroom view layout
       </a>
 
    </li>
@@ -803,7 +803,7 @@
    
 
       <a href="https://darktable-org.github.io/dtdocs/print/print-view-layout/" class="">
-          the print view layout
+          print view layout
       </a>
 
    </li>
@@ -2159,20 +2159,11 @@
       </a>
 
    <ul>
-   <li class="parent">
-      <i class="fa fa-plus-square toggle"></i>
-   
-
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/" class="">
-          usage
-      </a>
-
-   <ul>
    <li>
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/overview/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/overview/" class=" active">
           overview
       </a>
 
@@ -2182,7 +2173,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/basic-principles/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/basic-principles/" class="">
           basic principles: luarc files
       </a>
 
@@ -2192,7 +2183,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/a-simple-example/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/a-simple-example/" class="">
           a simple lua example
       </a>
 
@@ -2202,7 +2193,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/printing-labeled-images/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/printing-labeled-images/" class="">
           printing labeled images
       </a>
 
@@ -2212,7 +2203,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/simple-shortcut/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/simple-shortcut/" class="">
           adding a simple shortcut
       </a>
 
@@ -2222,7 +2213,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/exporting-images/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/exporting-images/" class="">
           exporting images with lua
       </a>
 
@@ -2232,7 +2223,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/building-ui-elements/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/building-ui-elements/" class="">
           building user interface elements
       </a>
 
@@ -2242,7 +2233,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/sharing-scripts/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/sharing-scripts/" class="">
           sharing scripts
       </a>
 
@@ -2252,7 +2243,7 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/calling-from-dbus/" class=" active">
+      <a href="https://darktable-org.github.io/dtdocs/lua/calling-from-dbus/" class="">
           calling lua from dbus
       </a>
 
@@ -2262,12 +2253,10 @@
       <i class="no-toggle"></i>
    
 
-      <a href="https://darktable-org.github.io/dtdocs/lua/usage/darktable-from-lua/" class="">
+      <a href="https://darktable-org.github.io/dtdocs/lua/darktable-from-lua/" class="">
           using darktable from a lua script
       </a>
 
-   </li>
-   </ul>
    </li>
    
    <li>
@@ -2719,20 +2708,19 @@
     <span class="crumb">
 	
 
-
-<a href='https://darktable-org.github.io/dtdocs/'>Home</a> / <a href='https://darktable-org.github.io/dtdocs/lua/'>Scripting with Lua</a> / <a href='https://darktable-org.github.io/dtdocs/lua/usage/'>usage</a> / calling lua from dbus
+<a href='https://darktable-org.github.io/dtdocs/'>Home</a> / <a href='https://darktable-org.github.io/dtdocs/lua/'>Scripting with Lua</a> / overview
     </span>
 </div>
     
 <div class="prev-next row">
     <div class="col-6">
     
-	<a href="https://darktable-org.github.io/dtdocs/lua/usage/sharing-scripts/" class="next">&lt; sharing scripts</a>
+	<a href="https://darktable-org.github.io/dtdocs/lua/" class="next">&lt; Scripting with Lua</a>
 	
     </div>
     <div class="col-6">
     
-	<a href="https://darktable-org.github.io/dtdocs/lua/usage/darktable-from-lua/" class="prev">using darktable from a lua script &gt;</a>
+	<a href="https://darktable-org.github.io/dtdocs/lua/basic-principles/" class="prev">basic principles: luarc files &gt;</a>
 	
     </div>
 </div>
@@ -2741,11 +2729,13 @@
 <article role="main">
 
     <h1 class="title">
-        calling lua from dbus
+        overview
     </h1>
 
-    <p>It is possible to send a lua command to darktable via its DBus interface. The method <code>org.darktable.service.Remote.Lua</code> takes a single string parameter which is interpreted as a lua command. The command will be executed in the current lua context and should return either nil or a string. The result will be passed back as the result of the DBus method.</p>
-<p>If the Lua call results in an error, the DBus method call will return an error <code>org.darktable.Error.LuaError</code> with the lua error message as the message attached to the DBus error.</p>
+    <p>Lua scripts can be used to define actions for darktable to perform when an event is triggered. One example might be calling an external application during file export in order to apply additional processing steps outside of darktable.</p>
+<p><a href="http://www.lua.org/" target="_blank">Lua</a> is an independent project founded in 1993, providing a powerful, fast, lightweight, embeddable scripting language. Lua is widely used by many open source applications, in commercial programs, and for games programming.</p>
+<p>darktable uses Lua version 5.3. Describing the principles and syntax of Lua is beyond the scope of this usermanual. For a detailed introduction see the <a href="http://www.lua.org/manual/5.3/manual.html" target="_blank">Lua reference manual</a>.</p>
+<p>The following sections will provide you with a brief introduction to how Lua scripts can be used within darktable.</p>
 
 
     
@@ -2754,12 +2744,12 @@
 <div class="prev-next row">
     <div class="col-6">
     
-	<a href="https://darktable-org.github.io/dtdocs/lua/usage/sharing-scripts/" class="next">&lt; sharing scripts</a>
+	<a href="https://darktable-org.github.io/dtdocs/lua/" class="next">&lt; Scripting with Lua</a>
 	
     </div>
     <div class="col-6">
     
-	<a href="https://darktable-org.github.io/dtdocs/lua/usage/darktable-from-lua/" class="prev">using darktable from a lua script &gt;</a>
+	<a href="https://darktable-org.github.io/dtdocs/lua/basic-principles/" class="prev">basic principles: luarc files &gt;</a>
 	
     </div>
 </div>
