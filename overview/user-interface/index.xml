@@ -56,7 +56,7 @@ The filmstrip allows you to interact with images while you are not in the lightt
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/keyboard-shortcuts/</guid>
       <description>Much of the functionality in darktable can be controlled via keyboard shortcuts which can be customised in preferences &amp;gt; shortcuts.
-Press the H button (for help) in any darktable view to show a list of all shortcuts that are applicable to the current view.</description>
+Press the H key (for help) in any darktable view to show a list of all shortcuts that are applicable to the current view.</description>
     </item>
     
   </channel>

@@ -211,7 +211,7 @@ To use the tethering feature you need to connect your camera to your PC using a 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/overview/sidecar-files/sidecar/</guid>
-      <description>darktable is a non-destructive image editor and opens all images in read-only mode. Any data created within darktable (metadata, tags, and image processing steps) are stored in separate .xmp sidecar files. These files allow darktable to store information about the images as well as the full editing history without touching the original raw files. When you import an image into darktable for the first time, an XMP file is automatically generated (XMP generation can be disabled in preferences &amp;gt; storage but this is not recommended in normal use).</description>
+      <description>darktable is a non-destructive image editor and opens all images in read-only mode. Any data created within darktable (metadata, tags, and image processing steps) are stored in separate .XMP sidecar files. These files allow darktable to store information about the images as well as the full editing history without touching the original raw files. When you import an image into darktable for the first time, an XMP file is automatically generated (XMP generation can be disabled in preferences &amp;gt; storage but this is not recommended in normal use).</description>
     </item>
     
     <item>
@@ -870,7 +870,7 @@ You can combine images into a group by selecting them and clicking the â€œgroupâ
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/keyboard-shortcuts/</guid>
       <description>Much of the functionality in darktable can be controlled via keyboard shortcuts which can be customised in preferences &amp;gt; shortcuts.
-Press the H button (for help) in any darktable view to show a list of all shortcuts that are applicable to the current view.</description>
+Press the H key (for help) in any darktable view to show a list of all shortcuts that are applicable to the current view.</description>
     </item>
     
     <item>

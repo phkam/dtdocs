@@ -2768,7 +2768,7 @@
 <p>The remaining modules operate in this non-linear <em>display-referred</em> section of the pixelpipe to produce the final output image.</p>
 </li>
 </ol>
-<p>There are two standard workflows offered in darktable (these can be changed in <a href="/dtdocs/preferences-settings/processing/"><code>preferences &gt; processing &gt; auto-apply pixel workflow defaults</code></a>):</p>
+<p>There are two standard workflows offered in darktable (these can be changed in <a href="/dtdocs/preferences-settings/processing/">preferences &gt; processing &gt; auto-apply pixel workflow defaults</a>):</p>
 <ul>
 <li><a href="/dtdocs/overview/workflow/edit-scene-referred/"><em>scene-referred workflow</em></a>: Here the emphasis is on doing as much processing as possible in the scene-referred part of the pipeline, and performing dynamic range compression to display-referred space as late as possible. This is the preferred workflow for darktable. It uses the <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module to perform the tone mapping compression.</li>
 <li><a href="/dtdocs/overview/workflow/edit-display-referred/"><em>display-referred workflow</em></a>: This is the legacy workflow and is still the default setting when darktable is first installed. It performs the tone mapping compression much earlier in the pixelpipe, and many of the modules therefore operate in display-referred space. It uses the <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a> module to perform the tone mapping compression.</li>
