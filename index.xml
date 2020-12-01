@@ -456,7 +456,7 @@ The order of the pixelpipe is represented graphically by the order in which modu
       
       <guid>https://darktable-org.github.io/dtdocs/slideshow/usage/</guid>
       <description>The slideshow view is still in an early stage of development with only a basic set of features.
-If you don&amp;rsquo;t need the auto-advance mode, you could even use the sticky-preview feature instead.
+If you don&amp;rsquo;t need the auto-advance mode, you could even use the sticky preview feature instead.
  spacebar start and stop auto-advance mode which automatically switches to the next images every five seconds by default. ESC leave slideshow mode and return to lighttable view. + or increase delay between each image. up arrow - or decrease delay between each image.</description>
     </item>
     
