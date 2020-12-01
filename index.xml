@@ -1178,7 +1178,7 @@ As an example, the following program will print the list of all images in your l
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/miscellaneous/</guid>
-      <description>interface  sort built-in presets first Choose how the presets menu is sorted. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on). mouse wheel scrolls modules side panel by default When enabled, the mouse wheel scrolls side panels by default and Ctrl+Alt+mouse wheel scrolls data entry fields. When disabled, this behavior is reversed (default off). always show panels&#39; scrollbars Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on).</description>
+      <description>interface  sort built-in presets first Choose how the presets menu is sorted. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on). mouse wheel scrolls modules side panel by default When enabled, the mouse wheel scrolls side panels by default and Ctrl+Alt+wheel scrolls data entry fields. When disabled, this behavior is reversed (default off). always show panels&#39; scrollbars Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on).</description>
     </item>
     
     <item>
@@ -1922,7 +1922,7 @@ In the top line of the mask manager panel are buttons that can be used to create
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/shared/metadata-editor/</guid>
       <description>Edit the metadata (title, description, creator, publisher, rights etc.) of selected images.
-module controls  metadata entry fields A separate field is displayed for each metadata item. Ctrl+scroll on any field to increase its height. Ctrl+Enter to insert a new line. Press Enter to apply any text entered in the current metadata field to the selected images. clear Delete existing metadata from the selected images. apply Apply new settings, from the metadata entry fields, to the selected images.</description>
+module controls  metadata entry fields A separate field is displayed for each metadata item. Hold Ctrl while scrolling with your mouse to increase the height of a field. Press Ctrl+Enter to insert a new line. Press Enter to apply any text entered in the current metadata field to the selected images. clear Delete existing metadata from the selected images.</description>
     </item>
     
     <item>
@@ -2252,7 +2252,7 @@ Tags provide a means of adding information to images using a keyword dictionary.
       <description>View your images by the date/time they were taken.
  In the lighttable filemanager view, you can show/hide the timeline module in the bottom panel with the shortcut Ctrl+F.
 Within the timeline, you can show the next and previous dates by scrolling your mouse; Ctrl+scroll to zoom in/out.
-You can also use timeline to select images by date range with mouse click+pan.</description>
+You can also use timeline to select images by date range with mouse click+drag.</description>
     </item>
     
     <item>

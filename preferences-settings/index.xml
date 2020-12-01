@@ -112,7 +112,7 @@ database  check for database maintenance Indicates when darktable should check f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/miscellaneous/</guid>
-      <description>interface  sort built-in presets first Choose how the presets menu is sorted. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on). mouse wheel scrolls modules side panel by default When enabled, the mouse wheel scrolls side panels by default and Ctrl+Alt+mouse wheel scrolls data entry fields. When disabled, this behavior is reversed (default off). always show panels&#39; scrollbars Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on).</description>
+      <description>interface  sort built-in presets first Choose how the presets menu is sorted. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on). mouse wheel scrolls modules side panel by default When enabled, the mouse wheel scrolls side panels by default and Ctrl+Alt+wheel scrolls data entry fields. When disabled, this behavior is reversed (default off). always show panels&#39; scrollbars Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on).</description>
     </item>
     
     <item>

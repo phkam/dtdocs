@@ -64,7 +64,7 @@ When hovering with the mouse over thumbnails, darktable will update this view, d
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/shared/metadata-editor/</guid>
       <description>Edit the metadata (title, description, creator, publisher, rights etc.) of selected images.
-module controls  metadata entry fields A separate field is displayed for each metadata item. Ctrl+scroll on any field to increase its height. Ctrl+Enter to insert a new line. Press Enter to apply any text entered in the current metadata field to the selected images. clear Delete existing metadata from the selected images. apply Apply new settings, from the metadata entry fields, to the selected images.</description>
+module controls  metadata entry fields A separate field is displayed for each metadata item. Hold Ctrl while scrolling with your mouse to increase the height of a field. Press Ctrl+Enter to insert a new line. Press Enter to apply any text entered in the current metadata field to the selected images. clear Delete existing metadata from the selected images.</description>
     </item>
     
     <item>

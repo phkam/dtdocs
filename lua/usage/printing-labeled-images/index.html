@@ -2749,7 +2749,7 @@
 local debug = require &quot;darktable.debug&quot;
 print(darktable.debug.dump(darktable.database[1]))
 </code></pre><p>Running the code above will produce a lot of output. We will look at it in a moment, but first let&rsquo;s look at the code itself.</p>
-<p>We know about <code>requiring darktable</code>. Here, we need to separately <code>require darktable.debug</code> which is an optional section of the API that provides helper functions to help debug lua scripts.</p>
+<p>We know about <code>require darktable</code>. Here, we need to separately <code>require darktable.debug</code> which is an optional section of the API that provides helper functions to help debug lua scripts.</p>
 <p><code>darktable.database</code> is a table provided by the API that contains all images in the database (currently visible or not, duplicate or not&hellip;). Each entry in the database is an image object. Image objects are complex objects that allow you to manipulate your image in various ways (it is all documented in the <code>types_dt_lua_image_t</code> section of the API manual). To display our images, we use <code>darktable.debug.dump</code> which is a function that will take anything as its parameter and recursively dump its content. Since images are complex objects that indirectly reference other complex objects, the resulting output is huge. Below is a cut down example of the output.</p>
 <pre><code>toplevel (userdata,dt_lua_image_t) : /images/100.JPG
    publisher (string) : &quot;&quot;
