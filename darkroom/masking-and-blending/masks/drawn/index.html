@@ -2757,8 +2757,8 @@
 
 </p>
 <p>This will take you into the creation mode for that shape. Once you have finished drawing your shape you will automatically be taken into edit mode.</p>
-<p><code>Ctrl+click</code> on the shape icon to continuously draw multiple shapes of the same type - each time a shape is completed, you will re-enter creation mode for a new instance of that shape. While in continuous creation mode, <code>right-click</code> to stop drawing shapes and enter edit mode.</p>
-<p>For all drawn shapes, <code>Shift+scroll</code> may be used to change the extent of the shape&rsquo;s feathering (the blur at the edge of the shape) and <code>Ctrl+scroll</code> to change the shape&rsquo;s opacity (how transparent it is). These operations are available in both creation and edit modes (as long as your mouse is over the shape in question).</p>
+<p>Ctrl+click on the shape icon to continuously draw multiple shapes of the same type - each time a shape is completed, you will re-enter creation mode for a new instance of that shape. While in continuous creation mode, right-click to stop drawing shapes and enter edit mode.</p>
+<p>For all drawn shapes, hold Shift while scrolling with the mouse wheel to change the extent of the shape&rsquo;s feathering (the blur at the edge of the shape) and use Ctrl+scroll to change the shape&rsquo;s opacity (how transparent it is). These operations are available in both creation and edit modes (as long as your mouse is over the shape in question).</p>
 <hr>
 <p><strong>Note:</strong> When used in shape creation mode, the preceding scroll operations will also cause the <strong>default</strong> feathering or opacity to be changed. The new default values will be used the next time you create a new shape.</p>
 <hr>
@@ -2768,10 +2768,10 @@
 
 <img src="https://darktable-org.github.io/dtdocs/darkroom/masking-and-blending/masks/drawn/shape-edit.png" alt="show-and-edit-masks-icon"  />
 
- to enter shape edit mode. This will show all drawn masks in use by the current module and allow you to edit those shapes. <code>Ctrl+click</code> on the same icon to enter restricted edit mode, where certain actions (e.g. dragging a complete shape or changing its size) are blocked. This is particularly useful to avoid costly mistakes when editing path and brush shapes.</p>
+ to enter shape edit mode. This will show all drawn masks in use by the current module and allow you to edit those shapes. Ctrl+click on the same icon to enter restricted edit mode, where certain actions (e.g. dragging a complete shape or changing its size) are blocked. This is particularly useful to avoid costly mistakes when editing path and brush shapes.</p>
 <p>Click and drag a shape to move it around the image canvas.</p>
 <h1 id="removing-shapes">removing shapes</h1>
-<p>While in edit mode <code>right-click</code> on a shape to remove it.</p>
+<p>While in edit mode right-click on a shape to remove it.</p>
 <h1 id="reusing-shapes">reusing shapes</h1>
 <p>You can reuse shapes that you have drawn in other modules. Click on the shapes drop-down (next to the &lsquo;show and edit mask elements&rsquo; button) to choose previously-drawn shapes individually or to use the same group of shapes as used by another module. The following options are available for selection:</p>
 <dl>
@@ -2787,10 +2787,10 @@
 <dt>brush</dt>
 <dd>Start drawing a brush stroke by left-clicking on the image canvas and moving the mouse while keeping the button pressed. The brush stroke is finalized once you release the mouse button. Scroll the mouse to change the shape size, either before you start drawing or at any time during the operation. Likewise you can use the &ldquo;<code>[</code>&rdquo; and &ldquo;<code>]</code>&rdquo; keys to decrease/increase brush size, the &ldquo;<code>{</code>&rdquo; and &ldquo;<code>}</code>&rdquo; keys to decrease/increase feathering, and the &ldquo;<code>&lt;</code>&rdquo; and &ldquo;<code>&gt;</code>&rdquo; keys to decrease/increase opacity.</dd>
 <dd>
-<p>If you have a graphics tablet with pen pressure sensitivity, darktable can apply the recorded pen pressure to certain attributes of the brush stroke. This operation can be controlled in <a href="/dtdocs/preferences-settings/darkroom/"><code>preferences &gt; darkroom &gt; pen pressure control for brush masks</code></a>.</p>
+<p>If you have a graphics tablet with pen pressure sensitivity, darktable can apply the recorded pen pressure to certain attributes of the brush stroke. This operation can be controlled in <a href="/dtdocs/preferences-settings/darkroom/">preferences &gt; darkroom &gt; pen pressure control for brush masks</a>.</p>
 </dd>
 <dd>
-<p>On lifting the tablet pen or releasing the left mouse button the brush stroke is converted into a number of connected nodes, which define the final shape. A configuration option (<a href="/dtdocs/preferences-settings/darkroom/"><code>preferences &gt; darkroom &gt; smoothing of brush strokes</code></a>) controls how much smoothing is applied. A higher level of smoothing leads to fewer nodes being created – this eases subsequent editing at the expense of lower accuracy.</p>
+<p>On lifting the tablet pen or releasing the left mouse button the brush stroke is converted into a number of connected nodes, which define the final shape. A configuration option (<a href="/dtdocs/preferences-settings/darkroom/">preferences &gt; darkroom &gt; smoothing of brush strokes</a>) controls how much smoothing is applied. A higher level of smoothing leads to fewer nodes being created – this eases subsequent editing at the expense of lower accuracy.</p>
 </dd>
 <dd>
 <p>Nodes and segments of a brush stroke can be modified individually. See the documentation on path shapes below for more details.</p>
@@ -2801,19 +2801,19 @@
 <hr>
 <dl>
 <dt>circle</dt>
-<dd>Click on the image canvas to place the circle. Scroll while hovering over the circle to change its diameter. Scroll while hovering over the circle&rsquo;s border to change the width of the feathering (the same effect as <code>Shift+scroll</code> within the main shape).</dd>
+<dd>Click on the image canvas to place the circle. Scroll while hovering over the circle to change its diameter. Scroll while hovering over the circle&rsquo;s border to change the width of the feathering (the same effect as holding Shift while scrolling with the mouse wheel within the main shape).</dd>
 <dt>ellipse</dt>
-<dd>The general principle is the same as for the circle shape. In addition, four nodes are shown on the ellipse line. Click on the nodes to adjust the ellipse&rsquo;s eccentricity. <code>Ctrl+click</code> on the nodes or use <code>Shift+Ctrl+scroll</code> to rotate the ellipse. <code>Shift+click</code> within the shape to toggle the gradual decay between equidistant and proportional mode.</dd>
+<dd>The general principle is the same as for the circle shape. In addition, four nodes are shown on the ellipse line. Click on the nodes to adjust the ellipse&rsquo;s eccentricity. Ctrl+click on the nodes or use Shift+Ctrl+scroll (with the mouse wheel) to rotate the ellipse. Shift+click within the shape to toggle the gradual decay between equidistant and proportional mode.</dd>
 <dt>path</dt>
-<dd>Click on the image canvas to place a number of nodes and generate a free-format enclosed shape, terminating the path by right-clicking after having set the last point. By default, nodes are connected with smooth lines. If you want a node to instead define a sharp corner, you can do so by creating it with <code>Ctrl+click</code>.</dd>
+<dd>Click on the image canvas to place a number of nodes and generate a free-format enclosed shape, terminating the path by right-clicking after having set the last point. By default, nodes are connected with smooth lines. If you want a node to instead define a sharp corner, you can do so by creating it with Ctrl+click.</dd>
 <dd>
-<p>In edit mode <code>Ctrl+click</code> on existing nodes to convert them from smooth to sharp corners and vice versa. <code>Ctrl+click</code> on one of the line segments to insert an additional node. Right-click on a node to delete it. Take care to ensure that the mouse pointer is over the desired node and the node is highlighted, to avoid accidentally removing the whole path.</p>
+<p>In edit mode Ctrl+click on existing nodes to convert them from smooth to sharp corners and vice versa. Ctrl+click on one of the line segments to insert an additional node. Right-click on a node to delete it. Take care to ensure that the mouse pointer is over the desired node and the node is highlighted, to avoid accidentally removing the whole path.</p>
 </dd>
 <dd>
-<p>The size of the completed shape can be modified by scrolling. The same holds true for the width of the border (the area with a gradual opacity decay), which can also be changed with <code>Shift+scroll</code> from anywhere within the shape. Single nodes as well as path segments can be moved by dragging them with the mouse. If a node is selected by clicking on it, a further control point appears which allows you to modify the curvature of the line (reset to default by right-clicking). Dragging one of the control points on the border adjusts the border width just in that part of the shape.</p>
+<p>The size of the completed shape can be modified by scrolling. The same holds true for the width of the border (the area with a gradual opacity decay), which can also be changed with Shift+scroll (with the mouse wheel) from anywhere within the shape. Single nodes as well as path segments can be moved by dragging them with the mouse. If a node is selected by clicking on it, a further control point appears which allows you to modify the curvature of the line (reset to default by right-clicking). Dragging one of the control points on the border adjusts the border width just in that part of the shape.</p>
 </dd>
 <dd>
-<p>Consider fine-tuning paths in restricted edit mode (enabled by <code>Ctrl+clicking</code> on the &lsquo;show and edit mask elements&rsquo; icon). This allows you to adjust single nodes and segments without the risk of accidentally shifting or resizing the whole shape.</p>
+<p>Consider fine-tuning paths in restricted edit mode (enabled by Ctrl+clicking on the &lsquo;show and edit mask elements&rsquo; icon). This allows you to adjust single nodes and segments without the risk of accidentally shifting or resizing the whole shape.</p>
 </dd>
 <dt>gradient</dt>
 <dd>The gradient shape is a linear gradient which extends from a given point to the edge of the image.</dd>

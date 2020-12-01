@@ -65,7 +65,7 @@ controls  zoom The number of images in each row can be altered using the slider 
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/module-header/</guid>
       <description>At the top of each processing module is the module header.
  Click on the module name to expand the module and display the parameters that control its operation.
-By default darktable will only allow one processing module to be expanded at a time &amp;ndash; if you click the header of another module, the previously-opened module&amp;rsquo;s controls are collapsed. If you want expand more than one module, you may expand further modules with Shift+click and all previously expanded modules will remain open.</description>
+By default darktable will only allow one processing module to be expanded at a time &amp;ndash; if you click the header of another module, the previously-opened module&amp;rsquo;s controls are collapsed. If you want expand more than one module, you may expand further modules by Shift+clicking on the header and all previously expanded modules will remain open.</description>
     </item>
     
     <item>
@@ -97,8 +97,7 @@ A module&amp;rsquo;s output data can optionally be reprocessed (combined) with i
       <guid>https://darktable-org.github.io/dtdocs/darkroom/overview/</guid>
       <description>The darkroom view is where you develop your images. The center panel contains the image currently being edited.
 zoom Middle-click on the center panel to zoom to 1:1 and double-middle-click to zoom to 2:1.
-Alternatively you can zoom in and out between 1:1 and &amp;ldquo;fit to screen&amp;rdquo; by scrolling with your mouse. Scroll while holding the Ctrl key pressed to extend the zoom range to between 2:1 and 1:10.
-export Images are normally exported using the export selected module in the lighttable view.</description>
+Alternatively you can zoom in and out between 1:1 and &amp;ldquo;fit to screen&amp;rdquo; by scrolling with your mouse. Scroll with your mouse while holding the Ctrl key pressed to extend the zoom range to between 2:1 and 1:10.</description>
     </item>
     
     <item>
