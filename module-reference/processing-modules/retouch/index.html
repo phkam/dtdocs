@@ -2806,7 +2806,7 @@
 <p>These two options are most useful when used together with wavelet decomposition, where they can be used to smooth over features within a selected detail layer.</p>
 <h1 id="source-and-target-shapes">source and target shapes</h1>
 <p>When you activate the <em>clone</em> or <em>heal</em> tool, you will place one or more matching pairs of shapes on the image, each consisting of a target region to be repaired, and a source region to use to undertake that repair. You must first choose the shape you wish to use (you can choose from <em>circle</em>, <em>ellipse</em>, <em>path</em> or <em>brush</em> &ndash; see the <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn masks</a> section for details) and (except when using the path shape), an outline of the shape will appear under the cursor.</p>
-<p>While you hover over the image with your mouse, a small plus sign (<code>+</code>) will be shown somewhere on the image, marking where the source shape will be placed by default. This plus sign will either be in a fixed position on the image or will move about with your cursor depending on whether the last pair of shapes was placed using absolute or relative mode (see below).</p>
+<p>While you hover over the image with your mouse, a small plus sign (+) will be shown somewhere on the image, marking where the source shape will be placed by default. This plus sign will either be in a fixed position on the image or will move about with your cursor depending on whether the last pair of shapes was placed using absolute or relative mode (see below).</p>
 <p>
 
 
@@ -2816,16 +2816,16 @@
 <p>The source and target shapes can be placed onto the image in the following ways:</p>
 <ul>
 <li>
-<p><code>Click</code> on the image to begin placing the target shape (see the <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn masks</a> section for details on how to draw shapes). The source shape will be placed at the position of the &ldquo;plus&rdquo; (<code>+</code>) sign on the image and can be adjusted later.</p>
+<p>Click on the image to begin placing the target shape (see the <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn masks</a> section for details on how to draw shapes). The source shape will be placed at the position of the &ldquo;plus&rdquo; (+) sign on the image and can be adjusted later.</p>
 </li>
 <li>
-<p><code>Shift+click</code> to change the position of the source shape in &ldquo;relative mode&rdquo;. The position of the &ldquo;plus&rdquo; (<code>+</code>) symbol will move to the clicked location. Then move the mouse and <code>Click</code> to begin placing the target shape. If you place subsequent shapes without changing the target location, the source shape will be placed at the same offset from the target shape as was used for the first stroke.</p>
+<p>Shift+click to change the position of the source shape in &ldquo;relative mode&rdquo;. The position of the &ldquo;plus&rdquo; (+) symbol will move to the clicked location. Then move the mouse and Click to begin placing the target shape. If you place subsequent shapes without changing the target location, the source shape will be placed at the same offset from the target shape as was used for the first stroke.</p>
 </li>
 <li>
-<p><code>Ctrl+Shift+click</code> to change the position of the source shape in &ldquo;absolute&rdquo; mode. As above, the position of the &ldquo;plus&rdquo; (<code>+</code>) symbol will move to the clicked location and you can then place your target shape. If you place subsequent shapes without changing the target location, exactly the same source position will be used, fixed in the absolute coordinate system of the image.</p>
+<p>Ctrl+Shift+click to change the position of the source shape in &ldquo;absolute&rdquo; mode. As above, the position of the &ldquo;plus&rdquo; (+) symbol will move to the clicked location and you can then place your target shape. If you place subsequent shapes without changing the target location, exactly the same source position will be used, fixed in the absolute coordinate system of the image.</p>
 </li>
 <li>
-<p>For <em>circle</em> and <em>ellipse</em> shapes only, you can simply click on the desired target location and then <code>drag</code>, releasing your mouse button when you reach the desired source location. This operation does not affect the placement of subsequent shapes.</p>
+<p>For <em>circle</em> and <em>ellipse</em> shapes only, you can simply click on the desired target location and then drag, releasing your mouse button when you reach the desired source location. This operation does not affect the placement of subsequent shapes.</p>
 </li>
 </ul>
 <p>The positions of the source and target shapes may then be altered manually.</p>
@@ -2851,13 +2851,13 @@
 <dt>shapes</dt>
 <dd>The number after the <em>shapes</em> label indicates how many shapes have been placed on the image, either directly or within a wavelet layer.</dd>
 <dd>
-<p><code>Click</code> on one of the shape icons to draw a new shape on the image (see <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn masks</a> for details).</p>
+<p>Click on one of the shape icons to draw a new shape on the image (see <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn masks</a> for details).</p>
 </dd>
 <dd>
-<p><code>Ctrl+click</code> on a shape icon to draw multiple shapes continuously (<code>right-click</code> to cancel).</p>
+<p>Ctrl+click on a shape icon to draw multiple shapes continuously (right-click to cancel).</p>
 </dd>
 <dd>
-<p><code>Click</code> the <em>show and edit shapes</em> button (
+<p>Click the <em>show and edit shapes</em> button (
 
 
 <img src="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/retouch/rt-shapes-icon.png" alt="retouch-shapes-icon"  />
@@ -2875,7 +2875,7 @@
 <li>The white square on the right represents the residual image (the remainder of the image after the detail layers have been extracted).</li>
 <li>A light grey dot in a square indicates the currently-selected layer. Click on another square to select a different layer.</li>
 <li>The light grey bar running along the top indicates which levels of detail are visible at the current zoom level. Zoom in closer to see the finer levels of detail.</li>
-<li>The triangle at the bottom shows how many layers the image has been decomposed into. <code>Drag</code> the triangle to the right to create more layers. <code>Drag</code> it to the left to decrease the number of layers. By default no wavelet decomposition is performed.</li>
+<li>The triangle at the bottom shows how many layers the image has been decomposed into. Drag the triangle to the right to create more layers. Drag it to the left to decrease the number of layers. By default no wavelet decomposition is performed.</li>
 <li>The triangle at the top shows the current value of the &ldquo;merge from&rdquo; parameter (see below)</li>
 <li>The orange lines under the squares indicate which layers have retouching edits applied.</li>
 </ul>
@@ -2886,7 +2886,7 @@
 <dt>current</dt>
 <dd>Indicates which layer is currently selected (also marked with the light grey dot on the bar graph).</dd>
 <dt>merge from</dt>
-<dd>This setting allows a common edit to be applied to multiple consecutive scales within a group starting from the coarsest scale (not including the residual image) down to the scale selected. For example, if &ldquo;merge from&rdquo; is set to 3 and the maximum scale is 5 then all edits that are added to scale 5 will be applied to scales 3 to 5. Edits added to scale 4 will be applied to scales 3 and 4, and edits added to scale 3 will be applied only to scale 3. If you set <em>merge from</em> to <code>0</code>, then merging is disabled, and all edits apply only to the scale that are defined in. Setting <em>merge from</em> to the highest scale (in this example, 5) would also effectively disable any merging.</dd>
+<dd>This setting allows a common edit to be applied to multiple consecutive scales within a group starting from the coarsest scale (not including the residual image) down to the scale selected. For example, if &ldquo;merge from&rdquo; is set to 3 and the maximum scale is 5 then all edits that are added to scale 5 will be applied to scales 3 to 5. Edits added to scale 4 will be applied to scales 3 and 4, and edits added to scale 3 will be applied only to scale 3. If you set <em>merge from</em> to 0, then merging is disabled, and all edits apply only to the scale that are defined in. Setting <em>merge from</em> to the highest scale (in this example, 5) would also effectively disable any merging.</dd>
 </dl>
 <pre><code>           merge_from
                v
@@ -2956,7 +2956,7 @@
 <dt>blur radius</dt>
 <dd>If the <em>blur</em> algorithm has been selected for the currently-selected shape, choose the radius of the blur.</dd>
 <dt>mask opacity</dt>
-<dd>Alter the opacity of the mask associated with the currently-selected shape. An opacity of <code>1.000</code> indicates the shape is completely opaque and the module&rsquo;s effect is fully applied, whereas a value less than <code>1.000</code> indicates that the effect applied by the shape is blended with the underlying image to the degree indicated by the slider.</dd>
+<dd>Alter the opacity of the mask associated with the currently-selected shape. An opacity of 1.000 indicates the shape is completely opaque and the module&rsquo;s effect is fully applied, whereas a value less than 1.000 indicates that the effect applied by the shape is blended with the underlying image to the degree indicated by the slider.</dd>
 </dl>
 
 

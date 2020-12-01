@@ -2770,19 +2770,19 @@
 <p>The following control is provided in all three tabs:</p>
 <dl>
 <dt>display exposure mask</dt>
-<dd><code>Click</code> on the icon to the right of this label to show/hide the module&rsquo;s guided mask over the top of the image.</dd>
+<dd>Click on the icon to the right of this label to show/hide the module&rsquo;s guided mask over the top of the image.</dd>
 </dl>
 <h2 id="simple">simple</h2>
 <p>This tab provides a set of sliders that control how the module affects the pixels falling under 9 different mask intensity levels. This is a simplified interface and is used to generate the tone adjustment curve, which is more fully illustrated in the <em>advanced</em> tab.</p>
 <dl>
-<dt><code>-8 EV</code> through to <code>0 EV</code></dt>
+<dt>-8 EV through to 0 EV</dt>
 <dd>Each of these sliders will adjust the brightness of all pixels having that intensity level <em>in the guided mask</em>. Sliders towards the top will generally affect the shadows of the image, whereas sliders towards the bottom will generally affect the highlights of the image, assuming the mask&rsquo;s histogram is nicely spread over the entire tonal range (you can check this by referring to the histogram image shown on the <em>advanced</em> tab).</dd>
 </dl>
 <h2 id="advanced">advanced</h2>
 <p>This tab allows you to control the same intensity levels as in the basic tab, though here they are represented as control points on a curve. Behind the curve is a histogram representing the intensity levels of the <strong><em>mask</em></strong> (not of the input or output image). If the histogram is too bunched up, it means your mask doesn&rsquo;t have a good spread of intensity levels, which makes it harder to independently control the brightness of different parts of your image. It is therefore recommended that the histogram is adjusted so that it extends the entire range, and covers as many control points as possible, thereby providing you with maximum flexibility. You can adjust the mask using the controls in the <em>masking</em> tab.</p>
 <dl>
 <dt>control points on the curve</dt>
-<dd><code>Click+drag</code> the control points on the tone equalizer curve up or down to adjust the brightness of all pixels that are classified under that mask intensity level. Control points to the left will normally affect the shadows, and control points to the right will normally affect the highlights, assuming you have a nice spread of the mask histogram. Moving one control point will generally affect control points on either side to ensure the curve remains smooth.</dd>
+<dd>Click+drag the control points on the tone equalizer curve up or down to adjust the brightness of all pixels that are classified under that mask intensity level. Control points to the left will normally affect the shadows, and control points to the right will normally affect the highlights, assuming you have a nice spread of the mask histogram. Moving one control point will generally affect control points on either side to ensure the curve remains smooth.</dd>
 <dt>curve smoothing</dt>
 <dd>Moving this control to the right will cause the transitions between the control points to become more gradual. However, going past about 0.6 can introduce some instability in the curve, causing oscillations due to the mathematical constraints on the curve. Moving this slider to the left will result in a better behaved curve, but it may result in harsher tone transitions that may damage local contrast.</dd>
 </dl>
@@ -2813,7 +2813,7 @@
 </ul>
 <dl>
 <dt>filter diffusion</dt>
-<dd>By default this is set to a value of <code>1</code>, meaning that the filtering algorithm is run once on the input image in order to produce the blurred monochrome mask.</dd>
+<dd>By default this is set to a value of 1, meaning that the filtering algorithm is run once on the input image in order to produce the blurred monochrome mask.</dd>
 <dd>
 <p>If you increase this to 2, the filtering algorithm will be run once on the input image to produce an intermediate mask, and will then be applied a second time on the intermediate mask to produce the final mask. As a result, the final mask will be more blurred than when using a single iteration. Progressively higher values will diffuse the mask even further, however because the mask filtering algorithm is run multiple times, it will cost more in terms of processing time.</p>
 </dd>
@@ -2826,7 +2826,7 @@
 <dt>mask quantisation</dt>
 <dd>This slider applies some degree of posterisation to the mask, so that the mask will tend to centre round a few discrete levels. In some cases, this may be useful to help separate out areas of your image into different masking levels.</dd>
 <dt>mask exposure compensation</dt>
-<dd>Adjust the histogram to the left or right. Often if you have used the <em>exposure</em> module earlier in your pixel pipeline to adjust the image brightness, you&rsquo;ll need to offset that adjustment by using this exposure compensation slider to re-centre the mask&rsquo;s histogram. <code>Click</code> on the eyedropper icon to the right of the slider to set the exposure compensation such that the average of the mask&rsquo;s histogram will coincide with the central <code>-4EV</code> control point. The slider can then be fine tuned as required.</dd>
+<dd>Adjust the histogram to the left or right. Often if you have used the <em>exposure</em> module earlier in your pixel pipeline to adjust the image brightness, you&rsquo;ll need to offset that adjustment by using this exposure compensation slider to re-centre the mask&rsquo;s histogram. Click on the eyedropper icon to the right of the slider to set the exposure compensation such that the average of the mask&rsquo;s histogram will coincide with the central -4EV control point. The slider can then be fine tuned as required.</dd>
 <dt>mask contrast compensation</dt>
 <dd>Spread out (dilate) or compress the histogram as needed. The auto-adjust eyedropper icon to the right of the slider will propose a reasonable starting point, which can then be fine-tuned to optimize the spread of the histogram under the tone equalizer control points.</dd>
 </dl>

@@ -2769,7 +2769,7 @@
 <h1 id="module-controls">module controls</h1>
 <p>The <em>denoise (profiled)</em> module provides a few controls that are independent of the algorithm used. These are described first, before moving on to the algorithm-specific controls.</p>
 <p>When describing the controls specific to an algorithm, we will first cover the simplified interface, and then move on to the more advanced controls for that algorithm.</p>
-<p>Note that sliders are provided with minimum and maximum values by default. However these are only soft limits and, where needed, higher values can be entered by <code>right-clicking</code> on the slider and using the keyboard.</p>
+<p>Note that sliders are provided with minimum and maximum values by default. However these are only soft limits and, where needed, higher values can be entered by right-clicking on the slider and using the keyboard.</p>
 <h2 id="common-controls">common controls</h2>
 <dl>
 <dt>profile</dt>
@@ -2779,11 +2779,11 @@
 <dt>whitebalance-adaptive transform</dt>
 <dd>As white balance amplifies the RGB channels differently, each channel exhibits different noise levels. This checkbox makes the selected algorithm adapt to the white balance. This option should be disabled on the second instance if you have used a first instance with a color blend mode.</dd>
 <dt>adjust autoset parameters (auto mode only)</dt>
-<dd>Automatically adjust all the other parameters on the current denoising algorithm using a single slider interface. This is particularly useful when you have had to increase the exposure on an under-exposed image, which normally introduces additional noise as if you had taken the shot with a higher ISO. This control compensates for that by using settings similar to what it would use for a higher ISO image. In general, the value of this slider indicates the number of stops by which you had to increase the exposure. For example, if you had to push the exposure 2 stops above what you normally use, then set this slider to <code>2</code>.</dd>
+<dd>Automatically adjust all the other parameters on the current denoising algorithm using a single slider interface. This is particularly useful when you have had to increase the exposure on an under-exposed image, which normally introduces additional noise as if you had taken the shot with a higher ISO. This control compensates for that by using settings similar to what it would use for a higher ISO image. In general, the value of this slider indicates the number of stops by which you had to increase the exposure. For example, if you had to push the exposure 2 stops above what you normally use, then set this slider to 2.</dd>
 <dt>strength</dt>
 <dd>Fine-tune the strength of the denoising. The default value has been chosen to maximize the peak signal to noise ratio. It&rsquo;s mostly a matter of taste if you prefer a rather low noise level at the costs of a higher loss of detail, or if you accept more remaining noise in order to have finer structures better preserved within your image.</dd>
 <dd>
-<p>In the case of <em>wavelets</em> mode, the default value of this slider may not be sufficient. If you do not set a high enough strength, then adjusting the wavelet curves above it will not have a large enough effect. It is therefore recommended that you set a reasonably high strength on this slider, and than make finer adjustments on the wavelet curves. Don&rsquo;t hesitate to <code>right-click</code> and enter a higher value if the default soft limit for this slider doesn&rsquo;t allow for enough denoising.</p>
+<p>In the case of <em>wavelets</em> mode, the default value of this slider may not be sufficient. If you do not set a high enough strength, then adjusting the wavelet curves above it will not have a large enough effect. It is therefore recommended that you set a reasonably high strength on this slider, and than make finer adjustments on the wavelet curves. Don&rsquo;t hesitate to right-click and enter a higher value if the default soft limit for this slider doesn&rsquo;t allow for enough denoising.</p>
 </dd>
 <dt>preserve shadows (advanced mode only)</dt>
 <dd>Choose whether to denoise the shadows more agressively. Lower the value to denoise the shadows more. Usually, as noise increases, you will need to lower this value.</dd>
