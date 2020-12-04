@@ -35,7 +35,7 @@ There are two main approaches this conversion:
       
       <guid>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/filemanager/</guid>
       <description>In the default mode images are displayed in a grid with an adjustable number of images per row.
-controls  zoom The number of images in each row can be altered using the slider in the bottom panel, or by holding Ctrl while scrolling over the center view with your mouse. navigate You can navigate through the images using the arrow keys (←/→/↑/↓) or by scrolling with your mouse. Press G to scroll to the top of the collection, Shift+G to scroll to the bottom, and PageUp/PageDown to scroll up/down by a page.</description>
+controls ¶  zoom The number of images in each row can be altered using the slider in the bottom panel, or by holding Ctrl while scrolling over the center view with your mouse. navigate You can navigate through the images using the arrow keys (←/→/↑/↓) or by scrolling with your mouse. Press G to scroll to the top of the collection, Shift+G to scroll to the bottom, and PageUp/PageDown to scroll up/down by a page.</description>
     </item>
     
     <item>
@@ -96,7 +96,7 @@ A module&amp;rsquo;s output data can optionally be reprocessed (combined) with i
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/overview/</guid>
       <description>The darkroom view is where you develop your images. The center panel contains the image currently being edited.
-zoom Middle-click on the center panel to zoom to 1:1 and double-middle-click to zoom to 2:1.
+zoom ¶ Middle-click on the center panel to zoom to 1:1 and double-middle-click to zoom to 2:1.
 Alternatively you can zoom in and out between 1:1 and &amp;ldquo;fit to screen&amp;rdquo; by scrolling with your mouse. Scroll with your mouse while holding the Ctrl key pressed to extend the zoom range to between 2:1 and 1:10.</description>
     </item>
     
@@ -280,8 +280,8 @@ You can easily construct other kinds of collections based on various image attri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/darkroom-view-layout/</guid>
-      <description>left panel From top to bottom:
- navigation Navigate and zoom the center view snapshots Take and view snapshots for comparison with the current edit duplicate manager View and manage duplicates global color picker Select and display color information taken from parts of the image tagging Manage tags image information Display information about the current image mask manager View and edit drawn shapes  right panel From top to bottom:</description>
+      <description>left panel ¶ From top to bottom:
+ navigation Navigate and zoom the center view snapshots Take and view snapshots for comparison with the current edit duplicate manager View and manage duplicates global color picker Select and display color information taken from parts of the image tagging Manage tags image information Display information about the current image mask manager View and edit drawn shapes  right panel ¶ From top to bottom:</description>
     </item>
     
     <item>
@@ -360,8 +360,8 @@ Each change you make to the image in the darkroom is turned into a history stack
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/lighttable/lighttable-view-layout/</guid>
-      <description>left panel From top to bottom:
- import Import images from the filesystem or a connected camera. collect images Filter the images displayed in the lighttable center panel &amp;ndash; also used to control the images displayed in the filmstrip and timeline modules. recently used collections View recently used collections of images image information Display image information lua scripts installer (optional) Install lua scripts  right panel From top to bottom:</description>
+      <description>left panel ¶ From top to bottom:
+ import Import images from the filesystem or a connected camera. collect images Filter the images displayed in the lighttable center panel &amp;ndash; also used to control the images displayed in the filmstrip and timeline modules. recently used collections View recently used collections of images image information Display image information lua scripts installer (optional) Install lua scripts  right panel ¶ From top to bottom:</description>
     </item>
     
     <item>
@@ -370,8 +370,8 @@ Each change you make to the image in the darkroom is turned into a history stack
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/map/map-view-layout/</guid>
-      <description>left panel These modules are identical to the lighttable view. From top to bottom:
- collect images Filter the list of images displayed in the map view. recently used collections View recently used collections of images. image information Display image information.  right panel Here you can find the modules specific to the map view. From top to bottom:
+      <description>left panel ¶ These modules are identical to the lighttable view. From top to bottom:
+ collect images Filter the list of images displayed in the map view. recently used collections View recently used collections of images. image information Display image information.  right panel ¶ Here you can find the modules specific to the map view. From top to bottom:
  find location Search for a place on map. locations Manage a hierarchical list of location tags and their corresponding regions on the map.</description>
     </item>
     
@@ -402,7 +402,7 @@ As with the base instance of a module, all instances can be moved independently 
       <guid>https://darktable-org.github.io/dtdocs/print/print-view-layout/</guid>
       <description>The central area displays the image layout on the paper (the white area). Some gray borders may be displayed around the image to represent the printable area (the page minus the borders) not filled by the image.
 The filmstrip below the image allows you to select more images.
-left panel  collect images Filter the list of images displayed in the lighttable. image information Display image information  right panel  print settings Adjust print settings and initiate printing.</description>
+left panel ¶  collect images Filter the list of images displayed in the lighttable. image information Display image information  right panel ¶  print settings Adjust print settings and initiate printing.</description>
     </item>
     
     <item>
@@ -434,8 +434,8 @@ In order for darktable to consider a file for import, it must have one of the fo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/tethering/tethering-view-layout/</guid>
-      <description>left panel  image information Display image information  right panel From top to bottom:
- histogram The histogram for the current image session Session settings live view Live view settings camera settings Camera settings metadata editor Edit metadata for selected images. tagging Tag selected images.  bottom panel From left to right:
+      <description>left panel ¶  image information Display image information  right panel ¶ From top to bottom:
+ histogram The histogram for the current image session Session settings live view Live view settings camera settings Camera settings metadata editor Edit metadata for selected images. tagging Tag selected images.  bottom panel ¶ From left to right:
  star ratings Apply star ratings to images color labels Apply color categories to images  </description>
     </item>
     
@@ -477,7 +477,7 @@ If you don&amp;rsquo;t need the auto-advance mode, you could even use the sticky
       
       <guid>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/zoomable-lighttable/</guid>
       <description>The zoomable lighttable mode provides a different way to navigate large collections of images.
-controls  zoom Scroll with the mouse wheel to zoom in and out of the lighttable (compared to Ctrl+scroll in filemanager mode). Zooming the thumbnails does not change the number of thumbnails per row, so the lighttable can exceed the visible area on all sides. navigate Hold down the left mouse button to drag the images around on the lighttable to navigate through your collection.</description>
+controls ¶  zoom Scroll with the mouse wheel to zoom in and out of the lighttable (compared to Ctrl+scroll in filemanager mode). Zooming the thumbnails does not change the number of thumbnails per row, so the lighttable can exceed the visible area on all sides. navigate Hold down the left mouse button to drag the images around on the lighttable to navigate through your collection.</description>
     </item>
     
     <item>
@@ -507,7 +507,7 @@ At this point, there is nothing darktable-specific in the script. We simply use 
       
       <guid>https://darktable-org.github.io/dtdocs/lighttable/lighttable-modes/culling/</guid>
       <description>Culling mode allows you to display images side by side to easily compare them.
-controls  zoom In culling mode, you can zoom into images (up to 100%) by holding Ctrl while scrolling with the mouse wheel. Pan within zoomed images with click+drag. By default, zooming and panning are synchronized between all visible images. If you want to zoom or pan only a specific image, add the Shift modifier to the above actions.</description>
+controls ¶  zoom In culling mode, you can zoom into images (up to 100%) by holding Ctrl while scrolling with the mouse wheel. Pan within zoomed images with click+drag. By default, zooming and panning are synchronized between all visible images. If you want to zoom or pan only a specific image, add the Shift modifier to the above actions.</description>
     </item>
     
     <item>
@@ -539,7 +539,7 @@ This being the recommended way to process images in versions 3.</description>
       
       <guid>https://darktable-org.github.io/dtdocs/tethering/examples/</guid>
       <description>This section contains examples of typical usages of tethering.
-studio setup with screening This is a pretty common use case. You have your studio and subject set up, the camera is connected to your computer and tethering view is active in darktable. You work at the camera and take images. Whenever you like, you can screen the image directly on your computer monitor instead of using the camera LCD for validation.</description>
+studio setup with screening ¶ This is a pretty common use case. You have your studio and subject set up, the camera is connected to your computer and tethering view is active in darktable. You work at the camera and take images. Whenever you like, you can screen the image directly on your computer monitor instead of using the camera LCD for validation.</description>
     </item>
     
     <item>
@@ -559,7 +559,7 @@ The filmstrip allows you to interact with images while you are not in the lightt
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/import/</guid>
       <description>This tab contains a number of default settings for the lighttable import module.
-import  ignore JPEG images when importing film rolls When you have RAW+JPEG images together in one directory it usually doesn&amp;rsquo;t make sense to import both. Set this flag to ignore all JPEGs when importing images (default off). recursive directory traversal when importing film rolls When importing images from a folder, also recursively import images from its sub-folders.</description>
+import ¶  ignore JPEG images when importing film rolls When you have RAW+JPEG images together in one directory it usually doesn&amp;rsquo;t make sense to import both. Set this flag to ignore all JPEGs when importing images (default off). recursive directory traversal when importing film rolls When importing images from a folder, also recursively import images from its sub-folders.</description>
     </item>
     
     <item>
@@ -589,7 +589,7 @@ For each data channel of a module (Lab, RGB) and several virtual data channels (
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/presets/</guid>
       <description>Presets allow you to store commonly used module settings for future use. Some modules already come with pre-defined presets and you may also define your own. Both internal and user-defined presets can be shown by clicking the presets menu in the module header.
-the presets menu The presets menu will contain one or more of the following entries depending on what presets are defined or selected for the current module:</description>
+the presets menu ¶ The presets menu will contain one or more of the following entries depending on what presets are defined or selected for the current module:</description>
     </item>
     
     <item>
@@ -629,7 +629,7 @@ The history stack can be queried and modified within the history stack module in
       
       <guid>https://darktable-org.github.io/dtdocs/lighttable/digital-asset-management/thumbnails/</guid>
       <description>Each image in the current collection is represented by a thumbnail in the lighttable view and filmstrip module. A cache of the last recently used thumbnails is stored in a file on disk and loaded into memory at startup. The size of this cache can be adjusted in preferences &amp;gt; cpu/gpu/memory.
-thumbnail creation Thumbnails are created whenever an image is imported into darktable for the first time, after an image has been modified in the darkroom, or when revisiting an image whose thumbnail is no longer available.</description>
+thumbnail creation ¶ Thumbnails are created whenever an image is imported into darktable for the first time, after an image has been modified in the darkroom, or when revisiting an image whose thumbnail is no longer available.</description>
     </item>
     
     <item>
@@ -691,7 +691,7 @@ Pressing and holding Ctrl+W fully zooms into the image and also identifies any r
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/lighttable/</guid>
       <description>The following options control functionality in the lighttable view and modules.
-general  number of folder levels to show in lists The number of folder levels to show in film roll names, starting from the right (default 1). sort film rolls by Sort film rolls by either the &amp;ldquo;folder&amp;rdquo; (path) or the &amp;ldquo;id&amp;rdquo; (roughly equivalent to the date the film rolls were first imported) in the collect images module (default &amp;ldquo;id&amp;rdquo;).</description>
+general ¶  number of folder levels to show in lists The number of folder levels to show in film roll names, starting from the right (default 1). sort film rolls by Sort film rolls by either the &amp;ldquo;folder&amp;rdquo; (path) or the &amp;ldquo;id&amp;rdquo; (roughly equivalent to the date the film rolls were first imported) in the collect images module (default &amp;ldquo;id&amp;rdquo;).</description>
     </item>
     
     <item>
@@ -700,7 +700,7 @@ general  number of folder levels to show in lists The number of folder levels to
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/module-controls/</guid>
-      <description>sliders Sliders offer five different methods of interaction, depending on the level of control you require.
+      <description>sliders ¶ Sliders offer five different methods of interaction, depending on the level of control you require.
  left-click Click anywhere in the slider area to set the value. You can also click and drag to change it. You don&amp;rsquo;t have to aim for the triangle or even the line - you can click anywhere in the entire height of the slider including the label. mouse wheel Hover over the slider with your mouse, then use your mouse wheel to adjust the value.</description>
     </item>
     
@@ -750,7 +750,7 @@ The principle OpenCL function flow is like this:</description>
       
       <guid>https://darktable-org.github.io/dtdocs/lighttable/digital-asset-management/star-color/</guid>
       <description>Star ratings and color labels help you to sort and rank images according to your own criteria. An image&amp;rsquo;s star rating and its color labels can be displayed over thumbnails in the lighttable view and filmstrip module.
-star ratings You can give an image a rating from zero to five stars. The quality criteria which lead to a rating are up to you. Whenever you import images, each image receives a default rating which you can define in preferences &amp;gt; import.</description>
+star ratings ¶ You can give an image a rating from zero to five stars. The quality criteria which lead to a rating are up to you. Whenever you import images, each image receives a default rating which you can define in preferences &amp;gt; import.</description>
     </item>
     
     <item>
@@ -760,7 +760,7 @@ star ratings You can give an image a rating from zero to five stars. The quality
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/top-panel/</guid>
       <description>The top panel is common to all darktable views and provides a number of common utility functions.
- On the left-hand-side  view Choose which images to view in the lighttable/filmstrip, based on star rating and reject status. sort by Choose the property to sort by from the dropdown.  sort order Switch the sort order (ascending / descending) with the arrow-toggle.  On the right-hand-side   grouping Expand or collapse grouped images  thumbnail overlays Define what information is displayed over thumbnails in the lighttable/filmstrip.</description>
+ On the left-hand-side ¶  view Choose which images to view in the lighttable/filmstrip, based on star rating and reject status. sort by Choose the property to sort by from the dropdown.  sort order Switch the sort order (ascending / descending) with the arrow-toggle.  On the right-hand-side ¶   grouping Expand or collapse grouped images  thumbnail overlays Define what information is displayed over thumbnails in the lighttable/filmstrip.</description>
     </item>
     
     <item>
@@ -771,7 +771,7 @@ star ratings You can give an image a rating from zero to five stars. The quality
       <guid>https://darktable-org.github.io/dtdocs/tethering/troubleshooting/</guid>
       <description>This troubleshooting guide will provide you with some steps to verify whether your camera can be used with tethering. This is done using the gphoto2 command-line tools. This is what darktable uses to interface with your camera.
 Find your camera port name to use it in the following tests. Usually the port &amp;ldquo;usb:&amp;rdquo; will be enough and therefore is used in these examples.
-is your camera detected? The following command will verify that your camera is connected to the computer and detected by gphoto2.</description>
+is your camera detected? ¶ The following command will verify that your camera is connected to the computer and detected by gphoto2.</description>
     </item>
     
     <item>
@@ -801,7 +801,7 @@ darktable = require &amp;quot;darktable&amp;quot; local function hello_shortcut(
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/curves/</guid>
       <description>Three image processing modules (base curve, tone curve and rgb curve) use curves to control the tones in the image. These modules have some common features that deserve separate discussion.
- nodes In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve.</description>
+ nodes ¶ In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve.</description>
     </item>
     
     <item>
@@ -811,7 +811,7 @@ darktable = require &amp;quot;darktable&amp;quot; local function hello_shortcut(
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/darkroom/</guid>
       <description>The following options control functionality in the darkroom view and associated modules.
-general  pen pressure control for brush masks Controls how the pressure reading of a graphics tablet impacts newly generated drawn mask brush strokes. You can control the brush width, hardness and opacity. “Absolute” control means that the pressure reading directly defines the attribute with a value between 0% and 100%. “Relative” means that the pressure reading adjusts the attribute between zero and the pre-defined default value (default off).</description>
+general ¶  pen pressure control for brush masks Controls how the pressure reading of a graphics tablet impacts newly generated drawn mask brush strokes. You can control the brush width, hardness and opacity. “Absolute” control means that the pressure reading directly defines the attribute with a value between 0% and 100%. “Relative” means that the pressure reading adjusts the attribute between zero and the pre-defined default value (default off).</description>
     </item>
     
     <item>
@@ -950,9 +950,9 @@ In this next example we will use lua to export via scp. A new storage type will 
       
       <guid>https://darktable-org.github.io/dtdocs/lighttable/digital-asset-management/metadata-tagging/</guid>
       <description>darktable allows you to store additional information about your images to allow them to be more easily searched and grouped. This information is stored in darktable&amp;rsquo;s database and XMP sidecar files and can also be included within exported images.
-metadata Metadata (e.g. title, description) is free-format text that usually differs for each image.
+metadata ¶ Metadata (e.g. title, description) is free-format text that usually differs for each image.
 See the metadata editor module for details of how to add metadata to images.
-tagging Tags are usually shared between multiple images and are used to categorise and group them.</description>
+tagging ¶ Tags are usually shared between multiple images and are used to categorise and group them.</description>
     </item>
     
     <item>
@@ -962,7 +962,7 @@ tagging Tags are usually shared between multiple images and are used to categori
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/other-views/</guid>
       <description>The following options control functionality in the map and slideshow views.
-map / geolocalisation  maximum number of images drawn on map The maximum number of geotagged images drawn on the map. Increasing this number can slow down the drawing of the map. Needs a restart if changed (default 100). pretty print the image location Show a more readable representation of the geo-location in the image information module (default on).  slideshow  waiting time before each picture in slideshow The number of seconds before displaying the next image (default 5).</description>
+map / geolocalisation ¶  maximum number of images drawn on map The maximum number of geotagged images drawn on the map. Increasing this number can slow down the drawing of the map. Needs a restart if changed (default 100). pretty print the image location Show a more readable representation of the geo-location in the image information module (default on).</description>
     </item>
     
     <item>
@@ -1001,7 +1001,7 @@ As with any mask, if the value for a pixel in a raster mask is zero the input to
       
       <guid>https://darktable-org.github.io/dtdocs/special-topics/variables/</guid>
       <description>darktable supports variable substitution in a number of modules and preference settings. For example:
- Defining file names in the export selected lighttable module Displaying image information in the darkroom&amp;rsquo;s image information line Displaying image information in the lighttable&amp;rsquo;s overlays and tooltips (see preferences &amp;gt; lighttable) Placing text on an image in the watermark processing module  available variables The following variables are available, though they may not all be available in all contexts:</description>
+ Defining file names in the export selected lighttable module Displaying image information in the darkroom&amp;rsquo;s image information line Displaying image information in the lighttable&amp;rsquo;s overlays and tooltips (see preferences &amp;gt; lighttable) Placing text on an image in the watermark processing module  available variables ¶ The following variables are available, though they may not all be available in all contexts:</description>
     </item>
     
     <item>
@@ -1021,7 +1021,7 @@ UI elements are created via the darktable_new_widget function. This function tak
       
       <guid>https://darktable-org.github.io/dtdocs/special-topics/module-order/</guid>
       <description>The following sections describe the default module order in the new scene-referred workflow and the legacy display-referred workflow. Note that in the following sections the module order goes from top (input file) to bottom (output image).
-scene-referred module order The default ordering of modules when using the new scene-referred workflow is as follows:
+scene-referred module order ¶ The default ordering of modules when using the new scene-referred workflow is as follows:
  raw black/white point invert (deprecated) white balance highlight reconstruction chromatic aberrations hot pixels raw denoise demosaic denoise (profiled) surface blur rotate pixels scale pixels lens correction haze removal perspective correction orientation crop and rotate liquify spot removal retouch exposure local tone mapping (deprecated) tone equalizer graduated density unbreak input profile legacy equalizer input color profile negadoctor astrophoto denoise color look up table defringe contrast equalizer lowpass highpass sharpen lut 3D color mapping channel mixer (deprecated) basic adjustments color balance rgb curve rgb levels base curve filmic (legacy) FILMIC RGB &amp;ndash; transition from scene-referred to display-referred space contrast brightness saturation tone curve levels shadows and highlights zone system (deprecated) global tonemap (deprecated) fill light (deprecated) local contrast color correction color contrast velvia vibrance color zones bloom colorize lowlight vision monochrome grain soften split-toning vignetting color reconstruction output color profile dithering framing watermark  key:</description>
     </item>
     
@@ -1111,7 +1111,7 @@ If the Lua call results in an error, the DBus method call will return an error o
       <guid>https://darktable-org.github.io/dtdocs/special-topics/contributing/</guid>
       <description>This page defines the style guide for dtdocs and information about how to contribute to the project.
 It is included in the user manual so that you can see how the page is rendered as well as how it is written. Please go to GitHub to see the source for this page.
-format This website is authored in pure markdown, using some extensions. It is initially designed to work with the Hugo SSG but indended to be portable enough that it can be easily rendered with another application if required.</description>
+format ¶ This website is authored in pure markdown, using some extensions. It is initially designed to work with the Hugo SSG but indended to be portable enough that it can be easily rendered with another application if required.</description>
     </item>
     
     <item>
@@ -1151,7 +1151,7 @@ Many of the potential problems will only appear with very specific combinations 
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/storage/</guid>
       <description>The following options are related to darktable&amp;rsquo;s library database and XMP sidecar files.
-database  check for database maintenance Indicates when darktable should check for database fragmentation and perform maintenance. Options are &amp;ldquo;never&amp;rdquo;, &amp;ldquo;on startup&amp;rdquo;, &amp;ldquo;on close&amp;rdquo; and &amp;ldquo;on both&amp;rdquo;. Each of these is also available with an additional &amp;ldquo;(don&amp;rsquo;t ask)&amp;rdquo; option to perform the checks automatically without prompting (default &amp;ldquo;on close&amp;rdquo;). database fragmentation ratio threshold Fragmentation ratio (in per cent) above which database maintenance should be performed (subject to the selection made in the option above) (default 25).</description>
+database ¶  check for database maintenance Indicates when darktable should check for database fragmentation and perform maintenance. Options are &amp;ldquo;never&amp;rdquo;, &amp;ldquo;on startup&amp;rdquo;, &amp;ldquo;on close&amp;rdquo; and &amp;ldquo;on both&amp;rdquo;. Each of these is also available with an additional &amp;ldquo;(don&amp;rsquo;t ask)&amp;rdquo; option to perform the checks automatically without prompting (default &amp;ldquo;on close&amp;rdquo;). database fragmentation ratio threshold Fragmentation ratio (in per cent) above which database maintenance should be performed (subject to the selection made in the option above) (default 25).</description>
     </item>
     
     <item>
@@ -1180,7 +1180,7 @@ As an example, the following program will print the list of all images in your l
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/miscellaneous/</guid>
-      <description>interface  sort built-in presets first Choose how the presets menu is sorted. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on). mouse wheel scrolls modules side panel by default When enabled, the mouse wheel scrolls side panels by default and Ctrl+Alt+wheel scrolls data entry fields. When disabled, this behavior is reversed (default off). always show panels&#39; scrollbars Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on).</description>
+      <description>interface ¶  sort built-in presets first Choose how the presets menu is sorted. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on). mouse wheel scrolls modules side panel by default When enabled, the mouse wheel scrolls side panels by default and Ctrl+Alt+wheel scrolls data entry fields. When disabled, this behavior is reversed (default off). always show panels&#39; scrollbars Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on).</description>
     </item>
     
     <item>
@@ -1263,7 +1263,7 @@ While this module can provide a quick and convenient way to make simple adjustme
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/bloom/</guid>
       <description>Create a soft bloom over the image. This module works by blurring the highlights and then blending them with the original image.
-module controls  size The spacial extent of the bloom effect threshold The threshold for the increase in brightness strength The strength of the overlighting for the effect  </description>
+module controls ¶  size The spacial extent of the bloom effect threshold The threshold for the increase in brightness strength The strength of the overlighting for the effect  </description>
     </item>
     
     <item>
@@ -1335,7 +1335,7 @@ All images imported imported into darktable are stored in darktable&amp;rsquo;s 
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/color-balance/</guid>
       <description>A versatile tool for adjusting the image&amp;rsquo;s color balance.
 This module can be used to revert parasitic color casts or to enhance the visual atmosphere of an image using color grading, a popular technique in the cinema industry.
-overview The color balance module allows you to shift colors selectively by luminance range: shadows, mid-tones, and highlights. It does so using two different methods:
+overview ¶ The color balance module allows you to shift colors selectively by luminance range: shadows, mid-tones, and highlights. It does so using two different methods:
  lift, gamma, gain the classic method, which allows a more separated control of shadows versus highlights.</description>
     </item>
     
@@ -1356,7 +1356,7 @@ overview The color balance module allows you to shift colors selectively by lumi
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/color-contrast/</guid>
       <description>A simplified control for changing the contrast or separation of colors between the green/magenta and blue/yellow axes in Lab color space. Higher values increase color contrast, lower values decrease it.
-module controls  green-magenta contrast Change the green-magenta color contrast. This is equivalent to raising or lowering the steepness of the a* curve in Lab. Lower values desaturate greens and magenta, while higher values increase their saturation. blue-yellow contrast Change the blue-yellow color contrast.</description>
+module controls ¶  green-magenta contrast Change the green-magenta color contrast. This is equivalent to raising or lowering the steepness of the a* curve in Lab. Lower values desaturate greens and magenta, while higher values increase their saturation. blue-yellow contrast Change the blue-yellow color contrast.</description>
     </item>
     
     <item>
@@ -1366,7 +1366,7 @@ module controls  green-magenta contrast Change the green-magenta color contrast.
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/color-correction/</guid>
       <description>Modify the global image saturation to give the image a tint or as an alternative method to split-tone the image.
-module controls  color board For split toning move the white dot to the desired highlight tint and then select a tint for shadows with the dark spot. For a simple global tint set both spots to the same color. saturation Correct the global saturation.  </description>
+module controls ¶  color board For split toning move the white dot to the desired highlight tint and then select a tint for shadows with the dark spot. For a simple global tint set both spots to the same color. saturation Correct the global saturation.  </description>
     </item>
     
     <item>
@@ -1376,7 +1376,7 @@ module controls  color board For split toning move the white dot to the desired 
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/color-look-up-table/</guid>
       <description>A generic color look up table implemented in Lab space. The input is a list of source and target points and the complete mapping is interpolated using splines. The resulting look up tables (LUTs) are editable by hand and can be created using the darktable-chart utility to match given input (such as hald-cluts and RAW/JPEG with in-camera processing pairs). See using darktable-chart for details.
-module controls  color board The color board grid shows a list of colored patches.</description>
+module controls ¶  color board The color board grid shows a list of colored patches.</description>
     </item>
     
     <item>
@@ -1418,7 +1418,7 @@ In the color zones module, you first need to choose whether you wish to adjust (
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/colorize/</guid>
       <description>Add a solid layer of color to the image.
-module controls  hue The hue of the color layer. saturation The saturation of shadow tones. lightness The lightness of the color layer. source mix Controls how the lightness of the input image is mixed with the color layer. Setting this to zero will result in a uniformly colored plane.  </description>
+module controls ¶  hue The hue of the color layer. saturation The saturation of shadow tones. lightness The lightness of the color layer. source mix Controls how the lightness of the input image is mixed with the color layer. Setting this to zero will result in a uniformly colored plane.  </description>
     </item>
     
     <item>
@@ -1429,7 +1429,7 @@ module controls  hue The hue of the color layer. saturation The saturation of sh
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/contrast-brightness-saturation/</guid>
       <description>A very basic tool for adjusting the contrast, brightness and saturation of an image. Please note that a number of other modules provide much more versatile methods of adjusting these parameters.
 All module controls default to a neutral position (zero) and provide the ability to increase or decrease the relevant parameter
-module controls  contrast The contrast brightness The brightness saturation The saturation  </description>
+module controls ¶  contrast The contrast brightness The brightness saturation The saturation  </description>
     </item>
     
     <item>
@@ -1461,7 +1461,7 @@ Whenever the user interface of this module is in focus, the full uncropped image
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/defringe/</guid>
       <description>Remove color fringing, which often results from Longitudinal Chromatic Aberrations (LCA), also known as Axial Chromatic Aberrations.
 This module uses edge-detection. Where pixels are detected as a fringe, the color is rebuilt from less saturated neighboring pixels.
-module controls  operation mode global average: This mode is is usually the fastest but might show slightly incorrect previews at high magnification. It might also protect the wrong regions of color too much or too little by comparison with local average.</description>
+module controls ¶  operation mode global average: This mode is is usually the fastest but might show slightly incorrect previews at high magnification. It might also protect the wrong regions of color too much or too little by comparison with local average.</description>
     </item>
     
     <item>
@@ -1471,7 +1471,7 @@ module controls  operation mode global average: This mode is is usually the fast
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/demosaic/</guid>
       <description>Control how raw files are demosaiced.
-bayer filters The sensor cells of a digital camera are not color-sensitive &amp;ndash; they are only able to record different levels of lightness. In order to obtain a color image, each cell is covered by a color filter (red, green or blue) that primarily passes light of that color. This means that each pixel of the raw image only contains information about a single color channel.</description>
+bayer filters ¶ The sensor cells of a digital camera are not color-sensitive &amp;ndash; they are only able to record different levels of lightness. In order to obtain a color image, each cell is covered by a color filter (red, green or blue) that primarily passes light of that color. This means that each pixel of the raw image only contains information about a single color channel.</description>
     </item>
     
     <item>
@@ -1513,7 +1513,7 @@ The buttons on the top-right allow you to create new duplicates of the current i
       <description>Export images that have been selected in the lighttable.
 Files can be exported to a file on disk, email, various on-line storage locations, a webalbum, or a book template.
 You can also press Ctrl+E within the darkroom mode to export the currently-edited image using the last settings from this module.
-module controls storage options  target storage The type of location to store your selected images. A number of different back-ends are implemented, including file on disk, a LaTeX book template and various web albums.</description>
+module controls ¶ storage options ¶  target storage The type of location to store your selected images. A number of different back-ends are implemented, including file on disk, a LaTeX book template and various web albums.</description>
     </item>
     
     <item>
@@ -1536,7 +1536,7 @@ This module has two modes of operation:
       <description>Please note that this module is deprecated in darktable 3.4 and should no longer be used for new edits. Please use the tone equalizer module or the exposure module with a drawn mask.
  Locally modify exposure based on pixel lightness.
 This module pushes exposure by increasing lightness with a Gaussian curve of a specified width, centered on a given lightness.
-module controls  exposure The fill-light exposure (EV) center The median lightness impacted by the fill-light.</description>
+module controls ¶  exposure The fill-light exposure (EV) center The median lightness impacted by the fill-light.</description>
     </item>
     
     <item>
@@ -1588,7 +1588,7 @@ The module is activated by clicking on the focus-peaking icon ( ). It highlights
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/framing/</guid>
       <description>Generate a frame around the image.
 The frame consists of a border (of a user-defined color) and a frame line within that border (of a second user-defined color). Various options are available to control the geometry of the frame.
-module controls  border size The size of the frame as a percentage of the underlying full image. aspect The aspect ratio of the final module output (i.e. of the underlying image plus the frame) orientation The orientation of the frame (portrait/landscape).</description>
+module controls ¶  border size The size of the frame as a percentage of the underlying full image. aspect The aspect ratio of the final module output (i.e. of the underlying image plus the frame) orientation The orientation of the frame (portrait/landscape).</description>
     </item>
     
     <item>
@@ -1641,7 +1641,7 @@ Global tonemap processes each pixel of an HDR image, without taking the local su
       <description>Simulate a graduated density filter in order to correct exposure and color in a progressive manner.
 A line is shown on screen allowing the position and rotation of the gradient to be modified with the mouse.
 This module is known to provoke banding artifacts under certain conditions. You should consider activating the dithering module to alleviate these issues.
-module controls  density Set the density of the filter (EV). A low value underexposes slightly whereas a high value creates a strong filter.</description>
+module controls ¶  density Set the density of the filter (EV). A low value underexposes slightly whereas a high value creates a strong filter.</description>
     </item>
     
     <item>
@@ -1651,7 +1651,7 @@ module controls  density Set the density of the filter (EV). A low value underex
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/grain/</guid>
       <description>Simulate the grain of analog film. The grain is processed on the L channel of Lab color space.
-module controls  coarseness The grain size, scaled to simulate an ISO number. strength The strength of the effect.  </description>
+module controls ¶  coarseness The grain size, scaled to simulate an ISO number. strength The strength of the effect.  </description>
     </item>
     
     <item>
@@ -1684,7 +1684,7 @@ Three methods of reconstruction are available:
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/highpass/</guid>
       <description>A high pass filter.
 This module is primarily intended to be used in combination with a blend mode. For example, try using the module with a blend mode of &amp;ldquo;soft light&amp;rdquo; for high pass sharpening.
-Module Controls  sharpness The sharpness of the filter contrast boost The contrast boost  </description>
+Module Controls ¶  sharpness The sharpness of the filter contrast boost The contrast boost  </description>
     </item>
     
     <item>
@@ -1715,7 +1715,7 @@ This module lists every change of state (activate/de-activate/move/change parame
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/lighttable/history-stack/</guid>
       <description>Manipulate the history stack of one or more selected images.
-module controls  copy parts&amp;hellip; Copy the history stack of the selected image. A dialog appears within which you may choose which items from the history stack to include. If more than one image is selected, the history stack is taken from the image that was selected first. Double-click on an item to copy that item only and immediately close the dialog.</description>
+module controls ¶  copy parts&amp;hellip; Copy the history stack of the selected image. A dialog appears within which you may choose which items from the history stack to include. If more than one image is selected, the history stack is taken from the image that was selected first. Double-click on an item to copy that item only and immediately close the dialog.</description>
     </item>
     
     <item>
@@ -1726,7 +1726,7 @@ module controls  copy parts&amp;hellip; Copy the history stack of the selected i
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/hot-pixels/</guid>
       <description>Automatically detect and eliminate hot pixels.
 Hot pixels are pixels which have failed to record a light level correctly. Detected hot pixels are replaced by an average of their neighbors.
-module controls  threshold How strong a pixel&amp;rsquo;s value needs to deviate from that of its neighbors to be regarded as a hot pixel. strength The blending strength of the hot pixels with their surrounding. detect by 3 neighbours Extend the detection of hot pixels &amp;ndash; regard a pixel as hot if a minimum of only three (instead of four) neighbor pixels deviate by more than the threshold level.</description>
+module controls ¶  threshold How strong a pixel&amp;rsquo;s value needs to deviate from that of its neighbors to be regarded as a hot pixel. strength The blending strength of the hot pixels with their surrounding. detect by 3 neighbours Extend the detection of hot pixels &amp;ndash; regard a pixel as hot if a minimum of only three (instead of four) neighbor pixels deviate by more than the threshold level.</description>
     </item>
     
     <item>
@@ -1758,7 +1758,7 @@ The image information line can be displayed in the top, bottom, left or right pa
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/lighttable/import/</guid>
       <description>Import images into one or more film rolls.
 Images can be imported from the local filesystem or from a connected camera. See supported file formats for more information.
-import from filesystem You can import either a single image or a folder of images from the filesystem by clicking the relevant button. The imported image(s) will be automatically added to a film roll with the same name as the filesystem folder they are imported from.</description>
+import from filesystem ¶ You can import either a single image or a folder of images from the filesystem by clicking the relevant button. The imported image(s) will be automatically added to a film roll with the same name as the filesystem folder they are imported from.</description>
     </item>
     
     <item>
@@ -1778,7 +1778,7 @@ import from filesystem You can import either a single image or a folder of image
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/invert/</guid>
       <description>Please note that this module is deprecated in darktable 3.4 and should no longer be used for new edits. Please use the negadoctor module instead.
  Invert scanned negatives.
-module controls  color of film material Clicking on the colored field will open a color selector dialog which offers you a choice of commonly used colors, or allows you to define an RGB color. You can also activate the color picker to take a color probe from your image – preferably from the unexposed border of your negative.</description>
+module controls ¶  color of film material Clicking on the colored field will open a color selector dialog which offers you a choice of commonly used colors, or allows you to define an RGB color. You can also activate the color picker to take a color probe from your image – preferably from the unexposed border of your negative.</description>
     </item>
     
     <item>
@@ -1810,7 +1810,7 @@ The levels tool offers two modes of operation:
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/liquify/</guid>
       <description>Move pixels around by applying freestyle distortions to parts of the image using points, lines and curves.
-nodes Each of liquify&amp;rsquo;s tools is based on nodes. A point is given by a single node and a line or curve consists of a set of nodes defining a path.
+nodes ¶ Each of liquify&amp;rsquo;s tools is based on nodes. A point is given by a single node and a line or curve consists of a set of nodes defining a path.
 There is a limit of 100 nodes in a single liquify instance. For more nodes than this, use additional module instances. However, note that the liquify module consumes a lot of system resources.</description>
     </item>
     
@@ -1831,7 +1831,7 @@ There is a limit of 100 nodes in a single liquify instance. For more nodes than 
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/local-contrast/</guid>
       <description>Enhance local contrast.
 This is achieved using either a local laplacian filter (the default mode) or an unnormalized bilateral filter. Both modes work exclusively on the L channel from Lab. The local laplacian filter has been designed to be very robust against unwanted halo effects and gradient reversals along edges.
-module controls  mode Choice of local laplacian filter or bilateral grid. The following sections define the controls available for each of these modes.</description>
+module controls ¶  mode Choice of local laplacian filter or bilateral grid. The following sections define the controls available for each of these modes.</description>
     </item>
     
     <item>
@@ -1862,7 +1862,7 @@ The idea is to calculate a scotopic vision image, which is perceived by the rods
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/lowpass/</guid>
       <description>Apply a low pass filter (for example, a Gaussian blur) to the image, while controlling the output contrast and saturation.
 This module is primarily intended to be used in combination with a blend mode. For example, try using the local contrast mask preset with the overlay blend mode.
-module controls  radius The radius of the blur soften with The blur algorithm to use  gaussian blur: Blur all image channels (L, a, b)    bilateral filter: Blur the L channel only, while preserving edges   contrast Higher absolute values increase contrast.</description>
+module controls ¶  radius The radius of the blur soften with The blur algorithm to use  gaussian blur: Blur all image channels (L, a, b)    bilateral filter: Blur the L channel only, while preserving edges   contrast Higher absolute values increase contrast.</description>
     </item>
     
     <item>
@@ -1893,7 +1893,7 @@ This module accepts .cube and .png (haldclut) files. The 3D LUT data is not save
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/</guid>
       <description>Manage the layout and grouping of processing modules.
  This maintenance screen can be accessed from the presets menu beside the module search box or group icons (below the histogram in the darkroom view).
-module controls preset list The left-hand panel lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. User-defined presets are placed at the bottom of the list.</description>
+module controls ¶ preset list ¶ The left-hand panel lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. User-defined presets are placed at the bottom of the list.</description>
     </item>
     
     <item>
@@ -1903,7 +1903,7 @@ module controls preset list The left-hand panel lists the currently-defined modu
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/map/map-settings/</guid>
       <description>Select preferred map data from various providers. Some will provide additional layers (satellite view etc.) which you can toggle.
-module controls  show OSD Choose whether to display the OSD controls on top-left of the center view. filtered images When selected, only the images from the filmstrip are displayed in the center view. If not selected, all images in the current library are displayed as long as the corresponding images have GPS data associated with them.</description>
+module controls ¶  show OSD Choose whether to display the OSD controls on top-left of the center view. filtered images When selected, only the images from the filmstrip are displayed in the center view. If not selected, all images in the current library are displayed as long as the corresponding images have GPS data associated with them.</description>
     </item>
     
     <item>
@@ -1924,7 +1924,7 @@ In the top line of the mask manager panel are buttons that can be used to create
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/shared/metadata-editor/</guid>
       <description>Edit the metadata (title, description, creator, publisher, rights etc.) of selected images.
-module controls  metadata entry fields A separate field is displayed for each metadata item. Hold Ctrl while scrolling with your mouse to increase the height of a field. Press Ctrl+Enter to insert a new line. Press Enter to apply any text entered in the current metadata field to the selected images. clear Delete existing metadata from the selected images.</description>
+module controls ¶  metadata entry fields A separate field is displayed for each metadata item. Hold Ctrl while scrolling with your mouse to increase the height of a field. Press Ctrl+Enter to insert a new line. Press Enter to apply any text entered in the current metadata field to the selected images. clear Delete existing metadata from the selected images.</description>
     </item>
     
     <item>
@@ -1967,7 +1967,7 @@ The navigation panel can be toggled on/off with a keyboard shortcut (Ctrl+Shift+
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/negadoctor/</guid>
       <description>Negadoctor allows you to process a scanned film negative.
 You can obtain an image of a negative using a film scanner, or by photographing it against a white light (e.g. a light table or computer monitor) or off-camera flash.
-preparation If the image of the negative was obtained using a digital camera, then in order to obtain accurate colors in the final image, you will need to take the following points into consideration:</description>
+preparation ¶ If the image of the negative was obtained using a digital camera, then in order to obtain accurate colors in the final image, you will need to take the following points into consideration:</description>
     </item>
     
     <item>
@@ -1979,7 +1979,7 @@ preparation If the image of the negative was obtained using a digital camera, th
       <description>Rotate the image 90 degrees at a time.
 The module is enabled by default and the orientation is automatically set based on the image&amp;rsquo;s Exif data.
 The orientation can also be set using the selected images module in the lighttable view.
-module controls  rotate Double click the label to reset the image&amp;rsquo;s rotation counter-clockwise Rotate the image 90 degrees counter-clockwise clockwise Rotate the image 90 degrees clockwise  </description>
+module controls ¶  rotate Double click the label to reset the image&amp;rsquo;s rotation counter-clockwise Rotate the image 90 degrees counter-clockwise clockwise Rotate the image 90 degrees clockwise  </description>
     </item>
     
     <item>
@@ -2010,7 +2010,7 @@ Perspective distortions are a natural effect when projecting a three dimensional
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/print/print-settings/</guid>
       <description>Manage settings for the print view and initiate printing.
-module controls printer  printer Select one of the installed printers. media The type of media loaded on the printer (Plain Paper, Luster Photo Paper, etc.). profile The printer&amp;rsquo;s ICC profile for the loaded paper. This is the profile specific to the printer and paper. This profile is the last color space transformation applied to the picture whose goal is to create a high quality print.</description>
+module controls ¶ printer ¶  printer Select one of the installed printers. media The type of media loaded on the printer (Plain Paper, Luster Photo Paper, etc.). profile The printer&amp;rsquo;s ICC profile for the loaded paper. This is the profile specific to the printer and paper. This profile is the last color space transformation applied to the picture whose goal is to create a high quality print.</description>
     </item>
     
     <item>
@@ -2021,7 +2021,7 @@ module controls printer  printer Select one of the installed printers. media The
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/raw-black-white-point/</guid>
       <description>Define camera-specific black and white points.
 This module is activated automatically for all raw images. Default settings are applied for all supported cameras. Changes to the defaults are normally not required.
-module controls  black level 0-3 The camera-specific black level of the four pixels in the RGGB Bayer pattern. Pixels with values lower than the defined level are considered not to contain valid data. white point The camera-specific white level.</description>
+module controls ¶  black level 0-3 The camera-specific black level of the four pixels in the RGGB Bayer pattern. Pixels with values lower than the defined level are considered not to contain valid data. white point The camera-specific white level.</description>
     </item>
     
     <item>
@@ -2032,7 +2032,7 @@ module controls  black level 0-3 The camera-specific black level of the four pix
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/raw-denoise/</guid>
       <description>Perform denoising on raw image data before it is demosaiced.
 This module has been ported from dcraw.
-module controls  noise threshold The threshold for noise detection. Higher values lead to stronger noise removal and greater loss of image detail. coarse/fine curves The noise of an image is usually a combination of fine-grained and coarse-grained noise. These curves allow the image to be denoised more or less depending on the coarseness of the visible noise.</description>
+module controls ¶  noise threshold The threshold for noise detection. Higher values lead to stronger noise removal and greater loss of image detail. coarse/fine curves The noise of an image is usually a combination of fine-grained and coarse-grained noise. These curves allow the image to be denoised more or less depending on the coarseness of the visible noise.</description>
     </item>
     
     <item>
@@ -2117,7 +2117,7 @@ The module has no controls.</description>
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/lighttable/select/</guid>
       <description>Select images in the lighttable according to simple criteria.
-module controls  select all Select all images shown in the current lighttable view select none De-select all images. invert selection Select all images that are not currently selected. select film roll Select all images that are in the same film roll as the currently-selected images. select untouched Select all images that have not yet been developed.  </description>
+module controls ¶  select all Select all images shown in the current lighttable view select none De-select all images. invert selection Select all images that are not currently selected. select film roll Select all images that are in the same film roll as the currently-selected images. select untouched Select all images that have not yet been developed.  </description>
     </item>
     
     <item>
@@ -2127,8 +2127,8 @@ module controls  select all Select all images shown in the current lighttable vi
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/lighttable/selected-image/</guid>
       <description>Perform actions on images that have been selected in the lighttable view.
-module controls The module controls are spread over two tabs, one for manipulating the image files, and the other for manipulating the metadata related to the images.
-images tab  remove Remove the selected images from the darktable database. Removed images can no longer be viewed or edited within darktable but the image files remain on the filesystem along with any XMP sidecar files.</description>
+module controls ¶ The module controls are spread over two tabs, one for manipulating the image files, and the other for manipulating the metadata related to the images.
+images tab ¶  remove Remove the selected images from the darktable database. Removed images can no longer be viewed or edited within darktable but the image files remain on the filesystem along with any XMP sidecar files.</description>
     </item>
     
     <item>
@@ -2148,7 +2148,7 @@ The session module allows you to set a jobcode, which can be used to create your
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/shadows-and-highlights/</guid>
       <description>Modify the tonal range of the shadows and highlights of an image by enhancing local contrast.
-module controls  shadows Control the effect on shadows. Positive values will lighten shadows while negative values will darken them. highlights Control the effect on highlights. Positive values will lighten highlights while negative values will darken them. white point adjustment By default the algorithm of this module leaves the black and white points untouched. In some cases an image might contain tonal variations beyond the white point, i.</description>
+module controls ¶  shadows Control the effect on shadows. Positive values will lighten shadows while negative values will darken them. highlights Control the effect on highlights. Positive values will lighten highlights while negative values will darken them. white point adjustment By default the algorithm of this module leaves the black and white points untouched.</description>
     </item>
     
     <item>
@@ -2159,7 +2159,7 @@ module controls  shadows Control the effect on shadows. Positive values will lig
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/sharpen/</guid>
       <description>Sharpen the details in the image using a standard UnSharp Mask (USM).
 This module works by increasing the contrast around edges and thereby enhancing the impression of sharpness of an image. This module is applied to the L channel in Lab color space.
-module controls  radius The unsharp mask applies a gaussian blur to the image as part of its algorithm. This parameter controls the radius of that blur which, in turn, defines the spatial extent of the edge enhancement.</description>
+module controls ¶  radius The unsharp mask applies a gaussian blur to the image as part of its algorithm. This parameter controls the radius of that blur which, in turn, defines the spatial extent of the edge enhancement.</description>
     </item>
     
     <item>
@@ -2189,7 +2189,7 @@ module controls  radius The unsharp mask applies a gaussian blur to the image as
       <description>Create a softened image using the Orton effect.
 Michael Orton achieved his results on slide film by using two exposures of the same scene, one well exposed and one overexposed. He then used a darkroom technique to blend these two images into a final image where the overexposed image was blurred.
 This module is a near-copy of Orton&amp;rsquo;s analog process into the digital domain.
-module controls  size The size of blur of the overexposed image.</description>
+module controls ¶  size The size of blur of the overexposed image.</description>
     </item>
     
     <item>
@@ -2200,7 +2200,7 @@ module controls  size The size of blur of the overexposed image.</description>
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/split-toning/</guid>
       <description>Create a two color linear toning effect where the shadows and highlights are represented by two different colors.
 The split-toning module does not convert images to black and white and has limited benefits on color images. In order to perform traditional split-toning, the input to this module should therefore be monochrome.
-module controls  shadows and highlights color Set the desired hue and saturation for both shadows and highlights. Clicking on the colored squares will open a color selector dialog which offers you a choice of commonly used colors, or allows you to define a color in RGB color space.</description>
+module controls ¶  shadows and highlights color Set the desired hue and saturation for both shadows and highlights. Clicking on the colored squares will open a color selector dialog which offers you a choice of commonly used colors, or allows you to define a color in RGB color space.</description>
     </item>
     
     <item>
@@ -2306,7 +2306,7 @@ If you decide to use an ICC profile from the camera manufacturer in the input co
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/velvia/</guid>
       <description>Resaturate pixels in a weighted manner that gives more weight to blacks, whites and low-saturation pixels.
-module controls  strength The strength of the effect mid-tones bias Reduce the effect on mid-tones in order to avoid unnatural skin tones. Reducing the mid-tone bias reduces mid-tone protection and makes the overall velvia effect stronger.  </description>
+module controls ¶  strength The strength of the effect mid-tones bias Reduce the effect on mid-tones in order to avoid unnatural skin tones. Reducing the mid-tone bias reduces mid-tone protection and makes the overall velvia effect stronger.  </description>
     </item>
     
     <item>
@@ -2316,7 +2316,7 @@ module controls  strength The strength of the effect mid-tones bias Reduce the e
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/vibrance/</guid>
       <description>Saturate and reduce the lightness of the most saturated pixels to make the colors more vivid.
-module controls  vibrance The amount of vibrance to apply to the image.  </description>
+module controls ¶  vibrance The amount of vibrance to apply to the image.  </description>
     </item>
     
     <item>

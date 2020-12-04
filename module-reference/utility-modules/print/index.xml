@@ -13,7 +13,7 @@
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/print/print-settings/</guid>
       <description>Manage settings for the print view and initiate printing.
-module controls printer  printer Select one of the installed printers. media The type of media loaded on the printer (Plain Paper, Luster Photo Paper, etc.). profile The printer&amp;rsquo;s ICC profile for the loaded paper. This is the profile specific to the printer and paper. This profile is the last color space transformation applied to the picture whose goal is to create a high quality print.</description>
+module controls ¶ printer ¶  printer Select one of the installed printers. media The type of media loaded on the printer (Plain Paper, Luster Photo Paper, etc.). profile The printer&amp;rsquo;s ICC profile for the loaded paper. This is the profile specific to the printer and paper. This profile is the last color space transformation applied to the picture whose goal is to create a high quality print.</description>
     </item>
     
   </channel>

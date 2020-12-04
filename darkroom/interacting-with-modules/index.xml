@@ -34,7 +34,7 @@ As with the base instance of a module, all instances can be moved independently 
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/presets/</guid>
       <description>Presets allow you to store commonly used module settings for future use. Some modules already come with pre-defined presets and you may also define your own. Both internal and user-defined presets can be shown by clicking the presets menu in the module header.
-the presets menu The presets menu will contain one or more of the following entries depending on what presets are defined or selected for the current module:</description>
+the presets menu ¶ The presets menu will contain one or more of the following entries depending on what presets are defined or selected for the current module:</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ the presets menu The presets menu will contain one or more of the following entr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/module-controls/</guid>
-      <description>sliders Sliders offer five different methods of interaction, depending on the level of control you require.
+      <description>sliders ¶ Sliders offer five different methods of interaction, depending on the level of control you require.
  left-click Click anywhere in the slider area to set the value. You can also click and drag to change it. You don&amp;rsquo;t have to aim for the triangle or even the line - you can click anywhere in the entire height of the slider including the label. mouse wheel Hover over the slider with your mouse, then use your mouse wheel to adjust the value.</description>
     </item>
     
@@ -54,7 +54,7 @@ the presets menu The presets menu will contain one or more of the following entr
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/curves/</guid>
       <description>Three image processing modules (base curve, tone curve and rgb curve) use curves to control the tones in the image. These modules have some common features that deserve separate discussion.
- nodes In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve.</description>
+ nodes ¶ In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve.</description>
     </item>
     
     <item>

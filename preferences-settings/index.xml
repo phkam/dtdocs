@@ -33,7 +33,7 @@ When opened from within the lighttable or darkroom views, the appropriate tab wi
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/import/</guid>
       <description>This tab contains a number of default settings for the lighttable import module.
-import  ignore JPEG images when importing film rolls When you have RAW+JPEG images together in one directory it usually doesn&amp;rsquo;t make sense to import both. Set this flag to ignore all JPEGs when importing images (default off). recursive directory traversal when importing film rolls When importing images from a folder, also recursively import images from its sub-folders.</description>
+import ¶  ignore JPEG images when importing film rolls When you have RAW+JPEG images together in one directory it usually doesn&amp;rsquo;t make sense to import both. Set this flag to ignore all JPEGs when importing images (default off). recursive directory traversal when importing film rolls When importing images from a folder, also recursively import images from its sub-folders.</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ import  ignore JPEG images when importing film rolls When you have RAW+JPEG imag
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/lighttable/</guid>
       <description>The following options control functionality in the lighttable view and modules.
-general  number of folder levels to show in lists The number of folder levels to show in film roll names, starting from the right (default 1). sort film rolls by Sort film rolls by either the &amp;ldquo;folder&amp;rdquo; (path) or the &amp;ldquo;id&amp;rdquo; (roughly equivalent to the date the film rolls were first imported) in the collect images module (default &amp;ldquo;id&amp;rdquo;).</description>
+general ¶  number of folder levels to show in lists The number of folder levels to show in film roll names, starting from the right (default 1). sort film rolls by Sort film rolls by either the &amp;ldquo;folder&amp;rdquo; (path) or the &amp;ldquo;id&amp;rdquo; (roughly equivalent to the date the film rolls were first imported) in the collect images module (default &amp;ldquo;id&amp;rdquo;).</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@ general  number of folder levels to show in lists The number of folder levels to
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/darkroom/</guid>
       <description>The following options control functionality in the darkroom view and associated modules.
-general  pen pressure control for brush masks Controls how the pressure reading of a graphics tablet impacts newly generated drawn mask brush strokes. You can control the brush width, hardness and opacity. “Absolute” control means that the pressure reading directly defines the attribute with a value between 0% and 100%. “Relative” means that the pressure reading adjusts the attribute between zero and the pre-defined default value (default off).</description>
+general ¶  pen pressure control for brush masks Controls how the pressure reading of a graphics tablet impacts newly generated drawn mask brush strokes. You can control the brush width, hardness and opacity. “Absolute” control means that the pressure reading directly defines the attribute with a value between 0% and 100%. “Relative” means that the pressure reading adjusts the attribute between zero and the pre-defined default value (default off).</description>
     </item>
     
     <item>
@@ -63,7 +63,7 @@ general  pen pressure control for brush masks Controls how the pressure reading 
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/other-views/</guid>
       <description>The following options control functionality in the map and slideshow views.
-map / geolocalisation  maximum number of images drawn on map The maximum number of geotagged images drawn on the map. Increasing this number can slow down the drawing of the map. Needs a restart if changed (default 100). pretty print the image location Show a more readable representation of the geo-location in the image information module (default on).  slideshow  waiting time before each picture in slideshow The number of seconds before displaying the next image (default 5).</description>
+map / geolocalisation ¶  maximum number of images drawn on map The maximum number of geotagged images drawn on the map. Increasing this number can slow down the drawing of the map. Needs a restart if changed (default 100). pretty print the image location Show a more readable representation of the geo-location in the image information module (default on).</description>
     </item>
     
     <item>
@@ -103,7 +103,7 @@ map / geolocalisation  maximum number of images drawn on map The maximum number 
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/storage/</guid>
       <description>The following options are related to darktable&amp;rsquo;s library database and XMP sidecar files.
-database  check for database maintenance Indicates when darktable should check for database fragmentation and perform maintenance. Options are &amp;ldquo;never&amp;rdquo;, &amp;ldquo;on startup&amp;rdquo;, &amp;ldquo;on close&amp;rdquo; and &amp;ldquo;on both&amp;rdquo;. Each of these is also available with an additional &amp;ldquo;(don&amp;rsquo;t ask)&amp;rdquo; option to perform the checks automatically without prompting (default &amp;ldquo;on close&amp;rdquo;). database fragmentation ratio threshold Fragmentation ratio (in per cent) above which database maintenance should be performed (subject to the selection made in the option above) (default 25).</description>
+database ¶  check for database maintenance Indicates when darktable should check for database fragmentation and perform maintenance. Options are &amp;ldquo;never&amp;rdquo;, &amp;ldquo;on startup&amp;rdquo;, &amp;ldquo;on close&amp;rdquo; and &amp;ldquo;on both&amp;rdquo;. Each of these is also available with an additional &amp;ldquo;(don&amp;rsquo;t ask)&amp;rdquo; option to perform the checks automatically without prompting (default &amp;ldquo;on close&amp;rdquo;). database fragmentation ratio threshold Fragmentation ratio (in per cent) above which database maintenance should be performed (subject to the selection made in the option above) (default 25).</description>
     </item>
     
     <item>
@@ -112,7 +112,7 @@ database  check for database maintenance Indicates when darktable should check f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/preferences-settings/miscellaneous/</guid>
-      <description>interface  sort built-in presets first Choose how the presets menu is sorted. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on). mouse wheel scrolls modules side panel by default When enabled, the mouse wheel scrolls side panels by default and Ctrl+Alt+wheel scrolls data entry fields. When disabled, this behavior is reversed (default off). always show panels&#39; scrollbars Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on).</description>
+      <description>interface ¶  sort built-in presets first Choose how the presets menu is sorted. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on). mouse wheel scrolls modules side panel by default When enabled, the mouse wheel scrolls side panels by default and Ctrl+Alt+wheel scrolls data entry fields. When disabled, this behavior is reversed (default off). always show panels&#39; scrollbars Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on).</description>
     </item>
     
     <item>

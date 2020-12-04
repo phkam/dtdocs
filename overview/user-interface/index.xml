@@ -46,7 +46,7 @@ The filmstrip allows you to interact with images while you are not in the lightt
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/top-panel/</guid>
       <description>The top panel is common to all darktable views and provides a number of common utility functions.
- On the left-hand-side  view Choose which images to view in the lighttable/filmstrip, based on star rating and reject status. sort by Choose the property to sort by from the dropdown.  sort order Switch the sort order (ascending / descending) with the arrow-toggle.  On the right-hand-side   grouping Expand or collapse grouped images  thumbnail overlays Define what information is displayed over thumbnails in the lighttable/filmstrip.</description>
+ On the left-hand-side ¶  view Choose which images to view in the lighttable/filmstrip, based on star rating and reject status. sort by Choose the property to sort by from the dropdown.  sort order Switch the sort order (ascending / descending) with the arrow-toggle.  On the right-hand-side ¶   grouping Expand or collapse grouped images  thumbnail overlays Define what information is displayed over thumbnails in the lighttable/filmstrip.</description>
     </item>
     
     <item>

@@ -2737,7 +2737,7 @@
 <p>Where an image has been captured in a camera raw file, the input color profile module will normally apply either a standard or enhanced color matrix specific for that camera model, which will be used to map the colors into the working profile color space. If color space information is embedded in the image, the <em>input color profile</em> module will use this information when mapping the colors to the working profile color space. The user can also explicitly specify a color space for the incoming image, and can even supply a custom ICC color profile specifically made for the input device.</p>
 <p>As part of the mapping from the input color space to the working profile space, the colors can be confined to a certain gamut using the <em>gamut clipping</em> options, which can help to mitigate some (infrequent) color artifacts. This is also influenced by the chosen <a href="/dtdocs/special-topics/color-management/rendering-intent/">rendering intent</a>.</p>
 <p>Note that the final color profile that will be used when exporting the image is controlled by the <a href="/dtdocs/module-reference/processing-modules/output-color-profile/"><em>output color profile</em></a> module.</p>
-<h1 id="module-controls">module controls</h1>
+<h1 id="module-controls">module controls <a href="#module-controls">¶</a></h1>
 <dl>
 <dt>input profile</dt>
 <dd>The profile or color matrix to apply. A number of matrices are provided along with an enhanced color matrix for some camera models. The enhanced matrices are designed to provide a look that is closer to that of the the camera manufacturer.</dd>
