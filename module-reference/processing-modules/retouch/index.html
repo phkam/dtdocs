@@ -2735,7 +2735,7 @@
 
     <p>Remove unwanted image elements by cloning, healing, blurring and filling using drawn shapes.</p>
 <p>This module extends the capabilities of the <a href="/dtdocs/module-reference/processing-modules/spot-removal/"><em>spot removal</em></a> module by including a &ldquo;heal&rdquo; tool (based on the heal tool from GIMP) which provides a type of seamless cloning. It can also take advantage of <a href="/dtdocs/darkroom/interacting-with-modules/wavelets/">wavelet decomposition</a>, allowing the image to be separated into layers of varying detail (from coarse to fine). These layers can then be selectively retouched before being recombined to produce the output image. Examples of these capabilities are shown in the following sections.</p>
-<h1 id="clone-and-heal">clone and heal <a href="#clone-and-heal">¶</a></h1>
+<h1 id="clone-and-heal">clone and heal</h1>
 <p>Cloning allows us to hide part of an image by replacing it with an area copied from another part of the image. For example, we may wish to get rid of a small cloud in a blue sky:</p>
 <p>
 
@@ -2774,7 +2774,7 @@
 <img src="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/retouch/rt-heal-nocontrol.png" alt="retouch-heal-nocontrol"  />
 
 </p>
-<h1 id="fill-and-blur">fill and blur <a href="#fill-and-blur">¶</a></h1>
+<h1 id="fill-and-blur">fill and blur</h1>
 <p>The <em>clone</em> and <em>heal</em> tools both require us to specify another part of the image, which is used to &ldquo;fill in&rdquo; the region we want to hide. Sometimes there is no suitable sample in the image that we can use to fill over the spot. In such cases, the <em>retouch</em> module offers two further options:</p>
 <dl>
 <dt>
@@ -2793,7 +2793,7 @@
 <dd>This tool applies a blur to the selected region, smoothing out any detail.</dd>
 </dl>
 <p>These two options are most useful when used together with wavelet decomposition, where they can be used to smooth over features within a selected detail layer.</p>
-<h1 id="source-and-target-shapes">source and target shapes <a href="#source-and-target-shapes">¶</a></h1>
+<h1 id="source-and-target-shapes">source and target shapes</h1>
 <p>When you activate the <em>clone</em> or <em>heal</em> tool, you will place one or more matching pairs of shapes on the image, each consisting of a target region to be repaired, and a source region to use to undertake that repair. You must first choose the shape you wish to use (you can choose from <em>circle</em>, <em>ellipse</em>, <em>path</em> or <em>brush</em> &ndash; see the <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn masks</a> section for details) and (except when using the path shape), an outline of the shape will appear under the cursor.</p>
 <p>While you hover over the image with your mouse, a small plus sign (+) will be shown somewhere on the image, marking where the source shape will be placed by default. This plus sign will either be in a fixed position on the image or will move about with your cursor depending on whether the last pair of shapes was placed using absolute or relative mode (see below).</p>
 <p>
@@ -2818,7 +2818,7 @@
 </li>
 </ul>
 <p>The positions of the source and target shapes may then be altered manually.</p>
-<h1 id="retouch-with-wavelet-decomposition">retouch with wavelet decomposition <a href="#retouch-with-wavelet-decomposition">¶</a></h1>
+<h1 id="retouch-with-wavelet-decomposition">retouch with wavelet decomposition</h1>
 <p>Wavelets allow us to decompose an image into different layers with varying levels of detail, so that we can work on the layers independently and then recombine them at the end. This is particularly useful in portrait photography, where we are able to deal with skin blotches and blemishes on a coarse layer of detail, while leaving the skin texture in a finer layer of detail untouched. The <a href="/dtdocs/darkroom/interacting-with-modules/wavelets/"><em>wavelets</em></a> section provides an example of how wavelets decompose the image into detail layers.</p>
 <p>Through this method, we could for example use the healing tool to paint over a spot that appears in one of the coarse detail layers, while leaving the whiskers in the fine detail layers intact:</p>
 <p>
@@ -2827,14 +2827,14 @@
 <img src="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/retouch/rt-beard-preserve.jpg" alt="retouch-beard-preserve"  />
 
 </p>
-<h1 id="module-controls">module controls <a href="#module-controls">¶</a></h1>
+<h1 id="module-controls">module controls</h1>
 <p>
 
 
 <img src="https://darktable-org.github.io/dtdocs/module-reference/processing-modules/retouch/rt-overview.png" alt="retouch-overview"  />
 
 </p>
-<h2 id="retouch-tools">retouch tools <a href="#retouch-tools">¶</a></h2>
+<h2 id="retouch-tools">retouch tools</h2>
 <p>The <em>retouch tools</em> section consists of two items:</p>
 <dl>
 <dt>shapes</dt>
@@ -2856,7 +2856,7 @@
 <dt>algorithms</dt>
 <dd>Choose a retouching algorithm: clone, heal, fill or blur (see above for details).</dd>
 </dl>
-<h2 id="wavelet-decompose">wavelet decompose <a href="#wavelet-decompose">¶</a></h2>
+<h2 id="wavelet-decompose">wavelet decompose</h2>
 <p>The <em>wavelet decompose</em> section centres around a bar graph showing how the image has been decomposed into different detail (scale) layers. The key features of the bar graph are:</p>
 <ul>
 <li>The black square on the left represents the entire non-decomposed image.</li>
@@ -2929,7 +2929,7 @@
  display masks</dt>
 <dd>Show the target shapes associated with the currently-selected layer with a yellow overlay.</dd>
 </dl>
-<h2 id="shapes">shapes <a href="#shapes">¶</a></h2>
+<h2 id="shapes">shapes</h2>
 <p>This section allows you to modify settings related to the currently-selected shape:</p>
 <dl>
 <dt>shape selected</dt>

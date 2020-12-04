@@ -2737,8 +2737,8 @@
     <p>Export images that have been selected in the lighttable.</p>
 <p>Files can be exported to a file on disk, email, various on-line storage locations, a webalbum, or a book template.</p>
 <p>You can also press Ctrl+E within the darkroom mode to export the currently-edited image using the last settings from this module.</p>
-<h1 id="module-controls">module controls <a href="#module-controls">¶</a></h1>
-<h2 id="storage-options">storage options <a href="#storage-options">¶</a></h2>
+<h1 id="module-controls">module controls</h1>
+<h2 id="storage-options">storage options</h2>
 <dl>
 <dt>target storage</dt>
 <dd>The type of location to store your selected images. A number of different back-ends are implemented, including file on disk, a LaTeX book template and various web albums. Depending on the selected target, you will be asked to provide additional information, like filenames, or account name and password.</dd>
@@ -2764,7 +2764,7 @@
 </ul>
 </dd>
 </dl>
-<h2 id="format-options">format options <a href="#format-options">¶</a></h2>
+<h2 id="format-options">format options</h2>
 <p>Options within this section will appear or not depending on the selected <em>file format</em>.</p>
 <dl>
 <dt>file format</dt>
@@ -2780,7 +2780,7 @@
 <dt>b&amp;w image</dt>
 <dd>For TIFF export format, it is possible to save a monochrome image. This setting controls whether the resulting file encodes the shades of grey as separate RGB channels, or as a single greyscale channel. The latter option will reuslt in smaller files.</dd>
 </dl>
-<h2 id="global-options">global options <a href="#global-options">¶</a></h2>
+<h2 id="global-options">global options</h2>
 <dl>
 <dt>set size</dt>
 <dd>Choose how to measure the maximum size of your exported image</dd>
@@ -2825,7 +2825,7 @@
 <dt>metadata</dt>
 <dd>Press the icon on the right of the export button to bring up the <em>edit metadata exportation</em> dialog. This dialog allows you to to configure which metadata items are to be embedded into the exported image. See the following section for more details.</dd>
 </dl>
-<h1 id="including-metadata-in-the-exported-image">including metadata in the exported image <a href="#including-metadata-in-the-exported-image">¶</a></h1>
+<h1 id="including-metadata-in-the-exported-image">including metadata in the exported image</h1>
 <p>
 
 
@@ -2833,7 +2833,7 @@
 
 </p>
 <p>The <em>edit metadata exportation</em> dialog can be used to control what metadata is included within exported files. The parameters entered into this dialog are saved along with other export parameters to user presets and the last entered values are retained when darktable is closed. The following options can be set:</p>
-<h2 id="general-settings">general settings <a href="#general-settings">¶</a></h2>
+<h2 id="general-settings">general settings</h2>
 <p>The left-hand-side of this dialog allows you to choose which groups of metadata are to be exported with the image. The following options are available:</p>
 <dl>
 <dt>exif data</dt>
@@ -2864,14 +2864,14 @@
 <hr>
 <p><strong>Caution:</strong> For various reasons embedding XMP tags into output files may fail without notice, e.g. if certain size limits are exceeded. Users are therefore advised to not rely on this feature for their backup strategy. To back up your data always make sure to save your input (raw) file as well as all of darktable&rsquo;s XMP sidecar files.</p>
 <hr>
-<h2 id="per-metadata-settings">per metadata settings <a href="#per-metadata-settings">¶</a></h2>
+<h2 id="per-metadata-settings">per metadata settings</h2>
 <p>The right-hand-side of this dialog allows you to define formulas to populate image metadata. The formulas defined here have priority over the settings in the left-hand-side of the dialog. The first column identifies the entry to be edited. The second column allows you to define how to calculate the value for that metadata entry using a formula.</p>
 <p>Leave the formula empty to prevent a given metadata entry from being exported (<code>Exif.GPSInfo.GPSVersionID</code> in the above example). To define a formula to calculate the metadata value, you can use the same variables and rules as for filenames (as documented in the <a href="/dtdocs/special-topics/variables/">variables</a> section). Press Enter to validate the formula.</p>
 <p>Use the “&ndash;” icon to remove a metadata entry from the list and the “+” icon to add a new one from a predefined list of available metadata tags.</p>
 <p>Click on the &ldquo;add&rdquo; button to add a metadata entry to the configuration list.</p>
 <p>The formulas allow you virtually define all the metadata you need to qualify your images in tagging and export the values in the XMP or IPTC tags of your choice. The exported tags can be different from one export to the next depending on the destination of the images. Tags and Categories are displayed separately in image information.</p>
 <p><em>Remember that a tag set up as a category is never exported.</em></p>
-<h2 id="examples">examples <a href="#examples">¶</a></h2>
+<h2 id="examples">examples</h2>
 <dl>
 <dt>example 1</dt>
 <dd>A first level tag called places is set as a category, and is followed by four levels of information (or keywords): country, region, city and location (e.g. <code>places|France|Nord|Lille|rue Nationale</code>). Each level can be retrieved (when it is defined) by one of the variables <code>$(CATEGORY0(places))</code>, <code>$(CATEGORY1(places))</code>, <code>$(CATEGORY2(places))</code> and <code>$(CATEGORY3(places))</code>. In this example, the returned values are &ldquo;France&rdquo;, &ldquo;Nord&rdquo;, &ldquo;Lille&rdquo; and &ldquo;rue Nationale&rdquo;, respectively. These keywords can also be retrieved as simple tags by the variable <code>$(TAGS)</code>. The last keyword level defined (the leaf) is displayed in <a href="/dtdocs/module-reference/utility-modules/shared/image-information/">image information</a>, here &ldquo;rue Nationale&rdquo;.</dd>

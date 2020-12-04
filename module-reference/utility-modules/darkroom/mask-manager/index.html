@@ -2745,14 +2745,14 @@
 <p>In the top line of the mask manager panel are buttons that can be used to create new shapes. These are the same as in the <a href="/dtdocs/darkroom/masking-and-blending/masks/drawn/">drawn mask</a> interface of the individual modules.</p>
 <p>The panel below these buttons displays a list of all masks and individual shapes defined for the current image.</p>
 <p>Groups of shapes forming a mask are displayed with a headline in the form &ldquo;grp &lt;module_name&gt;&rdquo; indicating the module in which they are used, with the component shapes listed below. The list of mask groups is followed by a list of all individual shapes that have been generated in the context of the current image. If a shape is in use by any masks this is indicated by a symbol to the right of the shape name.</p>
-<h1 id="shapes">shapes <a href="#shapes">¶</a></h1>
+<h1 id="shapes">shapes</h1>
 <p>By default each shape receives an automatically generated name, consisting of the shape type (&ldquo;brush&rdquo;, &ldquo;circle&rdquo;, &ldquo;ellipse&rdquo;, &ldquo;path&rdquo;, &ldquo;gradient&rdquo;) and an automatically-incremented integer. You can rename a shape by double-clicking on its current name. It is a good habit to give shapes and groups meaninful names, especially if you are going to use the same selection in different masks.</p>
 <p>Click on a shape name to show the selected shape on the image canvas with all of its controls, allowing you to edit the properties of just that shape. This is especially useful where there are many overlapping shapes within a mask, making it difficult to select the right one with the mouse.</p>
 <p>Right-click on a shape name to show a menu with options to remove the current shape or to remove all shapes not currently in use.</p>
 <hr>
 <p><strong>Note:</strong> darktable retains all shapes that have ever been defined for the current image unless you explicitly remove them. If you choose to include develop history when exporting an image, all defined shapes will be exported with the image. Beware that if the list of shapes is very long the space required to store those shapes might exceed the size limit of certain file formats. This can cause XMP tag creation to fail during export.</p>
 <hr>
-<h1 id="masks">masks <a href="#masks">¶</a></h1>
+<h1 id="masks">masks</h1>
 <p>Masks are constructed by adding shapes in the order that they are listed from top to bottom. Each shape adjusts the existing mask using one of four logical set operators (see below). Because order is important it is also possible to move shapes up and down the list.</p>
 <p>Click on the name of a mask to expand the list of the individual shapes which constitute that mask.</p>
 <p>Right-click on the mask name to show a menu which with options to add new or existing shapes to the mask, or to clean up unused shapes.</p>
@@ -2767,7 +2767,7 @@
 <dt>move up/down</dt>
 <dd>Move the shape up or down the list</dd>
 </dl>
-<h1 id="set-operators">set operators <a href="#set-operators">¶</a></h1>
+<h1 id="set-operators">set operators</h1>
 <p>As an example we will use a mask that combines a gradient followed by a path, to demonstrate the effect of each set operator when applied to the path shape. As a convention we say that a pixel is “selected” in a mask or shape if it has a value higher than zero.</p>
 <p>
 

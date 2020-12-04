@@ -25,7 +25,7 @@ This module supports the printer&amp;rsquo;s ICC profile which is somewhat manda
       <guid>https://darktable-org.github.io/dtdocs/print/print-view-layout/</guid>
       <description>The central area displays the image layout on the paper (the white area). Some gray borders may be displayed around the image to represent the printable area (the page minus the borders) not filled by the image.
 The filmstrip below the image allows you to select more images.
-left panel ¶  collect images Filter the list of images displayed in the lighttable. image information Display image information  right panel ¶  print settings Adjust print settings and initiate printing.</description>
+left panel  collect images Filter the list of images displayed in the lighttable. image information Display image information  right panel  print settings Adjust print settings and initiate printing.</description>
     </item>
     
   </channel>

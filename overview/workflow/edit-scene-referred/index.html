@@ -2735,7 +2735,7 @@
 
     <p>The <em>scene-referred</em> workflow places an emphasis on performing image processing in the linear scene-referred part of the pixelpipe. This helps to reduce artifacts and color shifts that can result from processing non-linear pixel values and, by decoupling the image processing from the characteristics of a specific display, it makes it easier to adapt your work in the future to new display media, such as high dynamic range displays.</p>
 <p>This being the recommended way to process images in versions 3.0 and above, this section will provide a much more comprehensive overview than the next section on the <em>display-referred</em> workflow.</p>
-<h1 id="basic-steps">basic steps <a href="#basic-steps">¶</a></h1>
+<h1 id="basic-steps">basic steps</h1>
 <p>Basic image processing in scene-referred workflow requires you, as a minimum, to consider the following steps in order to render a reasonable image on your display:</p>
 <dl>
 <dt>capture an image</dt>
@@ -2756,7 +2756,7 @@
 <dt><a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a></dt>
 <dd>This module performs tone mapping compression from the high-dynamic-range of the captured image, to the lower dynamic range of the display medium. The mid-grey tone level has already been set (above) with the <em>exposure</em> module. Filmic will propose, on its <em>scene</em> tab, an appropriate white point and black point for the image &ndash; you may need to adjust these for a particular scene. On the <em>look</em> tab you can adjust the midtone contrast and saturation settings if required.</dd>
 </dl>
-<h1 id="other-recommended-modules">other recommended modules <a href="#other-recommended-modules">¶</a></h1>
+<h1 id="other-recommended-modules">other recommended modules</h1>
 <p>In addition to the basic modules described above, you may want to consider using the following modules to make your image look even prettier. These modules are known to work well with the scene-referred workflow:</p>
 <dl>
 <dt><a href="/dtdocs/module-reference/processing-modules/crop-rotate/"><em>crop and rotate</em></a> / <a href="/dtdocs/module-reference/processing-modules/perspective-correction/"><em>perspective correction</em></a></dt>
@@ -2784,7 +2784,7 @@
 <dt><a href="/dtdocs/module-reference/processing-modules/lens-correction/"><em>lens correction</em></a></dt>
 <dd>If your camera/lens combination is supported, use this module to correct for standard lens distortions, where corrections have not already been performed in-camera. The <a href="/dtdocs/module-reference/processing-modules/crop-rotate/"><em>crop and rotate</em></a> or <a href="/dtdocs/module-reference/processing-modules/perspective-correction/"><em>perspective correction</em></a> modules can also be used to simulate the effects of a tilt-shift lens.</dd>
 </dl>
-<h1 id="modules-to-be-used-with-care">modules to be used with care <a href="#modules-to-be-used-with-care">¶</a></h1>
+<h1 id="modules-to-be-used-with-care">modules to be used with care</h1>
 <p>There are some modules for which there is not yet an alternative that is well-suited to the scene-referred workflow. If required, these modules should be used sparingly and with care.</p>
 <dl>
 <dt><a href="/dtdocs/module-reference/processing-modules/vibrance/"><em>vibrance</em></a></dt>
@@ -2797,7 +2797,7 @@
 <hr>
 <p><strong>Note:</strong> When using <a href="/dtdocs/darkroom/masking-and-blending/blend-modes/">blend modes</a> on any module, you should be aware that many of the blend modes are optimized for display-referred space and assume a mid-gray value of 50%. For the linear scene-referred space, stick with blend modes based on arithmetic operations (addition, multiplication, division, subtraction, average), on maximum/minimum comparisons (screen) or on channel separations (hue, color, chroma, etc.).</p>
 <hr>
-<h1 id="other-artistic-effects">other artistic effects <a href="#other-artistic-effects">¶</a></h1>
+<h1 id="other-artistic-effects">other artistic effects</h1>
 <p>There are also a number of artistic effect modules available in darktable. To name just a few:</p>
 <ul>
 <li>Use the <a href="/dtdocs/module-reference/processing-modules/watermark/"><em>watermark</em></a> module to add an individual watermark to your image.</li>
@@ -2807,7 +2807,7 @@
 <li>Use the <a href="/dtdocs/module-reference/processing-modules/graduated-density/"><em>graduated density</em></a> filter to add a neutral or colored gradient to your image for exposure and color correction.</li>
 </ul>
 <p>Please see the <a href="/dtdocs/module-reference/processing-modules/">processing module reference</a> for a list of the available modules.</p>
-<h1 id="modules-to-avoid">modules to avoid <a href="#modules-to-avoid">¶</a></h1>
+<h1 id="modules-to-avoid">modules to avoid</h1>
 <p>There are a number of modules which are no longer recommended for use within a scene-referred workflow. This doesn&rsquo;t mean they can&rsquo;t be used, but they can produce undesirable effects when their sliders are pushed too far, and there are better alternatives. In each case, the preferred alternative module is listed along with a brief explanation.</p>
 <dl>
 <dt><a href="/dtdocs/module-reference/processing-modules/tone-mapping/"><em>local tone mapping (deprecated)</em></a></dt>

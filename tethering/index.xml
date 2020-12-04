@@ -22,8 +22,8 @@ To use the tethering feature you need to connect your camera to your PC using a 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/tethering/tethering-view-layout/</guid>
-      <description>left panel ¶  image information Display image information  right panel ¶ From top to bottom:
- histogram The histogram for the current image session Session settings live view Live view settings camera settings Camera settings metadata editor Edit metadata for selected images. tagging Tag selected images.  bottom panel ¶ From left to right:
+      <description>left panel  image information Display image information  right panel From top to bottom:
+ histogram The histogram for the current image session Session settings live view Live view settings camera settings Camera settings metadata editor Edit metadata for selected images. tagging Tag selected images.  bottom panel From left to right:
  star ratings Apply star ratings to images color labels Apply color categories to images  </description>
     </item>
     
@@ -34,7 +34,7 @@ To use the tethering feature you need to connect your camera to your PC using a 
       
       <guid>https://darktable-org.github.io/dtdocs/tethering/examples/</guid>
       <description>This section contains examples of typical usages of tethering.
-studio setup with screening ¶ This is a pretty common use case. You have your studio and subject set up, the camera is connected to your computer and tethering view is active in darktable. You work at the camera and take images. Whenever you like, you can screen the image directly on your computer monitor instead of using the camera LCD for validation.</description>
+studio setup with screening This is a pretty common use case. You have your studio and subject set up, the camera is connected to your computer and tethering view is active in darktable. You work at the camera and take images. Whenever you like, you can screen the image directly on your computer monitor instead of using the camera LCD for validation.</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@ studio setup with screening ¶ This is a pretty common use case. You have your s
       <guid>https://darktable-org.github.io/dtdocs/tethering/troubleshooting/</guid>
       <description>This troubleshooting guide will provide you with some steps to verify whether your camera can be used with tethering. This is done using the gphoto2 command-line tools. This is what darktable uses to interface with your camera.
 Find your camera port name to use it in the following tests. Usually the port &amp;ldquo;usb:&amp;rdquo; will be enough and therefore is used in these examples.
-is your camera detected? ¶ The following command will verify that your camera is connected to the computer and detected by gphoto2.</description>
+is your camera detected? The following command will verify that your camera is connected to the computer and detected by gphoto2.</description>
     </item>
     
   </channel>
