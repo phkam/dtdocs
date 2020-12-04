@@ -2736,7 +2736,7 @@
     <p>Automatically correct for converging lines, a form of perspective distortion. The underlying mechanism is inspired by Markus Hebel&rsquo;s <a href="http://www.shiftn.de/" target="_blank"><em>ShiftN</em></a> program.</p>
 <p>Perspective distortions are a natural effect when projecting a three dimensional scene onto a two dimensional plane and cause objects close to the viewer to appear larger than objects further away. Converging lines are a special case of perspective distortions frequently seen in architectural photographs. Parallel lines, when photographed at an angle, are transformed into converging lines that meet at some vantage point within or outside of the image frame.</p>
 <p>This module is able to correct converging lines by warping the image in such a way that the lines in question become parallel to the image frame. Corrections can be applied in a vertical and horizontal direction, either separately or in combination. In order to perform automatic correction the module first analyzes the image for suitable structural features consisting of line segments. Based on these line segments a fitting procedure is initiated which determines the best values for the module&rsquo;s parameters.</p>
-<h1 id="analysing-the-structure-of-an-image">analysing the structure of an image</h1>
+<h1 id="analysing-the-structure-of-an-image">analysing the structure of an image <a href="#analysing-the-structure-of-an-image">¶</a></h1>
 <p>Click the 
 
 
@@ -2758,7 +2758,7 @@
 <p>Lines marked in red or yellow are regarded as outliers and are not taken into account for the automatic fitting step. This outlier elimination involves a statistical process using random sampling which means that each time you press the “get structure” button the color pattern of the lines will look slightly different.</p>
 <p>You can manually change the status of line segments: Left-Click on a line to select it (turn the color to green or blue) and Right-click to deselect it (turn the color to red or yellow). If you keep the mouse button pressed, you can use a sweeping action to select/deselect multiple lines in a row. The size of the select/deselect brush can be changed with the mouse wheel. Hold down the Shift key and keep the left or right mouse button pressed while dragging to select or deselect all lines in the chosen rectangular area.</p>
 <p>Click on one of the “automatic fit” icons (see below) to initiate an optimization process which finds the best suited module parameters based on the detected structure. The image and the overlaid lines are then displayed with perspective corrections applied.</p>
-<h1 id="module-controls">module controls</h1>
+<h1 id="module-controls">module controls <a href="#module-controls">¶</a></h1>
 <p>Once the initial image analysis is done, the following controls can be used to perform the perspective corrections.</p>
 <dl>
 <dt>rotation</dt>
@@ -2822,7 +2822,7 @@ icon to discard any structural information collected during previous analysis st
  icon to toggle the display of line segments identified by any previous structural analysis.</p>
 </dd>
 </dl>
-<h1 id="examples">examples</h1>
+<h1 id="examples">examples <a href="#examples">¶</a></h1>
 <p>Here is an image with a skewed horizon and converging lines caused by directing the camera upwards:</p>
 <p>
 

@@ -2737,7 +2737,7 @@
     <p>With the drawn mask feature you can construct a mask by drawing shapes directly onto the image canvas. Shapes can be used alone or in combination. Once a shape has been drawn on an image it can be adjusted, removed, or reused in other modules.</p>
 <p>Shapes are stored internally as vector graphics and are rendered with the required resolution during pixelpipe processing. Shapes are expressed in the coordinate system of the original image and are transformed along with the rest of the image by any active distorting modules in the pipe (<a href="/dtdocs/module-reference/processing-modules/lens-correction/"><em>lens correction</em></a>, <a href="/dtdocs/module-reference/processing-modules/crop-rotate/"><em>crop &amp; rotate</em></a> for example). This means that a shape will always work on the same image area regardless of any modifications that may be subsequently applied.  Please note that this distorting effect can cause straight lines in your mask to appear curved when the <a href="/dtdocs/module-reference/processing-modules/lens-correction/"><em>lens correction</em></a> module is active.</p>
 <p>The controls required to create and alter drawn masks may be enabled by selecting either the &ldquo;drawn mask&rdquo; or &ldquo;drawn &amp; parametric mask&rdquo; icon at the bottom of a module.</p>
-<h1 id="creating-shapes">creating shapes</h1>
+<h1 id="creating-shapes">creating shapes <a href="#creating-shapes">¶</a></h1>
 <p>Choose a shape by clicking on the appropriate shape icon (from left to right: brush, circle, ellipse, path, gradient).</p>
 <p>
 
@@ -2751,7 +2751,7 @@
 <hr>
 <p><strong>Note:</strong> When used in shape creation mode, the preceding scroll operations will also cause the <strong>default</strong> feathering or opacity to be changed. The new default values will be used the next time you create a new shape.</p>
 <hr>
-<h1 id="editing-shapes">editing shapes</h1>
+<h1 id="editing-shapes">editing shapes <a href="#editing-shapes">¶</a></h1>
 <p>Click on the &lsquo;show and edit mask elements&rsquo; icon 
 
 
@@ -2759,9 +2759,9 @@
 
  to enter shape edit mode. This will show all drawn masks in use by the current module and allow you to edit those shapes. Ctrl+click on the same icon to enter restricted edit mode, where certain actions (e.g. dragging a complete shape or changing its size) are blocked. This is particularly useful to avoid costly mistakes when editing path and brush shapes.</p>
 <p>Click and drag a shape to move it around the image canvas.</p>
-<h1 id="removing-shapes">removing shapes</h1>
+<h1 id="removing-shapes">removing shapes <a href="#removing-shapes">¶</a></h1>
 <p>While in edit mode right-click on a shape to remove it.</p>
-<h1 id="reusing-shapes">reusing shapes</h1>
+<h1 id="reusing-shapes">reusing shapes <a href="#reusing-shapes">¶</a></h1>
 <p>You can reuse shapes that you have drawn in other modules. Click on the shapes drop-down (next to the &lsquo;show and edit mask elements&rsquo; button) to choose previously-drawn shapes individually or to use the same group of shapes as used by another module. The following options are available for selection:</p>
 <dl>
 <dt>add existing shape</dt>
@@ -2769,9 +2769,9 @@
 <dt>use same shapes as</dt>
 <dd>Add a list of shapes used in another module to the current module&rsquo;s mask. This differs from the previous option in that it creates a new group, allowing shapes to be added to or removed from the group independently of the module from which they are copied. All shapes that are common to both groups remain linked.</dd>
 </dl>
-<h1 id="combining-and-managing-shapes">combining and managing shapes</h1>
+<h1 id="combining-and-managing-shapes">combining and managing shapes <a href="#combining-and-managing-shapes">¶</a></h1>
 <p>The <a href="/dtdocs/module-reference/utility-modules/darkroom/mask-manager/">mask manager</a> module can be used to manage your drawn shapes. This module also allows you to group and combine drawn masks using set operators (union, intersection, difference, exclusion).</p>
-<h1 id="available-shapes">available shapes</h1>
+<h1 id="available-shapes">available shapes <a href="#available-shapes">¶</a></h1>
 <dl>
 <dt>brush</dt>
 <dd>Start drawing a brush stroke by left-clicking on the image canvas and moving the mouse while keeping the button pressed. The brush stroke is finalized once you release the mouse button. Scroll the mouse to change the shape size, either before you start drawing or at any time during the operation. Likewise you can use the &ldquo;<code>[</code>&rdquo; and &ldquo;<code>]</code>&rdquo; keys to decrease/increase brush size, the &ldquo;<code>{</code>&rdquo; and &ldquo;<code>}</code>&rdquo; keys to decrease/increase feathering, and the &ldquo;<code>&lt;</code>&rdquo; and &ldquo;<code>&gt;</code>&rdquo; keys to decrease/increase opacity.</dd>
@@ -2819,7 +2819,7 @@
 <p>Depending on the module and the underlying image, using a gradient shape might provoke banding artifacts. You should consider activating the <a href="/dtdocs/module-reference/processing-modules/dithering/"><em>dithering</em></a> module to alleviate this.</p>
 </dd>
 </dl>
-<h1 id="reversing-the-polarity-of-a-drawn-mask">reversing the polarity of a drawn mask</h1>
+<h1 id="reversing-the-polarity-of-a-drawn-mask">reversing the polarity of a drawn mask <a href="#reversing-the-polarity-of-a-drawn-mask">¶</a></h1>
 <p>Click on the &ldquo;<code>+/-</code>&rdquo; button to reverse the polarity of the entire drawn mask. For example, a circular mask will, by default, cause the module to be applied only to the area inside the drawn circle. Reversing its polarity will cause the module to apply to the whole image, <em>except for</em> that circle.</p>
 
 

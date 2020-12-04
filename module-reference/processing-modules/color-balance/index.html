@@ -2735,7 +2735,7 @@
 
     <p>A versatile tool for adjusting the image&rsquo;s color balance.</p>
 <p>This module can be used to revert parasitic color casts or to enhance the visual atmosphere of an image using color grading, a popular technique in the cinema industry.</p>
-<h1 id="overview">overview</h1>
+<h1 id="overview">overview <a href="#overview">¶</a></h1>
 <p>The <em>color balance</em> module allows you to shift colors selectively by luminance range: shadows, mid-tones, and highlights. It does so using two different methods:</p>
 <dl>
 <dt>lift, gamma, gain</dt>
@@ -2749,10 +2749,10 @@
 <hr>
 <p><strong>Note:</strong> Although this module acts on RGB colors its location in the pixelpipe puts it into the Lab color space. Accordingly the module converts from Lab to RGB, performs its color adjustments, and then converts back to Lab.</p>
 <hr>
-<h1 id="presets">presets</h1>
+<h1 id="presets">presets <a href="#presets">¶</a></h1>
 <p>Several presets are provided in this module to help you to better understand how it can best be used. The &ldquo;teal/orange color-grading&rdquo; preset is a very popular look in cinema and is a good showcase model. It is meant to be used with two instances combined with <a href="/dtdocs/darkroom/masking-and-blending/masks/">masks</a>. The first instance will exclude skin tones and will shift neutral colors toward teal blue. The second will partially revert the first one and add more vibrance to skin tones only. Together they will create separation between subject and background. The masking and blending parameters will need to be tweaked to suit every image.</p>
 <p>Other presets provide Kodak film emulations. In this way you can recreate any film look you like using <em>color balance</em>.</p>
-<h1 id="module-controls">module controls</h1>
+<h1 id="module-controls">module controls <a href="#module-controls">¶</a></h1>
 <dl>
 <dt>mode</dt>
 <dd><em>lift, gamma, gain (sRGB)</em> is the legacy mode from darktable 2.4 and earlier. In this mode, the color transformations are applied in sRGB color space encoded with the sRGB gamma (average gamma of 2.2).</dd>
