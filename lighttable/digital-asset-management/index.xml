@@ -32,7 +32,7 @@ You can easily construct other kinds of collections based on various image attri
       
       <guid>https://darktable-org.github.io/dtdocs/lighttable/digital-asset-management/thumbnails/</guid>
       <description>Each image in the current collection is represented by a thumbnail in the lighttable view and filmstrip module. A cache of the last recently used thumbnails is stored in a file on disk and loaded into memory at startup. The size of this cache can be adjusted in preferences &amp;gt; cpu/gpu/memory.
-thumbnail creation ¶ Thumbnails are created whenever an image is imported into darktable for the first time, after an image has been modified in the darkroom, or when revisiting an image whose thumbnail is no longer available.</description>
+🔗thumbnail creation Thumbnails are created whenever an image is imported into darktable for the first time, after an image has been modified in the darkroom, or when revisiting an image whose thumbnail is no longer available.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ thumbnail creation ¶ Thumbnails are created whenever an image is imported into 
       
       <guid>https://darktable-org.github.io/dtdocs/lighttable/digital-asset-management/star-color/</guid>
       <description>Star ratings and color labels help you to sort and rank images according to your own criteria. An image&amp;rsquo;s star rating and its color labels can be displayed over thumbnails in the lighttable view and filmstrip module.
-star ratings ¶ You can give an image a rating from zero to five stars. The quality criteria which lead to a rating are up to you. Whenever you import images, each image receives a default rating which you can define in preferences &amp;gt; import.</description>
+🔗star ratings You can give an image a rating from zero to five stars. The quality criteria which lead to a rating are up to you. Whenever you import images, each image receives a default rating which you can define in preferences &amp;gt; import.</description>
     </item>
     
     <item>
@@ -62,9 +62,9 @@ You can combine images into a group by selecting them and clicking the “group�
       
       <guid>https://darktable-org.github.io/dtdocs/lighttable/digital-asset-management/metadata-tagging/</guid>
       <description>darktable allows you to store additional information about your images to allow them to be more easily searched and grouped. This information is stored in darktable&amp;rsquo;s database and XMP sidecar files and can also be included within exported images.
-metadata ¶ Metadata (e.g. title, description) is free-format text that usually differs for each image.
+🔗metadata Metadata (e.g. title, description) is free-format text that usually differs for each image.
 See the metadata editor module for details of how to add metadata to images.
-tagging ¶ Tags are usually shared between multiple images and are used to categorise and group them.</description>
+🔗tagging Tags are usually shared between multiple images and are used to categorise and group them.</description>
     </item>
     
   </channel>

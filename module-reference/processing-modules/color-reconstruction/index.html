@@ -14,7 +14,7 @@
 
 
 
-      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.50ed19bed5303907de761f2c0c98a5a0562b74e3c6f0fa564e4e9a84ab315485.css">
+      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.7df7f8174c95c2467fd3a2ca5a101277123c2d82771602a6ed82a09e53f20b12.css">
       
 
 <script src="https://darktable-org.github.io/dtdocs/js/jquery.js"></script>
@@ -2736,7 +2736,7 @@
     <p>Recover color information in blown-out highlights.</p>
 <p>Due to the nature of digital sensors, overexposed highlights lack valid color information. Most frequently they appear neutral white or exhibit some color cast &ndash; depending on what other image processing steps are involved. This module can “heal” overexposed highlights by replacing their colors with better fitting ones. The module acts on pixels whose luminance exceeds a user-defined threshold. Replacement colors are taken from neighboring pixels. Both the spatial distance and the luminance distance (range) are taken into account for color selection.</p>
 <p>Due to a limitation of the underlying algorithm, reconstructed colors may sometimes be displayed incorrectly if you zoom into the image in the darkroom view. If this happens you might observe a magenta shift in highlight areas close to high contrast edges, or you might see colorless highlight areas when used alongside the “reconstruct color” method of the <a href="/dtdocs/module-reference/processing-modules/highlight-reconstruction/"><em>highlight reconstruction</em></a> module. These artifacts only influence on-screen image display – the final output remains unaffected. It is recommended that you finetune the parameters of this module only when viewing the fully zoomed-out image.</p>
-<h1 id="module-controls">module controls <a href="#module-controls">¶</a></h1>
+<h1 id="module-controls"><a href="#module-controls">🔗</a><tab>module controls</h1>
 <dl>
 <dt>threshold</dt>
 <dd>The color reconstruction module replaces the color of all target pixels having luminance values above this threshold. Only pixels with luminance values below the threshold are taken as valid source pixels for replacement colors. Setting this parameter too high will cause the module to have no effect on any pixels. Setting it too low will minimize the “pool” of replacement colors &ndash; if no suitable colors are available the original colors are maintained. This parameter therefore exhibits a “sweet spot” characteristic with an optimum setting depending on the individual image.</dd>

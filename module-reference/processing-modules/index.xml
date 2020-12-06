@@ -45,7 +45,7 @@ While this module can provide a quick and convenient way to make simple adjustme
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/bloom/</guid>
       <description>Create a soft bloom over the image. This module works by blurring the highlights and then blending them with the original image.
-module controls ¶  size The spacial extent of the bloom effect threshold The threshold for the increase in brightness strength The strength of the overlighting for the effect  </description>
+🔗module controls  size The spacial extent of the bloom effect threshold The threshold for the increase in brightness strength The strength of the overlighting for the effect  </description>
     </item>
     
     <item>
@@ -78,7 +78,7 @@ This module currently only works for images recorded with a Bayer sensor (the se
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/color-balance/</guid>
       <description>A versatile tool for adjusting the image&amp;rsquo;s color balance.
 This module can be used to revert parasitic color casts or to enhance the visual atmosphere of an image using color grading, a popular technique in the cinema industry.
-overview ¶ The color balance module allows you to shift colors selectively by luminance range: shadows, mid-tones, and highlights. It does so using two different methods:
+🔗overview The color balance module allows you to shift colors selectively by luminance range: shadows, mid-tones, and highlights. It does so using two different methods:
  lift, gamma, gain the classic method, which allows a more separated control of shadows versus highlights.</description>
     </item>
     
@@ -99,7 +99,7 @@ overview ¶ The color balance module allows you to shift colors selectively by l
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/color-contrast/</guid>
       <description>A simplified control for changing the contrast or separation of colors between the green/magenta and blue/yellow axes in Lab color space. Higher values increase color contrast, lower values decrease it.
-module controls ¶  green-magenta contrast Change the green-magenta color contrast. This is equivalent to raising or lowering the steepness of the a* curve in Lab. Lower values desaturate greens and magenta, while higher values increase their saturation. blue-yellow contrast Change the blue-yellow color contrast.</description>
+🔗module controls  green-magenta contrast Change the green-magenta color contrast. This is equivalent to raising or lowering the steepness of the a* curve in Lab. Lower values desaturate greens and magenta, while higher values increase their saturation. blue-yellow contrast Change the blue-yellow color contrast.</description>
     </item>
     
     <item>
@@ -109,7 +109,7 @@ module controls ¶  green-magenta contrast Change the green-magenta color contra
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/color-correction/</guid>
       <description>Modify the global image saturation to give the image a tint or as an alternative method to split-tone the image.
-module controls ¶  color board For split toning move the white dot to the desired highlight tint and then select a tint for shadows with the dark spot. For a simple global tint set both spots to the same color. saturation Correct the global saturation.  </description>
+🔗module controls  color board For split toning move the white dot to the desired highlight tint and then select a tint for shadows with the dark spot. For a simple global tint set both spots to the same color. saturation Correct the global saturation.  </description>
     </item>
     
     <item>
@@ -119,7 +119,7 @@ module controls ¶  color board For split toning move the white dot to the desir
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/color-look-up-table/</guid>
       <description>A generic color look up table implemented in Lab space. The input is a list of source and target points and the complete mapping is interpolated using splines. The resulting look up tables (LUTs) are editable by hand and can be created using the darktable-chart utility to match given input (such as hald-cluts and RAW/JPEG with in-camera processing pairs). See using darktable-chart for details.
-module controls ¶  color board The color board grid shows a list of colored patches.</description>
+🔗module controls  color board The color board grid shows a list of colored patches.</description>
     </item>
     
     <item>
@@ -161,7 +161,7 @@ In the color zones module, you first need to choose whether you wish to adjust (
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/colorize/</guid>
       <description>Add a solid layer of color to the image.
-module controls ¶  hue The hue of the color layer. saturation The saturation of shadow tones. lightness The lightness of the color layer. source mix Controls how the lightness of the input image is mixed with the color layer. Setting this to zero will result in a uniformly colored plane.  </description>
+🔗module controls  hue The hue of the color layer. saturation The saturation of shadow tones. lightness The lightness of the color layer. source mix Controls how the lightness of the input image is mixed with the color layer. Setting this to zero will result in a uniformly colored plane.  </description>
     </item>
     
     <item>
@@ -172,7 +172,7 @@ module controls ¶  hue The hue of the color layer. saturation The saturation of
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/contrast-brightness-saturation/</guid>
       <description>A very basic tool for adjusting the contrast, brightness and saturation of an image. Please note that a number of other modules provide much more versatile methods of adjusting these parameters.
 All module controls default to a neutral position (zero) and provide the ability to increase or decrease the relevant parameter
-module controls ¶  contrast The contrast brightness The brightness saturation The saturation  </description>
+🔗module controls  contrast The contrast brightness The brightness saturation The saturation  </description>
     </item>
     
     <item>
@@ -204,7 +204,7 @@ Whenever the user interface of this module is in focus, the full uncropped image
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/defringe/</guid>
       <description>Remove color fringing, which often results from Longitudinal Chromatic Aberrations (LCA), also known as Axial Chromatic Aberrations.
 This module uses edge-detection. Where pixels are detected as a fringe, the color is rebuilt from less saturated neighboring pixels.
-module controls ¶  operation mode global average: This mode is is usually the fastest but might show slightly incorrect previews at high magnification. It might also protect the wrong regions of color too much or too little by comparison with local average.</description>
+🔗module controls  operation mode global average: This mode is is usually the fastest but might show slightly incorrect previews at high magnification. It might also protect the wrong regions of color too much or too little by comparison with local average.</description>
     </item>
     
     <item>
@@ -214,7 +214,7 @@ module controls ¶  operation mode global average: This mode is is usually the f
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/demosaic/</guid>
       <description>Control how raw files are demosaiced.
-bayer filters ¶ The sensor cells of a digital camera are not color-sensitive &amp;ndash; they are only able to record different levels of lightness. In order to obtain a color image, each cell is covered by a color filter (red, green or blue) that primarily passes light of that color. This means that each pixel of the raw image only contains information about a single color channel.</description>
+🔗bayer filters The sensor cells of a digital camera are not color-sensitive &amp;ndash; they are only able to record different levels of lightness. In order to obtain a color image, each cell is covered by a color filter (red, green or blue) that primarily passes light of that color. This means that each pixel of the raw image only contains information about a single color channel.</description>
     </item>
     
     <item>
@@ -257,7 +257,7 @@ This module has two modes of operation:
       <description>Please note that this module is deprecated in darktable 3.4 and should no longer be used for new edits. Please use the tone equalizer module or the exposure module with a drawn mask.
  Locally modify exposure based on pixel lightness.
 This module pushes exposure by increasing lightness with a Gaussian curve of a specified width, centered on a given lightness.
-module controls ¶  exposure The fill-light exposure (EV) center The median lightness impacted by the fill-light.</description>
+🔗module controls  exposure The fill-light exposure (EV) center The median lightness impacted by the fill-light.</description>
     </item>
     
     <item>
@@ -278,7 +278,7 @@ This module protects colors and contrast in the mid-tones, recovers the shadows,
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/framing/</guid>
       <description>Generate a frame around the image.
 The frame consists of a border (of a user-defined color) and a frame line within that border (of a second user-defined color). Various options are available to control the geometry of the frame.
-module controls ¶  border size The size of the frame as a percentage of the underlying full image. aspect The aspect ratio of the final module output (i.e. of the underlying image plus the frame) orientation The orientation of the frame (portrait/landscape).</description>
+🔗module controls  border size The size of the frame as a percentage of the underlying full image. aspect The aspect ratio of the final module output (i.e. of the underlying image plus the frame) orientation The orientation of the frame (portrait/landscape).</description>
     </item>
     
     <item>
@@ -301,7 +301,7 @@ Global tonemap processes each pixel of an HDR image, without taking the local su
       <description>Simulate a graduated density filter in order to correct exposure and color in a progressive manner.
 A line is shown on screen allowing the position and rotation of the gradient to be modified with the mouse.
 This module is known to provoke banding artifacts under certain conditions. You should consider activating the dithering module to alleviate these issues.
-module controls ¶  density Set the density of the filter (EV). A low value underexposes slightly whereas a high value creates a strong filter.</description>
+🔗module controls  density Set the density of the filter (EV). A low value underexposes slightly whereas a high value creates a strong filter.</description>
     </item>
     
     <item>
@@ -311,7 +311,7 @@ module controls ¶  density Set the density of the filter (EV). A low value unde
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/grain/</guid>
       <description>Simulate the grain of analog film. The grain is processed on the L channel of Lab color space.
-module controls ¶  coarseness The grain size, scaled to simulate an ISO number. strength The strength of the effect.  </description>
+🔗module controls  coarseness The grain size, scaled to simulate an ISO number. strength The strength of the effect.  </description>
     </item>
     
     <item>
@@ -344,7 +344,7 @@ Three methods of reconstruction are available:
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/highpass/</guid>
       <description>A high pass filter.
 This module is primarily intended to be used in combination with a blend mode. For example, try using the module with a blend mode of &amp;ldquo;soft light&amp;rdquo; for high pass sharpening.
-Module Controls ¶  sharpness The sharpness of the filter contrast boost The contrast boost  </description>
+🔗Module Controls  sharpness The sharpness of the filter contrast boost The contrast boost  </description>
     </item>
     
     <item>
@@ -355,7 +355,7 @@ Module Controls ¶  sharpness The sharpness of the filter contrast boost The con
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/hot-pixels/</guid>
       <description>Automatically detect and eliminate hot pixels.
 Hot pixels are pixels which have failed to record a light level correctly. Detected hot pixels are replaced by an average of their neighbors.
-module controls ¶  threshold How strong a pixel&amp;rsquo;s value needs to deviate from that of its neighbors to be regarded as a hot pixel. strength The blending strength of the hot pixels with their surrounding. detect by 3 neighbours Extend the detection of hot pixels &amp;ndash; regard a pixel as hot if a minimum of only three (instead of four) neighbor pixels deviate by more than the threshold level.</description>
+🔗module controls  threshold How strong a pixel&amp;rsquo;s value needs to deviate from that of its neighbors to be regarded as a hot pixel. strength The blending strength of the hot pixels with their surrounding. detect by 3 neighbours Extend the detection of hot pixels &amp;ndash; regard a pixel as hot if a minimum of only three (instead of four) neighbor pixels deviate by more than the threshold level.</description>
     </item>
     
     <item>
@@ -375,7 +375,7 @@ module controls ¶  threshold How strong a pixel&amp;rsquo;s value needs to devi
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/invert/</guid>
       <description>Please note that this module is deprecated in darktable 3.4 and should no longer be used for new edits. Please use the negadoctor module instead.
  Invert scanned negatives.
-module controls ¶  color of film material Clicking on the colored field will open a color selector dialog which offers you a choice of commonly used colors, or allows you to define an RGB color. You can also activate the color picker to take a color probe from your image – preferably from the unexposed border of your negative.</description>
+🔗module controls  color of film material Clicking on the colored field will open a color selector dialog which offers you a choice of commonly used colors, or allows you to define an RGB color. You can also activate the color picker to take a color probe from your image – preferably from the unexposed border of your negative.</description>
     </item>
     
     <item>
@@ -407,7 +407,7 @@ The levels tool offers two modes of operation:
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/liquify/</guid>
       <description>Move pixels around by applying freestyle distortions to parts of the image using points, lines and curves.
-nodes ¶ Each of liquify&amp;rsquo;s tools is based on nodes. A point is given by a single node and a line or curve consists of a set of nodes defining a path.
+🔗nodes Each of liquify&amp;rsquo;s tools is based on nodes. A point is given by a single node and a line or curve consists of a set of nodes defining a path.
 There is a limit of 100 nodes in a single liquify instance. For more nodes than this, use additional module instances. However, note that the liquify module consumes a lot of system resources.</description>
     </item>
     
@@ -419,7 +419,7 @@ There is a limit of 100 nodes in a single liquify instance. For more nodes than 
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/local-contrast/</guid>
       <description>Enhance local contrast.
 This is achieved using either a local laplacian filter (the default mode) or an unnormalized bilateral filter. Both modes work exclusively on the L channel from Lab. The local laplacian filter has been designed to be very robust against unwanted halo effects and gradient reversals along edges.
-module controls ¶  mode Choice of local laplacian filter or bilateral grid. The following sections define the controls available for each of these modes.</description>
+🔗module controls  mode Choice of local laplacian filter or bilateral grid. The following sections define the controls available for each of these modes.</description>
     </item>
     
     <item>
@@ -440,7 +440,7 @@ The idea is to calculate a scotopic vision image, which is perceived by the rods
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/lowpass/</guid>
       <description>Apply a low pass filter (for example, a Gaussian blur) to the image, while controlling the output contrast and saturation.
 This module is primarily intended to be used in combination with a blend mode. For example, try using the local contrast mask preset with the overlay blend mode.
-module controls ¶  radius The radius of the blur soften with The blur algorithm to use  gaussian blur: Blur all image channels (L, a, b)    bilateral filter: Blur the L channel only, while preserving edges   contrast Higher absolute values increase contrast.</description>
+🔗module controls  radius The radius of the blur soften with The blur algorithm to use  gaussian blur: Blur all image channels (L, a, b)    bilateral filter: Blur the L channel only, while preserving edges   contrast Higher absolute values increase contrast.</description>
     </item>
     
     <item>
@@ -472,7 +472,7 @@ To use this module, first reduce the filter size (to concentrate its effect) and
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/negadoctor/</guid>
       <description>Negadoctor allows you to process a scanned film negative.
 You can obtain an image of a negative using a film scanner, or by photographing it against a white light (e.g. a light table or computer monitor) or off-camera flash.
-preparation ¶ If the image of the negative was obtained using a digital camera, then in order to obtain accurate colors in the final image, you will need to take the following points into consideration:</description>
+🔗preparation If the image of the negative was obtained using a digital camera, then in order to obtain accurate colors in the final image, you will need to take the following points into consideration:</description>
     </item>
     
     <item>
@@ -484,7 +484,7 @@ preparation ¶ If the image of the negative was obtained using a digital camera,
       <description>Rotate the image 90 degrees at a time.
 The module is enabled by default and the orientation is automatically set based on the image&amp;rsquo;s Exif data.
 The orientation can also be set using the selected images module in the lighttable view.
-module controls ¶  rotate Double click the label to reset the image&amp;rsquo;s rotation counter-clockwise Rotate the image 90 degrees counter-clockwise clockwise Rotate the image 90 degrees clockwise  </description>
+🔗module controls  rotate Double click the label to reset the image&amp;rsquo;s rotation counter-clockwise Rotate the image 90 degrees counter-clockwise clockwise Rotate the image 90 degrees clockwise  </description>
     </item>
     
     <item>
@@ -516,7 +516,7 @@ Perspective distortions are a natural effect when projecting a three dimensional
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/raw-black-white-point/</guid>
       <description>Define camera-specific black and white points.
 This module is activated automatically for all raw images. Default settings are applied for all supported cameras. Changes to the defaults are normally not required.
-module controls ¶  black level 0-3 The camera-specific black level of the four pixels in the RGGB Bayer pattern. Pixels with values lower than the defined level are considered not to contain valid data. white point The camera-specific white level.</description>
+🔗module controls  black level 0-3 The camera-specific black level of the four pixels in the RGGB Bayer pattern. Pixels with values lower than the defined level are considered not to contain valid data. white point The camera-specific white level.</description>
     </item>
     
     <item>
@@ -527,7 +527,7 @@ module controls ¶  black level 0-3 The camera-specific black level of the four 
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/raw-denoise/</guid>
       <description>Perform denoising on raw image data before it is demosaiced.
 This module has been ported from dcraw.
-module controls ¶  noise threshold The threshold for noise detection. Higher values lead to stronger noise removal and greater loss of image detail. coarse/fine curves The noise of an image is usually a combination of fine-grained and coarse-grained noise. These curves allow the image to be denoised more or less depending on the coarseness of the visible noise.</description>
+🔗module controls  noise threshold The threshold for noise detection. Higher values lead to stronger noise removal and greater loss of image detail. coarse/fine curves The noise of an image is usually a combination of fine-grained and coarse-grained noise. These curves allow the image to be denoised more or less depending on the coarseness of the visible noise.</description>
     </item>
     
     <item>
@@ -591,7 +591,7 @@ The module has no controls.</description>
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/shadows-and-highlights/</guid>
       <description>Modify the tonal range of the shadows and highlights of an image by enhancing local contrast.
-module controls ¶  shadows Control the effect on shadows. Positive values will lighten shadows while negative values will darken them. highlights Control the effect on highlights. Positive values will lighten highlights while negative values will darken them. white point adjustment By default the algorithm of this module leaves the black and white points untouched.</description>
+🔗module controls  shadows Control the effect on shadows. Positive values will lighten shadows while negative values will darken them. highlights Control the effect on highlights. Positive values will lighten highlights while negative values will darken them. white point adjustment By default the algorithm of this module leaves the black and white points untouched. In some cases an image might contain tonal variations beyond the white point, i.</description>
     </item>
     
     <item>
@@ -602,7 +602,7 @@ module controls ¶  shadows Control the effect on shadows. Positive values will 
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/sharpen/</guid>
       <description>Sharpen the details in the image using a standard UnSharp Mask (USM).
 This module works by increasing the contrast around edges and thereby enhancing the impression of sharpness of an image. This module is applied to the L channel in Lab color space.
-module controls ¶  radius The unsharp mask applies a gaussian blur to the image as part of its algorithm. This parameter controls the radius of that blur which, in turn, defines the spatial extent of the edge enhancement.</description>
+🔗module controls  radius The unsharp mask applies a gaussian blur to the image as part of its algorithm. This parameter controls the radius of that blur which, in turn, defines the spatial extent of the edge enhancement.</description>
     </item>
     
     <item>
@@ -614,7 +614,7 @@ module controls ¶  radius The unsharp mask applies a gaussian blur to the image
       <description>Create a softened image using the Orton effect.
 Michael Orton achieved his results on slide film by using two exposures of the same scene, one well exposed and one overexposed. He then used a darkroom technique to blend these two images into a final image where the overexposed image was blurred.
 This module is a near-copy of Orton&amp;rsquo;s analog process into the digital domain.
-module controls ¶  size The size of blur of the overexposed image.</description>
+🔗module controls  size The size of blur of the overexposed image.</description>
     </item>
     
     <item>
@@ -625,7 +625,7 @@ module controls ¶  size The size of blur of the overexposed image.</description
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/split-toning/</guid>
       <description>Create a two color linear toning effect where the shadows and highlights are represented by two different colors.
 The split-toning module does not convert images to black and white and has limited benefits on color images. In order to perform traditional split-toning, the input to this module should therefore be monochrome.
-module controls ¶  shadows and highlights color Set the desired hue and saturation for both shadows and highlights. Clicking on the colored squares will open a color selector dialog which offers you a choice of commonly used colors, or allows you to define a color in RGB color space.</description>
+🔗module controls  shadows and highlights color Set the desired hue and saturation for both shadows and highlights. Clicking on the colored squares will open a color selector dialog which offers you a choice of commonly used colors, or allows you to define a color in RGB color space.</description>
     </item>
     
     <item>
@@ -698,7 +698,7 @@ If you decide to use an ICC profile from the camera manufacturer in the input co
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/velvia/</guid>
       <description>Resaturate pixels in a weighted manner that gives more weight to blacks, whites and low-saturation pixels.
-module controls ¶  strength The strength of the effect mid-tones bias Reduce the effect on mid-tones in order to avoid unnatural skin tones. Reducing the mid-tone bias reduces mid-tone protection and makes the overall velvia effect stronger.  </description>
+🔗module controls  strength The strength of the effect mid-tones bias Reduce the effect on mid-tones in order to avoid unnatural skin tones. Reducing the mid-tone bias reduces mid-tone protection and makes the overall velvia effect stronger.  </description>
     </item>
     
     <item>
@@ -708,7 +708,7 @@ module controls ¶  strength The strength of the effect mid-tones bias Reduce th
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/vibrance/</guid>
       <description>Saturate and reduce the lightness of the most saturated pixels to make the colors more vivid.
-module controls ¶  vibrance The amount of vibrance to apply to the image.  </description>
+🔗module controls  vibrance The amount of vibrance to apply to the image.  </description>
     </item>
     
     <item>

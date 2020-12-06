@@ -14,7 +14,7 @@
 
 
 
-      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.50ed19bed5303907de761f2c0c98a5a0562b74e3c6f0fa564e4e9a84ab315485.css">
+      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.7df7f8174c95c2467fd3a2ca5a101277123c2d82771602a6ed82a09e53f20b12.css">
       
 
 <script src="https://darktable-org.github.io/dtdocs/js/jquery.js"></script>
@@ -2740,7 +2740,7 @@
 <hr>
 <p><strong>Note</strong>: Despite the technical look of this module, the best way to set it up is to assess the quality of the visual result. Do not overthink the numbers that are put in the GUI to quantify the strength of the effects.</p>
 <hr>
-<h1 id="prerequisites">prerequisites <a href="#prerequisites">¶</a></h1>
+<h1 id="prerequisites"><a href="#prerequisites">🔗</a><tab>prerequisites</h1>
 <p>In order to get the best from this module, your images need some preparation:</p>
 <dl>
 <dt>capturing (ETTR)</dt>
@@ -2758,7 +2758,7 @@
 <dt>disable tone mapping modules</dt>
 <dd>If you plan to use one of <em>filmic rgb</em>&rsquo;s chrominance preservation modes, avoid using <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a> and the various tone mapping modules. These may produce unpredictable color shifts that would make the chrominance preservation useless. None of these modules should be required when using <em>filmic rgb</em>.</dd>
 </dl>
-<h1 id="usage">usage <a href="#usage">¶</a></h1>
+<h1 id="usage"><a href="#usage">🔗</a><tab>usage</h1>
 <p>The <em>filmic rgb</em> module aims at mapping the dynamic range of the photographed scene (RAW image) to the dynamic range of the display.</p>
 <p>This mapping is defined in three steps, each handled in a separate tab in the interface:</p>
 <ul>
@@ -2790,7 +2790,7 @@
 </ul>
 <p>In this configuration, filmic will only perform a logarithmic tone mapping between the bounds set in the <em>scene</em> tab.</p>
 <hr>
-<h1 id="graphic-display">graphic display <a href="#graphic-display">¶</a></h1>
+<h1 id="graphic-display"><a href="#graphic-display">🔗</a><tab>graphic display</h1>
 <p>The graphic display of the <em>filmic rgb</em> module now offers multiple views. You can cycle through the different views using the 
 
 
@@ -2844,8 +2844,8 @@
 </p>
 </dd>
 </dl>
-<h1 id="module-controls">module controls <a href="#module-controls">¶</a></h1>
-<h2 id="scene">scene <a href="#scene">¶</a></h2>
+<h1 id="module-controls"><a href="#module-controls">🔗</a><tab>module controls</h1>
+<h2 id="scene"><a href="#scene">🔗</a><tab>scene</h2>
 <p>The controls of the <em>scene</em> tab are similar in principle to those of the <em>levels</em> module (black, grey, white). The difference is that <em>levels</em> assume display-referred pixels values (between 0 and 100%), while <em>filmic</em> allows you to work on scene-referred pixels (between -infinity EV and + infinity EV), which forces the use of a different interface.</p>
 <dl>
 <dt>middle-grey luminance (hidden by default)</dt>
@@ -2876,10 +2876,10 @@
 <p><strong>Note</strong>: There is no direct relationship between your camera sensor&rsquo;s dynamic range (to be found in DxoMark.com or PhotonsToPhotos.org measurements) and the dynamic range in filmic (scene white EV - scene black EV). Many things happen before <em>filmic</em> in the pipeline, amongst them a black raw offset that could map black to 0, such that <em>filmic</em> sees a theoretically infinite dynamic range at its input (which has to do only with pixel encoding manipulation in software, not actual sensor capabilities).</p>
 <p>The <em>scene-referred</em> workflow forces a black level correction of -0.0002, in the <em>exposure</em> module, which ensures that the dynamic range seen by <em>filmic&rsquo;s</em> input is around 12.3 EV most of the time. Decrease this value even more if setting the black relative exposure in <em>filmic</em> to -16 EV fails to unclip blacks.</p>
 <hr>
-<h2 id="reconstruct">reconstruct <a href="#reconstruct">¶</a></h2>
+<h2 id="reconstruct"><a href="#reconstruct">🔗</a><tab>reconstruct</h2>
 <p>This tab provides controls that will help to blend transisitons between unclipped and clipped areas within an image and can also help to reconstruct colors from adjacent pixels. It is designed to deal with spotlights that could not possibly be unclipped when taking the shot (such as naked light bulbs or the sun disc when they are in the frame) and aims at diffusing their edges as film would do. It is not designed to recover large areas of clipped pixels or in-paint missing parts of the image.</p>
 <p>Firstly, a mask needs to be set up to identify the areas of the image that will be affected by the highlights reconstruction. Then there are some controls to fine-tune some of the tradeoffs made by the reconstruction algorithm.</p>
-<h3 id="_highlights-clipping_"><em>highlights clipping</em> <a href="#_highlights-clipping_">¶</a></h3>
+<h3 id="_highlights-clipping_"><a href="#_highlights-clipping_">🔗</a><tab><em>highlights clipping</em></h3>
 <p>These controls allow you to choose which areas of the image are impacted by the highlight reconstruction algorithms.</p>
 <dl>
 <dt>threshold</dt>
@@ -2889,7 +2889,7 @@
 <dt>display highlight reconstruction mask</dt>
 <dd>Click on the icon to the right of this label to toggle the display of the highlight reconstruction mask. It is recommended that you turn this on while adjusting the above controls.</dd>
 </dl>
-<h3 id="_balance_"><em>balance</em> <a href="#_balance_">¶</a></h3>
+<h3 id="_balance_"><a href="#_balance_">🔗</a><tab><em>balance</em></h3>
 <p>These controls allow you to balance the trade-offs between the various reconstruction algorithms.</p>
 <dl>
 <dt>structure/texture</dt>
@@ -2899,7 +2899,7 @@
 <dt>grey/colorful details</dt>
 <dd>Use this to control whether the algorithm favors the recovery of monochromatic highlights or colorful highlights. Move the slider to the right if you want more color in the highlights. Move the slider to the left if you want to reduce the saturation of the highlights. It can be helpful to reduce the saturation in the highlights if you see start seeing magenta or out-of-gamut colors.</dd>
 </dl>
-<h2 id="look">look <a href="#look">¶</a></h2>
+<h2 id="look"><a href="#look">🔗</a><tab>look</h2>
 <p>When working on the <em>look</em> tab, it is recommended that you monitor the S-curve spline on the <em>look only</em> graph. This curve starts from the scene/display black levels at the bottom left of the graph, and should smoothly increase up to the scene/display white levels at the top right. Sometimes, if the constraints on the S-curve are too tight, the splines in the shadows and/or highlights regions can &ldquo;overshoot&rdquo; the limits of the display, and an orange warning is shown on those parts of the spline.</p>
 <p>If you see the orange warning indicator at either end of the S-curve, corrective actions should be performed to bring the S-curve back to a smooth monotonically increasing curve. This may involve:</p>
 <ul>
@@ -2944,7 +2944,7 @@
 <p>Please note that this desaturation strategy has changed compared to previous versions of <em>filmic rgb</em> which provided a different slider control labelled <em>extreme luminance saturation</em>. You can revert to the previous desaturation behaviour by selecting &ldquo;v3 (2019)&rdquo; in the <em>color science</em> setting on the <em>options</em> tab.</p>
 </dd>
 </dl>
-<h2 id="display">display <a href="#display">¶</a></h2>
+<h2 id="display"><a href="#display">🔗</a><tab>display</h2>
 <p>The parameters in this tab will only rarely require adjustment.</p>
 <dl>
 <dt>target black luminance</dt>
@@ -2960,7 +2960,7 @@
 <p>To avoid double-ups and washed pictures, <em>filmic rgb</em> applies a “gamma” compression reverting the output ICC gamma correction, so the middle-grey is correctly remapped at the end. To remove this compression, set the destination power factor to 1.0 and the middle-grey destination to 45%.</p>
 </dd>
 </dl>
-<h2 id="options">options <a href="#options">¶</a></h2>
+<h2 id="options"><a href="#options">🔗</a><tab>options</h2>
 <dl>
 <dt>color science</dt>
 <dd>This setting defaults to <em>v4 (2020)</em> for new images, and defines the algorithms used by the <em>filmic rgb</em> module (such as the extreme luminance desaturation strategy). To revert to the behaviour of previous versions of <em>filmic rgb</em>, set this parmaeter to <em>v3 (2019)</em>. If you have previously made edits to an image using older versions of <em>filmic rgb</em>, this will already be set to <em>v3 (2019)</em> in order to provide backward compatibility for those edits.</dd>

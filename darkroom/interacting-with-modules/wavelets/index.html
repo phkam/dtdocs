@@ -14,7 +14,7 @@
 
 
 
-      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.50ed19bed5303907de761f2c0c98a5a0562b74e3c6f0fa564e4e9a84ab315485.css">
+      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.7df7f8174c95c2467fd3a2ca5a101277123c2d82771602a6ed82a09e53f20b12.css">
       
 
 <script src="https://darktable-org.github.io/dtdocs/js/jquery.js"></script>
@@ -2740,7 +2740,7 @@
 <li>contrast adjustment (in the <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> module)</li>
 <li>blurring or removal of unwanted detail (in the <a href="/dtdocs/module-reference/processing-modules/retouch/"><em>retouch</em></a> module)</li>
 </ul>
-<h1 id="theory">theory <a href="#theory">¶</a></h1>
+<h1 id="theory"><a href="#theory">🔗</a><tab>theory</h1>
 <p>A wavelet is a mathematical function that starts off at zero, oscillates up and down and then settles back to zero. The following diagram shows some simple wavelets of differing sizes.</p>
 <p>
 
@@ -2785,7 +2785,7 @@
 <img src="https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/wavelets/wavelets-layer-scale-8.png#w50" alt="wavelets-layer-scale-8"  />
 
 </p>
-<h1 id="why-use-wavelets">why use wavelets? <a href="#why-use-wavelets">¶</a></h1>
+<h1 id="why-use-wavelets"><a href="#why-use-wavelets">🔗</a><tab>why use wavelets?</h1>
 <p>Suppose, in the above example, that we wanted to smooth out some of the blotchiness in the model&rsquo;s skin, without losing any of the underlying skin texture. Wavelet decomposition makes this a trivial operation - we can simply use the retouch module to apply a Gaussian blur to only the &lsquo;blotchy&rsquo; detail layer(s), leaving all other detail layers untouched. Once the adjustment is complete, the retouch module simply recombines that adjusted layer with the remaining untouched layers to produce the final image.</p>
 <p>The sequence of images below shows (1) The original image; (2) The layer (scale 5) that we wish to blur; and (3) The final image after the scale 5 layer has been blurred and the layers recombined:</p>
 <p>
@@ -2807,9 +2807,9 @@
 
 </p>
 <p>As you can see, the large-scale skin blotches have been removed, but the smaller-scale details remain untouched.</p>
-<h1 id="interacting-with-wavelet-scales">interacting with wavelet scales <a href="#interacting-with-wavelet-scales">¶</a></h1>
+<h1 id="interacting-with-wavelet-scales"><a href="#interacting-with-wavelet-scales">🔗</a><tab>interacting with wavelet scales</h1>
 <p>There are two methods by which processing modules allow you to modify their operation using wavelet scales</p>
-<h2 id="wavelet-decomposition">wavelet decomposition <a href="#wavelet-decomposition">¶</a></h2>
+<h2 id="wavelet-decomposition"><a href="#wavelet-decomposition">🔗</a><tab>wavelet decomposition</h2>
 <p>As discussed above, the <em>retouch</em> module allows you to choose how many detail levels to split your image into. It decomposes the image into separate layers and allows you to perform operations selectively on each individual layer or on the image as a whole:</p>
 <p>
 
@@ -2818,7 +2818,7 @@
 
 </p>
 <p>See the <a href="/dtdocs/module-reference/processing-modules/retouch/"><em>retouch</em></a> module documentation for more details.</p>
-<h2 id="spline-controls">spline controls <a href="#spline-controls">¶</a></h2>
+<h2 id="spline-controls"><a href="#spline-controls">🔗</a><tab>spline controls</h2>
 <p>The <a href="/dtdocs/module-reference/processing-modules/denoise-profiled/"><em>denoise (profiled)</em></a>, <a href="/dtdocs/module-reference/processing-modules/raw-denoise/"><em>raw denoise</em></a> and <a href="/dtdocs/module-reference/processing-modules/contrast-equalizer/"><em>contrast equalizer</em></a> modules allow their effects to be applied more or less to different wavelet scales using <em>splines</em>.</p>
 <p>
 

@@ -85,7 +85,7 @@ The image information line can be displayed in the top, bottom, left or right pa
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/</guid>
       <description>Manage the layout and grouping of processing modules.
  This maintenance screen can be accessed from the presets menu beside the module search box or group icons (below the histogram in the darkroom view).
-module controls ¶ preset list ¶ The left-hand panel lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. User-defined presets are placed at the bottom of the list.</description>
+🔗module controls 🔗preset list The left-hand panel lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. User-defined presets are placed at the bottom of the list.</description>
     </item>
     
     <item>
