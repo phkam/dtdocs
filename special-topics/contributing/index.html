@@ -14,7 +14,7 @@
 
 
 
-      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.b2f67389ac7b9f9352c39873d52cdfb6abe398a8ed99fbe766778fd2e65a593c.css">
+      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.90bf285118b682729e6b91f7d5850183ef66340a61bb19643e4c815d48df76ef.css">
       
 
 <script src="https://darktable-org.github.io/dtdocs/js/jquery.js"></script>
@@ -2799,7 +2799,10 @@ weight: 10
 <dt>
 
 
-<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/active-icon.png" alt="active-icon"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/active-icon.png" alt="active-icon"  class="icon "   />
 
  a control accessed through a button with an icon</dt>
 <dd>When a control is activated using an icon, take a screenshot of the icon using the standard darktable theme and add it before the name of the control</dd>
@@ -2836,10 +2839,13 @@ weight: 10
 <p>Several keywords or filename suffixes are used to determine how an image is rendered.</p>
 <dl>
 <dt>icon</dt>
-<dd>To insert an image as an icon, ensure that the &ldquo;alt text&rdquo; has the word &ldquo;icon&rdquo; at the end. The markdown <code>![squirrel icon](./contributing/contributing.png)</code> causes the following output: 
+<dd>To insert an image as an icon, include <code>#icon</code> after the image name in the link. The markdown <code>![squirrel icon](./contributing/contributing.png#icon)</code> causes the following output: 
 
 
-<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel icon"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel icon"  class="icon "   />
 
 </dd>
 <dt>image width</dt>
@@ -2848,28 +2854,40 @@ weight: 10
 <dd>
 
 
-<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png#w25" alt="squirrel"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  class="w25 "   />
 
 </dd>
 <dd><code>![squirrel](./contributing/squirrel.png#w50)</code></dd>
 <dd>
 
 
-<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png#w50" alt="squirrel"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  class="w50 "   />
 
 </dd>
 <dd><code>![squirrel](./contributing/squirrel.png#w75)</code></dd>
 <dd>
 
 
-<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png#w75" alt="squirrel"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  class="w75 "   />
 
 </dd>
 <dd><code>![squirrel](./contributing/squirrel.png#w100)</code></dd>
 <dd>
 
 
-<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png#w100" alt="squirrel"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  class="w100 "   />
 
 </dd>
 <dt>inline</dt>
@@ -2877,7 +2895,10 @@ weight: 10
 <dd>This image 
 
 
-<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png#w25#inline" alt="squirrel"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  class="w25 inline "   />
 
  has been made inline using the syntax <code>![squirrel](./contributing/squirrel.png#w25#inline)</code></dd>
 <dt>default</dt>
@@ -2886,7 +2907,10 @@ weight: 10
 <dd>
 
 
-<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"   />
 
 </dd>
 </dl>

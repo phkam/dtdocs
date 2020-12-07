@@ -14,7 +14,7 @@
 
 
 
-      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.b2f67389ac7b9f9352c39873d52cdfb6abe398a8ed99fbe766778fd2e65a593c.css">
+      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.90bf285118b682729e6b91f7d5850183ef66340a61bb19643e4c815d48df76ef.css">
       
 
 <script src="https://darktable-org.github.io/dtdocs/js/jquery.js"></script>
@@ -2738,7 +2738,10 @@
 <p>
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager.png" alt="mask manager"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager.png" alt="mask manager"   />
 
 </p>
 <p>This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.</p>
@@ -2772,13 +2775,19 @@
 <p>
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex1.png#w25" alt="gradient"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex1.png" alt="gradient"  class="w25 "   />
 
 </p>
 <p>
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex2.png#w25" alt="path"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex2.png" alt="path"  class="w25 "   />
 
 </p>
 <dl>
@@ -2786,14 +2795,20 @@
 <dd>This is the default set operator. It is depicted by the symbol 
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_union.png" alt="union-icon"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_union.png" alt="union-icon"  class="icon "   />
 
  to the left of the shape name. The shape adds to the existing mask in such a way that the resulting mask contains the pixels that are <em>either</em> selected in the existing mask <em>or</em> in the added shape. In overlapping areas the maximum value is taken:</dd>
 <dd>
 <p>
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex3.png#w25" alt="union"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex3.png" alt="union"  class="w25 "   />
 
 </p>
 </dd>
@@ -2801,14 +2816,20 @@
 <dd>This set operator is depicted by the symbol 
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_intersection.png" alt="intersection-icon"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_intersection.png" alt="intersection-icon"  class="icon "   />
 
  to the left of the shape name. The shape adds to the existing mask in such a way that the resulting mask contains only pixels that are selected in <em>both</em> the existing mask <em>and</em> the added shape. In overlapping areas the minimum value is used. In the given example we use this operator to “imprint” the path with a gradient:</dd>
 <dd>
 <p>
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex4.png#w25" alt="intersection"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex4.png" alt="intersection"  class="w25 "   />
 
 </p>
 </dd>
@@ -2816,14 +2837,20 @@
 <dd>This set operator is depicted by the symbol 
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_difference.png" alt="difference-icon"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_difference.png" alt="difference-icon"  class="icon "   />
 
  to the left of the shape name. In the non-overlapping area the existing mask is unchanged. In the resulting mask, pixels are selected only if they are selected in the existing mask but <em>not</em> in the added shape. This set operator can be chosen if you want to “cut out” a region from within an existing selection:</dd>
 <dd>
 <p>
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex5.png#w25" alt="difference"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex5.png" alt="difference"  class="w25 "   />
 
 </p>
 </dd>
@@ -2831,14 +2858,20 @@
 <dd>This set operator is depicted by the symbol 
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_exclusion.png" alt="exclusion-icon"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/masks_exclusion.png" alt="exclusion-icon"  class="icon "   />
 
  to the left of the shape name. The resulting mask has all pixels selected that are either selected in the existing mask and not in the added shape or vice versa. This is equivalent to an “exclusive or”:</dd>
 <dd>
 <p>
 
 
-<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex6.png#w25" alt="exclusion"  />
+
+
+
+<img src="https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/mask-manager_ex6.png" alt="exclusion"  class="w25 "   />
 
 </p>
 </dd>
