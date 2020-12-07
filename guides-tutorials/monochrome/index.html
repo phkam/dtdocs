@@ -14,7 +14,7 @@
 
 
 
-      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.71860c45b081e80b43a1b4cb957c5c31eca0ea6dae7b40214837a8673df59f17.css">
+      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.b2f67389ac7b9f9352c39873d52cdfb6abe398a8ed99fbe766778fd2e65a593c.css">
       
 
 <script src="https://darktable-org.github.io/dtdocs/js/jquery.js"></script>
@@ -2743,7 +2743,7 @@
 </li>
 </ul>
 <p>These approaches and other monochrome-related features in darktable are discussed in the following sections.</p>
-<h1 id="importing-and-flagging-images-as-monochrome"><a href="#importing-and-flagging-images-as-monochrome">🔗</a><tab>importing and flagging images as monochrome</h1>
+<h1 id="importing-and-flagging-images-as-monochrome"><a href="#importing-and-flagging-images-as-monochrome">🔗</a>importing and flagging images as monochrome</h1>
 <p>When importing an image, there are a number of properties that can be used to indicate that the image requires a monochrome treatment:</p>
 <ul>
 <li>
@@ -2763,8 +2763,8 @@
 </ul>
 <p>If any of the above methods result in an image being flagged as monochrome, darktable modules can use this information to present the user with some monochrome-specific module controls and/or apply special processing to the image.</p>
 <p>The <code>darktable|mode|monochrome</code> tag will be automatically applied to any images flagged as monochrome, and if you have enabled any permanent overlay information on your lighttable thumbnails, such images will be marked with a visual indicator <code>B&amp;W</code> next to the file type information. By automatically applying this tag and visual indicator, darktable makes it easy to set up filters to single out any images for monochrome treatment, and to see at a glance which images in the current collection bear the <em>monochrome</em> tag.</p>
-<h1 id="monochrome-conversion"><a href="#monochrome-conversion">🔗</a><tab>monochrome conversion</h1>
-<h2 id="physical-approach"><a href="#physical-approach">🔗</a><tab>physical approach</h2>
+<h1 id="monochrome-conversion"><a href="#monochrome-conversion">🔗</a>monochrome conversion</h1>
+<h2 id="physical-approach"><a href="#physical-approach">🔗</a>physical approach</h2>
 <p>This approach tends to work with linear scene-referred data from the sensor, and attempts to mimic the response of a photographic film with a silver emulsion. It consists of three steps:</p>
 <ol>
 <li>
@@ -2777,7 +2777,7 @@
 <p>Developing a monochrome film in the darkroom traditionally involves &ldquo;dodging and burning&rdquo; to control the level of exposure across different parts of the image. This can be emulated in darktable by using either the <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a> module with manually created <a href="/dtdocs/darkroom/masking-and-blending/overview/">masks</a>, or by using the <a href="/dtdocs/module-reference/processing-modules/tone-equalizer/"><em>tone equalizer</em></a> module, which will automatically generate a mask for you using a guided filter.</p>
 </li>
 </ol>
-<h2 id="perceptual-approach"><a href="#perceptual-approach">🔗</a><tab>perceptual approach</h2>
+<h2 id="perceptual-approach"><a href="#perceptual-approach">🔗</a>perceptual approach</h2>
 <p>The other option for producing a monochrome image is to reduce the color saturation in the image, which can be done in a linear colorspace, or in a color space oriented towards modelling human perception.</p>
 <ul>
 <li>

@@ -14,7 +14,7 @@
 
 
 
-      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.71860c45b081e80b43a1b4cb957c5c31eca0ea6dae7b40214837a8673df59f17.css">
+      <link rel="stylesheet" href="https://darktable-org.github.io/dtdocs/css/style.min.b2f67389ac7b9f9352c39873d52cdfb6abe398a8ed99fbe766778fd2e65a593c.css">
       
 
 <script src="https://darktable-org.github.io/dtdocs/js/jquery.js"></script>
@@ -2732,10 +2732,10 @@
 
     <p>This page defines the style guide for dtdocs and information about how to contribute to the project.</p>
 <p>It is included in the user manual so that you can see how the page is rendered as well as how it is written. Please go to <a href="https://raw.githubusercontent.com/darktable-org/dtdocs/master/content/special-topics/contributing.md" target="_blank">GitHub</a> to see the source for this page.</p>
-<h1 id="format"><a href="#format">🔗</a><tab>format</h1>
+<h1 id="format"><a href="#format">🔗</a>format</h1>
 <p>This website is authored in pure markdown, using some extensions. It is initially designed to work with the Hugo SSG but indended to be portable enough that it can be easily rendered with another application if required.</p>
 <p>File should be rendered in UTF-8 and should not include any column wrapping.</p>
-<h1 id="structure"><a href="#structure">🔗</a><tab>structure</h1>
+<h1 id="structure"><a href="#structure">🔗</a>structure</h1>
 <p>The following shows the structure of an example main chapter with subsections in the dtdocs website.</p>
 <pre><code>example-chapter/
    _index.md
@@ -2752,7 +2752,7 @@
 <li><code>_index.md</code> files do not contain any content (they contain metadata only) and are used to render section headers and ToC entries. In the above example <code>example-chapter/_index.md</code> defines the title of the example chapter and the order in which it appears in the main table of contents. Similarly <code>example-chapter/section1-with-subsections/_index.md</code> defines metadata for the first section of the chapter.</li>
 <li>Media files should be contained in a directory with the same name as the page to which they relate. In this example, <code>example-chapter/section1-with-subsections/subsection1</code> contains media related to the <code>subsection1.md</code> page.</li>
 </ul>
-<h1 id="metadata"><a href="#metadata">🔗</a><tab>metadata</h1>
+<h1 id="metadata"><a href="#metadata">🔗</a>metadata</h1>
 <p>Metadata for the markdown files is presented at the head of the page using yaml. Any metadata may be defined &ndash; the module reference sections contain quite a lot of specific metadata &ndash; however the following defines some minimal metadata for the example page <code>example-chapter/section1-with-subsections/subsection1.md</code>.</p>
 <pre><code>---
 title: Sub Section 1 Title
@@ -2774,8 +2774,8 @@ weight: 10
          subsection2.md             # weight: 10 (place subsection2 page at the start of section1)
       section2.md                # weight: 20 (place section2 in the middle of example-chapter)
       section3.md                # weight: 10 (place section3 at the start of example-chapter)
-</code></pre><h1 id="content"><a href="#content">🔗</a><tab>content</h1>
-<h2 id="general-style-guidance"><a href="#general-style-guidance">🔗</a><tab>general style guidance</h2>
+</code></pre><h1 id="content"><a href="#content">🔗</a>content</h1>
+<h2 id="general-style-guidance"><a href="#general-style-guidance">🔗</a>general style guidance</h2>
 <ul>
 <li>All content should be authored in plain markdown without shortcodes and HTML should be kept to an absolute minimum , if used at all</li>
 <li>Minimalism is an absolute must. Fewer words are preferred</li>
@@ -2788,7 +2788,7 @@ weight: 10
 <li>Changes to the content should be proposed via pull request or a similar mechanism</li>
 <li>Your submissions will be copy edited, don&rsquo;t take it personally</li>
 </ul>
-<h2 id="definition-lists"><a href="#definition-lists">🔗</a><tab>definition lists</h2>
+<h2 id="definition-lists"><a href="#definition-lists">🔗</a>definition lists</h2>
 <p>The standard method of presenting information about darktable module controls is with the use of definition lists.</p>
 <dl>
 <dt>gui control name</dt>
@@ -2815,14 +2815,14 @@ weight: 10
 </dd>
 </dl>
 <p>Definition lists are also used throughout the document, wherever a named piece of functionality needs to be defined. See, for example, <a href="/dtdocs/special-topics/program-invocation/darktable-cli/">darktable-cli</a>.</p>
-<h2 id="notes"><a href="#notes">🔗</a><tab>notes</h2>
+<h2 id="notes"><a href="#notes">🔗</a>notes</h2>
 <p>If you wish to present an important note to the user, use the following format:</p>
 <hr>
 <p><strong>Note</strong>: This is an important note.</p>
 <hr>
-<h2 id="fixed-width-fonts-and-code-blocks"><a href="#fixed-width-fonts-and-code-blocks">🔗</a><tab>fixed-width fonts and code blocks</h2>
+<h2 id="fixed-width-fonts-and-code-blocks"><a href="#fixed-width-fonts-and-code-blocks">🔗</a>fixed-width fonts and code blocks</h2>
 <p>Fixed width fonts (using the ` character) should normally only be used for code blocks and when referencing file names and command line parameters.</p>
-<h2 id="links"><a href="#links">🔗</a><tab>links</h2>
+<h2 id="links"><a href="#links">🔗</a>links</h2>
 <p>Internal links must be relative to the current file and must point to a valid markdown (.md) file. Start links with either <code>./</code> to represent the current directory or <code>../</code> to represent the parent directory.</p>
 <ul>
 <li>Links to a processing module should be in italics, e.g. <a href="/dtdocs/module-reference/processing-modules/exposure/"><em>exposure</em></a></li>
@@ -2831,7 +2831,7 @@ weight: 10
 <li>Link to a tab in the preferences dialog: <a href="/dtdocs/preferences-settings/general/">preferences &gt; general</a></li>
 <li>Link to a specific preference setting: <a href="/dtdocs/preferences-settings/general/">preferences &gt; general &gt; interface language</a></li>
 </ul>
-<h2 id="images"><a href="#images">🔗</a><tab>images</h2>
+<h2 id="images"><a href="#images">🔗</a>images</h2>
 <p>when taking screenshots from the darktable application itself, use the default darktable theme.</p>
 <p>Several keywords or filename suffixes are used to determine how an image is rendered.</p>
 <dl>
