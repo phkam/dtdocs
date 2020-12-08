@@ -2762,25 +2762,25 @@
 <dt><a href="/dtdocs/darkroom/masking-and-blending/masks/raster/">raster mask</a></dt>
 <dd>Reprocessing takes place with the chosen blend mode and opacity based on a mask that was generated within a different module</dd>
 <dt>blending options</dt>
-<dd>Choose which color space to perform blending in and whether or not to show output channels. The following options are available:</dd>
+<dd>Choose which color space to use when calculating the blending mask, and specify whether or not to allow a mask to be generated based on the module&rsquo;s output channels (normally a parametric mask is generated based on the input channels coming into the module). The following options are available:</dd>
 <dd><ul>
-<li><em>reset to default blend colorspace</em>: Perform blending operations in the default color space for the module.</li>
+<li><em>reset to default blend colorspace</em>: Use the default color space for the module to specify the parametric mask.</li>
 </ul>
 </dd>
 <dd><ul>
-<li><em>Lab</em>: Perform blending operations in the Lab color space (where available).</li>
+<li><em>Lab</em>: Use the Lab color space (where available) when specifying the parametric mask.</li>
 </ul>
 </dd>
 <dd><ul>
-<li><em>RGB (display)</em>: Perform blending operations in the display RGB color space.</li>
+<li><em>RGB (display)</em>: Use the display-referred RGB/HSL color space to specify the parametric mask.</li>
 </ul>
 </dd>
 <dd><ul>
-<li><em>RGB (scene)</em>: Perform blending operations in the scene RGB color space.</li>
+<li><em>RGB (scene)</em>: Use the scene-referred RGB/J<!-- raw HTML omitted -->z<!-- raw HTML omitted -->C<!-- raw HTML omitted -->z<!-- raw HTML omitted -->h<!-- raw HTML omitted -->z<!-- raw HTML omitted --> color space to specify the parametric mask.</li>
 </ul>
 </dd>
 <dd><ul>
-<li><em>show output channels</em>: Show the output channels in the <a href="/dtdocs/darkroom/masking-and-blending/masks/parametric/">parametric mask</a> controls.</li>
+<li><em>show output channels</em>: Show the <a href="/dtdocs/darkroom/masking-and-blending/masks/parametric/">parametric mask</a> output channel controls, so that the parametric mask can be defined in terms of the module&rsquo;s output channels.</li>
 </ul>
 </dd>
 </dl>
