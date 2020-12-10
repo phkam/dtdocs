@@ -2758,7 +2758,7 @@
 <p>If no drawn/parametric mask is used, the output of this step is a mask where every pixel has the same opacity (governed by the global opacity setting). If no opacity is defined (no blending is performed) a global opacity of 1.0 (or 100%) is assumed.</p>
 </li>
 <li>
-<p>Combine the <em>module input</em> and <em>blended output</em> pixel-by-pixel using the <em>mask</em> as a mixing operator, to produce the <em>final output</em>. Where the mask opacity is 100%, the <em>final output</em> is the the <em>blended output</em> for that pixel. Where the mask opacity is 0 the final output is the <em>module input</em> for that pixel. An intermediate opacity combines the <em>blended output</em> and <em>module input</em> proportionally. The <em>final output</em> is passed to the next module for further processing.</p>
+<p>Combine the <em>module input</em> and <em>blended output</em> pixel-by-pixel using the <em>mask</em> as a mixing operator, to produce the <em>final output</em>. Where the mask opacity is 100%, the <em>final output</em> is the <em>blended output</em> for that pixel. Where the mask opacity is 0 the final output is the <em>module input</em> for that pixel. An intermediate opacity combines the <em>blended output</em> and <em>module input</em> proportionally. The <em>final output</em> is passed to the next module for further processing.</p>
 </li>
 </ol>
 <p>Steps 2 and 3 are optional and not supported by all modules. For example, the <a href="/dtdocs/module-reference/processing-modules/demosaic/">demosaic</a> module must be applied to the entire raw file in order to produce a legible image so it does not make sense to mask or blend its output.</p>
