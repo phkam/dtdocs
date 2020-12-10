@@ -84,7 +84,7 @@ The image information line can be displayed in the top, bottom, left or right pa
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/</guid>
       <description>Manage the layout and grouping of processing modules.
- This maintenance screen can be accessed from the presets menu beside the module search box or group icons (below the histogram in the darkroom view).
+  This maintenance screen can be accessed from the presets menu beside the module search box or group icons (below the histogram in the darkroom view).
 🔗module controls 🔗preset list The left-hand panel lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. User-defined presets are placed at the bottom of the list.</description>
     </item>
     
@@ -95,7 +95,7 @@ The image information line can be displayed in the top, bottom, left or right pa
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/</guid>
       <description>Manage all masks and shapes for the current image.
- This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.
+  This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.
 In the top line of the mask manager panel are buttons that can be used to create new shapes. These are the same as in the drawn mask interface of the individual modules.</description>
     </item>
     

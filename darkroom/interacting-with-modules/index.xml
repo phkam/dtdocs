@@ -13,7 +13,7 @@
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/module-header/</guid>
       <description>At the top of each processing module is the module header.
- Click on the module name to expand the module and display the parameters that control its operation.
+  Click on the module name to expand the module and display the parameters that control its operation.
 By default darktable will only allow one processing module to be expanded at a time &amp;ndash; if you click the header of another module, the previously-opened module&amp;rsquo;s controls are collapsed. If you want expand more than one module, you may expand further modules by Shift+clicking on the header and all previously expanded modules will remain open.</description>
     </item>
     
@@ -54,7 +54,7 @@ As with the base instance of a module, all instances can be moved independently 
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/curves/</guid>
       <description>Three image processing modules (base curve, tone curve and rgb curve) use curves to control the tones in the image. These modules have some common features that deserve separate discussion.
- 🔗nodes In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve.</description>
+  🔗nodes In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve.</description>
     </item>
     
     <item>
@@ -73,7 +73,7 @@ As with the base instance of a module, all instances can be moved independently 
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/</guid>
       <description>At the top of the right-hand panel in the darkroom view is a module that allows you to search for and select from pre-defined groups of processing modules:
- darktable ships with some standard pre-defined module group presets, which can be selected from the presets menu on the right-hand-side of the module groups list. You can also customize and create your own groups by selecting &amp;ldquo;manage presets&amp;hellip;&amp;rdquo; from the same drop-down menu.</description>
+  darktable ships with some standard pre-defined module group presets, which can be selected from the presets menu on the right-hand-side of the module groups list. You can also customize and create your own groups by selecting &amp;ldquo;manage presets&amp;hellip;&amp;rdquo; from the same drop-down menu.</description>
     </item>
     
   </channel>

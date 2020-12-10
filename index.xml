@@ -64,7 +64,7 @@ There are two main approaches this conversion:
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/module-header/</guid>
       <description>At the top of each processing module is the module header.
- Click on the module name to expand the module and display the parameters that control its operation.
+  Click on the module name to expand the module and display the parameters that control its operation.
 By default darktable will only allow one processing module to be expanded at a time &amp;ndash; if you click the header of another module, the previously-opened module&amp;rsquo;s controls are collapsed. If you want expand more than one module, you may expand further modules by Shift+clicking on the header and all previously expanded modules will remain open.</description>
     </item>
     
@@ -412,7 +412,7 @@ The filmstrip below the image allows you to select more images.
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/screen-layout/</guid>
       <description>The layout of all views is similar and consists of a center area with panels at the edges:
-   center area : Contains information and functionality specific to the current view.
+    center area : Contains information and functionality specific to the current view.
   left panel : Contains modules primarily used to provide information.
   right panel : Contains modules primarily used for image processing.
   top banner : Contains information about the current darktable version and allows you to switch between views.</description>
@@ -467,7 +467,7 @@ If you don&amp;rsquo;t need the auto-advance mode, you could even use the sticky
       
       <guid>https://darktable-org.github.io/dtdocs/special-topics/darktable-chart/usage/</guid>
       <description>The tool is organized into three tabs in the upper part and a text output frame in the lower part.
- The first tab is used to define the source image, the second tab defines the reference (target) and the third tab contains the controls to generate the resulting darktable style.</description>
+  The first tab is used to define the source image, the second tab defines the reference (target) and the third tab contains the controls to generate the resulting darktable style.</description>
     </item>
     
     <item>
@@ -760,7 +760,7 @@ The principle OpenCL function flow is like this:</description>
       
       <guid>https://darktable-org.github.io/dtdocs/overview/user-interface/top-panel/</guid>
       <description>The top panel is common to all darktable views and provides a number of common utility functions.
- 🔗On the left-hand-side  view Choose which images to view in the lighttable/filmstrip, based on star rating and reject status. sort by Choose the property to sort by from the dropdown.  sort order Switch the sort order (ascending / descending) with the arrow-toggle.  🔗On the right-hand-side   grouping Expand or collapse grouped images  thumbnail overlays Define what information is displayed over thumbnails in the lighttable/filmstrip.</description>
+  🔗On the left-hand-side  view Choose which images to view in the lighttable/filmstrip, based on star rating and reject status. sort by Choose the property to sort by from the dropdown.   sort order Switch the sort order (ascending / descending) with the arrow-toggle.  🔗On the right-hand-side    grouping Expand or collapse grouped images   thumbnail overlays Define what information is displayed over thumbnails in the lighttable/filmstrip.</description>
     </item>
     
     <item>
@@ -801,7 +801,7 @@ darktable = require &amp;quot;darktable&amp;quot; local function hello_shortcut(
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/curves/</guid>
       <description>Three image processing modules (base curve, tone curve and rgb curve) use curves to control the tones in the image. These modules have some common features that deserve separate discussion.
- 🔗nodes In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve.</description>
+  🔗nodes In their default state, curves are straight lines, defined by two anchor nodes at the top-right and bottom-left of the curve graph. You can move the nodes to modify the curve or generate new nodes by clicking on the curve.</description>
     </item>
     
     <item>
@@ -822,7 +822,7 @@ darktable = require &amp;quot;darktable&amp;quot; local function hello_shortcut(
       <guid>https://darktable-org.github.io/dtdocs/special-topics/color-management/color-spaces/</guid>
       <description>darktable&amp;rsquo;s input images are either RGB files (like JPEGs or TIFFs) or camera RAWs. Both store visual information as a combination of primary colours (such as red, green and blue) which together describe a light emission to be later recreated by a display.
 The following image illustrates this concept.
- On the left-hand-side of the image is a colored light that we need to represent digitally. Using three ideal color filters, we can decompose this light into three colored primary lights at different intensities.</description>
+  On the left-hand-side of the image is a colored light that we need to represent digitally. Using three ideal color filters, we can decompose this light into three colored primary lights at different intensities.</description>
     </item>
     
     <item>
@@ -892,7 +892,7 @@ There can be various reasons why OpenCL might fail during the initialization pha
       
       <guid>https://darktable-org.github.io/dtdocs/special-topics/darktable-chart/process/</guid>
       <description>If all of the required settings in the “source image” and “reference values” tabs are ready you can move on to the “process” tab.
- First, you need to tell darktable-chart which of the patches represents the gray ramp. In the screenshot displayed above, the gray ramp is positioned in the lower part of the color reference chart, denoted as “GS00&amp;hellip;GS23”.
+  First, you need to tell darktable-chart which of the patches represents the gray ramp. In the screenshot displayed above, the gray ramp is positioned in the lower part of the color reference chart, denoted as “GS00&amp;hellip;GS23”.
 The “number of final patches” input defines how many editable color patches the resulting style will use within the color look up table module.</description>
     </item>
     
@@ -982,7 +982,7 @@ As with any mask, if the value for a pixel in a raster mask is zero the input to
       
       <guid>https://darktable-org.github.io/dtdocs/darkroom/interacting-with-modules/search-and-group/</guid>
       <description>At the top of the right-hand panel in the darkroom view is a module that allows you to search for and select from pre-defined groups of processing modules:
- darktable ships with some standard pre-defined module group presets, which can be selected from the presets menu on the right-hand-side of the module groups list. You can also customize and create your own groups by selecting &amp;ldquo;manage presets&amp;hellip;&amp;rdquo; from the same drop-down menu.</description>
+  darktable ships with some standard pre-defined module group presets, which can be selected from the presets menu on the right-hand-side of the module groups list. You can also customize and create your own groups by selecting &amp;ldquo;manage presets&amp;hellip;&amp;rdquo; from the same drop-down menu.</description>
     </item>
     
     <item>
@@ -1450,7 +1450,7 @@ A number of presets are provided, which should give you a better understanding t
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/crop-rotate/</guid>
       <description>Crop, rotate, and correct perspective distortions using on-screen guides.
 Whenever the user interface of this module is in focus, the full uncropped image will be shown, overlaid with crop handles and optional guiding lines.
- Resize the crop by dragging the border and corner handles. Move the crop rectangle by clicking and dragging. Constrain movement to the horizontal/vertical axis by holding Ctrl/Shift, respectively while dragging. Commit changes by either giving focus to another module or by double-clicking on the image.</description>
+  Resize the crop by dragging the border and corner handles. Move the crop rectangle by clicking and dragging. Constrain movement to the horizontal/vertical axis by holding Ctrl/Shift, respectively while dragging. Commit changes by either giving focus to another module or by double-clicking on the image.</description>
     </item>
     
     <item>
@@ -1556,7 +1556,7 @@ This module protects colors and contrast in the mid-tones, recovers the shadows,
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/shared/filmstrip/</guid>
       <description>The filmstrip can be used to quickly switch between images in any darktable view. The images shown are the same as displayed in the lighttable view and are defined by the currently-selected collection.
- The filmstrip can be switched on and off using the shortcut Ctrl+F. The height of the filmstrip panel can be changed by clicking and dragging its top border.
+  The filmstrip can be switched on and off using the shortcut Ctrl+F. The height of the filmstrip panel can be changed by clicking and dragging its top border.
 Quickly navigate through the images in the filmstrip by scrolling with the mouse.</description>
     </item>
     
@@ -1577,7 +1577,7 @@ To use this module, type in a place name or address, press Enter and a list of r
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/shared/focus-peaking/</guid>
       <description>The focus peaking module allows you to identify which parts of the image are sharp and in-focus. It works both in the lighttable view, where you can easily see at a glance which images are sharp and which are blurry, and in the darkroom view, when you are processing a single image.
-The module is activated by clicking on the focus-peaking icon ( ). It highlights the sharp parts of the image with a yellow, green and blue overlay:</description>
+The module is activated by clicking on the focus-peaking icon (  ). It highlights the sharp parts of the image with a yellow, green and blue overlay:</description>
     </item>
     
     <item>
@@ -1694,7 +1694,7 @@ This module is primarily intended to be used in combination with a blend mode. F
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/shared/histogram/</guid>
       <description>A graphical depiction of the developed image&amp;rsquo;s light levels.
- Move the mouse over the panel to show buttons to adjust the display. The leftmost button cycles the mode between a &amp;ldquo;regular&amp;rdquo; and a waveform-style histogram. The next button controls how the data for the current mode is displayed. The three rightmost colored squares are toggles which enable or disable the display of the red, green and blue color channels.</description>
+  Move the mouse over the panel to show buttons to adjust the display. The leftmost button cycles the mode between a &amp;ldquo;regular&amp;rdquo; and a waveform-style histogram. The next button controls how the data for the current mode is displayed. The three rightmost colored squares are toggles which enable or disable the display of the red, green and blue color channels.</description>
     </item>
     
     <item>
@@ -1892,7 +1892,7 @@ This module accepts .cube and .png (haldclut) files. The 3D LUT data is not save
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/manage-module-layouts/</guid>
       <description>Manage the layout and grouping of processing modules.
- This maintenance screen can be accessed from the presets menu beside the module search box or group icons (below the histogram in the darkroom view).
+  This maintenance screen can be accessed from the presets menu beside the module search box or group icons (below the histogram in the darkroom view).
 🔗module controls 🔗preset list The left-hand panel lists the currently-defined module layout presets. Those at the top of the list are fixed and cannot be altered. User-defined presets are placed at the bottom of the list.</description>
     </item>
     
@@ -1913,7 +1913,7 @@ This module accepts .cube and .png (haldclut) files. The 3D LUT data is not save
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/darkroom/mask-manager/</guid>
       <description>Manage all masks and shapes for the current image.
- This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.
+  This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.
 In the top line of the mask manager panel are buttons that can be used to create new shapes. These are the same as in the drawn mask interface of the individual modules.</description>
     </item>
     
@@ -2252,7 +2252,7 @@ Tags provide a means of adding information to images using a keyword dictionary.
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/lighttable/timeline/</guid>
       <description>View your images by the date/time they were taken.
- In the lighttable filemanager view, you can show/hide the timeline module in the bottom panel with the shortcut Ctrl+F.
+  In the lighttable filemanager view, you can show/hide the timeline module in the bottom panel with the shortcut Ctrl+F.
 Within the timeline, you can show the next and previous dates by scrolling your mouse; Ctrl+scroll to zoom in/out.
 You can also use timeline to select images by date range with mouse click+drag.</description>
     </item>
