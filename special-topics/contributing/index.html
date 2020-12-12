@@ -2833,13 +2833,14 @@ weight: 10
 <li>Link to a top level section by referencing the <code>_index.md</code> file, e.g. <a href="/dtdocs/module-reference/">module reference</a></li>
 <li>Link to a tab in the preferences dialog: <a href="/dtdocs/preferences-settings/general/">preferences &gt; general</a></li>
 <li>Link to a specific preference setting: <a href="/dtdocs/preferences-settings/general/">preferences &gt; general &gt; interface language</a></li>
+<li>Each header within a page can be linked to directly with an anchor link: <a href="/dtdocs/special-topics/contributing/#notes">contributing/notes</a></li>
 </ul>
 <h2 id="images"><a href="#images">🔗</a>images</h2>
-<p>when taking screenshots from the darktable application itself, use the default darktable theme.</p>
-<p>Several keywords or filename suffixes are used to determine how an image is rendered.</p>
+<p>When taking screenshots from the darktable application itself, use the default darktable theme.</p>
+<p>Several filename suffixes can be used to control how an image is rendered.</p>
 <dl>
 <dt>icon</dt>
-<dd>To insert an image as an icon, include <code>#icon</code> after the image name in the link. The markdown <code>![squirrel icon](./contributing/contributing.png#icon)</code> causes the following output: 
+<dd>To insert an image as an icon, include <code>#icon</code> after the image name in the link. The markdown <code>![squirrel icon](./contributing/contributing.png#icon)</code> outputs the following: 
 
 
 
@@ -2849,8 +2850,8 @@ weight: 10
 
 </dd>
 <dt>image width</dt>
-<dd>You can set the image width to 25, 50, 75 or 100 per cent of the rendered page width by including &ldquo;#wxx&rdquo; after the image name in the link, where xx is the desired width.</dd>
-<dd><code>![squirrel](./contributing/squirrel.png#w25)</code></dd>
+<dd>You can set the image width to 25, 33, 50, 66, 75 or 100 per cent of the rendered page width by including <code>#wxx</code> after the image name in the link, where <code>xx</code> is the desired width. For example:</dd>
+<dd><code>![squirrel](./contributing/squirrel.png#w25)</code> outputs</dd>
 <dd>
 
 
@@ -2860,17 +2861,7 @@ weight: 10
 <a href="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png"><img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  class="w25"    /></a>
 
 </dd>
-<dd><code>![squirrel](./contributing/squirrel.png#w50)</code></dd>
-<dd>
-
-
-
-
-
-<a href="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png"><img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  class="w50"    /></a>
-
-</dd>
-<dd><code>![squirrel](./contributing/squirrel.png#w75)</code></dd>
+<dd><code>![squirrel](./contributing/squirrel.png#w75)</code> outputs</dd>
 <dd>
 
 
@@ -2880,19 +2871,9 @@ weight: 10
 <a href="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png"><img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  class="w75"    /></a>
 
 </dd>
-<dd><code>![squirrel](./contributing/squirrel.png#w100)</code></dd>
-<dd>
-
-
-
-
-
-<a href="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png"><img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  class="w100"    /></a>
-
-</dd>
 <dt>inline</dt>
-<dd>With the exception of icons, images are included as block elements by default. You can override this by including &ldquo;#inline&rdquo; after the image name. This can be combined with the width setting as follows.</dd>
-<dd>This image 
+<dd>With the exception of icons, images are included as block elements by default. You can override this by including <code>#inline</code> after the image name. This can be combined with the width setting as follows.</dd>
+<dd><code>![squirrel](./contributing/squirrel.png#w25#inline)</code> outputs 
 
 
 
@@ -2900,10 +2881,9 @@ weight: 10
 
 <a href="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png"><img src="https://darktable-org.github.io/dtdocs/special-topics/contributing/squirrel.png" alt="squirrel"  class="w25 inline"    /></a>
 
- has been made inline using the syntax <code>![squirrel](./contributing/squirrel.png#w25#inline)</code></dd>
+</dd>
 <dt>default</dt>
-<dd>By default images will be presented as block elements with no restriction on their width. Be careful with this is it can render in unpredictable ways:</dd>
-<dd><code>![squirrel](./contributing/squirrel.png)</code></dd>
+<dd>By default images are presented as block elements with 100% width. So <code>![squirrel](./contributing/squirrel.png#w100)</code> and <code>![squirrel](./contributing/squirrel.png)</code> are equivalent and both output the following:</dd>
 <dd>
 
 
