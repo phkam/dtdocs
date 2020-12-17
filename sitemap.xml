@@ -679,6 +679,10 @@
   </url>
   
   <url>
+    <loc>https://darktable-org.github.io/dtdocs/</loc>
+  </url>
+  
+  <url>
     <loc>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/defringe/</loc>
   </url>
   
@@ -776,10 +780,6 @@
   
   <url>
     <loc>https://darktable-org.github.io/dtdocs/module-reference/utility-modules/lighttable/history-stack/</loc>
-  </url>
-  
-  <url>
-    <loc>https://darktable-org.github.io/dtdocs/</loc>
   </url>
   
   <url>
