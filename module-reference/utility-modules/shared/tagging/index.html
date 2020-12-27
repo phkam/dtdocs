@@ -2775,7 +2775,7 @@
 <dt>check mark [✓]</dt>
 <dd>Choose whether to view any hidden tags that darktable has automatically attached to the selected images.</dd>
 <dt>sort [⥯]</dt>
-<dd>Choose whether to sort the <em>attached tags</em> list alphabetically or by the count shown in brackets next to the tag (this count indiates how many of the selected images have that tag attached to them).</dd>
+<dd>Choose whether to sort the <em>attached tags</em> list alphabetically or by the count shown in brackets next to the tag (this count indicates how many of the selected images have that tag attached to them).</dd>
 <dt>minus [&ndash;]</dt>
 <dd>Choose whether or not to show the parent categories of the tag.</dd>
 </dl>
@@ -2857,7 +2857,10 @@
 <p>“synonyms” enrich the tag information and are mainly used to assist search engines. For example “juvenile”, “kid” or “youth” can be set as synonyms of “child”. Synonyms can also be used to translate tag names to other languages.</p>
 </li>
 </ul>
-<p>The &ldquo;rename path&hellip;&rdquo; operation is only available in the <em>tree</em> view mode, and it shows the number of tagged images which would be impacted by a change to the name of this tag or category. The rename path window lets the user change the full path of tag, including the catagories to which it belongs (categories can be specified using the pipe &ldquo;|&rdquo; symbol). This operation is powerful, but please take care as it can have a significant impact on the metadata of your images. The operation is aborted if the requested change causes a conflict with an existing tag.</p>
+<p>The &ldquo;rename path&hellip;&rdquo; operation is only available in the <em>tree</em> view mode, and it shows the number of tagged images which would be impacted by a change to the name of this tag or category. The rename path window lets the user change the full path of the tag, including the categories to which it belongs (categories can be specified using the pipe <code>|</code> symbol). This operation is powerful, but please take care as it can have a significant impact on the metadata of your images. The operation is aborted if the requested change causes a conflict with an existing tag.</p>
+<p>A quick way to organize the tag structure is to drag and drop the tags. In the <em>tree</em> view mode, you can drag any tag (node or leaf) and drop it on top of another one (node or leaf). The first tag and its descendants, if any, become descendants of the second tag. Dragging over a node automatically opens the node.
+To place a tag at the root level, drag it onto the top of the tagging window.
+If the requested change causes a conflict with an existing tag, the operation is aborted.</p>
 <h2 id="attach-tag"><a href="#attach-tag">🔗</a>attach tag</h2>
 <p>There are a number of ways to attach an existing tag to a group of selected images:</p>
 <ul>
@@ -2867,6 +2870,7 @@
 <li>right-click on a tag shown in the <em>attached tags</em> view to show a pop-up menu. If some of the selected images do not currently have that tag, the &ldquo;attach tag to all&rdquo; menu item will attach that tag to all the selected images.</li>
 <li>Type into the text box and press the “new” button or Enter. This will create the tag if it doesn&rsquo;t already exist, and attach it to the selected images.</li>
 <li>Press Ctrl+T to open a small text box at the bottom of the central view of the lighttable. Type in the name of a tag and press Enter. The tag will be created if it doesn&rsquo;t exist, and the tag will be attached to all the selected images.</li>
+<li>Drag an image or group of images and drop it onto the desired tag.</li>
 </ul>
 <p>When hovering over the images in the ligthtable you can check which tags are attached to the image, either by looking at the <em>attached tags</em> window in the <em>tagging</em> module, or in the <em>tags</em> attribute in the <a href="/dtdocs/module-reference/utility-modules/shared/image-information/">image information</a> module.</p>
 <h2 id="detach-tag"><a href="#detach-tag">🔗</a>detach tag</h2>
