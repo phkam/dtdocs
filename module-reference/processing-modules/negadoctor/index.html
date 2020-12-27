@@ -2748,7 +2748,7 @@
 <p>Apply the standard or enhanced camera matrix in the <a href="/dtdocs/module-reference/processing-modules/input-color-profile/"><em>input color profile</em></a> module.</p>
 </li>
 </ul>
-<p>When scanning or photographing your film negative, make sure you include some unexposed part of the film within the captured image. This is required to set the <em>Dmin</em> parameter (see below). If this is not possible (e.g. your film holder completed obscures the unexposed parts of the film), you can take a separate image of an unexposed part of the film, measure the <em>Dmin</em> parameter from that image, and then paste that setting to the rest of the images from that film.</p>
+<p>When scanning or photographing your film negative, make sure you include some unexposed part of the film within the captured image. This is required to set the <em>Dmin</em> parameter (see below). If this is not possible (e.g. your film holder completely obscures the unexposed parts of the film), you can take a separate image of an unexposed part of the film, measure the <em>Dmin</em> parameter from that image, and then paste that setting to the rest of the images from that film.</p>
 <p>When developing the scanned/photographed film negatives, it is recommended that you disable any tone mapping modules such as <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a>, <a href="/dtdocs/module-reference/processing-modules/base-curve/"><em>base curve</em></a> and the like.</p>
 <p>The <em>working profile</em> parameter in darktable&rsquo;s <a href="/dtdocs/module-reference/processing-modules/input-color-profile/"><em>input color profile</em></a> module should be set to either <em>linear Rec2020 RGB</em>, or to an ICC profile representing the actual color space of your film emulsion. Some examples of such ICC profiles may be found in the following forum posts:</p>
 <ul>
@@ -2767,7 +2767,7 @@
 <p>When using color pickers, be careful to avoid including dust and scratches, which can skew the results of the sampled region.</p>
 <dl>
 <dt>film stock</dt>
-<dd>The first step is to choose &ldquo;color&rdquo; or &ldquo;black and white&rdquo; in the <em>film stock</em> drop-down. If you select &ldquo;black and white&rdquo;, any sliders that are only used for color only will be hidden from view.</dd>
+<dd>The first step is to choose &ldquo;color&rdquo; or &ldquo;black and white&rdquo; in the <em>film stock</em> drop-down. If you select &ldquo;black and white&rdquo;, any sliders that are only used for color will be hidden from view.</dd>
 </dl>
 <h2 id="film-properties"><a href="#film-properties">🔗</a>film properties</h2>
 <p>This tab contains a number of basic settings. If, after adjusting these settings, your image is still not quite as you would like it, you can make further adjustments on the the <em>corrections</em> tab. These are technical settings, and serve a somewhat similar purpose to the <em>scene</em> tab in the <a href="/dtdocs/module-reference/processing-modules/filmic-rgb/"><em>filmic rgb</em></a> module, in that they adjust the black and white points and hence define the dynamic range of the negative.</p>
@@ -2783,7 +2783,7 @@
 </dl>
 <h2 id="corrections"><a href="#corrections">🔗</a>corrections</h2>
 <p>This tab contains sliders which allow you to make color cast corrections within both the shadow and highlight regions.</p>
-<p>The settings on this tab should not be needed for most well-preserved negatives and will mostly be useful for old and poorly-preserved negatives having a decayed film base that introduces undesirable color casts. Note that that the shadows color cast setting will have no effect if the <em>scan exposure bias</em> setting in the <em>film properties</em> tab is set to a non-zero value.</p>
+<p>The settings on this tab should not be needed for most well-preserved negatives and will mostly be useful for old and poorly-preserved negatives having a decayed film base that introduces undesirable color casts. Note that the shadows color cast setting will have no effect if the <em>scan exposure bias</em> setting in the <em>film properties</em> tab is set to a non-zero value.</p>
 <p>The other case where these color cast corrections may be needed is if the white balance properties of the light used to scan the film negative are significantly different to the light source under which the original film camera took the shot. For example, if you illuminate the film with an LED light, but the original shot was taken under daylight, this may require some additional color cast corrections.</p>
 <dl>
 <dt>shadows color cast</dt>
