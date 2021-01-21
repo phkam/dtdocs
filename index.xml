@@ -2231,7 +2231,9 @@ A list of all available styles is displayed at the top of the module. A search f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darktable-org.github.io/dtdocs/module-reference/processing-modules/surface-blur/</guid>
-      <description>This module provides smoothing of the surfaces in an image while preversing sharp edges by means of a bilateral filter. It can be used as a type of denoising filter, however bilateral filtering is susceptible to overshoots, and darktable offers better options for denoising. For example, the astrophoto denoise module uses a non-local means denoising algorithm, and the denoise (profiled) module provides a choice between non-local means and wavelet denoising algorithms.</description>
+      <description>Smooth image surfaces while preserving sharp edges using a bilateral filter.
+This module can be used to denoise images, however you should be aware that bilateral filters are susceptible to overshoots and darktable offers much better alternatives. For example, the astrophoto denoise module uses a non-local means denoising algorithm, and the denoise (profiled) module provides a choice between non-local means and wavelet denoising algorithms.
+The surface blur module blurs noise within the surfaces of an image by averaging pixels with their neighbors, taking into account not only their geometric distance but also their distance on the range scale (i.</description>
     </item>
     
     <item>
