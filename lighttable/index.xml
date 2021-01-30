@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lighttable on darktable 3.4 user manual</title>
+    <title>Lighttable on darktable user manual (development version)</title>
     <link>https://darktable-org.github.io/dtdocs/lighttable/</link>
-    <description>Recent content in Lighttable on darktable 3.4 user manual</description>
+    <description>Recent content in Lighttable on darktable user manual (development version)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://darktable-org.github.io/dtdocs/lighttable/index.xml" rel="self" type="application/rss+xml" />
     <item>
